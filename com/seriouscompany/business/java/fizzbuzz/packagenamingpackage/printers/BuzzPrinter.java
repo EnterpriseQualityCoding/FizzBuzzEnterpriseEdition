@@ -4,7 +4,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.stringretu
 
 public class BuzzPrinter {
 	public void printBuzz() {
-		BuzzStringReturner bsr = new BuzzStringReturner();
-		System.out.print(bsr.getBuzz());
+		BuzzStringReturner myBuzzStringReturner = new BuzzStringReturner();
+		System.out.print(myBuzzStringReturner.getBuzz());
 	}
 }

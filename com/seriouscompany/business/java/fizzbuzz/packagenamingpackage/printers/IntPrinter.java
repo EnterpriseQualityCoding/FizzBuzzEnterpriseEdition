@@ -5,9 +5,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.stringretu
 public class IntPrinter {
 
 	public void printInteger(int i) {
-		IntegerStringReturner isr = new IntegerStringReturner();
-		String integerString = isr.getIntegerString(i); 
-		System.out.print(integerString);
+		IntegerStringReturner myIntegerStringReturner = new IntegerStringReturner();
+		String myIntegerString = myIntegerStringReturner.getIntegerString(i); 
+		System.out.print(myIntegerString);
 	}
 
 }

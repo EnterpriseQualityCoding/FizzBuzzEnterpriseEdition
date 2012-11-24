@@ -1,5 +1,8 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage;
 
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.loop.LoopCondition;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.loop.LoopInitializer;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.loop.LoopStep;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.printers.BuzzPrinter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.printers.FizzPrinter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.printers.IntPrinter;
@@ -10,32 +13,32 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.strategies
 
 public class FizzBuzz {
 	public void fizzbuzz(int n) {
-		LoopInitializer li = new LoopInitializer();
-		LoopCondition lc = new LoopCondition();
-		LoopStep ls = new LoopStep();
+		LoopInitializer myLoopInitializer = new LoopInitializer();
+		LoopCondition myLoopCondition = new LoopCondition();
+		LoopStep myLoopStep = new LoopStep();
 		
-		FizzStrategy fs = new FizzStrategy();
-		FizzPrinter fp = new FizzPrinter();
+		FizzStrategy myFizzStrategy = new FizzStrategy();
+		FizzPrinter myFizzPrinter = new FizzPrinter();
 		
-		BuzzStrategy bs = new BuzzStrategy();	
-		BuzzPrinter bp = new BuzzPrinter();
+		BuzzStrategy myBuzzStrategy = new BuzzStrategy();	
+		BuzzPrinter myBuzzPrinter = new BuzzPrinter();
 		
-		NoFizzNoBuzzStrategy nfnbs = new NoFizzNoBuzzStrategy();
-		IntPrinter ip = new IntPrinter();
+		NoFizzNoBuzzStrategy myNoFizzNoBuzzStrategy = new NoFizzNoBuzzStrategy();
+		IntPrinter myIntPrinter = new IntPrinter();
 		
-		NewLinePrinter nlp = new NewLinePrinter();
+		NewLinePrinter myNewLinePrinter = new NewLinePrinter();
 		
-		for (int i = li.getLoopInitializationPoint(); lc.evaluateLoop(i, n); i = ls.stepLoop(i)) {
-			if (fs.isEvenlyDivisible(i)) { 
-				fp.printFizz();
+		for (int i = myLoopInitializer.getLoopInitializationPoint(); myLoopCondition.evaluateLoop(i, n); i = myLoopStep.stepLoop(i)) {
+			if (myFizzStrategy.isEvenlyDivisible(i)) { 
+				myFizzPrinter.printFizz();
 			}
-			if (bs.isEvenlyDivisible(i)) { 
-				bp.printBuzz();
+			if (myBuzzStrategy.isEvenlyDivisible(i)) { 
+				myBuzzPrinter.printBuzz();
 			}
-			if (nfnbs.isEvenlyDivisible(i)) {
-				ip.printInteger(i);
+			if (myNoFizzNoBuzzStrategy.isEvenlyDivisible(i)) {
+				myIntPrinter.printInteger(i);
 			}
-			nlp.printNewLine();
+			myNewLinePrinter.printNewLine();
 		}
 	}
 }

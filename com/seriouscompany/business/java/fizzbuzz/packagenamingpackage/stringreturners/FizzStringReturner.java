@@ -3,9 +3,9 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.stringret
 public class FizzStringReturner {
 
 	public String getFizz() {
-		StringBuilder sb = new StringBuilder("Fizz");
-		String s = sb.toString();
-		return new String(s);
+		StringBuilder myStringBuilder = new StringBuilder("Fizz");
+		String myString = myStringBuilder.toString();
+		return new String(myString);
 	}
 
 }

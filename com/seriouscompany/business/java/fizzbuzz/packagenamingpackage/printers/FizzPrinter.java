@@ -5,8 +5,8 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.stringretu
 public class FizzPrinter {
 
 	public void printFizz() {
-		FizzStringReturner fsr = new FizzStringReturner();
-		System.out.print(fsr.getFizz());
+		FizzStringReturner myFizzStringReturner = new FizzStringReturner();
+		System.out.print(myFizzStringReturner.getFizz());
 	}
 
 }

@@ -3,8 +3,8 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.stringret
 public class NewLineStringReturner {
 	
 	public String getNewLineString() {
-		StringBuilder sb = new StringBuilder("\n");
-		String s = sb.toString();
-		return new String(s);
+		StringBuilder myStringBuilder = new StringBuilder("\n");
+		String myString = myStringBuilder.toString();
+		return new String(myString);
 	}
 }

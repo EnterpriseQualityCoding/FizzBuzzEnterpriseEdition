@@ -5,9 +5,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.stringretu
 public class NewLinePrinter {
 
 	public void printNewLine() {
-		NewLineStringReturner nlsr = new NewLineStringReturner();
-		String newLineString = nlsr.getNewLineString();
-		System.out.print(newLineString);
+		NewLineStringReturner myNewLineStringReturner = new NewLineStringReturner();
+		String myNewLineString = myNewLineStringReturner.getNewLineString();
+		System.out.print(myNewLineString);
 	}
 	
 }

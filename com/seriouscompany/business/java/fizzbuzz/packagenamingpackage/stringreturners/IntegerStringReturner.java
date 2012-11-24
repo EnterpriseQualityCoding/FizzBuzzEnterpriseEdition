@@ -3,10 +3,10 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.stringret
 public class IntegerStringReturner {
 
 	public String getIntegerString(int i) {
-		Integer integerI = new Integer(i);
-		StringBuilder sb = new StringBuilder(integerI.toString());
-		String s = sb.toString();
-		return new String(s);
+		Integer myInteger = new Integer(i);
+		StringBuilder myStringBuilder = new StringBuilder(myInteger.toString());
+		String myString = myStringBuilder.toString();
+		return new String(myString);
 	}
 
 }
