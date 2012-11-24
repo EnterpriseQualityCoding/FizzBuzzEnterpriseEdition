@@ -1,7 +1,7 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.stringreturners;
 
-public interface IntegerStringReturner {
+public interface StringStringReturner {
 	
-	public String getIntegerReturnString(int i);
-	
+	public String getReturnString();
+
 }

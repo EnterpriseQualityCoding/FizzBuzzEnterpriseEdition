@@ -1,44 +1,60 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage;
 
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.factories.BuzzStrategyFactory;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.factories.BuzzStringPrinterFactory;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.factories.FizzStrategyFactory;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.factories.FizzStringPrinterFactory;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.factories.IntIntegerPrinterFactory;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.factories.IntegerPrinterFactory;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.factories.IsEvenlyDivisibleStrategyFactory;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.factories.LoopComponentFactory;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.factories.NewLineStringPrinterFactory;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.factories.NoFizzNoBuzzStrategyFactory;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.factories.StringPrinterFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.loop.LoopCondition;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.loop.LoopInitializer;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.loop.LoopStep;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.printers.BuzzPrinter;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.printers.FizzPrinter;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.printers.IntPrinter;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.printers.NewLinePrinter;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.strategies.BuzzStrategy;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.strategies.FizzStrategy;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.strategies.NoFizzNoBuzzStrategy;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.printers.IntegerPrinter;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.printers.StringPrinter;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.strategies.IsEvenlyDivisibleStrategy;
 
 public class FizzBuzz {
 	public void fizzbuzz(int n) {
-		LoopInitializer myLoopInitializer = new LoopInitializer();
-		LoopCondition myLoopCondition = new LoopCondition();
-		LoopStep myLoopStep = new LoopStep();
 		
-		FizzStrategy myFizzStrategy = new FizzStrategy();
-		FizzPrinter myFizzPrinter = new FizzPrinter();
+		LoopComponentFactory myLoopComponentFactory = new LoopComponentFactory();
+		LoopInitializer myLoopInitializer = myLoopComponentFactory.createLoopInitializer();
+		LoopCondition myLoopCondition = myLoopComponentFactory.createLoopCondition();
+		LoopStep myLoopStep = myLoopComponentFactory.createLoopStep();
 		
-		BuzzStrategy myBuzzStrategy = new BuzzStrategy();	
-		BuzzPrinter myBuzzPrinter = new BuzzPrinter();
+		IsEvenlyDivisibleStrategyFactory myFizzStrategyFactory = new FizzStrategyFactory();
+		IsEvenlyDivisibleStrategy myFizzStrategy = myFizzStrategyFactory.createIsEvenlyDivisibleStrategy();
+		StringPrinterFactory myFizzStringPrinterFactory = new FizzStringPrinterFactory();
+		StringPrinter myFizzStringPrinter = myFizzStringPrinterFactory.createStringPrinter();
 		
-		NoFizzNoBuzzStrategy myNoFizzNoBuzzStrategy = new NoFizzNoBuzzStrategy();
-		IntPrinter myIntPrinter = new IntPrinter();
+		IsEvenlyDivisibleStrategyFactory myBuzzStrategyFactory = new BuzzStrategyFactory();
+		IsEvenlyDivisibleStrategy myBuzzStrategy = myBuzzStrategyFactory.createIsEvenlyDivisibleStrategy();	
+		StringPrinterFactory myBuzzStringPrinterFactory = new BuzzStringPrinterFactory();
+		StringPrinter myBuzzStringPrinter = myBuzzStringPrinterFactory.createStringPrinter();
 		
-		NewLinePrinter myNewLinePrinter = new NewLinePrinter();
+		IsEvenlyDivisibleStrategyFactory myNoFizzNoBuzzStrategyFactory = new NoFizzNoBuzzStrategyFactory();
+		IsEvenlyDivisibleStrategy myNoFizzNoBuzzStrategy = myNoFizzNoBuzzStrategyFactory.createIsEvenlyDivisibleStrategy();
+		IntegerPrinterFactory myIntIntegerPrinterFactory = new IntIntegerPrinterFactory();
+		IntegerPrinter myIntIntegerPrinter = myIntIntegerPrinterFactory.createPrinter();
+		
+		StringPrinterFactory myNewLineStringPrinterFactory = new NewLineStringPrinterFactory();
+		StringPrinter myNewLinePrinter = myNewLineStringPrinterFactory.createStringPrinter();
 		
 		for (int i = myLoopInitializer.getLoopInitializationPoint(); myLoopCondition.evaluateLoop(i, n); i = myLoopStep.stepLoop(i)) {
 			if (myFizzStrategy.isEvenlyDivisible(i)) { 
-				myFizzPrinter.printFizz();
+				myFizzStringPrinter.print();
 			}
 			if (myBuzzStrategy.isEvenlyDivisible(i)) { 
-				myBuzzPrinter.printBuzz();
+				myBuzzStringPrinter.print();
 			}
 			if (myNoFizzNoBuzzStrategy.isEvenlyDivisible(i)) {
-				myIntPrinter.printInteger(i);
+				myIntIntegerPrinter.printInteger(i);
 			}
-			myNewLinePrinter.printNewLine();
+			myNewLinePrinter.print();
 		}
 	}
 }
