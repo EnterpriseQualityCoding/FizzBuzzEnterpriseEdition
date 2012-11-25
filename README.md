@@ -4,7 +4,7 @@ Enterprise software marks a special high-grade class of software that makes
 careful use of relevant software architecture design principles to build
 particularly customizable and extensible solutions to real problems. This
 project is an example of how the popular FizzBuzz game might be built were it
-subject the high quality standards of enterprise software.
+subject to the high quality standards of enterprise software.
 
 ## FizzBuzz
 
