@@ -6,7 +6,7 @@ public class FizzPrinter {
 
 	public void printFizz() {
 		FizzStringReturner myFizzStringReturner = new FizzStringReturner();
-		System.out.print(myFizzStringReturner.getFizz());
+		System.out.print(myFizzStringReturner.getReturnString());
 	}
 
 }

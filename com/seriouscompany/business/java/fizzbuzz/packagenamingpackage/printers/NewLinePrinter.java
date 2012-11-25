@@ -6,7 +6,7 @@ public class NewLinePrinter {
 
 	public void printNewLine() {
 		NewLineStringReturner myNewLineStringReturner = new NewLineStringReturner();
-		String myNewLineString = myNewLineStringReturner.getNewLineString();
+		String myNewLineString = myNewLineStringReturner.getReturnString();
 		System.out.print(myNewLineString);
 	}
 	

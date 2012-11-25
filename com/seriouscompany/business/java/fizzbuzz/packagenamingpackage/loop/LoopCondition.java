@@ -5,8 +5,8 @@ public class LoopCondition {
 		if (i < n) {
 			return true;
 		} else if (i == n) {
-                        return true;
-                } else {
+			return true;
+		} else {
 			return false;
 		}
 	}
