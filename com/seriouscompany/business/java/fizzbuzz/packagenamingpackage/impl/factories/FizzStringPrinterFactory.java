@@ -2,7 +2,6 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.fact
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.printers.FizzStringPrinter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.StringPrinterFactory;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.StringStringReturnerFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.printers.StringPrinter;
 
 public class FizzStringPrinterFactory implements StringPrinterFactory {
