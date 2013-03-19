@@ -1,0 +1,36 @@
+apply {
+  plugin 'application'
+  plugin 'java'
+}
+ 
+repositories {
+  mavenCentral()
+}
+ 
+dependencies {
+  compile 'commons-logging:commons-logging:1.1.1'
+  testCompile group: 'junit', name: 'junit', version: '4.+'
+}
+ 
+jar {
+  baseName = 'fizzbuzz'
+}
+ 
+javadoc {
+  options.encoding = "UTF-8"
+  appName = 'FizzBuzz Enterprise Edition'
+  project.configure(options) {
+    memberLevel = org.gradle.external.javadoc.JavadocMemberLevel.PROTECTED
+    charSet = "UTF-8"
+    docTitle = "$appName"
+    windowTitle = "$appName"
+    header = "<b>$appName</b>"
+    author = "true"
+    use = "true"
+  }
+}
+ 
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+ 
+mainClassName = "com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.Main"
+manifest.mainAttributes("Main-Class" : "com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.Main")
