@@ -6,13 +6,9 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.io.StringReader;
 
 public class FizzBuzzTest {
 	private PrintStream out;
