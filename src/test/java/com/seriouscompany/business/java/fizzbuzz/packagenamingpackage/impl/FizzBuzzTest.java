@@ -1,3 +1,5 @@
+package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,8 +13,6 @@ import java.io.InputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.StringReader;
-
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.FizzBuzz;
 
 public class FizzBuzzTest {
 	private PrintStream out;
