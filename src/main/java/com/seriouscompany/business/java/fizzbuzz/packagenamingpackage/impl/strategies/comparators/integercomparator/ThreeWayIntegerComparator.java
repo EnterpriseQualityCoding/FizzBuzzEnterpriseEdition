@@ -9,7 +9,8 @@ public class ThreeWayIntegerComparator {
 		} else if (nFirstInteger > nSecondInteger) {
 			return ThreeWayIntegerComparisonResult.FirstIsGreaterThanSecond;
 		} else {
-			throw new IllegalStateException("The integers could not be compared.");
+			// If the integers cannot be compared, then something is seriously wrong with the numbers.
+			throw new UnsupportedOperationException("The integers could not be compared.");
 		}
 	}
 }
