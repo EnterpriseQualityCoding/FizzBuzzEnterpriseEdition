@@ -7,10 +7,10 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public class IntegerIntegerPrinter implements IntegerPrinter {
 
-	public void printInteger(int i) {
+	public void printInteger(int theInteger) {
 		IntegerStringReturnerFactory myIntegerIntegerStringReturnerFactory = new IntegerIntegerStringReturnerFactory();
 		IntegerStringReturner myIntegerStringReturner = myIntegerIntegerStringReturnerFactory.createIntegerStringReturner();
-		String myIntegerString = myIntegerStringReturner.getIntegerReturnString(i); 
+		String myIntegerString = myIntegerStringReturner.getIntegerReturnString(theInteger); 
 		System.out.print(myIntegerString);
 	}
 

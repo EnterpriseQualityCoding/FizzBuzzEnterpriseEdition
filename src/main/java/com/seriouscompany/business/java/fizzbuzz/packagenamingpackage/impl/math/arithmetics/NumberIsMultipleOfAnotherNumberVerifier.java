@@ -4,12 +4,16 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.comparators.integercomparator.ThreeWayIntegerComparator;
 
 public class NumberIsMultipleOfAnotherNumberVerifier {
-	public static boolean numberIsMultipleOfAnotherNumber(int number, int anotherNumber) {
-		ThreeWayIntegerComparisonResult validationResult =
-			ThreeWayIntegerComparator.Compare(((int)(number / anotherNumber)) * anotherNumber, number);
-		if (validationResult == ThreeWayIntegerComparisonResult.FirstEqualsSecond) {
-			return true;
-		} else {
+	public static boolean numberIsMultipleOfAnotherNumber(int nFirstNumber, int nSecondNumber) {
+		try{
+			ThreeWayIntegerComparisonResult validationResult =
+				ThreeWayIntegerComparator.Compare((IntegerDivider.divide(nFirstNumber, nSecondNumber)) * nSecondNumber, nFirstNumber);
+			if (validationResult == ThreeWayIntegerComparisonResult.FirstEqualsSecond) {
+				return true;
+			} else {
+				return false;
+			}
+		} catch( ArithmeticException ae ){
 			return false;
 		}
 	}

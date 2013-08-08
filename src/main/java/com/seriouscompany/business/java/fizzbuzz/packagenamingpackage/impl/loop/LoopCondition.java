@@ -4,8 +4,8 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.comparators.integercomparator.ThreeWayIntegerComparator;
 
 public class LoopCondition {
-	public boolean evaluateLoop(int i, int n) {
-		ThreeWayIntegerComparisonResult comparisonResult = ThreeWayIntegerComparator.Compare(i, n);
+	public boolean evaluateLoop(int nCurrentNumber, int nTotalCount) {
+		ThreeWayIntegerComparisonResult comparisonResult = ThreeWayIntegerComparator.Compare(nCurrentNumber, nTotalCount);
 		if (comparisonResult == ThreeWayIntegerComparisonResult.FirstIsLessThanSecond) {
 			return true;
 		} else if (comparisonResult == ThreeWayIntegerComparisonResult.FirstEqualsSecond) {

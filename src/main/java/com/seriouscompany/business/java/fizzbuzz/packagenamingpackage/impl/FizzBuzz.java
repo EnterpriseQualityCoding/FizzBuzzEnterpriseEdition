@@ -19,7 +19,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.IsEvenlyDivisibleStrategy;
 
 public class FizzBuzz {
-	public void fizzbuzz(int n) {
+	public void fizzbuzz(int nTotalCount) {
 		
 		LoopComponentFactory myLoopComponentFactory = new LoopComponentFactory();
 		LoopInitializer myLoopInitializer = myLoopComponentFactory.createLoopInitializer();
@@ -44,15 +44,15 @@ public class FizzBuzz {
 		StringPrinterFactory myNewLineStringPrinterFactory = new NewLineStringPrinterFactory();
 		StringPrinter myNewLinePrinter = myNewLineStringPrinterFactory.createStringPrinter();
 		
-		for (int i = myLoopInitializer.getLoopInitializationPoint(); myLoopCondition.evaluateLoop(i, n); i = myLoopStep.stepLoop(i)) {
-			if (myFizzStrategy.isEvenlyDivisible(i)) { 
+		for (int nCurrentNumber = myLoopInitializer.getLoopInitializationPoint(); myLoopCondition.evaluateLoop(nCurrentNumber, nTotalCount); nCurrentNumber = myLoopStep.stepLoop(nCurrentNumber)) {
+			if (myFizzStrategy.isEvenlyDivisible(nCurrentNumber)) { 
 				myFizzStringPrinter.print();
 			}
-			if (myBuzzStrategy.isEvenlyDivisible(i)) { 
+			if (myBuzzStrategy.isEvenlyDivisible(nCurrentNumber)) { 
 				myBuzzStringPrinter.print();
 			}
-			if (myNoFizzNoBuzzStrategy.isEvenlyDivisible(i)) {
-				myIntIntegerPrinter.printInteger(i);
+			if (myNoFizzNoBuzzStrategy.isEvenlyDivisible(nCurrentNumber)) {
+				myIntIntegerPrinter.printInteger(nCurrentNumber);
 			}
 			myNewLinePrinter.print();
 		}

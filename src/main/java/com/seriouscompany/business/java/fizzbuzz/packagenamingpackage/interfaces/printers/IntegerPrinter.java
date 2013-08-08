@@ -2,6 +2,6 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 
 public interface IntegerPrinter {
 
-	public void printInteger(int i);
+	public void printInteger(int theInteger);
 
 }
