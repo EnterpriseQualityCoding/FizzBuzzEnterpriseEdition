@@ -4,8 +4,8 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public class IntegerIntegerStringReturner implements IntegerStringReturner {
 
-	public String getIntegerReturnString(int i) {
-		Integer myInteger = new Integer(i);
+	public String getIntegerReturnString(int theInteger) {
+		Integer myInteger = new Integer(theInteger);
 		StringBuilder myStringBuilder = new StringBuilder(myInteger.toString());
 		String myString = myStringBuilder.toString();
 		return new String(myString);

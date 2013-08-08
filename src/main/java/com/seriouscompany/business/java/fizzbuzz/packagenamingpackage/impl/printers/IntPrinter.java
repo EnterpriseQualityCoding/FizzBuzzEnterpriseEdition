@@ -5,9 +5,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public class IntPrinter {
 
-	public void printInteger(int i) {
+	public void printInteger(int theInteger) {
 		IntegerStringReturner myIntegerIntegerStringReturner = new IntegerIntegerStringReturner();
-		String myIntegerString = myIntegerIntegerStringReturner.getIntegerReturnString(i); 
+		String myIntegerString = myIntegerIntegerStringReturner.getIntegerReturnString(theInteger); 
 		System.out.print(myIntegerString);
 	}
 
