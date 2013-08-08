@@ -6,7 +6,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 public class NumberIsMultipleOfAnotherNumberVerifier {
 	public static boolean numberIsMultipleOfAnotherNumber(int nFirstNumber, int nSecondNumber) {
 		ThreeWayIntegerComparisonResult validationResult =
-			ThreeWayIntegerComparator.Compare(((int)(nFirstNumber / nSecondNumber)) * nSecondNumber, nFirstNumber);
+			ThreeWayIntegerComparator.Compare((IntegerDivider.divide(nFirstNumber, nSecondNumber)) * nSecondNumber, nFirstNumber);
 		if (validationResult == ThreeWayIntegerComparisonResult.FirstEqualsSecond) {
 			return true;
 		} else {
