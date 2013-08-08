@@ -5,8 +5,8 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.math.arithmetics.NumberIsMultipleOfAnotherNumberVerifier;
 
 public class FizzStrategy implements IsEvenlyDivisibleStrategy {
-	public boolean isEvenlyDivisible(int i) {
-		if (NumberIsMultipleOfAnotherNumberVerifier.numberIsMultipleOfAnotherNumber(i, FizzStrategyConstants.FIZZ_INTEGER_CONSTANT_VALUE)) {
+	public boolean isEvenlyDivisible(int theInteger) {
+		if (NumberIsMultipleOfAnotherNumberVerifier.numberIsMultipleOfAnotherNumber(theInteger, FizzStrategyConstants.FIZZ_INTEGER_CONSTANT_VALUE)) {
 			return true;
 		} else {
 			return false;

@@ -4,8 +4,8 @@ public class LoopStep {
 
 	private static final int LOOP_INC_VALUE = 1;
 	
-	public int stepLoop(int i) {
-		return i + LoopStep.LOOP_INC_VALUE;
+	public int stepLoop(int nCurrentNumber) {
+		return nCurrentNumber + LoopStep.LOOP_INC_VALUE;
 	}
 
 }
