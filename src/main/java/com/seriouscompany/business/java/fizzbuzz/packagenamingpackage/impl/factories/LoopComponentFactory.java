@@ -15,6 +15,11 @@ public class LoopComponentFactory {
 		return myLoopInitializer;
 	}
 	
+	public LoopFinalizer createLoopFinalizer(int nLoopFinalValue) {
+		LoopFinalizer myLoopFinalizer = new LoopFinalizer(nLoopFinalValue);
+		return myLoopFinalizer;
+	}
+
 	public LoopStep createLoopStep() {
 		LoopStep myLoopStep = new LoopStep();
 		return myLoopStep;
