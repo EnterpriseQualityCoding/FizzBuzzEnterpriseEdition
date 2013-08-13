@@ -16,7 +16,12 @@ public class IntegerDivider {
 			double dbFirstNumber = (double) nFirstInteger;
 			double dbSecondNumber = (double) nSecondInteger;
 			double dbQuotient = dbFirstNumber / dbSecondNumber;
-			double dbRoundedQuotient = Math.floor(dbQuotient);
+			double dbRoundedQuotient = 0;
+			if(dbQuotient < 0){
+				dbRoundedQuotient = Math.ceil(dbQuotient);
+			else if(dbQuotient > 0){
+				dbRoundedQuotient = Math.floor(dbQuotient);
+			}
 			int nIntegerQuotient = (int) dbRoundedQuotient;
 			return nIntegerQuotient;
 		}
