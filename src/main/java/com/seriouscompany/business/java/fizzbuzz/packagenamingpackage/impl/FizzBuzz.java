@@ -23,6 +23,7 @@ public class FizzBuzz {
 		
 		LoopComponentFactory myLoopComponentFactory = new LoopComponentFactory();
 		LoopInitializer myLoopInitializer = myLoopComponentFactory.createLoopInitializer();
+		LoopFinalizer myLoopFinalizer = myLoopComponentFactory.createLoopFinalizer(nTotalCount);
 		LoopCondition myLoopCondition = myLoopComponentFactory.createLoopCondition();
 		LoopStep myLoopStep = myLoopComponentFactory.createLoopStep();
 		
@@ -44,7 +45,7 @@ public class FizzBuzz {
 		StringPrinterFactory myNewLineStringPrinterFactory = new NewLineStringPrinterFactory();
 		StringPrinter myNewLinePrinter = myNewLineStringPrinterFactory.createStringPrinter();
 		
-		for (int nCurrentNumber = myLoopInitializer.getLoopInitializationPoint(); myLoopCondition.evaluateLoop(nCurrentNumber, nTotalCount); nCurrentNumber = myLoopStep.stepLoop(nCurrentNumber)) {
+		for (int nCurrentNumber = myLoopInitializer.getLoopInitializationPoint(); myLoopCondition.evaluateLoop(nCurrentNumber, myLoopFinalizer.getLoopFinalizationPoint()); nCurrentNumber = myLoopStep.stepLoop(nCurrentNumber)) {
 			if (myFizzStrategy.isEvenlyDivisible(nCurrentNumber)) { 
 				myFizzStringPrinter.print();
 			}
