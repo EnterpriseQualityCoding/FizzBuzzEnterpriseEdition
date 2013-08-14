@@ -1,14 +1,15 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.math.arithmetics;
 
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.comparators.integercomparator.ThreeWayIntegerComparisonResult;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.comparators.integercomparator.ThreeWayIntegerComparator;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.comparators.integercomparator.IntegerForEqualityComparator;
 
 public class NumberIsMultipleOfAnotherNumberVerifier {
 	public static boolean numberIsMultipleOfAnotherNumber(int nFirstNumber, int nSecondNumber) {
 		try{
-			ThreeWayIntegerComparisonResult validationResult =
-				ThreeWayIntegerComparator.Compare((IntegerDivider.divide(nFirstNumber, nSecondNumber)) * nSecondNumber, nFirstNumber);
-			if (validationResult == ThreeWayIntegerComparisonResult.FirstEqualsSecond) {
+			int nDivideFirstIntegerBySecondIntegerResult =
+				(IntegerDivider.divide(nFirstNumber, nSecondNumber));
+			int nMultiplyDivisionResultBySecondIntegerResult =
+				nDivideFirstIntegerBySecondIntegerResult * nSecondNumber;
+			if (IntegerForEqualityComparator.areTwoIntegersEqual(nMultiplyDivisionResultBySecondIntegerResult, nFirstNumber)) {
 				return true;
 			} else {
 				return false;
