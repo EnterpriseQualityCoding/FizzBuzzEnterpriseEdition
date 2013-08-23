@@ -7,10 +7,10 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 public class EnterpriseGradeFizzBuzzSolutionStrategyFactory implements FizzBuzzSolutionStrategyFactory {
 
 	@Override
-	public FizzBuzzSolutionStrategy createFizzBuzzSolutionStrategy(); {
+	public FizzBuzzSolutionStrategy createFizzBuzzSolutionStrategy() {
 		FizzBuzzSolutionStrategy myEnterpriseGradeStrategy =
 			new EnterpriseGradeFizzBuzzSolutionStrategy();
-		return myFizzStrategy;
+		return myEnterpriseGradeStrategy;
 	}
 
 }
