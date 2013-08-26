@@ -22,7 +22,7 @@ public class IntegerDivider {
 			double dbRoundedQuotient = 0;
 			if(FirstIsSmallerThanSecondDoubleComparator.FirstIsSmallerThanSecond(dbQuotient, 0)){
 				dbRoundedQuotient = Math.ceil(dbQuotient);
-			else if(FirstIsLargerThanSecondDoubleComparator.FirstIsLargerThanSecond(dbQuotient, 0)){
+			}else if(FirstIsLargerThanSecondDoubleComparator.FirstIsLargerThanSecond(dbQuotient, 0)){
 				dbRoundedQuotient = Math.floor(dbQuotient);
 			}
 			int nIntegerQuotient = DoubleToIntConverter.Convert(dbRoundedQuotient);

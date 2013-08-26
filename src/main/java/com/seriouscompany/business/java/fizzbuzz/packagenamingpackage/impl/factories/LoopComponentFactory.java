@@ -1,6 +1,7 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories;
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.loop.LoopCondition;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.loop.LoopFinalizer;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.loop.LoopInitializer;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.loop.LoopStep;
 
