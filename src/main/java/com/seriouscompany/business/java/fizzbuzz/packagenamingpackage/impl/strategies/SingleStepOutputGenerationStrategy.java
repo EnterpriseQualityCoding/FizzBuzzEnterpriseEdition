@@ -13,6 +13,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.printers.IntegerPrinter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.printers.StringPrinter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.IsEvenlyDivisibleStrategy;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.SingleStepOutputGenerationParameter;
 
 public class SingleStepOutputGenerationStrategy {
 
@@ -47,15 +48,16 @@ public class SingleStepOutputGenerationStrategy {
 		myNewLinePrinter = myNewLineStringPrinterFactory.createStringPrinter();
 	}
 
-	public void performGenerationForCurrentStep(int nCurrentStepNumber) {
-		if (myFizzStrategy.isEvenlyDivisible(nCurrentStepNumber)) {
+	public void performGenerationForCurrentStep(SingleStepOutputGenerationParameter generationParameter) {
+		int nGenerationParameter = generationParameter.retrieveIntegerValue();
+		if (myFizzStrategy.isEvenlyDivisible(nGenerationParameter)) {
 			myFizzStringPrinter.print();
 		}
-		if (myBuzzStrategy.isEvenlyDivisible(nCurrentStepNumber)) {
+		if (myBuzzStrategy.isEvenlyDivisible(nGenerationParameter)) {
 			myBuzzStringPrinter.print();
 		}
-		if (myNoFizzNoBuzzStrategy.isEvenlyDivisible(nCurrentStepNumber)) {
-			myIntIntegerPrinter.printInteger(nCurrentStepNumber);
+		if (myNoFizzNoBuzzStrategy.isEvenlyDivisible(nGenerationParameter)) {
+			myIntIntegerPrinter.printInteger(nGenerationParameter);
 		}
 		myNewLinePrinter.print();
 	}
