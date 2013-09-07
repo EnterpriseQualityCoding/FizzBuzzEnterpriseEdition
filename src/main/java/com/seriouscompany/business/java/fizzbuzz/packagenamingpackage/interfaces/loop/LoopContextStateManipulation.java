@@ -1,6 +1,6 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.loop;
 
-public interface LoopContextStateManipuation {
+public interface LoopContextStateManipulation {
 
 	public void start();
 	public boolean shouldProceed();
