@@ -7,7 +7,7 @@ public class LoopContextStateRetrievalToSingleStepOutputGenerationAdapter implem
 
 	private LoopContextStateRetrieval myRetrievalObjectToAdapt;
 
-	public LoopContextStateRetrievalToSingleStepOutputGenerationAdapter(LoopContextStepRetrieval retrievalToAdapt) {
+	public LoopContextStateRetrievalToSingleStepOutputGenerationAdapter(LoopContextStateRetrieval retrievalToAdapt) {
 		myRetrievalObjectToAdapt = retrievalToAdapt;
 	}
 
