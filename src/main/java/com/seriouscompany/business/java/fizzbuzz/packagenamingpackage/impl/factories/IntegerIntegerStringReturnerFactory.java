@@ -9,7 +9,7 @@ public class IntegerIntegerStringReturnerFactory implements
 
 	@Override
 	public IntegerStringReturner createIntegerStringReturner() {
-		IntegerIntegerStringReturner myIntegerIntegerStringReturner = new IntegerIntegerStringReturner();
+		final IntegerIntegerStringReturner myIntegerIntegerStringReturner = new IntegerIntegerStringReturner();
 		return myIntegerIntegerStringReturner;
 	}
 

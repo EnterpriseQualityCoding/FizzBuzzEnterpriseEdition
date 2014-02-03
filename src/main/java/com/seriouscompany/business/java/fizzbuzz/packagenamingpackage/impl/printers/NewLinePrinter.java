@@ -5,8 +5,8 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strin
 public class NewLinePrinter {
 
 	public void printNewLine() {
-		NewLineStringReturner myNewLineStringReturner = new NewLineStringReturner();
-		String myNewLineString = myNewLineStringReturner.getReturnString();
+		final NewLineStringReturner myNewLineStringReturner = new NewLineStringReturner();
+		final String myNewLineString = myNewLineStringReturner.getReturnString();
 		System.out.print(myNewLineString);
 	}
 	

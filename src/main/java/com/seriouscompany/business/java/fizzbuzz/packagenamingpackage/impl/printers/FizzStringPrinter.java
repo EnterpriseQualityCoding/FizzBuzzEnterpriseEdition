@@ -8,8 +8,8 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 public class FizzStringPrinter implements StringPrinter {
 
 	public void print() {
-		StringStringReturnerFactory myFizzStringReturnerFactory = new FizzStringReturnerFactory();
-		StringStringReturner myFizzStringReturner = myFizzStringReturnerFactory.createStringStringReturner();
+		final StringStringReturnerFactory myFizzStringReturnerFactory = new FizzStringReturnerFactory();
+		final StringStringReturner myFizzStringReturner = myFizzStringReturnerFactory.createStringStringReturner();
 		System.out.print(myFizzStringReturner.getReturnString());
 	}
 

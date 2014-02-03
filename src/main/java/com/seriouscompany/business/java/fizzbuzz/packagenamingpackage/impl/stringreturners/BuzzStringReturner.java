@@ -5,8 +5,8 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 public class BuzzStringReturner implements StringStringReturner {
 
 	public String getReturnString() {
-		StringBuilder myStringBuilder = new StringBuilder("Buzz");
-		String myString = myStringBuilder.toString();
+		final StringBuilder myStringBuilder = new StringBuilder("Buzz");
+		final String myString = myStringBuilder.toString();
 		return new String(myString);
 	}
 	

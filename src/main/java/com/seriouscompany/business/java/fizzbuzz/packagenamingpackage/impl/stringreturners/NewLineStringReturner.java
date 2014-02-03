@@ -5,9 +5,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 public class NewLineStringReturner implements StringStringReturner {
 	
 	public String getReturnString() {
-		String systemDefaultNewLineString = System.getProperty("line.separator");
-		StringBuilder myStringBuilder = new StringBuilder(systemDefaultNewLineString);
-		String myString = myStringBuilder.toString();
+		final String systemDefaultNewLineString = System.getProperty("line.separator");
+		final StringBuilder myStringBuilder = new StringBuilder(systemDefaultNewLineString);
+		final String myString = myStringBuilder.toString();
 		return new String(myString);
 	}
 }

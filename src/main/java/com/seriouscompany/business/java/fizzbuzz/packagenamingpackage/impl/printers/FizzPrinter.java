@@ -5,7 +5,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strin
 public class FizzPrinter {
 
 	public void printFizz() {
-		FizzStringReturner myFizzStringReturner = new FizzStringReturner();
+		final FizzStringReturner myFizzStringReturner = new FizzStringReturner();
 		System.out.print(myFizzStringReturner.getReturnString());
 	}
 

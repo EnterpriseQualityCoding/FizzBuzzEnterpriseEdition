@@ -8,7 +8,7 @@ public class EnterpriseGradeFizzBuzzSolutionStrategyFactory implements FizzBuzzS
 
 	@Override
 	public FizzBuzzSolutionStrategy createFizzBuzzSolutionStrategy() {
-		FizzBuzzSolutionStrategy myEnterpriseGradeStrategy =
+		final FizzBuzzSolutionStrategy myEnterpriseGradeStrategy =
 			new EnterpriseGradeFizzBuzzSolutionStrategy();
 		return myEnterpriseGradeStrategy;
 	}

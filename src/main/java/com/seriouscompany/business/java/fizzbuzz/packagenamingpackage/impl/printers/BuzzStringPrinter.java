@@ -7,8 +7,8 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public class BuzzStringPrinter implements StringPrinter {
 	public void print() {
-		StringStringReturnerFactory myBuzzStringReturnerFactory = new BuzzStringReturnerFactory();
-		StringStringReturner myBuzzStringReturner = myBuzzStringReturnerFactory.createStringStringReturner();
+		final StringStringReturnerFactory myBuzzStringReturnerFactory = new BuzzStringReturnerFactory();
+		final StringStringReturner myBuzzStringReturner = myBuzzStringReturnerFactory.createStringStringReturner();
 		System.out.print(myBuzzStringReturner.getReturnString());
 	}
 }

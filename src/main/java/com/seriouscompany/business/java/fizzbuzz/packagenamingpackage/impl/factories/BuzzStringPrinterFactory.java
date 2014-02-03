@@ -8,7 +8,7 @@ public class BuzzStringPrinterFactory implements StringPrinterFactory {
 
 	@Override
 	public StringPrinter createStringPrinter() {
-		StringPrinter myBuzzStringPrinter = new BuzzStringPrinter();
+		final StringPrinter myBuzzStringPrinter = new BuzzStringPrinter();
 		return myBuzzStringPrinter;
 	}
 

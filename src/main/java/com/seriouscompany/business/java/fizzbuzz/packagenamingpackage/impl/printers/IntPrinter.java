@@ -6,8 +6,8 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 public class IntPrinter {
 
 	public void printInteger(int theInteger) {
-		IntegerStringReturner myIntegerIntegerStringReturner = new IntegerIntegerStringReturner();
-		String myIntegerString = myIntegerIntegerStringReturner.getIntegerReturnString(theInteger); 
+		final IntegerStringReturner myIntegerIntegerStringReturner = new IntegerIntegerStringReturner();
+		final String myIntegerString = myIntegerIntegerStringReturner.getIntegerReturnString(theInteger); 
 		System.out.print(myIntegerString);
 	}
 

@@ -8,9 +8,9 @@ public class EnterpriseGradeFizzBuzzSolutionStrategy implements FizzBuzzSolution
 
 	@Override
 	public void runSolution(int nFizzBuzzUpperLimit) {
-		LoopContext loopContext = new LoopContext(nFizzBuzzUpperLimit);
-		SingleStepPayload stepPayload = new SingleStepPayload();
-		LoopRunner loopRunner = new LoopRunner(loopContext, loopContext, stepPayload);
+		final LoopContext loopContext = new LoopContext(nFizzBuzzUpperLimit);
+		final SingleStepPayload stepPayload = new SingleStepPayload();
+		final LoopRunner loopRunner = new LoopRunner(loopContext, loopContext, stepPayload);
 		loopRunner.runLoop();
 	}
 }

@@ -8,7 +8,7 @@ public class BuzzStringReturnerFactory implements StringStringReturnerFactory {
 
 	@Override
 	public StringStringReturner createStringStringReturner() {
-		BuzzStringReturner myBuzzStringReturner = new BuzzStringReturner();
+		final BuzzStringReturner myBuzzStringReturner = new BuzzStringReturner();
 		return myBuzzStringReturner;
 	}
 

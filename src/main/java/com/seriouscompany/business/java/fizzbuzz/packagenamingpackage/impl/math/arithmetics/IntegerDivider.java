@@ -16,16 +16,16 @@ public class IntegerDivider {
 		if (denominatorEqualsZero) {
 			throw new ArithmeticException("An attempt was made to divide by zero.");
 		}else{
-			double dbFirstNumber = IntToDoubleConverter.Convert(nFirstInteger);
-			double dbSecondNumber = IntToDoubleConverter.Convert(nSecondInteger);
-			double dbQuotient = dbFirstNumber / dbSecondNumber;
+			final double dbFirstNumber = IntToDoubleConverter.Convert(nFirstInteger);
+			final double dbSecondNumber = IntToDoubleConverter.Convert(nSecondInteger);
+			final double dbQuotient = dbFirstNumber / dbSecondNumber;
 			double dbRoundedQuotient = 0;
 			if(FirstIsSmallerThanSecondDoubleComparator.FirstIsSmallerThanSecond(dbQuotient, 0)){
 				dbRoundedQuotient = Math.ceil(dbQuotient);
 			}else if(FirstIsLargerThanSecondDoubleComparator.FirstIsLargerThanSecond(dbQuotient, 0)){
 				dbRoundedQuotient = Math.floor(dbQuotient);
 			}
-			int nIntegerQuotient = DoubleToIntConverter.Convert(dbRoundedQuotient);
+			final int nIntegerQuotient = DoubleToIntConverter.Convert(dbRoundedQuotient);
 			return nIntegerQuotient;
 		}
 	}

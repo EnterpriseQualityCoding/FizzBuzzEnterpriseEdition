@@ -8,9 +8,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 public class NewLineStringPrinter implements StringPrinter {
 
 	public void print() {
-		StringStringReturnerFactory myNewLineStringReturnerFactory = new NewLineStringReturnerFactory();
-		StringStringReturner myNewLineStringReturner = myNewLineStringReturnerFactory.createStringStringReturner();
-		String myNewLineString = myNewLineStringReturner.getReturnString();
+		final StringStringReturnerFactory myNewLineStringReturnerFactory = new NewLineStringReturnerFactory();
+		final StringStringReturner myNewLineStringReturner = myNewLineStringReturnerFactory.createStringStringReturner();
+		final String myNewLineString = myNewLineStringReturner.getReturnString();
 		System.out.print(myNewLineString);
 	}
 	

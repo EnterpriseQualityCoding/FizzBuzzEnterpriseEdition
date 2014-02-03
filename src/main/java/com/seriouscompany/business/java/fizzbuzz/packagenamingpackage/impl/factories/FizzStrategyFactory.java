@@ -8,7 +8,7 @@ public class FizzStrategyFactory implements IsEvenlyDivisibleStrategyFactory {
 
 	@Override
 	public IsEvenlyDivisibleStrategy createIsEvenlyDivisibleStrategy() {
-		FizzStrategy myFizzStrategy = new FizzStrategy();
+		final FizzStrategy myFizzStrategy = new FizzStrategy();
 		return myFizzStrategy;
 	}
 
