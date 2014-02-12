@@ -13,4 +13,9 @@ public class FizzStringPrinter implements StringPrinter {
 		System.out.print(myFizzStringReturner.getReturnString());
 	}
 
+	@Override
+	public void printValue(Object value) {
+		print();
+	}
+
 }
