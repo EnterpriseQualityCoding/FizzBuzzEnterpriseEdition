@@ -1,5 +1,5 @@
 # FizzBuzzEnterpriseEdition
-[![Build Status](https://travis-ci.org/wfreeman/FizzBuzzEnterpriseEdition.png?branch=master)](https://travis-ci.org/wfreeman/cq)
+[![Build Status](https://travis-ci.org/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition.png?branch=master)](https://travis-ci.org/EnterpriseQualityCoding/cq)
 
 Enterprise software marks a special high-grade class of software that makes
 careful use of relevant software architecture design principles to build
