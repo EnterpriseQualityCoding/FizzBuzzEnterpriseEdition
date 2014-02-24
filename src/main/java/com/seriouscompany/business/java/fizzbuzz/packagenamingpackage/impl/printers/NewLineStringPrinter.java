@@ -13,5 +13,10 @@ public class NewLineStringPrinter implements StringPrinter {
 		String myNewLineString = myNewLineStringReturner.getReturnString();
 		System.out.print(myNewLineString);
 	}
+
+	@Override
+	public void printValue(Object value) {
+		print();
+	}
 	
 }

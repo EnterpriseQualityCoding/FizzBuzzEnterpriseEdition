@@ -11,4 +11,9 @@ public class BuzzStringPrinter implements StringPrinter {
 		StringStringReturner myBuzzStringReturner = myBuzzStringReturnerFactory.createStringStringReturner();
 		System.out.print(myBuzzStringReturner.getReturnString());
 	}
+
+	@Override
+	public void printValue(Object value) {
+		print();
+	}
 }
