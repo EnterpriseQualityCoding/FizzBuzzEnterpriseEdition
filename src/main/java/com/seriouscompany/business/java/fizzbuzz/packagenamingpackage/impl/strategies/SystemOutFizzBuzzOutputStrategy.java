@@ -7,12 +7,17 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public class SystemOutFizzBuzzOutputStrategy implements FizzBuzzOutputStrategy {
 
-	public static final OutputStream OUTPUT_STREAM = System.out;
+	public final OutputStream outputStream;
+	
+	public SystemOutFizzBuzzOutputStrategy() {
+		outputStream = System.out;
+	}
 
 	@Override
 	public void output(String output) throws IOException {
 
-		OUTPUT_STREAM.write(output.getBytes());
+		outputStream.write(output.getBytes());
+		outputStream.flush();
 
 	}
 
