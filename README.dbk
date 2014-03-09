@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book xml:id="readme_book" xmlns="http://docbook.org/ns/docbook" version="5.0">
+    <title>FizzBuzzEnterpriseEdition</title>
+    <chapter xml:id="Prologue">
+        <title>Prologue</title>
+        <para>
+            <ulink url="https://travis-ci.org/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition.png?branch=master">Build Status</ulink>
+        </para>
+        <para>Enterprise software marks a special high-grade class of software that makes careful use of relevant software architecture design principles to build particularly customizable and extensible solutions to real problems. This project is an example of how the popular FizzBuzz game might be built were it subject to the high quality standards of enterprise software.</para>
+    </chapter>
+    <chapter xml:id="FizzBuzz">
+        <title>FizzBuzz</title>
+        <para>FizzBuzz is a game that has gained in popularity as a programming assignment to weed out non-programmers during job interviews. The object of the assignment is less about solving it correctly according to the below rules and more about showing the programmer understands basic, necessary tools such as <computeroutput>if</computeroutput>-/<computeroutput>else</computeroutput>-statements and loops. The rules of FizzBuzz are as follows:</para>
+        <para>For numbers 1 through 100,</para>
+        <itemizedlist>
+            <listitem>
+                <para>if the number is divisible by 3 print Fizz;</para>
+            </listitem>
+            <listitem>
+                <para>if the number is divisible by 5 print Buzz;</para>
+            </listitem>
+            <listitem>
+                <para>if the number is divisible by 3 and 5 (15) print FizzBuzz;</para>
+            </listitem>
+            <listitem>
+                <para>else, print the number.</para>
+            </listitem>
+        </itemizedlist>
+    </chapter>
+</book>
