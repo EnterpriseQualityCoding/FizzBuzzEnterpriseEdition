@@ -28,4 +28,9 @@ public class FizzStringPrinter implements StringPrinter {
 		}
 	}
 
+	@Override
+	public void printValue(Object value) {
+		print();
+	}
+
 }

@@ -27,4 +27,10 @@ public class BuzzStringPrinter implements StringPrinter {
 			// We're the enterprise...we don't get exceptions!
 		}
 	}
+
+	@Override
+	public void printValue(Object value) {
+		print();
+		
+	}
 }
