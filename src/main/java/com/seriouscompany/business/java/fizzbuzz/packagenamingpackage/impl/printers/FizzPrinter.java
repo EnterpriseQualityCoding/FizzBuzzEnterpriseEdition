@@ -15,7 +15,7 @@ public class FizzPrinter {
 	}
 
 	public void printFizz() {
-		FizzStringReturner myFizzStringReturner = new FizzStringReturner();
+		final FizzStringReturner myFizzStringReturner = new FizzStringReturner();
 		try {
 			this.outputStrategy.output(myFizzStringReturner.getReturnString());
 		} catch (Exception e) {

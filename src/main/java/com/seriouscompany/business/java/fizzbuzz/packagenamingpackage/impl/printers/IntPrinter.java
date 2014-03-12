@@ -16,8 +16,8 @@ public class IntPrinter {
 	}
 
 	public void printInteger(int theInteger) {
-		IntegerStringReturner myIntegerIntegerStringReturner = new IntegerIntegerStringReturner();
-		String myIntegerString = myIntegerIntegerStringReturner
+		final IntegerStringReturner myIntegerIntegerStringReturner = new IntegerIntegerStringReturner();
+		final String myIntegerString = myIntegerIntegerStringReturner
 				.getIntegerReturnString(theInteger);
 		try {
 			this.outputStrategy.output(myIntegerString);

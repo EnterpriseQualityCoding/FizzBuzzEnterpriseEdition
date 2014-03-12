@@ -7,9 +7,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 
 public class FizzBuzz {
 	public void fizzbuzz(int nFizzBuzzUpperLimit) {
-		FizzBuzzSolutionStrategyFactory mySolutionStrategyFactory =
+		final FizzBuzzSolutionStrategyFactory mySolutionStrategyFactory =
 			new EnterpriseGradeFizzBuzzSolutionStrategyFactory();
-		FizzBuzzSolutionStrategy mySolutionStrategy =
+		final FizzBuzzSolutionStrategy mySolutionStrategy =
 			mySolutionStrategyFactory.createFizzBuzzSolutionStrategy();
 		mySolutionStrategy.runSolution(nFizzBuzzUpperLimit);
 	}

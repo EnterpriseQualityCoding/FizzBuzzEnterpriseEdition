@@ -8,7 +8,7 @@ public class FizzStringPrinterFactory implements StringPrinterFactory {
 
 	@Override
 	public StringPrinter createStringPrinter() {
-		StringPrinter myFizzStringPrinter = new FizzStringPrinter();
+		final StringPrinter myFizzStringPrinter = new FizzStringPrinter();
 		return myFizzStringPrinter;
 	}
 

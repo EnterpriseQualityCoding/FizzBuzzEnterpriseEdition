@@ -9,7 +9,7 @@ public class NewLineStringReturnerFactory implements
 
 	@Override
 	public StringStringReturner createStringStringReturner() {
-		StringStringReturner myNewLineStringReturner = new NewLineStringReturner();
+		final StringStringReturner myNewLineStringReturner = new NewLineStringReturner();
 		return myNewLineStringReturner;
 	}
 

@@ -13,7 +13,7 @@ public class LoopContext implements LoopContextStateManipulation, LoopContextSta
 	int myCurrentControlParameterValue;
 
 	public LoopContext(int nLoopControlParameterFinalValue) {
-		LoopComponentFactory myLoopComponentFactory = new LoopComponentFactory();
+		final LoopComponentFactory myLoopComponentFactory = new LoopComponentFactory();
 		myLoopInitializer = myLoopComponentFactory.createLoopInitializer();
 		myLoopFinalizer = myLoopComponentFactory.createLoopFinalizer(nLoopControlParameterFinalValue);
 		myLoopCondition = myLoopComponentFactory.createLoopCondition();

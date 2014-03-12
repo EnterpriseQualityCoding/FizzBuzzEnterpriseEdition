@@ -18,10 +18,10 @@ public class NewLineStringPrinter implements StringPrinter {
 	}
 
 	public void print() {
-		StringStringReturnerFactory myNewLineStringReturnerFactory = new NewLineStringReturnerFactory();
-		StringStringReturner myNewLineStringReturner = myNewLineStringReturnerFactory
+		final StringStringReturnerFactory myNewLineStringReturnerFactory = new NewLineStringReturnerFactory();
+		final StringStringReturner myNewLineStringReturner = myNewLineStringReturnerFactory
 				.createStringStringReturner();
-		String myNewLineString = myNewLineStringReturner.getReturnString();
+		final String myNewLineString = myNewLineStringReturner.getReturnString();
 		try {
 			this.outputStrategy.output(myNewLineString);
 		} catch (Exception e) {

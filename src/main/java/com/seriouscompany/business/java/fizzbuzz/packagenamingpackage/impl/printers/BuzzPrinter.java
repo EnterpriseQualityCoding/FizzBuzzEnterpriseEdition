@@ -15,7 +15,7 @@ public class BuzzPrinter {
 	}
 
 	public void printBuzz() {
-		BuzzStringReturner myBuzzStringReturner = new BuzzStringReturner();
+		final BuzzStringReturner myBuzzStringReturner = new BuzzStringReturner();
 		try {
 			this.outputStrategy.output(myBuzzStringReturner.getReturnString());
 		} catch (Exception e) {

@@ -8,7 +8,7 @@ public class BuzzStrategyFactory implements IsEvenlyDivisibleStrategyFactory {
 
 	@Override
 	public IsEvenlyDivisibleStrategy createIsEvenlyDivisibleStrategy() {
-		BuzzStrategy myBuzzStrategy = new BuzzStrategy();
+		final BuzzStrategy myBuzzStrategy = new BuzzStrategy();
 		return myBuzzStrategy;
 	}
 

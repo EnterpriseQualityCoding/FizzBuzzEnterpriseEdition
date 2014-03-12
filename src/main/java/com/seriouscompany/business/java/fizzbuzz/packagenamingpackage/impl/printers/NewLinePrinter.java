@@ -15,8 +15,8 @@ public class NewLinePrinter {
 	}
 
 	public void printNewLine() {
-		NewLineStringReturner myNewLineStringReturner = new NewLineStringReturner();
-		String myNewLineString = myNewLineStringReturner.getReturnString();
+		final NewLineStringReturner myNewLineStringReturner = new NewLineStringReturner();
+		final String myNewLineString = myNewLineStringReturner.getReturnString();
 		try {
 			this.outputStrategy.output(myNewLineString);
 		} catch (Exception e) {

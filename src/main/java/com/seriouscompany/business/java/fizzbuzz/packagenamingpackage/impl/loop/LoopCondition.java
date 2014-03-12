@@ -5,7 +5,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 
 public class LoopCondition {
 	public boolean evaluateLoop(int nCurrentNumber, int nTotalCount) {
-		ThreeWayIntegerComparisonResult comparisonResult = ThreeWayIntegerComparator.Compare(nCurrentNumber, nTotalCount);
+		final ThreeWayIntegerComparisonResult comparisonResult = ThreeWayIntegerComparator.Compare(nCurrentNumber, nTotalCount);
 		if (comparisonResult == ThreeWayIntegerComparisonResult.FirstIsLessThanSecond) {
 			return true;
 		} else if (comparisonResult == ThreeWayIntegerComparisonResult.FirstEqualsSecond) {

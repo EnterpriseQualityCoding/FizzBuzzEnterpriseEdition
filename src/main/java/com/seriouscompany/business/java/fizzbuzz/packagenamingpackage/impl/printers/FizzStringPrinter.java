@@ -18,8 +18,8 @@ public class FizzStringPrinter implements StringPrinter {
 	}
 
 	public void print() {
-		StringStringReturnerFactory myFizzStringReturnerFactory = new FizzStringReturnerFactory();
-		StringStringReturner myFizzStringReturner = myFizzStringReturnerFactory
+		final StringStringReturnerFactory myFizzStringReturnerFactory = new FizzStringReturnerFactory();
+		final StringStringReturner myFizzStringReturner = myFizzStringReturnerFactory
 				.createStringStringReturner();
 		try {
 			this.outputStrategy.output(myFizzStringReturner.getReturnString());

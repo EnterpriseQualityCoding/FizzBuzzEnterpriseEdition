@@ -29,27 +29,27 @@ public class SingleStepOutputGenerationStrategy {
 	private StringPrinter myNewLinePrinter;
 
 	public SingleStepOutputGenerationStrategy() {
-		IsEvenlyDivisibleStrategyFactory myFizzStrategyFactory = new FizzStrategyFactory();
+		final IsEvenlyDivisibleStrategyFactory myFizzStrategyFactory = new FizzStrategyFactory();
 		myFizzStrategy = myFizzStrategyFactory.createIsEvenlyDivisibleStrategy();
-		StringPrinterFactory myFizzStringPrinterFactory = new FizzStringPrinterFactory();
+		final StringPrinterFactory myFizzStringPrinterFactory = new FizzStringPrinterFactory();
 		myFizzStringPrinter = myFizzStringPrinterFactory.createStringPrinter();
 
-		IsEvenlyDivisibleStrategyFactory myBuzzStrategyFactory = new BuzzStrategyFactory();
+		final IsEvenlyDivisibleStrategyFactory myBuzzStrategyFactory = new BuzzStrategyFactory();
 		myBuzzStrategy = myBuzzStrategyFactory.createIsEvenlyDivisibleStrategy();
-		StringPrinterFactory myBuzzStringPrinterFactory = new BuzzStringPrinterFactory();
+		final StringPrinterFactory myBuzzStringPrinterFactory = new BuzzStringPrinterFactory();
 		myBuzzStringPrinter = myBuzzStringPrinterFactory.createStringPrinter();
 
-		IsEvenlyDivisibleStrategyFactory myNoFizzNoBuzzStrategyFactory = new NoFizzNoBuzzStrategyFactory();
+		final IsEvenlyDivisibleStrategyFactory myNoFizzNoBuzzStrategyFactory = new NoFizzNoBuzzStrategyFactory();
 		myNoFizzNoBuzzStrategy = myNoFizzNoBuzzStrategyFactory.createIsEvenlyDivisibleStrategy();
-		IntegerPrinterFactory myIntIntegerPrinterFactory = new IntIntegerPrinterFactory();
+		final IntegerPrinterFactory myIntIntegerPrinterFactory = new IntIntegerPrinterFactory();
 		myIntIntegerPrinter = myIntIntegerPrinterFactory.createPrinter();
 
-		StringPrinterFactory myNewLineStringPrinterFactory = new NewLineStringPrinterFactory();
+		final StringPrinterFactory myNewLineStringPrinterFactory = new NewLineStringPrinterFactory();
 		myNewLinePrinter = myNewLineStringPrinterFactory.createStringPrinter();
 	}
 
 	public void performGenerationForCurrentStep(SingleStepOutputGenerationParameter generationParameter) {
-		int nGenerationParameter = generationParameter.retrieveIntegerValue();
+		final int nGenerationParameter = generationParameter.retrieveIntegerValue();
 		if (myFizzStrategy.isEvenlyDivisible(nGenerationParameter)) {
 			myFizzStringPrinter.print();
 		}

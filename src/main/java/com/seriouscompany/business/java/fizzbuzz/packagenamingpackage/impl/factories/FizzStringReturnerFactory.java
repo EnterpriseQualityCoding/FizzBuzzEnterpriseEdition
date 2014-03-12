@@ -8,7 +8,7 @@ public class FizzStringReturnerFactory implements StringStringReturnerFactory {
 
 	@Override
 	public StringStringReturner createStringStringReturner() {
-		FizzStringReturner myFizzStringReturner = new FizzStringReturner();
+		final FizzStringReturner myFizzStringReturner = new FizzStringReturner();
 		return myFizzStringReturner;
 	}
 

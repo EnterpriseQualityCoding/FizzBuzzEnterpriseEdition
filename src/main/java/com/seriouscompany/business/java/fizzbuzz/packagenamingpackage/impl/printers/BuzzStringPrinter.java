@@ -18,8 +18,8 @@ public class BuzzStringPrinter implements StringPrinter {
 	}
 
 	public void print() {
-		StringStringReturnerFactory myBuzzStringReturnerFactory = new BuzzStringReturnerFactory();
-		StringStringReturner myBuzzStringReturner = myBuzzStringReturnerFactory
+		final StringStringReturnerFactory myBuzzStringReturnerFactory = new BuzzStringReturnerFactory();
+		final StringStringReturner myBuzzStringReturner = myBuzzStringReturnerFactory
 				.createStringStringReturner();
 		try {
 			this.outputStrategy.output(myBuzzStringReturner.getReturnString());
