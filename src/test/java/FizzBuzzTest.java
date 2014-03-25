@@ -34,7 +34,7 @@ public class FizzBuzzTest {
 		BufferedOutputStream bos = new BufferedOutputStream(baos);
 		System.setOut(new PrintStream(bos));
 
-		fb.fizzbuzz(n);
+		fb.fizzBuzz(n);
 
 		System.out.flush();
 		assertEquals(s, baos.toString());
