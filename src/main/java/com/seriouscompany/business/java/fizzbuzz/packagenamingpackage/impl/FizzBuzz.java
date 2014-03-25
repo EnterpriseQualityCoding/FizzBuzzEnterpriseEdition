@@ -6,7 +6,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.EnterpriseGradeFizzBuzzSolutionStrategy;
 
 public class FizzBuzz {
-	public void fizzbuzz(int nFizzBuzzUpperLimit) {
+	public void fizzBuzz(int nFizzBuzzUpperLimit) {
 		final FizzBuzzSolutionStrategyFactory mySolutionStrategyFactory =
 			new EnterpriseGradeFizzBuzzSolutionStrategyFactory();
 		final FizzBuzzSolutionStrategy mySolutionStrategy =
