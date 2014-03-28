@@ -8,7 +8,7 @@ To handle a lot of clients we must use something web scalable. Everyone of cours
 
 Look at this:
 
-![benchmark](https://github.com/schfkt/FizzBuzzEnterpriseEdition/blob/master/images/benchmark.png "Amazingly fast and scalable node.js can handle a lot of requests")
+![benchmark](https://raw.githubusercontent.com/schfkt/FizzBuzzEnterpriseEdition/master/images/benchmark.png "Amazingly fast and scalable node.js can handle a lot of requests")
 
 This is amazing! So fast and damn scalable!
 
