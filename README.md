@@ -1,10 +1,34 @@
-# FizzBuzzEnterpriseEdition
+# FizzBuzzWebScaleEdition
 
-Enterprise software marks a special high-grade class of software that makes
-careful use of relevant software architecture design principles to build
-particularly customizable and extensible solutions to real problems. This
-project is an example of how the popular FizzBuzz game might be built were it
-subject to the high quality standards of enterprise software.
+Web scalable version of [FizzBuzzEnterprizeEdition](https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition).
+
+To handle a lot of clients we must use something web scalable. Everyone of course heard cool stories about node.js. Some big companies such as Wallmart, Ebay, Groupon already moved from slow, old, nonscalable java to modern, new and web scalable node.js. They cannot be wrong. So, we must too move from java to node.js.
+
+## Benchmarks
+
+Look at this:
+
+![benchmark](https://github.com/schfkt/FizzBuzzEnterpriseEdition/blob/master/images/benchmark.png "Amazingly fast and scalable node.js can handle a lot of requests")
+
+This is amazing! So fast and damn scalable!
+
+For that benchmark I used Apache Benchmark:
+```
+ab -n 50000 -c 1000 http://127.0.0.1:1337/
+```
+
+Let's compare it with java:
+
+```
+> ab -n 50000 -c 1000 java
+ab: invalid URL
+Usage: ab [options] [http[s]://]hostname[:port]/path
+ ....
+```
+
+Java version doesn't work! It cannot handle a lot of requests, in fact it can't handle even one!
+
+So, it is obvious that our migration from java to node.js is right choice.
 
 ## FizzBuzz
 

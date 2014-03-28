@@ -1,0 +1,26 @@
+{
+  "name": "FizzBuzzWebScaleEdition",
+  "private": true,
+  "version": "0.0.1-alpha1",
+  "description": "Web scalable version of FizzBuzzEnterprizeEdition",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/schfkt/FizzBuzzEnterpriseEdition.git"
+  },
+  "keywords": [
+    "web-scale",
+    "enterprize",
+    "fast",
+    "robust"
+  ],
+  "author": "schfkt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/schfkt/FizzBuzzEnterpriseEdition/issues"
+  },
+  "homepage": "https://github.com/schfkt/FizzBuzzEnterpriseEdition"
+}
