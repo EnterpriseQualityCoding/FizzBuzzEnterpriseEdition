@@ -17,6 +17,7 @@ public class IntegerIntegerPrinter implements IntegerPrinter {
 		this.outputStrategy = factory.createOutputStrategy();
 	}
 
+	@Override
 	public void printInteger(int theInteger) {
 		final IntegerStringReturnerFactory myIntegerIntegerStringReturnerFactory = new IntegerIntegerStringReturnerFactory();
 		final IntegerStringReturner myIntegerStringReturner = myIntegerIntegerStringReturnerFactory.createIntegerStringReturner();

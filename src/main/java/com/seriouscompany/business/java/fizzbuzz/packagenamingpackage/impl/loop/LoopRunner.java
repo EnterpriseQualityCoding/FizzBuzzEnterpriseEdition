@@ -6,9 +6,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public class LoopRunner {
 
-	private LoopContextStateManipulation myStateManipulation;
-	private LoopContextStateRetrieval myStateRetrieval;
-	private LoopPayloadExecution myPayload;
+	private final LoopContextStateManipulation myStateManipulation;
+	private final LoopContextStateRetrieval myStateRetrieval;
+	private final LoopPayloadExecution myPayload;
 
 	public LoopRunner(LoopContextStateManipulation stateManipulation,
 						LoopContextStateRetrieval stateRetrieval,

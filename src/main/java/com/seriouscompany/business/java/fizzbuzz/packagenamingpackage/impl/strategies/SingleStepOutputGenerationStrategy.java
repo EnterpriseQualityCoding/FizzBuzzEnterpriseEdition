@@ -17,16 +17,16 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public class SingleStepOutputGenerationStrategy {
 
-	private IsEvenlyDivisibleStrategy myFizzStrategy;
-	private StringPrinter myFizzStringPrinter;
+	private final IsEvenlyDivisibleStrategy myFizzStrategy;
+	private final StringPrinter myFizzStringPrinter;
 
-	private IsEvenlyDivisibleStrategy myBuzzStrategy;
-	private StringPrinter myBuzzStringPrinter;
+	private final IsEvenlyDivisibleStrategy myBuzzStrategy;
+	private final StringPrinter myBuzzStringPrinter;
 
-	private IsEvenlyDivisibleStrategy myNoFizzNoBuzzStrategy;
-	private IntegerPrinter myIntIntegerPrinter;
+	private final IsEvenlyDivisibleStrategy myNoFizzNoBuzzStrategy;
+	private final IntegerPrinter myIntIntegerPrinter;
 
-	private StringPrinter myNewLinePrinter;
+	private final StringPrinter myNewLinePrinter;
 
 	public SingleStepOutputGenerationStrategy() {
 		final IsEvenlyDivisibleStrategyFactory myFizzStrategyFactory = new FizzStrategyFactory();

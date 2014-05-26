@@ -17,6 +17,7 @@ public class BuzzStringPrinter implements StringPrinter {
 		this.outputStrategy = factory.createOutputStrategy();
 	}
 
+	@Override
 	public void print() {
 		final StringStringReturnerFactory myBuzzStringReturnerFactory = new BuzzStringReturnerFactory();
 		final StringStringReturner myBuzzStringReturner = myBuzzStringReturnerFactory

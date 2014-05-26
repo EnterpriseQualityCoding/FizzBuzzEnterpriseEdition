@@ -17,6 +17,7 @@ public class NewLineStringPrinter implements StringPrinter {
 		this.outputStrategy = factory.createOutputStrategy();
 	}
 
+	@Override
 	public void print() {
 		final StringStringReturnerFactory myNewLineStringReturnerFactory = new NewLineStringReturnerFactory();
 		final StringStringReturner myNewLineStringReturner = myNewLineStringReturnerFactory
