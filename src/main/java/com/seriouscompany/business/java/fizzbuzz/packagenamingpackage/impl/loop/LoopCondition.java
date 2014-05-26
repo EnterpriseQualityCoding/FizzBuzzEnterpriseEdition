@@ -8,10 +8,8 @@ public class LoopCondition {
 		final ThreeWayIntegerComparisonResult comparisonResult = ThreeWayIntegerComparator.Compare(nCurrentNumber, nTotalCount);
 		if (comparisonResult == ThreeWayIntegerComparisonResult.FirstIsLessThanSecond) {
 			return true;
-		} else if (comparisonResult == ThreeWayIntegerComparisonResult.FirstEqualsSecond) {
-			return true;
 		} else {
-			return false;
+			return comparisonResult == ThreeWayIntegerComparisonResult.FirstEqualsSecond;
 		}
 	}
 }

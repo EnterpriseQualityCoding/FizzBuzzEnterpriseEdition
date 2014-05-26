@@ -17,6 +17,7 @@ public class FizzStringPrinter implements StringPrinter {
 		this.outputStrategy = factory.createOutputStrategy();
 	}
 
+	@Override
 	public void print() {
 		final StringStringReturnerFactory myFizzStringReturnerFactory = new FizzStringReturnerFactory();
 		final StringStringReturner myFizzStringReturner = myFizzStringReturnerFactory

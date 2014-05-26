@@ -4,11 +4,12 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public class IntegerIntegerStringReturner implements IntegerStringReturner {
 
+	@Override
 	public String getIntegerReturnString(int theInteger) {
-		final Integer myInteger = new Integer(theInteger);
+		final Integer myInteger = theInteger;
 		final StringBuilder myStringBuilder = new StringBuilder(myInteger.toString());
 		final String myString = myStringBuilder.toString();
-		return new String(myString);
+		return myString;
 	}
 
 }

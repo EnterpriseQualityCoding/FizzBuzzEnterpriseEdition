@@ -4,10 +4,6 @@ public class IntegerForEqualityComparator {
 	public static boolean areTwoIntegersEqual(int nFirstInteger, int nSecondInteger) {
 		ThreeWayIntegerComparisonResult comparisonResult =
 			ThreeWayIntegerComparator.Compare(nFirstInteger, nSecondInteger);
-		if (comparisonResult == ThreeWayIntegerComparisonResult.FirstEqualsSecond) {
-			return true;
-		} else {
-			return false;
-		}
+		return comparisonResult == ThreeWayIntegerComparisonResult.FirstEqualsSecond;
 	}
 }
