@@ -28,4 +28,14 @@ public class IntegerIntegerPrinter implements IntegerPrinter {
 		}
 	}
 
+	@Override
+	public void print() {
+		throw new UnsupportedOperationException("com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.printers.IntegerIntegerPrinter.print()");
+	}
+
+	@Override
+	public void printValue(Object value) {
+		printInteger((Integer)value);
+	}
+
 }

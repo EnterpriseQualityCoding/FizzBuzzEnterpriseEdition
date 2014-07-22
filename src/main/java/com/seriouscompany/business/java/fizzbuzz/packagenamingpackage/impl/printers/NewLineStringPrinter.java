@@ -29,4 +29,9 @@ public class NewLineStringPrinter implements StringPrinter {
 		}
 	}
 
+	@Override
+	public void printValue(Object value) {
+		print();
+	}
+
 }
