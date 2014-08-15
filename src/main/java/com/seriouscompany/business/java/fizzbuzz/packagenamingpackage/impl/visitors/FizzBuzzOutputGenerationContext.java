@@ -6,11 +6,11 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public class FizzBuzzOutputGenerationContext implements OutputGenerationContext {
 
-	private DataPrinter printer;
-	private IsEvenlyDivisibleStrategy strategy;
+	private final DataPrinter printer;
+	private final IsEvenlyDivisibleStrategy strategy;
 
-	public FizzBuzzOutputGenerationContext(IsEvenlyDivisibleStrategy strategy,
-			DataPrinter printer) {
+	public FizzBuzzOutputGenerationContext(final IsEvenlyDivisibleStrategy strategy,
+			final DataPrinter printer) {
 		super();
 		this.strategy = strategy;
 		this.printer = printer;
