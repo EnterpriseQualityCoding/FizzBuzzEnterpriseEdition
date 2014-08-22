@@ -4,6 +4,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.facto
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.stringreturners.NewLineStringReturner;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.FizzBuzzOutputStrategyFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.adapters.FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter;
 
 public class NewLinePrinter {
 	
@@ -17,11 +18,10 @@ public class NewLinePrinter {
 	public void printNewLine() {
 		final NewLineStringReturner myNewLineStringReturner = new NewLineStringReturner();
 		final String myNewLineString = myNewLineStringReturner.getReturnString();
-		try {
-			this.outputStrategy.output(myNewLineString);
-		} catch (Exception e) {
-			// We're the enterprise...we don't get exceptions!
-		}
+		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
+				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(outputStrategy);
+
+		myOutputAdapter.output(myNewLineString);
 	}
 	
 }

@@ -7,6 +7,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.printers.StringPrinter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.StringStringReturner;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.adapters.FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter;
 
 public class BuzzStringPrinter implements StringPrinter {
 
@@ -21,11 +22,10 @@ public class BuzzStringPrinter implements StringPrinter {
 		final StringStringReturnerFactory myBuzzStringReturnerFactory = new BuzzStringReturnerFactory();
 		final StringStringReturner myBuzzStringReturner = myBuzzStringReturnerFactory
 				.createStringStringReturner();
-		try {
-			this.outputStrategy.output(myBuzzStringReturner.getReturnString());
-		} catch (Exception e) {
-			// We're the enterprise...we don't get exceptions!
-		}
+		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
+				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(outputStrategy);
+
+		myOutputAdapter.output(myBuzzStringReturner.getReturnString());
 	}
 
 	@Override

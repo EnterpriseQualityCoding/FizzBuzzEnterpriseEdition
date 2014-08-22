@@ -5,6 +5,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strin
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.FizzBuzzOutputStrategyFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.IntegerStringReturner;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.adapters.FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter;
 
 public class IntPrinter {
 
@@ -19,11 +20,10 @@ public class IntPrinter {
 		final IntegerStringReturner myIntegerIntegerStringReturner = new IntegerIntegerStringReturner();
 		final String myIntegerString = myIntegerIntegerStringReturner
 				.getIntegerReturnString(theInteger);
-		try {
-			this.outputStrategy.output(myIntegerString);
-		} catch (Exception e) {
-			// We're the enterprise...we don't get exceptions!
-		}
+		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
+				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(outputStrategy);
+
+		myOutputAdapter.output(myIntegerString);
 	}
 
 }

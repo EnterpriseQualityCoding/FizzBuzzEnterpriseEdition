@@ -4,6 +4,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.facto
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.stringreturners.BuzzStringReturner;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.FizzBuzzOutputStrategyFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.adapters.FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter;
 
 public class BuzzPrinter {
 
@@ -16,10 +17,9 @@ public class BuzzPrinter {
 
 	public void printBuzz() {
 		final BuzzStringReturner myBuzzStringReturner = new BuzzStringReturner();
-		try {
-			this.outputStrategy.output(myBuzzStringReturner.getReturnString());
-		} catch (Exception e) {
-			// We're the enterprise...we don't get exceptions!
-		}
+		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
+				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(outputStrategy);
+
+		myOutputAdapter.output(myBuzzStringReturner.getReturnString());
 	}
 }
