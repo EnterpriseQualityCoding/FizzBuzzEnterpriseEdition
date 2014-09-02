@@ -7,7 +7,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 public class NewLineStringPrinterFactory implements StringPrinterFactory {
 
 	@Override
-	public StringPrinter createStringPrinter() {
+	public StringPrinter createPrinter() {
 		final NewLineStringPrinter myNewLineStringPrinter = new NewLineStringPrinter();
 		return myNewLineStringPrinter;
 	}
