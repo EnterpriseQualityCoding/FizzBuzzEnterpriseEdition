@@ -11,8 +11,8 @@ public class LoopComponentFactory {
 		return myLoopCondition;
 	}
 	
-	public LoopInitializer createLoopInitializer() {
-		final LoopInitializer myLoopInitializer = new LoopInitializer();
+	public LoopInitializer createLoopInitializer(int nLoopInitialValue) {
+		final LoopInitializer myLoopInitializer = new LoopInitializer(nLoopInitialValue);
 		return myLoopInitializer;
 	}
 	
@@ -21,8 +21,8 @@ public class LoopComponentFactory {
 		return myLoopFinalizer;
 	}
 
-	public LoopStep createLoopStep() {
-		final LoopStep myLoopStep = new LoopStep();
+	public LoopStep createLoopStep(int nLoopStepValue) {
+		final LoopStep myLoopStep = new LoopStep(nLoopStepValue);
 		return myLoopStep;
 	}
 }

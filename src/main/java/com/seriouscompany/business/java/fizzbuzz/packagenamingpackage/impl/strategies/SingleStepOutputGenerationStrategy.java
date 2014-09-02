@@ -45,7 +45,8 @@ public class SingleStepOutputGenerationStrategy {
 		contexts.add(new FizzBuzzOutputGenerationContext(myNoFizzNoBuzzStrategyFactory.createIsEvenlyDivisibleStrategy(), myIntIntegerPrinterFactory.createPrinter()));
 
 		final StringPrinterFactory myNewLineStringPrinterFactory = new NewLineStringPrinterFactory();
-		myNewLinePrinter = myNewLineStringPrinterFactory.createStringPrinter();	}
+		myNewLinePrinter = myNewLineStringPrinterFactory.createStringPrinter();
+    }
 
 	public void performGenerationForCurrentStep(SingleStepOutputGenerationParameter generationParameter) {
 		final int nGenerationParameter = generationParameter.retrieveIntegerValue();

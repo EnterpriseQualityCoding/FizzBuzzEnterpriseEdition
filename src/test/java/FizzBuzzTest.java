@@ -37,7 +37,7 @@ public class FizzBuzzTest {
 		BufferedOutputStream bos = new BufferedOutputStream(baos);
 		System.setOut(new PrintStream(bos));
 
-		fb.fizzBuzz(n);
+		fb.fizzBuzz(new FizzBuzzParameterFactoryMock(1, n, 1));
 
 		System.out.flush();
 		assertEquals(s, baos.toString());

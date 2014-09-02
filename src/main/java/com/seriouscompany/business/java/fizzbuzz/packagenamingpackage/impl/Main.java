@@ -1,12 +1,12 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl;
 
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.parameters.FizzBuzzUpperLimitParameter;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.parameters.DefaultFizzBuzzUpperLimitParameter;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.FizzBuzzParameterFactory;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.FizzBuzzDefaultParameterFactory;
 
 public class Main {
 	public static void main(String[] args) {
 		final FizzBuzz myFizzBuzz = new FizzBuzz();
-		final FizzBuzzUpperLimitParameter fizzBuzzUpperLimit = new DefaultFizzBuzzUpperLimitParameter();
-		myFizzBuzz.fizzBuzz(fizzBuzzUpperLimit.ObtainUpperLimitValue());
+		final FizzBuzzParameterFactory parameterFactory = new FizzBuzzDefaultParameterFactory();
+		myFizzBuzz.fizzBuzz(parameterFactory);
 	}
 }
