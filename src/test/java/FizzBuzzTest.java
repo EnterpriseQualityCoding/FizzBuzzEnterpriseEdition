@@ -17,6 +17,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.FizzB
 public class FizzBuzzTest {
 	private PrintStream out;
 	private FizzBuzz fb;
+    private String[] precomputedResults = {
+        "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz", "16"
+    };
 
 	@Before
 	public void setUp() {
@@ -40,23 +43,31 @@ public class FizzBuzzTest {
 		assertEquals(s, baos.toString());
 	}
 
+    private String generateFizzBuzzFor(int i) {
+        if ((i % 15) == 0) {
+            return "FizzBuzz";
+        } else if ((i % 5) == 0) {
+            return "Buzz";
+        } else if ((i % 3) == 0) {
+            return "Fizz";
+        } else {
+            return "" + i;
+        }
+    }
+
+    @Test
+    public void testFizzBuzz() throws IOException {
+        String expectedResult = "";
+        for (int i = 1; i <= 100; i++) {
+            expectedResult += generateFizzBuzzFor(i) + "\n";
+            doFizzBuzz(i, expectedResult);
+        }
+    }
+
 	@Test
-	public void testFizzBuzz() throws IOException {
-		doFizzBuzz(1, "1\n");
-		doFizzBuzz(2, "1\n2\n");
-		doFizzBuzz(3, "1\n2\nFizz\n");
-		doFizzBuzz(4, "1\n2\nFizz\n4\n");
-		doFizzBuzz(5, "1\n2\nFizz\n4\nBuzz\n");
-		doFizzBuzz(6, "1\n2\nFizz\n4\nBuzz\nFizz\n");
-		doFizzBuzz(7, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n");
-		doFizzBuzz(8, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\n");
-		doFizzBuzz(9, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\n");
-		doFizzBuzz(10, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n");
-		doFizzBuzz(11, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\n");
-		doFizzBuzz(12, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n");
-		doFizzBuzz(13, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n");
-		doFizzBuzz(14, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\n");
-		doFizzBuzz(15, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n");
-		doFizzBuzz(16, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n");
+	public void testFizzBuzzGenerator() throws IOException {
+        for (int i = 0; i < precomputedResults.length; i++) {
+            assertEquals(precomputedResults[i], generateFizzBuzzFor(i + 1));
+        }
 	}
 }
