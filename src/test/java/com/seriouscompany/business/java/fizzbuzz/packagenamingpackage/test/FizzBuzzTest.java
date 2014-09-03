@@ -1,16 +1,14 @@
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.test;
 import static org.junit.Assert.assertEquals;
 
 import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.io.StringReader;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.FizzBuzz;
 
@@ -30,6 +28,22 @@ public class FizzBuzzTest {
 	@After
 	public void tearDown() {
 		System.setOut(out);
+	}
+
+    @Test
+    public void testFizzBuzz() throws IOException {
+        String expectedResult = "";
+        for (int i = 1; i <= 100; i++) {
+            expectedResult += generateFizzBuzzFor(i) + "\n";
+            doFizzBuzz(i, expectedResult);
+        }
+    }
+
+	@Test
+	public void testFizzBuzzGenerator() throws IOException {
+        for (int i = 0; i < precomputedResults.length; i++) {
+            assertEquals(precomputedResults[i], generateFizzBuzzFor(i + 1));
+        }
 	}
 
 	private void doFizzBuzz(int n, String s) throws IOException {
@@ -55,19 +69,4 @@ public class FizzBuzzTest {
         }
     }
 
-    @Test
-    public void testFizzBuzz() throws IOException {
-        String expectedResult = "";
-        for (int i = 1; i <= 100; i++) {
-            expectedResult += generateFizzBuzzFor(i) + "\n";
-            doFizzBuzz(i, expectedResult);
-        }
-    }
-
-	@Test
-	public void testFizzBuzzGenerator() throws IOException {
-        for (int i = 0; i < precomputedResults.length; i++) {
-            assertEquals(precomputedResults[i], generateFizzBuzzFor(i + 1));
-        }
-	}
 }
