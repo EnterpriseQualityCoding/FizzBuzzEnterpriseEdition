@@ -1,5 +1,8 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.newline;
 
+import java.util.ResourceBundle;
+
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.LocalizationProviderFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.newline.constants.NewLineStrategyConstants;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.newline.factories.NewLineStrategyFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.newline.factories.NewLineStringPrinterFactory;
@@ -18,7 +21,8 @@ public class NewLineModule implements Module {
 
     @Override
     public StringPrinterFactory getPrinterFactory() {
-		final NewLineStringReturnerFactory returnerFactory = new NewLineStringReturnerFactory();
+		final ResourceBundle l10n = LocalizationProviderFactory.createLocalizationProvider(this);
+		final NewLineStringReturnerFactory returnerFactory = new NewLineStringReturnerFactory(l10n);
         final NewLineStringPrinterFactory myNewLineStringPrinterFactory = new NewLineStringPrinterFactory(returnerFactory);
         return myNewLineStringPrinterFactory;
     }

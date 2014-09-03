@@ -1,5 +1,8 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.buzz;
 
+import java.util.ResourceBundle;
+
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.LocalizationProviderFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.buzz.constants.BuzzStrategyConstants;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.buzz.factories.BuzzStrategyFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.buzz.factories.BuzzStringPrinterFactory;
@@ -18,7 +21,8 @@ public class BuzzModule implements Module {
 
     @Override
     public StringPrinterFactory getPrinterFactory() {
-		final BuzzStringReturnerFactory returnerFactory = new BuzzStringReturnerFactory();
+		final ResourceBundle l10n = LocalizationProviderFactory.createLocalizationProvider(this);
+		final BuzzStringReturnerFactory returnerFactory = new BuzzStringReturnerFactory(l10n);
         final BuzzStringPrinterFactory myBuzzStringPrinterFactory = new BuzzStringPrinterFactory(returnerFactory);
         return myBuzzStringPrinterFactory;
     }

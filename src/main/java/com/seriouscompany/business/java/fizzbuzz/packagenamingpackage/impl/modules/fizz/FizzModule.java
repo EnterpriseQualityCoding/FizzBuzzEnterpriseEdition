@@ -1,5 +1,8 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.fizz;
 
+import java.util.ResourceBundle;
+
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.LocalizationProviderFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.fizz.constants.FizzStrategyConstants;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.fizz.factories.FizzStrategyFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.fizz.factories.FizzStringPrinterFactory;
@@ -18,7 +21,8 @@ public class FizzModule implements Module {
 
     @Override
     public StringPrinterFactory getPrinterFactory() {
-		final FizzStringReturnerFactory myFizzStringReturnerFactory = new FizzStringReturnerFactory();
+		final ResourceBundle l10n = LocalizationProviderFactory.createLocalizationProvider(this);
+		final FizzStringReturnerFactory myFizzStringReturnerFactory = new FizzStringReturnerFactory(l10n);
         final FizzStringPrinterFactory myFizzStringPrinterFactory
         		= new FizzStringPrinterFactory(myFizzStringReturnerFactory);
         return myFizzStringPrinterFactory;
