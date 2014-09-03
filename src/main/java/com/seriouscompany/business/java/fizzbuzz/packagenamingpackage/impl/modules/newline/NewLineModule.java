@@ -3,9 +3,10 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modu
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.newline.constants.NewLineStrategyConstants;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.newline.factories.NewLineStrategyFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.newline.factories.NewLineStringPrinterFactory;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.modules.Module;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.newline.factories.NewLineStringReturnerFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.IsEvenlyDivisibleStrategyFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.StringPrinterFactory;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.modules.Module;
 
 public class NewLineModule implements Module {
 
@@ -17,7 +18,8 @@ public class NewLineModule implements Module {
 
     @Override
     public StringPrinterFactory getPrinterFactory() {
-        final NewLineStringPrinterFactory myNewLineStringPrinterFactory = new NewLineStringPrinterFactory();
+		final NewLineStringReturnerFactory returnerFactory = new NewLineStringReturnerFactory();
+        final NewLineStringPrinterFactory myNewLineStringPrinterFactory = new NewLineStringPrinterFactory(returnerFactory);
         return myNewLineStringPrinterFactory;
     }
     

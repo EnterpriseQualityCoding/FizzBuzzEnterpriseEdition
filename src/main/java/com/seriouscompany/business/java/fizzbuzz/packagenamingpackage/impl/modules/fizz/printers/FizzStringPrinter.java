@@ -1,27 +1,22 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.fizz.printers;
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.fizz.factories.FizzStringReturnerFactory;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.fizz.returners.FizzStringReturner;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.adapters.FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.StringStringReturnerFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.printers.StringPrinter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.StringStringReturner;
 
 public class FizzStringPrinter implements StringPrinter {
 
-	private final FizzBuzzOutputStrategy outputStrategy;
+	private FizzStringReturner myFizzStringReturner;
+	private FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter;
 
-	public FizzStringPrinter(FizzBuzzOutputStrategy outputStrategy) {
-		this.outputStrategy = outputStrategy;
+	public FizzStringPrinter(FizzStringReturnerFactory returnerFactory, FizzBuzzOutputStrategy outputStrategy) {
+		myFizzStringReturner = (FizzStringReturner) returnerFactory.createStringStringReturner();
+		myOutputAdapter = new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(outputStrategy);
 	}
 
 	public void print() {
-		final StringStringReturnerFactory myFizzStringReturnerFactory = new FizzStringReturnerFactory();
-		final StringStringReturner myFizzStringReturner = myFizzStringReturnerFactory
-				.createStringStringReturner();
-		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
-				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(outputStrategy);
-
 		myOutputAdapter.output(myFizzStringReturner.getReturnString());
 	}
 

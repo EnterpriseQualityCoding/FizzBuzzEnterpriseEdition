@@ -6,10 +6,15 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
 
 public class BuzzStringPrinterFactory implements StringPrinterFactory {
+	private final BuzzStringReturnerFactory returnerFactory;
 
+	public BuzzStringPrinterFactory(BuzzStringReturnerFactory returnerFactory) {
+		this.returnerFactory = returnerFactory;
+	}
+	
 	@Override
 	public StringPrinter createPrinter(FizzBuzzOutputStrategy outputStrategy) {
-		final StringPrinter myBuzzStringPrinter = new BuzzStringPrinter(outputStrategy);
+		final StringPrinter myBuzzStringPrinter = new BuzzStringPrinter(returnerFactory, outputStrategy);
 		return myBuzzStringPrinter;
 	}
 

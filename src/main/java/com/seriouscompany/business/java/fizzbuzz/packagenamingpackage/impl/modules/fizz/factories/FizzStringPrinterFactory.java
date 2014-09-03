@@ -7,9 +7,15 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public class FizzStringPrinterFactory implements StringPrinterFactory {
 
+	private FizzStringReturnerFactory returnerFactory;
+
+	public FizzStringPrinterFactory(FizzStringReturnerFactory myFizzStringReturnerFactory) {
+		this.returnerFactory = myFizzStringReturnerFactory;
+	}
+
 	@Override
 	public StringPrinter createPrinter(FizzBuzzOutputStrategy outputStrategy) {
-		final StringPrinter myFizzStringPrinter = new FizzStringPrinter(outputStrategy);
+		final StringPrinter myFizzStringPrinter = new FizzStringPrinter(returnerFactory, outputStrategy);
 		return myFizzStringPrinter;
 	}
 

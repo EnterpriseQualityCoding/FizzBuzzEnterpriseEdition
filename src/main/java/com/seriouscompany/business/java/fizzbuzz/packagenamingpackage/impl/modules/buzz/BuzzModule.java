@@ -3,9 +3,10 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modu
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.buzz.constants.BuzzStrategyConstants;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.buzz.factories.BuzzStrategyFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.buzz.factories.BuzzStringPrinterFactory;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.modules.Module;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.buzz.factories.BuzzStringReturnerFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.IsEvenlyDivisibleStrategyFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.StringPrinterFactory;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.modules.Module;
 
 public class BuzzModule implements Module {
 
@@ -17,7 +18,8 @@ public class BuzzModule implements Module {
 
     @Override
     public StringPrinterFactory getPrinterFactory() {
-        final BuzzStringPrinterFactory myBuzzStringPrinterFactory = new BuzzStringPrinterFactory();
+		final BuzzStringReturnerFactory returnerFactory = new BuzzStringReturnerFactory();
+        final BuzzStringPrinterFactory myBuzzStringPrinterFactory = new BuzzStringPrinterFactory(returnerFactory);
         return myBuzzStringPrinterFactory;
     }
     

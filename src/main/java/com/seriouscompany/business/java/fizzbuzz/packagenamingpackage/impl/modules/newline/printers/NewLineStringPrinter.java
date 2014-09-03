@@ -2,26 +2,22 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modu
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.newline.factories.NewLineStringReturnerFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.adapters.FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.StringStringReturnerFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.printers.StringPrinter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.StringStringReturner;
 
 public class NewLineStringPrinter implements StringPrinter {
 
-	private final FizzBuzzOutputStrategy outputStrategy;
+	private StringStringReturner myNewLineStringReturner;
+	private FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter;
 
-	public NewLineStringPrinter(FizzBuzzOutputStrategy outputStrategy) {
-		this.outputStrategy = outputStrategy;
+	public NewLineStringPrinter(NewLineStringReturnerFactory returnerFactory, FizzBuzzOutputStrategy outputStrategy) {
+		myNewLineStringReturner = returnerFactory.createStringStringReturner();
+		myOutputAdapter = new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(outputStrategy);
+
 	}
 
 	public void print() {
-		final StringStringReturnerFactory myNewLineStringReturnerFactory = new NewLineStringReturnerFactory();
-		final StringStringReturner myNewLineStringReturner = myNewLineStringReturnerFactory
-				.createStringStringReturner();
-		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
-				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(outputStrategy);
-
 		myOutputAdapter.output(myNewLineStringReturner.getReturnString());
 	}
 

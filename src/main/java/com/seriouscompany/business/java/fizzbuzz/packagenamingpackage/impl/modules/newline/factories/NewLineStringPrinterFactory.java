@@ -6,10 +6,16 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
 
 public class NewLineStringPrinterFactory implements StringPrinterFactory {
+	
+	private final NewLineStringReturnerFactory returnerFactory;
 
+	public NewLineStringPrinterFactory(NewLineStringReturnerFactory returnerFactory) {
+		this.returnerFactory = returnerFactory;
+	}
+	
 	@Override
 	public StringPrinter createPrinter(FizzBuzzOutputStrategy outputStrategy) {
-		final StringPrinter myNewLineStringPrinter = new NewLineStringPrinter(outputStrategy);
+		final StringPrinter myNewLineStringPrinter = new NewLineStringPrinter(returnerFactory, outputStrategy);
 		return myNewLineStringPrinter;
 	}
 

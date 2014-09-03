@@ -8,18 +8,16 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public class NoFizzNoBuzzIntegerPrinter implements IntegerPrinter {
 	
-	private final FizzBuzzOutputStrategy outputStrategy;
+	private IntegerStringReturner myIntegerStringReturner;
+	private FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter;
 
-	public NoFizzNoBuzzIntegerPrinter(FizzBuzzOutputStrategy outputStrategy) {
-		this.outputStrategy = outputStrategy;
+	public NoFizzNoBuzzIntegerPrinter(NoFizzNoBuzzReturnerFactory returnerFactory, FizzBuzzOutputStrategy outputStrategy) {
+		myIntegerStringReturner = returnerFactory.createIntegerStringReturner();
+		myOutputAdapter = new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(outputStrategy);
 	}
 
 	public void printInteger(int theInteger) {
-		final NoFizzNoBuzzReturnerFactory myIntegerIntegerStringReturnerFactory = new NoFizzNoBuzzReturnerFactory();
-		final IntegerStringReturner myIntegerStringReturner = myIntegerIntegerStringReturnerFactory.createIntegerStringReturner();
 		final String myIntegerString = myIntegerStringReturner.getIntegerReturnString(theInteger); 
-		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
-				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(outputStrategy);
 
 		myOutputAdapter.output(myIntegerString);
 	}
