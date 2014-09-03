@@ -6,7 +6,6 @@ import java.util.List;
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.ModuleRegistry;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.FizzBuzzOutputGenerationContextVisitorFactory;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.NewLineStringPrinterFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.visitors.FizzBuzzOutputGenerationContext;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.modules.Module;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.IntegerPrinterFactory;
@@ -36,9 +35,6 @@ public class SingleStepOutputGenerationStrategy {
 
 		OutputGenerationContextVisitorFactory contextVisitorFactory = new FizzBuzzOutputGenerationContextVisitorFactory();
 		contextVisitor = contextVisitorFactory.createVisitor();
-
-		final StringPrinterFactory myNewLineStringPrinterFactory = new NewLineStringPrinterFactory();
-		myNewLinePrinter = myNewLineStringPrinterFactory.createPrinter();
     }
 
 	public void performGenerationForCurrentStep(SingleStepOutputGenerationParameter generationParameter) {
@@ -48,6 +44,5 @@ public class SingleStepOutputGenerationStrategy {
 			OutputGenerationContext context = iterator.next();
 			contextVisitor.visit(context, nGenerationParameter);
 		}
-		myNewLinePrinter.print();
 	}
 }

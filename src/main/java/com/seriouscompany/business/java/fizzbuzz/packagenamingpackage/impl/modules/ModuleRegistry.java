@@ -3,6 +3,8 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modu
 import java.util.ServiceLoader;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.modules.Module;
 
@@ -13,6 +15,12 @@ public class ModuleRegistry {
             for (Module m : moduleLoader) {
                 modules.add(m);
             }
+            Collections.sort(modules, new Comparator<Module>() {
+                @Override
+                public int compare(Module m1, Module m2) {
+                    return m1.getPriority() - m2.getPriority();
+                }
+            });
         }
         return modules;
     }

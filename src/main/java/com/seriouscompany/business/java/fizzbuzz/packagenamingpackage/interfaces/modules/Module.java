@@ -7,5 +7,6 @@ public interface Module {
 
     public IsEvenlyDivisibleStrategyFactory getStrategyFactory();
     public DataPrinterFactory getPrinterFactory();
-
+    public int getPriority();
+    
 }

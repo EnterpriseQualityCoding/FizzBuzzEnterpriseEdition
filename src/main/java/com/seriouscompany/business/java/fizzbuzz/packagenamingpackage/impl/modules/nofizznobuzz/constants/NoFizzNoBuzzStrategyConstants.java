@@ -4,4 +4,5 @@ public class NoFizzNoBuzzStrategyConstants
 {
 	public static final int NO_BUZZ_INTEGER_CONSTANT_VALUE = 5;
 	public static final int NO_FIZZ_INTEGER_CONSTANT_VALUE = 3;
+    public static final int NOFIZZNOBUZZ_MODULE_PRIORITY = 30;
 }

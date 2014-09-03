@@ -1,6 +1,6 @@
-package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.printers;
+package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.newline.printers;
 
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.NewLineStringReturnerFactory;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.newline.factories.NewLineStringReturnerFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.SystemOutFizzBuzzOutputStrategyFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.FizzBuzzOutputStrategyFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.StringStringReturnerFactory;
@@ -22,16 +22,14 @@ public class NewLineStringPrinter implements StringPrinter {
 		final StringStringReturnerFactory myNewLineStringReturnerFactory = new NewLineStringReturnerFactory();
 		final StringStringReturner myNewLineStringReturner = myNewLineStringReturnerFactory
 				.createStringStringReturner();
-		final String myNewLineString = myNewLineStringReturner.getReturnString();
 		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
 				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(outputStrategy);
 
-		myOutputAdapter.output(myNewLineString);
+		myOutputAdapter.output(myNewLineStringReturner.getReturnString());
 	}
 
 	@Override
 	public void printValue(Object value) {
 		print();
 	}
-
 }

@@ -1,5 +1,6 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.nofizznobuzz;
 
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.nofizznobuzz.constants.NoFizzNoBuzzStrategyConstants;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.nofizznobuzz.factories.NoFizzNoBuzzStrategyFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.modules.nofizznobuzz.factories.NoFizzNoBuzzPrinterFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.modules.Module;
@@ -18,6 +19,11 @@ public class NoFizzNoBuzzModule implements Module {
     public IntegerPrinterFactory getPrinterFactory() {
         final NoFizzNoBuzzPrinterFactory myNoFizzNoBuzzPrinterFactory = new NoFizzNoBuzzPrinterFactory();
         return myNoFizzNoBuzzPrinterFactory;
+    }
+
+    @Override
+    public int getPriority() {
+        return NoFizzNoBuzzStrategyConstants.NOFIZZNOBUZZ_MODULE_PRIORITY;
     }
 
 }
