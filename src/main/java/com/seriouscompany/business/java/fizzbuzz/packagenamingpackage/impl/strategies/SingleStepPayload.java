@@ -6,7 +6,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public class SingleStepPayload implements LoopPayloadExecution {
 
-	SingleStepOutputGenerationStrategy myGenerator;
+	private final SingleStepOutputGenerationStrategy myGenerator;
 
 	public SingleStepPayload() {
 		myGenerator = new SingleStepOutputGenerationStrategy();

@@ -6,11 +6,11 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public class LoopContext implements LoopContextStateManipulation, LoopContextStateRetrieval {
 
-	LoopInitializer myLoopInitializer;
-	LoopFinalizer myLoopFinalizer;
-	LoopCondition myLoopCondition;
-	LoopStep myLoopStep;
-	int myCurrentControlParameterValue;
+	private final LoopInitializer myLoopInitializer;
+    private final LoopFinalizer myLoopFinalizer;
+    private final LoopCondition myLoopCondition;
+    private final LoopStep myLoopStep;
+    private int myCurrentControlParameterValue;
 
 	public LoopContext(int nLoopControlParameterFinalValue) {
 		final LoopComponentFactory myLoopComponentFactory = new LoopComponentFactory();

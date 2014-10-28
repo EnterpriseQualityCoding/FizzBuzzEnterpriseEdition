@@ -9,9 +9,8 @@ public class SystemOutFizzBuzzOutputStrategyFactory implements
 
 	@Override
 	public FizzBuzzOutputStrategy createOutputStrategy() {
-
-		return new SystemOutFizzBuzzOutputStrategy();
-		
+        SystemOutFizzBuzzOutputStrategy outputStrategy = new SystemOutFizzBuzzOutputStrategy();
+        return outputStrategy;
 	}
 
 }

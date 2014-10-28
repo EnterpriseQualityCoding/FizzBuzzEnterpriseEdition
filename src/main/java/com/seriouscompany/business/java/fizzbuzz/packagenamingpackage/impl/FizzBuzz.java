@@ -5,11 +5,11 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzSolutionStrategy;
 
 public class FizzBuzz {
-	public void fizzBuzz(int nFizzBuzzUpperLimit) {
+	public void execute(int nFizzBuzzUpperLimit) {
 		final FizzBuzzSolutionStrategyFactory mySolutionStrategyFactory =
 			new EnterpriseGradeFizzBuzzSolutionStrategyFactory();
 		final FizzBuzzSolutionStrategy mySolutionStrategy =
-			mySolutionStrategyFactory.createFizzBuzzSolutionStrategy();
+			mySolutionStrategyFactory.create();
 		mySolutionStrategy.runSolution(nFizzBuzzUpperLimit);
 	}
 }

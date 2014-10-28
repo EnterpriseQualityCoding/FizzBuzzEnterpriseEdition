@@ -12,15 +12,14 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.visitors.OutputGenerationContextVisitor;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class SingleStepOutputGenerationStrategy {
 
-	private List<OutputGenerationContext> contexts = new ArrayList<OutputGenerationContext>();
-	private OutputGenerationContextVisitor contextVisitor;
+	private final List<OutputGenerationContext> contexts = new ArrayList<OutputGenerationContext>();
+    private final OutputGenerationContextVisitor contextVisitor;
 
-	private StringPrinter myNewLinePrinter;
+    private final StringPrinter myNewLinePrinter;
 
 	public SingleStepOutputGenerationStrategy() {
 		OutputGenerationContextVisitorFactory contextVisitorFactory = new FizzBuzzOutputGenerationContextVisitorFactory();
@@ -42,11 +41,9 @@ public class SingleStepOutputGenerationStrategy {
 
 	public void performGenerationForCurrentStep(SingleStepOutputGenerationParameter generationParameter) {
 		final int nGenerationParameter = generationParameter.retrieveIntegerValue();
-		Iterator<OutputGenerationContext> iterator = contexts.iterator();
-		while(iterator.hasNext()) {
-			OutputGenerationContext context = iterator.next();
-			contextVisitor.visit(context, nGenerationParameter);
-		}
+        for (OutputGenerationContext context : contexts) {
+            contextVisitor.visit(context, nGenerationParameter);
+        }
 		myNewLinePrinter.print();
 	}
 }

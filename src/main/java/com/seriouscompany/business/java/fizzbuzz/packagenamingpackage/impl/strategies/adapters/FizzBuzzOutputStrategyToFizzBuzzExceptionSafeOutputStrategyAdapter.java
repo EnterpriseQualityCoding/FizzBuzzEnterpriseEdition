@@ -20,6 +20,6 @@ public class FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter 
 		}
 	}
 
-	final FizzBuzzOutputStrategy myFizzBuzzOutputStrategyToAdapt;
+	private final FizzBuzzOutputStrategy myFizzBuzzOutputStrategyToAdapt;
 
 }

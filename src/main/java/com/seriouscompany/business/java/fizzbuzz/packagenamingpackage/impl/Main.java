@@ -7,6 +7,6 @@ public class Main {
 	public static void main(String[] args) {
 		final FizzBuzz myFizzBuzz = new FizzBuzz();
 		final FizzBuzzUpperLimitParameter fizzBuzzUpperLimit = new DefaultFizzBuzzUpperLimitParameter();
-		myFizzBuzz.fizzBuzz(fizzBuzzUpperLimit.ObtainUpperLimitValue());
+		myFizzBuzz.execute(fizzBuzzUpperLimit.ObtainUpperLimitValue());
 	}
 }
