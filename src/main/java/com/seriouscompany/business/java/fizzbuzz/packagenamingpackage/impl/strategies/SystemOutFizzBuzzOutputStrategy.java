@@ -1,9 +1,9 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies;
 
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
+
 import java.io.IOException;
 import java.io.OutputStream;
-
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
 
 public class SystemOutFizzBuzzOutputStrategy implements FizzBuzzOutputStrategy {
 

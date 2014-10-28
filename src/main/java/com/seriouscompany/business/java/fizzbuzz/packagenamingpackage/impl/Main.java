@@ -1,7 +1,7 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl;
 
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.parameters.FizzBuzzUpperLimitParameter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.parameters.DefaultFizzBuzzUpperLimitParameter;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.parameters.FizzBuzzUpperLimitParameter;
 
 public class Main {
 	public static void main(String[] args) {
