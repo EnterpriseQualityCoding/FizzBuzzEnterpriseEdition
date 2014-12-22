@@ -10,7 +10,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.adapters.FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter;
 
 public class IntegerIntegerPrinter implements IntegerPrinter {
-	
+
 	private final FizzBuzzOutputStrategy outputStrategy;
 
 	public IntegerIntegerPrinter() {
@@ -21,7 +21,7 @@ public class IntegerIntegerPrinter implements IntegerPrinter {
 	public void printInteger(int theInteger) {
 		final IntegerStringReturnerFactory myIntegerIntegerStringReturnerFactory = new IntegerIntegerStringReturnerFactory();
 		final IntegerStringReturner myIntegerStringReturner = myIntegerIntegerStringReturnerFactory.createIntegerStringReturner();
-		final String myIntegerString = myIntegerStringReturner.getIntegerReturnString(theInteger); 
+		final String myIntegerString = myIntegerStringReturner.getIntegerReturnString(theInteger);
 		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
 				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(outputStrategy);
 
