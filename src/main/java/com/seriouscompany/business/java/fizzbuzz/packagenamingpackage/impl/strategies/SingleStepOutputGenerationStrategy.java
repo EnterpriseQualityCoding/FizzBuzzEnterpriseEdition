@@ -31,7 +31,7 @@ public class SingleStepOutputGenerationStrategy {
 
 	public SingleStepOutputGenerationStrategy() {
 		OutputGenerationContextVisitorFactory contextVisitorFactory = new FizzBuzzOutputGenerationContextVisitorFactory();
-		contextVisitor = contextVisitorFactory.createVisitor(); 
+		contextVisitor = contextVisitorFactory.createVisitor();
 		final IsEvenlyDivisibleStrategyFactory myFizzStrategyFactory = new FizzStrategyFactory();
 		final StringPrinterFactory myFizzStringPrinterFactory = new FizzStringPrinterFactory();
 		contexts.add(new FizzBuzzOutputGenerationContext(myFizzStrategyFactory.createIsEvenlyDivisibleStrategy(), myFizzStringPrinterFactory.createStringPrinter()));
