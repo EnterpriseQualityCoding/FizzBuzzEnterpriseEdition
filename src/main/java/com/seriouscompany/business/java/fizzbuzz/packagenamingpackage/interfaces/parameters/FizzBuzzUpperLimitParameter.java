@@ -2,6 +2,7 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 
 public interface FizzBuzzUpperLimitParameter {
 
-	public int ObtainUpperLimitValue();
+	int ObtainUpperLimitValue();
+
 }
 

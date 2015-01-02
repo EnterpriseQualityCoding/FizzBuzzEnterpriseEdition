@@ -2,6 +2,6 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 
 public interface LoopContextStateRetrieval {
 
-	public int getControlParameter();
+	int getControlParameter();
 
 }

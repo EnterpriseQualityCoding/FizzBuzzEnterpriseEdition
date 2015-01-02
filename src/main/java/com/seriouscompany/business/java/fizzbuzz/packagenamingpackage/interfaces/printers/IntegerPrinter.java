@@ -2,6 +2,6 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 
 public interface IntegerPrinter extends DataPrinter {
 
-	public void printInteger(int theInteger);
+	void printInteger(int theInteger);
 
 }
