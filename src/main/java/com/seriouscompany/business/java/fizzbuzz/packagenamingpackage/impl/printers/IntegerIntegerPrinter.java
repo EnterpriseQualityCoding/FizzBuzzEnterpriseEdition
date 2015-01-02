@@ -14,11 +14,11 @@ public class IntegerIntegerPrinter implements IntegerPrinter {
 	private final FizzBuzzOutputStrategy outputStrategy;
 
 	public IntegerIntegerPrinter() {
-		FizzBuzzOutputStrategyFactory factory = new SystemOutFizzBuzzOutputStrategyFactory();
+		final FizzBuzzOutputStrategyFactory factory = new SystemOutFizzBuzzOutputStrategyFactory();
 		this.outputStrategy = factory.createOutputStrategy();
 	}
 
-	public void printInteger(int theInteger) {
+	public void printInteger(final int theInteger) {
 		final IntegerStringReturnerFactory myIntegerIntegerStringReturnerFactory = new IntegerIntegerStringReturnerFactory();
 		final IntegerStringReturner myIntegerStringReturner = myIntegerIntegerStringReturnerFactory.createIntegerStringReturner();
 		final String myIntegerString = myIntegerStringReturner.getIntegerReturnString(theInteger);
@@ -34,7 +34,7 @@ public class IntegerIntegerPrinter implements IntegerPrinter {
 	}
 
 	@Override
-	public void printValue(Object value) {
+	public void printValue(final Object value) {
 		printInteger((Integer)value);
 	}
 

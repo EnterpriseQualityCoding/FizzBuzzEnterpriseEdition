@@ -12,11 +12,11 @@ public class IntPrinter {
 	private final FizzBuzzOutputStrategy outputStrategy;
 
 	public IntPrinter() {
-		FizzBuzzOutputStrategyFactory factory = new SystemOutFizzBuzzOutputStrategyFactory();
+		final FizzBuzzOutputStrategyFactory factory = new SystemOutFizzBuzzOutputStrategyFactory();
 		this.outputStrategy = factory.createOutputStrategy();
 	}
 
-	public void printInteger(int theInteger) {
+	public void printInteger(final int theInteger) {
 		final IntegerStringReturner myIntegerIntegerStringReturner = new IntegerIntegerStringReturner();
 		final String myIntegerString = myIntegerIntegerStringReturner
 				.getIntegerReturnString(theInteger);

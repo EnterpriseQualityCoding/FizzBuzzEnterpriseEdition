@@ -4,6 +4,6 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public interface IntegerPrinterFactory {
 	
-	public IntegerPrinter createPrinter();
-	
+	IntegerPrinter createPrinter();
+
 }

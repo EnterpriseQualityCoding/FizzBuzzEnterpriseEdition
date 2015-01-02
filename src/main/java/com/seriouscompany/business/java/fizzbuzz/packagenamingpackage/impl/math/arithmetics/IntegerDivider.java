@@ -11,19 +11,19 @@ public class IntegerDivider {
 	public static final int INTEGER_DIVIDE_ZERO_VALUE = 0;
 	public static final int INTEGER_ORIGIN_ZERO_VALUE = 0;
 	
-	public static int divide(int nFirstInteger, int nSecondInteger){
-		boolean denominatorEqualsZero =
+	public static int divide(final int nFirstInteger, final int nSecondInteger){
+		final boolean denominatorEqualsZero =
 			IntegerForEqualityComparator.areTwoIntegersEqual(nSecondInteger, INTEGER_DIVIDE_ZERO_VALUE);
 		if (denominatorEqualsZero) {
 			throw new ArithmeticException("An attempt was made to divide by zero.");
-		}else{
+		} else {
 			final double dbFirstNumber = IntToDoubleConverter.Convert(nFirstInteger);
 			final double dbSecondNumber = IntToDoubleConverter.Convert(nSecondInteger);
 			final double dbQuotient = dbFirstNumber / dbSecondNumber;
 			double dbRoundedQuotient = 0;
-			if(FirstIsSmallerThanSecondDoubleComparator.FirstIsSmallerThanSecond(dbQuotient, INTEGER_ORIGIN_ZERO_VALUE)){
+			if (FirstIsSmallerThanSecondDoubleComparator.FirstIsSmallerThanSecond(dbQuotient, INTEGER_ORIGIN_ZERO_VALUE)) {
 				dbRoundedQuotient = Math.ceil(dbQuotient);
-			}else if(FirstIsLargerThanSecondDoubleComparator.FirstIsLargerThanSecond(dbQuotient, INTEGER_ORIGIN_ZERO_VALUE)){
+			} else if(FirstIsLargerThanSecondDoubleComparator.FirstIsLargerThanSecond(dbQuotient, INTEGER_ORIGIN_ZERO_VALUE)) {
 				dbRoundedQuotient = Math.floor(dbQuotient);
 			}
 			final int nIntegerQuotient = DoubleToIntConverter.Convert(dbRoundedQuotient);

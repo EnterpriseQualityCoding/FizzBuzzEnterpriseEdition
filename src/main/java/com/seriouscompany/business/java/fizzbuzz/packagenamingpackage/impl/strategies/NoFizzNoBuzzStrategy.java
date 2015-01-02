@@ -6,7 +6,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.math.
 
 public class NoFizzNoBuzzStrategy implements IsEvenlyDivisibleStrategy {
 
-	public boolean isEvenlyDivisible(int theInteger) {
+	public boolean isEvenlyDivisible(final int theInteger) {
 		if (!NumberIsMultipleOfAnotherNumberVerifier.numberIsMultipleOfAnotherNumber(theInteger, NoFizzNoBuzzStrategyConstants.NO_FIZZ_INTEGER_CONSTANT_VALUE)) {
 			if (!NumberIsMultipleOfAnotherNumberVerifier.numberIsMultipleOfAnotherNumber(theInteger, NoFizzNoBuzzStrategyConstants.NO_BUZZ_INTEGER_CONSTANT_VALUE)) {
 				return true;

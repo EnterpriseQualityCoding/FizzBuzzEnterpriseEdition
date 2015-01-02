@@ -2,6 +2,6 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 
 public interface SingleStepOutputGenerationParameter {
 
-	public int retrieveIntegerValue();
+	int retrieveIntegerValue();
 
 }

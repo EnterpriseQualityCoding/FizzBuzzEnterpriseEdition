@@ -2,6 +2,6 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 
 public interface FizzBuzzSolutionStrategy {
 
-	public void runSolution(int nFizzBuzzUpperLimit);
+	void runSolution(int nFizzBuzzUpperLimit);
 
 }

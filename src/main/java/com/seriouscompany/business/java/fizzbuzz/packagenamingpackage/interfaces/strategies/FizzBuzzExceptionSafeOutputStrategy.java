@@ -2,6 +2,6 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 
 public interface FizzBuzzExceptionSafeOutputStrategy {
 
-	public void output(String output);
+	void output(String output);
 
 }

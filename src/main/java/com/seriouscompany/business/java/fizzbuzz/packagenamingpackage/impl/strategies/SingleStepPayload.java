@@ -13,7 +13,7 @@ public class SingleStepPayload implements LoopPayloadExecution {
 	}
 
 	@Override
-	public void runLoopPayload(LoopContextStateRetrieval stateRetrieval) {
+	public void runLoopPayload(final LoopContextStateRetrieval stateRetrieval) {
 		final LoopContextStateRetrievalToSingleStepOutputGenerationAdapter adapter =
 			new LoopContextStateRetrievalToSingleStepOutputGenerationAdapter(stateRetrieval);
 		myGenerator.performGenerationForCurrentStep(adapter);

@@ -4,6 +4,6 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public interface StringPrinterFactory {
 	
-	public StringPrinter createStringPrinter();
-	
+	StringPrinter createStringPrinter();
+
 }

@@ -2,6 +2,6 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 
 public interface IsEvenlyDivisibleStrategy {
 	
-	public boolean isEvenlyDivisible(int theInteger);
+	boolean isEvenlyDivisible(int theInteger);
 	
 }

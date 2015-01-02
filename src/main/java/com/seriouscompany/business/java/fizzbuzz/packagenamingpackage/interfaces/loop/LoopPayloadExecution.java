@@ -2,6 +2,6 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 
 public interface LoopPayloadExecution {
 
-	public void runLoopPayload(LoopContextStateRetrieval stateRetrieval);
+	void runLoopPayload(LoopContextStateRetrieval stateRetrieval);
 
 }

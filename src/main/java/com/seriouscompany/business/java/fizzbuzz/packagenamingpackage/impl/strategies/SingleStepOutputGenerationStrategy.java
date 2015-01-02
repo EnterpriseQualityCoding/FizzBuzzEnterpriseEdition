@@ -1,9 +1,5 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.BuzzStrategyFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.BuzzStringPrinterFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.FizzBuzzOutputGenerationContextVisitorFactory;
@@ -22,6 +18,10 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.visitors.OutputGenerationContext;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.visitors.OutputGenerationContextVisitor;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public class SingleStepOutputGenerationStrategy {
 
 	private List<OutputGenerationContext> contexts = new ArrayList<OutputGenerationContext>();
@@ -30,7 +30,7 @@ public class SingleStepOutputGenerationStrategy {
 	private StringPrinter myNewLinePrinter;
 
 	public SingleStepOutputGenerationStrategy() {
-		OutputGenerationContextVisitorFactory contextVisitorFactory = new FizzBuzzOutputGenerationContextVisitorFactory();
+		final OutputGenerationContextVisitorFactory contextVisitorFactory = new FizzBuzzOutputGenerationContextVisitorFactory();
 		contextVisitor = contextVisitorFactory.createVisitor();
 		final IsEvenlyDivisibleStrategyFactory myFizzStrategyFactory = new FizzStrategyFactory();
 		final StringPrinterFactory myFizzStringPrinterFactory = new FizzStringPrinterFactory();
@@ -47,11 +47,11 @@ public class SingleStepOutputGenerationStrategy {
 		final StringPrinterFactory myNewLineStringPrinterFactory = new NewLineStringPrinterFactory();
 		myNewLinePrinter = myNewLineStringPrinterFactory.createStringPrinter();	}
 
-	public void performGenerationForCurrentStep(SingleStepOutputGenerationParameter generationParameter) {
+	public void performGenerationForCurrentStep(final SingleStepOutputGenerationParameter generationParameter) {
 		final int nGenerationParameter = generationParameter.retrieveIntegerValue();
-		Iterator<OutputGenerationContext> iterator = contexts.iterator();
+		final Iterator<OutputGenerationContext> iterator = contexts.iterator();
 		while(iterator.hasNext()) {
-			OutputGenerationContext context = iterator.next();
+			final OutputGenerationContext context = iterator.next();
 			contextVisitor.visit(context, nGenerationParameter);
 		}
 		myNewLinePrinter.print();

@@ -4,5 +4,6 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public interface IsEvenlyDivisibleStrategyFactory {
 	
-	public IsEvenlyDivisibleStrategy createIsEvenlyDivisibleStrategy();
+	IsEvenlyDivisibleStrategy createIsEvenlyDivisibleStrategy();
+
 }
