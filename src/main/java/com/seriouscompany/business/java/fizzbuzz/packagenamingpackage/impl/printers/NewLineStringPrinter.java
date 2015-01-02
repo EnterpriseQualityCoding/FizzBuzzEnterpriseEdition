@@ -14,7 +14,7 @@ public class NewLineStringPrinter implements StringPrinter {
 	private final FizzBuzzOutputStrategy outputStrategy;
 
 	public NewLineStringPrinter() {
-		FizzBuzzOutputStrategyFactory factory = new SystemOutFizzBuzzOutputStrategyFactory();
+		final FizzBuzzOutputStrategyFactory factory = new SystemOutFizzBuzzOutputStrategyFactory();
 		this.outputStrategy = factory.createOutputStrategy();
 	}
 
@@ -30,7 +30,7 @@ public class NewLineStringPrinter implements StringPrinter {
 	}
 
 	@Override
-	public void printValue(Object value) {
+	public void printValue(final Object value) {
 		print();
 	}
 

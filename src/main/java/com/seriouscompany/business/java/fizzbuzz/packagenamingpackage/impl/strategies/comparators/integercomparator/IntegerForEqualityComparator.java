@@ -1,8 +1,8 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.comparators.integercomparator;
 
 public class IntegerForEqualityComparator {
-	public static boolean areTwoIntegersEqual(int nFirstInteger, int nSecondInteger) {
-		ThreeWayIntegerComparisonResult comparisonResult =
+	public static boolean areTwoIntegersEqual(final int nFirstInteger, final int nSecondInteger) {
+		final ThreeWayIntegerComparisonResult comparisonResult =
 			ThreeWayIntegerComparator.Compare(nFirstInteger, nSecondInteger);
 		if (comparisonResult == ThreeWayIntegerComparisonResult.FirstEqualsSecond) {
 			return true;

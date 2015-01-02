@@ -4,7 +4,7 @@ public class LoopFinalizer {
 
 	private final int nStoredLoopFinalValue;
 
-	public LoopFinalizer(int nLoopFinalValue) {
+	public LoopFinalizer(final int nLoopFinalValue) {
 		nStoredLoopFinalValue = nLoopFinalValue;
 	}
 

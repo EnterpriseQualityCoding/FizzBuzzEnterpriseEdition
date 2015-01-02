@@ -7,7 +7,7 @@ public class FizzBuzzOutputGenerationContextVisitor implements
 		OutputGenerationContextVisitor {
 
 	@Override
-	public void visit(OutputGenerationContext context, int nGenerationParameter) {
+	public void visit(final OutputGenerationContext context, final int nGenerationParameter) {
 		if (context.getStrategy().isEvenlyDivisible(nGenerationParameter)) {
 			context.getPrinter().printValue(new Integer(nGenerationParameter));
 		}

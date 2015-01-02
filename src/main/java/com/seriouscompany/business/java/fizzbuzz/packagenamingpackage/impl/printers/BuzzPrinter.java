@@ -11,7 +11,7 @@ public class BuzzPrinter {
 	private final FizzBuzzOutputStrategy outputStrategy;
 
 	public BuzzPrinter() {
-		FizzBuzzOutputStrategyFactory factory = new SystemOutFizzBuzzOutputStrategyFactory();
+		final FizzBuzzOutputStrategyFactory factory = new SystemOutFizzBuzzOutputStrategyFactory();
 		this.outputStrategy = factory.createOutputStrategy();
 	}
 

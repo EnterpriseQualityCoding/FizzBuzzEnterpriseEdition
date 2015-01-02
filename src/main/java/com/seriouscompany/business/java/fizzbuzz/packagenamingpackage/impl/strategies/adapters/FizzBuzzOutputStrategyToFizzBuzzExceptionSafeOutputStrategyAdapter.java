@@ -6,13 +6,13 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 public class FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter implements FizzBuzzExceptionSafeOutputStrategy {
 
 	public FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(
-				FizzBuzzOutputStrategy fizzBuzzOutputStrategyToAdapt)
+				final FizzBuzzOutputStrategy fizzBuzzOutputStrategyToAdapt)
 	{
 		myFizzBuzzOutputStrategyToAdapt = fizzBuzzOutputStrategyToAdapt;	
 	}
 
 	@Override
-	public void output(String outputStringToOutput) {
+	public void output(final String outputStringToOutput) {
 		try {
 			myFizzBuzzOutputStrategyToAdapt.output(outputStringToOutput);
 		} catch (Exception exceptionFromDoingOutput) {

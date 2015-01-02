@@ -10,9 +10,9 @@ public class LoopRunner {
 	private LoopContextStateRetrieval myStateRetrieval;
 	private LoopPayloadExecution myPayload;
 
-	public LoopRunner(LoopContextStateManipulation stateManipulation,
-						LoopContextStateRetrieval stateRetrieval,
-						LoopPayloadExecution payload)
+	public LoopRunner(final LoopContextStateManipulation stateManipulation,
+						final LoopContextStateRetrieval stateRetrieval,
+						final LoopPayloadExecution payload)
 	{
 		myStateManipulation = stateManipulation;
 		myStateRetrieval = stateRetrieval;

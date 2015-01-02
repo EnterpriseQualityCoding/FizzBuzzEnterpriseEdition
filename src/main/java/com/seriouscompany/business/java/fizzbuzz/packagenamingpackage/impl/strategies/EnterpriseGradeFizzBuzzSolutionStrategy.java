@@ -7,7 +7,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.loop.
 public class EnterpriseGradeFizzBuzzSolutionStrategy implements FizzBuzzSolutionStrategy {
 
 	@Override
-	public void runSolution(int nFizzBuzzUpperLimit) {
+	public void runSolution(final int nFizzBuzzUpperLimit) {
 		final LoopContext loopContext = new LoopContext(nFizzBuzzUpperLimit);
 		final SingleStepPayload stepPayload = new SingleStepPayload();
 		final LoopRunner loopRunner = new LoopRunner(loopContext, loopContext, stepPayload);

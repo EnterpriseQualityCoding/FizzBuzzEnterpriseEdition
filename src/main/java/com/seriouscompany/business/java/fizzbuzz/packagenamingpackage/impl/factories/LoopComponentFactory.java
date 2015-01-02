@@ -16,7 +16,7 @@ public class LoopComponentFactory {
 		return myLoopInitializer;
 	}
 	
-	public LoopFinalizer createLoopFinalizer(int nLoopFinalValue) {
+	public LoopFinalizer createLoopFinalizer(final int nLoopFinalValue) {
 		final LoopFinalizer myLoopFinalizer = new LoopFinalizer(nLoopFinalValue);
 		return myLoopFinalizer;
 	}

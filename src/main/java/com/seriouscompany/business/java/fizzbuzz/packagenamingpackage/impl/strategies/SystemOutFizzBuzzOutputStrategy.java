@@ -1,9 +1,9 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies;
 
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
+
 import java.io.IOException;
 import java.io.OutputStream;
-
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
 
 public class SystemOutFizzBuzzOutputStrategy implements FizzBuzzOutputStrategy {
 
@@ -14,7 +14,7 @@ public class SystemOutFizzBuzzOutputStrategy implements FizzBuzzOutputStrategy {
 	}
 
 	@Override
-	public void output(String output) throws IOException {
+	public void output(final String output) throws IOException {
 
 		outputStream.write(output.getBytes());
 		outputStream.flush();

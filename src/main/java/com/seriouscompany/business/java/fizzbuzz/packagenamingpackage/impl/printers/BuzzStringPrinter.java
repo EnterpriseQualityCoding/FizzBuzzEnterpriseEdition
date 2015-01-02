@@ -14,7 +14,7 @@ public class BuzzStringPrinter implements StringPrinter {
 	private final FizzBuzzOutputStrategy outputStrategy;
 
 	public BuzzStringPrinter() {
-		FizzBuzzOutputStrategyFactory factory = new SystemOutFizzBuzzOutputStrategyFactory();
+		final FizzBuzzOutputStrategyFactory factory = new SystemOutFizzBuzzOutputStrategyFactory();
 		this.outputStrategy = factory.createOutputStrategy();
 	}
 
@@ -29,7 +29,7 @@ public class BuzzStringPrinter implements StringPrinter {
 	}
 
 	@Override
-	public void printValue(Object value) {
+	public void printValue(final Object value) {
 		print();
 	}
 }
