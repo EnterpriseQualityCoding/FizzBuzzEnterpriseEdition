@@ -20,6 +20,7 @@ public class IntPrinter {
 		final IntegerStringReturner myIntegerIntegerStringReturner = new IntegerIntegerStringReturner();
 		final String myIntegerString = myIntegerIntegerStringReturner
 				.getIntegerReturnString(theInteger);
+				
 		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
 				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(outputStrategy);
 

@@ -4,5 +4,7 @@ public class IntToDoubleConverter {
 	public static double Convert(int nIntegerToConvert) {
 		double dbConversionResult = (double) nIntegerToConvert;
 		return dbConversionResult;
+
 	}
+	
 }

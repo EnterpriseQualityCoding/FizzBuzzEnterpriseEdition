@@ -8,8 +8,10 @@ public class FizzBuzz {
 	public void fizzBuzz(int nFizzBuzzUpperLimit) {
 		final FizzBuzzSolutionStrategyFactory mySolutionStrategyFactory =
 			new EnterpriseGradeFizzBuzzSolutionStrategyFactory();
+
 		final FizzBuzzSolutionStrategy mySolutionStrategy =
 			mySolutionStrategyFactory.createFizzBuzzSolutionStrategy();
+			
 		mySolutionStrategy.runSolution(nFizzBuzzUpperLimit);
 	}
 }

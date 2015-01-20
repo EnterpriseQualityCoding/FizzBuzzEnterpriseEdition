@@ -22,6 +22,7 @@ public class NewLineStringPrinter implements StringPrinter {
 		final StringStringReturnerFactory myNewLineStringReturnerFactory = new NewLineStringReturnerFactory();
 		final StringStringReturner myNewLineStringReturner = myNewLineStringReturnerFactory
 				.createStringStringReturner();
+				
 		final String myNewLineString = myNewLineStringReturner.getReturnString();
 		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
 				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(outputStrategy);

@@ -9,7 +9,9 @@ public class NoFizzNoBuzzStrategyFactory implements
 
 	@Override
 	public IsEvenlyDivisibleStrategy createIsEvenlyDivisibleStrategy() {
-		final NoFizzNoBuzzStrategy myNoFizzNoBuzzStrategy = new NoFizzNoBuzzStrategy();
+		final NoFizzNoBuzzStrategy myNoFizzNoBuzzStrategy = 
+			new NoFizzNoBuzzStrategy();
+			
 		return myNoFizzNoBuzzStrategy;
 	}
 

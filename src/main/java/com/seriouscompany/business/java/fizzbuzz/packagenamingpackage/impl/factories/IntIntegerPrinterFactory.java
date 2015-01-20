@@ -8,7 +8,9 @@ public class IntIntegerPrinterFactory implements IntegerPrinterFactory {
 
 	@Override
 	public IntegerPrinter createPrinter() {
-		final IntegerIntegerPrinter myIntIntegerPrinter = new IntegerIntegerPrinter();
+		final IntegerIntegerPrinter myIntIntegerPrinter = 
+			new IntegerIntegerPrinter();
+			
 		return myIntIntegerPrinter;
 	}
 
