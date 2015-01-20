@@ -4,5 +4,7 @@ public class DoubleToIntConverter {
 	public static int Convert(double dbDoubleToConvert) {
 		int nConversionResult = (int) dbDoubleToConvert;
 		return nConversionResult;
+
 	}
+	
 }

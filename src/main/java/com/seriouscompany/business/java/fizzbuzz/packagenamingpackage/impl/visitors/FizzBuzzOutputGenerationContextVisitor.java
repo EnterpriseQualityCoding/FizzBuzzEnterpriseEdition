@@ -11,6 +11,7 @@ public class FizzBuzzOutputGenerationContextVisitor implements
 		if (context.getStrategy().isEvenlyDivisible(nGenerationParameter)) {
 			context.getPrinter().printValue(new Integer(nGenerationParameter));
 		}
+		
 	}
 
 }

@@ -9,5 +9,7 @@ public class NewLineStringReturner implements StringStringReturner {
 		final StringBuilder myStringBuilder = new StringBuilder(systemDefaultNewLineString);
 		final String myString = myStringBuilder.toString();
 		return new String(myString);
+
 	}
+
 }

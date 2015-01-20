@@ -6,12 +6,13 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 public class LoopCondition {
 	public boolean evaluateLoop(int nCurrentNumber, int nTotalCount) {
 		final ThreeWayIntegerComparisonResult comparisonResult = ThreeWayIntegerComparator.Compare(nCurrentNumber, nTotalCount);
-		if (comparisonResult == ThreeWayIntegerComparisonResult.FirstIsLessThanSecond) {
+		if (comparisonResult == ThreeWayIntegerComparisonResult.FirstIsLessThanSecond ||
+			comparisonResult == ThreeWayIntegerComparisonResult.FirstEqualsSecond) {
 			return true;
-		} else if (comparisonResult == ThreeWayIntegerComparisonResult.FirstEqualsSecond) {
-			return true;
-		} else {
-			return false;
-		}
+		} 
+
+		return false;
+
 	}
+	
 }

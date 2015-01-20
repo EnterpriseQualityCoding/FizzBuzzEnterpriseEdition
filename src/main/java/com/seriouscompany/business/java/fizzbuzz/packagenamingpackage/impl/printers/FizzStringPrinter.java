@@ -22,6 +22,7 @@ public class FizzStringPrinter implements StringPrinter {
 		final StringStringReturnerFactory myFizzStringReturnerFactory = new FizzStringReturnerFactory();
 		final StringStringReturner myFizzStringReturner = myFizzStringReturnerFactory
 				.createStringStringReturner();
+				
 		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
 				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(outputStrategy);
 

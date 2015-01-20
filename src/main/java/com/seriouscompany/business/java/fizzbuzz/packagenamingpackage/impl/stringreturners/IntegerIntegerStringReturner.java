@@ -9,6 +9,7 @@ public class IntegerIntegerStringReturner implements IntegerStringReturner {
 		final StringBuilder myStringBuilder = new StringBuilder(myIntegerToBeConvertedToString.toString());
 		final String myResultingStringFromIntegerToStringConversion = myStringBuilder.toString();
 		return new String(myResultingStringFromIntegerToStringConversion);
+		
 	}
 
 }

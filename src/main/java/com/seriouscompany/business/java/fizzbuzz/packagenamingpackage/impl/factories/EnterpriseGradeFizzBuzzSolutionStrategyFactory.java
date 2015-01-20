@@ -10,6 +10,7 @@ public class EnterpriseGradeFizzBuzzSolutionStrategyFactory implements FizzBuzzS
 	public FizzBuzzSolutionStrategy createFizzBuzzSolutionStrategy() {
 		final FizzBuzzSolutionStrategy myEnterpriseGradeStrategy =
 			new EnterpriseGradeFizzBuzzSolutionStrategy();
+			
 		return myEnterpriseGradeStrategy;
 	}
 

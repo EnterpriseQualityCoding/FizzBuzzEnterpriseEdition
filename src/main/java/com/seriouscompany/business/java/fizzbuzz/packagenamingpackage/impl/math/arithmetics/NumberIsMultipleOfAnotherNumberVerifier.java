@@ -4,11 +4,13 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 
 public class NumberIsMultipleOfAnotherNumberVerifier {
 	public static boolean numberIsMultipleOfAnotherNumber(int nFirstNumber, int nSecondNumber) {
-		try{
+		try {
 			final int nDivideFirstIntegerBySecondIntegerResult =
 				(IntegerDivider.divide(nFirstNumber, nSecondNumber));
+
 			final int nMultiplyDivisionResultBySecondIntegerResult =
 				nDivideFirstIntegerBySecondIntegerResult * nSecondNumber;
+				
 			if (IntegerForEqualityComparator.areTwoIntegersEqual(nMultiplyDivisionResultBySecondIntegerResult, nFirstNumber)) {
 				return true;
 			} else {

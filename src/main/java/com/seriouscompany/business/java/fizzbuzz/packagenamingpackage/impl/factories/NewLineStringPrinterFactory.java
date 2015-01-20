@@ -8,7 +8,9 @@ public class NewLineStringPrinterFactory implements StringPrinterFactory {
 
 	@Override
 	public StringPrinter createStringPrinter() {
-		final NewLineStringPrinter myNewLineStringPrinter = new NewLineStringPrinter();
+		final NewLineStringPrinter myNewLineStringPrinter = 
+			new NewLineStringPrinter();
+			
 		return myNewLineStringPrinter;
 	}
 

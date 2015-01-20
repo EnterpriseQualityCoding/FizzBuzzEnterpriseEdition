@@ -19,7 +19,9 @@ public class IntegerIntegerPrinter implements IntegerPrinter {
 	}
 
 	public void printInteger(int theInteger) {
-		final IntegerStringReturnerFactory myIntegerIntegerStringReturnerFactory = new IntegerIntegerStringReturnerFactory();
+		final IntegerStringReturnerFactory myIntegerIntegerStringReturnerFactory = 
+			new IntegerIntegerStringReturnerFactory();
+			
 		final IntegerStringReturner myIntegerStringReturner = myIntegerIntegerStringReturnerFactory.createIntegerStringReturner();
 		final String myIntegerString = myIntegerStringReturner.getIntegerReturnString(theInteger);
 		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
@@ -30,7 +32,16 @@ public class IntegerIntegerPrinter implements IntegerPrinter {
 
 	@Override
 	public void print() {
-		throw new UnsupportedOperationException("com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.printers.IntegerIntegerPrinter.print()");
+		throw new UnsupportedOperationException("com." + 
+			"seriouscompany." +
+			"business." +
+			"java." + 
+			"fizzbuzz." + 
+			"packagenamingpackage." + 
+			"impl." + 
+			"printers." + 
+			"IntegerIntegerPrinter." + 
+			"print()");
 	}
 
 	@Override
