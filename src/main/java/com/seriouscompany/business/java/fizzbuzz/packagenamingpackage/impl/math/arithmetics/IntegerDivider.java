@@ -20,7 +20,7 @@ public class IntegerDivider {
 			final double dbFirstNumber = IntToDoubleConverter.Convert(nFirstInteger);
 			final double dbSecondNumber = IntToDoubleConverter.Convert(nSecondInteger);
 			final double dbQuotient = dbFirstNumber / dbSecondNumber;
-			double dbRoundedQuotient = 0;
+			double dbRoundedQuotient = INTEGER_ORIGIN_ZERO_VALUE;
 			if(FirstIsSmallerThanSecondDoubleComparator.FirstIsSmallerThanSecond(dbQuotient, INTEGER_ORIGIN_ZERO_VALUE)){
 				dbRoundedQuotient = Math.ceil(dbQuotient);
 			}else if(FirstIsLargerThanSecondDoubleComparator.FirstIsLargerThanSecond(dbQuotient, INTEGER_ORIGIN_ZERO_VALUE)){
