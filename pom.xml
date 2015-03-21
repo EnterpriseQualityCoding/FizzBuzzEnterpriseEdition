@@ -51,7 +51,7 @@
   <build>
     <resources>
 	  <resource>
-	    <directory>resources/assets/configuration/spring/dependencyinjection/configuration/spring.xml</directory>
+	    <directory>resources/assets/configuration/spring/dependencyinjection/configuration</directory>
 	    <filtering>true</filtering>
 	  </resource>
     </resources>
