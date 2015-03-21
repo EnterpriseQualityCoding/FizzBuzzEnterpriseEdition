@@ -13,6 +13,13 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
+  <resources>
+	<resource>
+	  <directory>resources/assets/configuration/spring/dependencyinjection/configuration/spring.xml</directory>
+	  <filtering>true</filtering>
+	</resource>
+  </resources>
 
   <dependencies>
     <dependency>
