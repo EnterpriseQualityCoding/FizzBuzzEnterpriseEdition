@@ -1,19 +1,32 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.loop.LoopCondition;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.loop.LoopFinalizer;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.loop.LoopInitializer;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.loop.LoopStep;
 
+@Service
 public class LoopComponentFactory {
+	
+	@Autowired
+	LoopCondition _loopCondition;
+	
+	@Autowired
+	LoopInitializer _loopInitializer;
+	
+	@Autowired
+	LoopStep _lootStep;
+	
+	
 	public LoopCondition createLoopCondition() {
-		final LoopCondition myLoopCondition = new LoopCondition();
-		return myLoopCondition;
+		return _loopCondition;
 	}
 	
 	public LoopInitializer createLoopInitializer() {
-		final LoopInitializer myLoopInitializer = new LoopInitializer();
-		return myLoopInitializer;
+		return _loopInitializer;
 	}
 	
 	public LoopFinalizer createLoopFinalizer(int nLoopFinalValue) {
@@ -22,7 +35,6 @@ public class LoopComponentFactory {
 	}
 
 	public LoopStep createLoopStep() {
-		final LoopStep myLoopStep = new LoopStep();
-		return myLoopStep;
+		return _lootStep;
 	}
 }

@@ -1,7 +1,10 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.stringreturners;
 
+import org.springframework.stereotype.Service;
+
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.IntegerStringReturner;
 
+@Service
 public class IntegerIntegerStringReturner implements IntegerStringReturner {
 
 	public String getIntegerReturnString(int theInteger) {

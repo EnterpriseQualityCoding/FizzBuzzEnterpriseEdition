@@ -5,15 +5,16 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public class LoopContextStateRetrievalToSingleStepOutputGenerationAdapter implements SingleStepOutputGenerationParameter {
 
-	private LoopContextStateRetrieval myRetrievalObjectToAdapt;
-
-	public LoopContextStateRetrievalToSingleStepOutputGenerationAdapter(LoopContextStateRetrieval retrievalToAdapt) {
-		myRetrievalObjectToAdapt = retrievalToAdapt;
+	private LoopContextStateRetrieval _retrievalObjectToAdapt;
+	
+	public LoopContextStateRetrievalToSingleStepOutputGenerationAdapter(LoopContextStateRetrieval retrievalObjectToAdapt) {
+		this._retrievalObjectToAdapt = retrievalObjectToAdapt;
+		
 	}
 
 	@Override
 	public int retrieveIntegerValue() {
-		return myRetrievalObjectToAdapt.getControlParameter();
+		return this._retrievalObjectToAdapt.getControlParameter();
 	}
 
 }

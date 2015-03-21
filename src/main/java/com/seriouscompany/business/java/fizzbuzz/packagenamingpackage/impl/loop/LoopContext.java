@@ -1,5 +1,9 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.loop;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.LoopComponentFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.loop.LoopContextStateManipulation;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.loop.LoopContextStateRetrieval;
@@ -13,11 +17,13 @@ public class LoopContext implements LoopContextStateManipulation, LoopContextSta
 	int myCurrentControlParameterValue;
 
 	public LoopContext(int nLoopControlParameterFinalValue) {
-		final LoopComponentFactory myLoopComponentFactory = new LoopComponentFactory();
+		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+		final LoopComponentFactory myLoopComponentFactory = (LoopComponentFactory) context.getBean("loopComponentFactory");
 		myLoopInitializer = myLoopComponentFactory.createLoopInitializer();
 		myLoopFinalizer = myLoopComponentFactory.createLoopFinalizer(nLoopControlParameterFinalValue);
 		myLoopCondition = myLoopComponentFactory.createLoopCondition();
 		myLoopStep = myLoopComponentFactory.createLoopStep();
+		((ConfigurableApplicationContext) context).close();
 	}
 
 	@Override

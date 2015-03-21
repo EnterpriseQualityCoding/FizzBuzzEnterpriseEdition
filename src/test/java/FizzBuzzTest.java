@@ -1,18 +1,18 @@
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import static org.junit.Assert.assertEquals;
 
 import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.io.StringReader;
 
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.FizzBuzz;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.FizzBuzz;
 
 public class FizzBuzzTest {
 	private PrintStream out;
@@ -20,8 +20,10 @@ public class FizzBuzzTest {
 
 	@Before
 	public void setUp() {
-		fb = new FizzBuzz();
+		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+		fb = (FizzBuzz) context.getBean("standardFizzBuzz");
 		out = System.out;
+		((ConfigurableApplicationContext) context).close();
 	}
 
 	@After

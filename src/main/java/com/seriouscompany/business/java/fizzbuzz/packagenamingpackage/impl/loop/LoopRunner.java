@@ -10,15 +10,12 @@ public class LoopRunner {
 	private LoopContextStateRetrieval myStateRetrieval;
 	private LoopPayloadExecution myPayload;
 
-	public LoopRunner(LoopContextStateManipulation stateManipulation,
-						LoopContextStateRetrieval stateRetrieval,
-						LoopPayloadExecution payload)
-	{
-		myStateManipulation = stateManipulation;
-		myStateRetrieval = stateRetrieval;
-		myPayload = payload;
+	public LoopRunner(LoopContextStateManipulation stateManipulation, LoopContextStateRetrieval stateRetrieval, LoopPayloadExecution payload) {
+		this.myStateManipulation = stateManipulation;
+		this.myStateRetrieval = stateRetrieval;
+		this.myPayload = payload;
 	}
-
+	
 	public void runLoop() {
 		for (myStateManipulation.start(); myStateManipulation.shouldProceed(); myStateManipulation.proceed()) {
 			myPayload.runLoopPayload(myStateRetrieval);
