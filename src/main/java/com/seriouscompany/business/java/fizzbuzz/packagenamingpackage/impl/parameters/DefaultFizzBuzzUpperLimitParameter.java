@@ -4,7 +4,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public class DefaultFizzBuzzUpperLimitParameter implements FizzBuzzUpperLimitParameter {
 
-	public int ObtainUpperLimitValue() {
+	public int obtainUpperLimitValue() {
 		return DefaultFizzBuzzUpperLimitParameterValue;
 	}
 
