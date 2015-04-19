@@ -1,5 +1,8 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.constants;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class NoFizzNoBuzzStrategyConstants
 {
 	public static final int NO_BUZZ_INTEGER_CONSTANT_VALUE = BuzzStrategyConstants.BUZZ_INTEGER_CONSTANT_VALUE;

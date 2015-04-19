@@ -1,15 +1,21 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.FizzBuzz;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.FizzBuzzSolutionStrategyFactory;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.EnterpriseGradeFizzBuzzSolutionStrategyFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzSolutionStrategy;
 
-public class FizzBuzz {
+@Service
+public class StandardFizzBuzz implements FizzBuzz {
+	
+	@Autowired
+	FizzBuzzSolutionStrategyFactory _fizzBuzzSolutionStrategyFactory;
+	
 	public void fizzBuzz(int nFizzBuzzUpperLimit) {
-		final FizzBuzzSolutionStrategyFactory mySolutionStrategyFactory =
-			new EnterpriseGradeFizzBuzzSolutionStrategyFactory();
 		final FizzBuzzSolutionStrategy mySolutionStrategy =
-			mySolutionStrategyFactory.createFizzBuzzSolutionStrategy();
+			this._fizzBuzzSolutionStrategyFactory.createFizzBuzzSolutionStrategy();
 		mySolutionStrategy.runSolution(nFizzBuzzUpperLimit);
 	}
 }

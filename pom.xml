@@ -21,9 +21,40 @@
       <version>4.8.2</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-aop</artifactId>
+        <version>3.2.13.RELEASE</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-beans</artifactId>
+        <version>3.2.13.RELEASE</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>3.2.13.RELEASE</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>3.2.13.RELEASE</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-expression</artifactId>
+        <version>3.2.13.RELEASE</version>
+    </dependency>
   </dependencies>
 
   <build>
+    <resources>
+	  <resource>
+	    <directory>resources/assets/configuration/spring/dependencyinjection/configuration</directory>
+	    <filtering>true</filtering>
+	  </resource>
+    </resources>
     <plugins>
       <plugin>
           <artifactId>maven-compiler-plugin</artifactId>

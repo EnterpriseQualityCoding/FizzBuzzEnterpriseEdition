@@ -1,29 +1,28 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.printers;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.FizzStringReturnerFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.SystemOutFizzBuzzOutputStrategyFactory;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.FizzBuzzOutputStrategyFactory;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.StringStringReturnerFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.printers.StringPrinter;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.StringStringReturner;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.adapters.FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter;
 
+@Service
 public class FizzStringPrinter implements StringPrinter {
 
-	private final FizzBuzzOutputStrategy outputStrategy;
-
-	public FizzStringPrinter() {
-		FizzBuzzOutputStrategyFactory factory = new SystemOutFizzBuzzOutputStrategyFactory();
-		this.outputStrategy = factory.createOutputStrategy();
-	}
-
+	@Autowired
+	private SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory;
+	
+	@Autowired 
+	private FizzStringReturnerFactory _fizzStringReturnerFactory;
+	
 	public void print() {
-		final StringStringReturnerFactory myFizzStringReturnerFactory = new FizzStringReturnerFactory();
-		final StringStringReturner myFizzStringReturner = myFizzStringReturnerFactory
+		final StringStringReturner myFizzStringReturner = _fizzStringReturnerFactory
 				.createStringStringReturner();
 		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
-				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(outputStrategy);
+				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(_systemOutFizzBuzzOutputStrategyFactory.createOutputStrategy());
 
 		myOutputAdapter.output(myFizzStringReturner.getReturnString());
 	}

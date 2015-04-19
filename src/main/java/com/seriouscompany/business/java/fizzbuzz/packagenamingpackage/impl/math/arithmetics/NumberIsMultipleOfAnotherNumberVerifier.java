@@ -1,7 +1,10 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.math.arithmetics;
 
+import org.springframework.stereotype.Service;
+
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.comparators.integercomparator.IntegerForEqualityComparator;
 
+@Service
 public class NumberIsMultipleOfAnotherNumberVerifier {
 	public static boolean numberIsMultipleOfAnotherNumber(int nFirstNumber, int nSecondNumber) {
 		try{

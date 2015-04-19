@@ -5,21 +5,18 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public class FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter implements FizzBuzzExceptionSafeOutputStrategy {
 
-	public FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(
-				FizzBuzzOutputStrategy fizzBuzzOutputStrategyToAdapt)
-	{
-		myFizzBuzzOutputStrategyToAdapt = fizzBuzzOutputStrategyToAdapt;	
+	private FizzBuzzOutputStrategy _fizzBuzzOutputStrategy;
+	
+	public FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(FizzBuzzOutputStrategy fizzBuzzOutputStrategy) {
+		this._fizzBuzzOutputStrategy = fizzBuzzOutputStrategy;
 	}
 
 	@Override
 	public void output(String outputStringToOutput) {
 		try {
-			myFizzBuzzOutputStrategyToAdapt.output(outputStringToOutput);
+			this._fizzBuzzOutputStrategy.output(outputStringToOutput);
 		} catch (Exception exceptionFromDoingOutput) {
 			// We're the enterprise...we don't get exceptions!
 		}
 	}
-
-	final FizzBuzzOutputStrategy myFizzBuzzOutputStrategyToAdapt;
-
 }

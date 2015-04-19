@@ -1,30 +1,29 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.printers;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.NewLineStringReturnerFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.SystemOutFizzBuzzOutputStrategyFactory;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.FizzBuzzOutputStrategyFactory;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.StringStringReturnerFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.printers.StringPrinter;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.StringStringReturner;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.adapters.FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter;
 
+@Service
 public class NewLineStringPrinter implements StringPrinter {
 
-	private final FizzBuzzOutputStrategy outputStrategy;
-
-	public NewLineStringPrinter() {
-		FizzBuzzOutputStrategyFactory factory = new SystemOutFizzBuzzOutputStrategyFactory();
-		this.outputStrategy = factory.createOutputStrategy();
-	}
+	@Autowired
+	private SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory;
+	
+	@Autowired
+	private NewLineStringReturnerFactory _newLineStringReturnerFactory;
 
 	public void print() {
-		final StringStringReturnerFactory myNewLineStringReturnerFactory = new NewLineStringReturnerFactory();
-		final StringStringReturner myNewLineStringReturner = myNewLineStringReturnerFactory
+		final StringStringReturner myNewLineStringReturner = _newLineStringReturnerFactory
 				.createStringStringReturner();
 		final String myNewLineString = myNewLineStringReturner.getReturnString();
 		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
-				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(outputStrategy);
+				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(_systemOutFizzBuzzOutputStrategyFactory.createOutputStrategy());
 
 		myOutputAdapter.output(myNewLineString);
 	}

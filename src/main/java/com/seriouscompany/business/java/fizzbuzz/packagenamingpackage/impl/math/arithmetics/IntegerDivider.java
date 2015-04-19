@@ -1,11 +1,14 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.math.arithmetics;
 
+import org.springframework.stereotype.Service;
+
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.comparators.integercomparator.IntegerForEqualityComparator;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.comparators.doublecomparator.FirstIsSmallerThanSecondDoubleComparator;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.comparators.doublecomparator.FirstIsLargerThanSecondDoubleComparator;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.converters.primitivetypesconverters.DoubleToIntConverter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.converters.primitivetypesconverters.IntToDoubleConverter;
 
+@Service
 public class IntegerDivider {
 	
 	public static final int INTEGER_DIVIDE_ZERO_VALUE = 0;
