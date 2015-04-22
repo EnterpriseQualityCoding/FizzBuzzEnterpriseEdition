@@ -10,31 +10,35 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.loop.
 
 @Service
 public class LoopComponentFactory {
-	
+
+	private final LoopCondition _loopCondition;
+
+	private final LoopInitializer _loopInitializer;
+
+	private final LoopStep _lootStep;
+
 	@Autowired
-	LoopCondition _loopCondition;
-	
-	@Autowired
-	LoopInitializer _loopInitializer;
-	
-	@Autowired
-	LoopStep _lootStep;
-	
-	
+	public LoopComponentFactory(final LoopCondition _loopCondition, final LoopInitializer _loopInitializer,
+			final LoopStep _lootStep) {
+		this._loopCondition = _loopCondition;
+		this._loopInitializer = _loopInitializer;
+		this._lootStep = _lootStep;
+	}
+
 	public LoopCondition createLoopCondition() {
-		return _loopCondition;
+		return this._loopCondition;
 	}
-	
+
 	public LoopInitializer createLoopInitializer() {
-		return _loopInitializer;
+		return this._loopInitializer;
 	}
-	
-	public LoopFinalizer createLoopFinalizer(int nLoopFinalValue) {
+
+	public LoopFinalizer createLoopFinalizer(final int nLoopFinalValue) {
 		final LoopFinalizer myLoopFinalizer = new LoopFinalizer(nLoopFinalValue);
 		return myLoopFinalizer;
 	}
 
 	public LoopStep createLoopStep() {
-		return _lootStep;
+		return this._lootStep;
 	}
 }

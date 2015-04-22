@@ -4,8 +4,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class IntToDoubleConverter {
-	public static double Convert(int nIntegerToConvert) {
-		double dbConversionResult = (double) nIntegerToConvert;
+
+	public static double Convert(final int nIntegerToConvert) {
+		final double dbConversionResult = (double) nIntegerToConvert;
 		return dbConversionResult;
 	}
 }

@@ -11,14 +11,18 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 @Service
 public class SingleStepPayload implements LoopPayloadExecution {
 
+	private final OutputGenerationStrategy _outputGenerationStrategy;
+
 	@Autowired
-	OutputGenerationStrategy _outputGenerationStrategy;	
+	public SingleStepPayload(final OutputGenerationStrategy _outputGenerationStrategy) {
+		this._outputGenerationStrategy = _outputGenerationStrategy;
+	}
 
 	@Override
-	public void runLoopPayload(LoopContextStateRetrieval stateRetrieval) {
+	public void runLoopPayload(final LoopContextStateRetrieval stateRetrieval) {
 		final LoopContextStateRetrievalToSingleStepOutputGenerationAdapter adapter =
-			new LoopContextStateRetrievalToSingleStepOutputGenerationAdapter(stateRetrieval);
-		_outputGenerationStrategy.performGenerationForCurrentStep(adapter);
+				new LoopContextStateRetrievalToSingleStepOutputGenerationAdapter(stateRetrieval);
+		this._outputGenerationStrategy.performGenerationForCurrentStep(adapter);
 	}
 
 }

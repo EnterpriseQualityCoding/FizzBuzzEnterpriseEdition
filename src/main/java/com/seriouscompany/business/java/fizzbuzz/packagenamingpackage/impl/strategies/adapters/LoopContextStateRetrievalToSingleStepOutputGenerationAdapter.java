@@ -3,11 +3,11 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.stra
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.loop.LoopContextStateRetrieval;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.SingleStepOutputGenerationParameter;
 
-public class LoopContextStateRetrievalToSingleStepOutputGenerationAdapter implements SingleStepOutputGenerationParameter {
+public final class LoopContextStateRetrievalToSingleStepOutputGenerationAdapter implements SingleStepOutputGenerationParameter {
 
-	private LoopContextStateRetrieval _retrievalObjectToAdapt;
+	private final LoopContextStateRetrieval _retrievalObjectToAdapt;
 	
-	public LoopContextStateRetrievalToSingleStepOutputGenerationAdapter(LoopContextStateRetrieval retrievalObjectToAdapt) {
+	public LoopContextStateRetrievalToSingleStepOutputGenerationAdapter(final LoopContextStateRetrieval retrievalObjectToAdapt) {
 		this._retrievalObjectToAdapt = retrievalObjectToAdapt;
 		
 	}
