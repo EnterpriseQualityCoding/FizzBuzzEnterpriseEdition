@@ -18,7 +18,7 @@ public class LoopComponentFactory {
 	LoopInitializer _loopInitializer;
 	
 	@Autowired
-	LoopStep _lootStep;
+	LoopStep _loopStep;
 	
 	
 	public LoopCondition createLoopCondition() {
@@ -35,6 +35,6 @@ public class LoopComponentFactory {
 	}
 
 	public LoopStep createLoopStep() {
-		return _lootStep;
+		return _loopStep;
 	}
 }
