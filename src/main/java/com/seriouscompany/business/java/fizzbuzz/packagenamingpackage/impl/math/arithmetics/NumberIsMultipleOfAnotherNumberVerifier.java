@@ -21,7 +21,7 @@ public class NumberIsMultipleOfAnotherNumberVerifier {
 	public static boolean numberIsMultipleOfAnotherNumber(final int nFirstNumber, final int nSecondNumber) {
 		try {
 			final int nDivideFirstIntegerBySecondIntegerResult =
-					(integerDivider.divide(nFirstNumber, nSecondNumber));
+					(NumberIsMultipleOfAnotherNumberVerifier.integerDivider.divide(nFirstNumber, nSecondNumber));
 			final int nMultiplyDivisionResultBySecondIntegerResult =
 					nDivideFirstIntegerBySecondIntegerResult * nSecondNumber;
 			if (IntegerForEqualityComparator.areTwoIntegersEqual(nMultiplyDivisionResultBySecondIntegerResult,

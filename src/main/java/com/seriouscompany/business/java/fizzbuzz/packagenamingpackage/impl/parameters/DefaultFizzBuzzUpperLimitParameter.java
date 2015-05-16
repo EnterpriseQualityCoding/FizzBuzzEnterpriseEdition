@@ -9,7 +9,7 @@ public final class DefaultFizzBuzzUpperLimitParameter implements FizzBuzzUpperLi
 	private final int fizzBuzzUpperLimitParameterValue;
 
 	public DefaultFizzBuzzUpperLimitParameter() {
-		this.fizzBuzzUpperLimitParameterValue = DEFAULT_FIZZ_BUZZ_UPPER_LIMIT_PARAMETER_VALUE;
+		this.fizzBuzzUpperLimitParameterValue = DefaultFizzBuzzUpperLimitParameter.DEFAULT_FIZZ_BUZZ_UPPER_LIMIT_PARAMETER_VALUE;
 	}
 
 	public DefaultFizzBuzzUpperLimitParameter(final int fizzBuzzUpperLimitParameterValue) {

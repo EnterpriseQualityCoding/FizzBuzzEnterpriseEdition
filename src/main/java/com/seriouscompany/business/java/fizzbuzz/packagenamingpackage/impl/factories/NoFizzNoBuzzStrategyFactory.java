@@ -20,7 +20,7 @@ public class NoFizzNoBuzzStrategyFactory implements
 
 	@Override
 	public IsEvenlyDivisibleStrategy createIsEvenlyDivisibleStrategy() {
-		return _noFizzNoBuzzStrategy;
+		return this._noFizzNoBuzzStrategy;
 	}
 
 }
