@@ -15,14 +15,14 @@ public class LoopComponentFactory {
 
 	private final LoopInitializer _loopInitializer;
 
-	private final LoopStep _lootStep;
+	private final LoopStep _loopStep;
 
 	@Autowired
 	public LoopComponentFactory(final LoopCondition _loopCondition, final LoopInitializer _loopInitializer,
-			final LoopStep _lootStep) {
+			final LoopStep _loopStep) {
 		this._loopCondition = _loopCondition;
 		this._loopInitializer = _loopInitializer;
-		this._lootStep = _lootStep;
+		this._loopStep = _loopStep;
 	}
 
 	public LoopCondition createLoopCondition() {
@@ -39,6 +39,6 @@ public class LoopComponentFactory {
 	}
 
 	public LoopStep createLoopStep() {
-		return this._lootStep;
+		return this._loopStep;
 	}
 }
