@@ -14,7 +14,7 @@ public class NumberIsMultipleOfAnotherNumberVerifier {
 
 	@PostConstruct
 	public void init() {
-		ApplicationContext applicationContext = ApplicationContextHolder.getApplicationContext();
+		final ApplicationContext applicationContext = ApplicationContextHolder.getApplicationContext();
 		this.integerDivider = applicationContext.getBean(IntegerDivider.class);
 	}
 
