@@ -11,6 +11,7 @@ import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.Arrays;
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.FizzBuzz;
 
@@ -41,24 +42,24 @@ public class FizzBuzzTest {
 		System.out.flush();
 		assertEquals(s, baos.toString());
 	}
+	
+	private String generateFizzBuzzTestStringsUntil20 (int length) {
+		if (length < 1 || length > 20) {
+			throw new IllegalArgumentException("generateFizzBuzzTestStringsUntil20 must be called with a length from 1-20");
+		}
+		String[] outputs = {"1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz", "16", "17", "Fizz", "19", "Buzz"};
+		String output = "";
+		for(String s: Arrays.asList(outputs).subList(0, length)) {
+			output = output + String.format(s + "%n");
+		}
+		System.out.println(output);
+		return output;
+	}
 
 	@Test
 	public void testFizzBuzz() throws IOException {
-		doFizzBuzz(1, "1\n");
-		doFizzBuzz(2, "1\n2\n");
-		doFizzBuzz(3, "1\n2\nFizz\n");
-		doFizzBuzz(4, "1\n2\nFizz\n4\n");
-		doFizzBuzz(5, "1\n2\nFizz\n4\nBuzz\n");
-		doFizzBuzz(6, "1\n2\nFizz\n4\nBuzz\nFizz\n");
-		doFizzBuzz(7, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n");
-		doFizzBuzz(8, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\n");
-		doFizzBuzz(9, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\n");
-		doFizzBuzz(10, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n");
-		doFizzBuzz(11, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\n");
-		doFizzBuzz(12, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n");
-		doFizzBuzz(13, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n");
-		doFizzBuzz(14, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\n");
-		doFizzBuzz(15, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n");
-		doFizzBuzz(16, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n");
+		for(int i = 1; i <=20; i++) {
+			doFizzBuzz(i, generateFizzBuzzTestStringsUntil20(i));
+		}
 	}
 }
