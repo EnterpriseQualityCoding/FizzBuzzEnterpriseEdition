@@ -7,10 +7,11 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 @Service
 public class BuzzStringReturner implements StringStringReturner {
 
+	@Override
 	public String getReturnString() {
 		final StringBuilder myStringBuilder = new StringBuilder("Buzz");
 		final String myString = myStringBuilder.toString();
 		return new String(myString);
 	}
-	
+
 }

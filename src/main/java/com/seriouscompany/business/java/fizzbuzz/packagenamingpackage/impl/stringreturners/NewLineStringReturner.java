@@ -6,7 +6,8 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 @Service
 public class NewLineStringReturner implements StringStringReturner {
-	
+
+	@Override
 	public String getReturnString() {
 		final String systemDefaultNewLineString = System.getProperty("line.separator");
 		final StringBuilder myStringBuilder = new StringBuilder(systemDefaultNewLineString);

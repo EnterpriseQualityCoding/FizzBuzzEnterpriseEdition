@@ -16,6 +16,7 @@ public final class DefaultFizzBuzzUpperLimitParameter implements FizzBuzzUpperLi
 		this.fizzBuzzUpperLimitParameterValue = fizzBuzzUpperLimitParameterValue;
 	}
 
+	@Override
 	public int obtainUpperLimitValue() {
 		return this.fizzBuzzUpperLimitParameterValue;
 	}

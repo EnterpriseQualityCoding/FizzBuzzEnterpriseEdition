@@ -23,6 +23,7 @@ public class IntegerIntegerPrinter implements IntegerPrinter {
 		this._systemOutFizzBuzzOutputStrategyFactory = _systemOutFizzBuzzOutputStrategyFactory;
 	}
 
+	@Override
 	public void printInteger(final int theInteger) {
 		final IntegerStringReturner myIntegerStringReturner =
 				this._integerIntegerStringReturnerFactory.createIntegerStringReturner();

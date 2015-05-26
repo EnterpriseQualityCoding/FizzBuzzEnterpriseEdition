@@ -23,6 +23,7 @@ public class NewLineStringPrinter implements StringPrinter {
 		this._systemOutFizzBuzzOutputStrategyFactory = _systemOutFizzBuzzOutputStrategyFactory;
 	}
 
+	@Override
 	public void print() {
 		final StringStringReturner myNewLineStringReturner = this._newLineStringReturnerFactory
 			.createStringStringReturner();

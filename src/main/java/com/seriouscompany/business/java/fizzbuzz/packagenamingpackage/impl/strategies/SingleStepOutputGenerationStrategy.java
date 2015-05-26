@@ -52,6 +52,7 @@ public class SingleStepOutputGenerationStrategy implements OutputGenerationStrat
 		this.myNewLinePrinter = newLineStringPrinterFactory.createStringPrinter();
 	}
 
+	@Override
 	public void performGenerationForCurrentStep(final SingleStepOutputGenerationParameter generationParameter) {
 		final int nGenerationParameter = generationParameter.retrieveIntegerValue();
 		final Iterator<OutputGenerationContext> iterator = this.contexts.iterator();

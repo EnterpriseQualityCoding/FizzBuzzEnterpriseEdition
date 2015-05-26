@@ -23,6 +23,7 @@ public class BuzzStringPrinter implements StringPrinter {
 		this._outputStrategyFactory = _outputStrategyFactory;
 	}
 
+	@Override
 	public void print() {
 		final StringStringReturner myBuzzStringReturner = this._buzzStringReturnerFactory
 			.createStringStringReturner();

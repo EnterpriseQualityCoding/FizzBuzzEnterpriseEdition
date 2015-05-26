@@ -23,6 +23,7 @@ public class FizzStringPrinter implements StringPrinter {
 		this._systemOutFizzBuzzOutputStrategyFactory = _systemOutFizzBuzzOutputStrategyFactory;
 	}
 
+	@Override
 	public void print() {
 		final StringStringReturner myFizzStringReturner = this._fizzStringReturnerFactory
 			.createStringStringReturner();

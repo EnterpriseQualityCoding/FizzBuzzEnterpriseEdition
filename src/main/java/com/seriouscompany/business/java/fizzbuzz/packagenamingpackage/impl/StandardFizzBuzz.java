@@ -17,6 +17,7 @@ public class StandardFizzBuzz implements FizzBuzz {
 		this._fizzBuzzSolutionStrategyFactory = _fizzBuzzSolutionStrategyFactory;
 	}
 
+	@Override
 	public void fizzBuzz(final int nFizzBuzzUpperLimit) {
 		final FizzBuzzSolutionStrategy mySolutionStrategy =
 				this._fizzBuzzSolutionStrategyFactory.createFizzBuzzSolutionStrategy();
