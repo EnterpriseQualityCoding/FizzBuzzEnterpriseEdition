@@ -1,8 +1,6 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.math.arithmetics;
 
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.ApplicationContextHolder;
-import javax.annotation.PostConstruct;
-import org.springframework.context.ApplicationContext;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.comparators.integercomparator.IntegerForEqualityComparator;
@@ -12,10 +10,9 @@ public class NumberIsMultipleOfAnotherNumberVerifier {
 
 	private static IntegerDivider integerDivider;
 
-	@PostConstruct
-	public void init() {
-		final ApplicationContext applicationContext = ApplicationContextHolder.getApplicationContext();
-		this.integerDivider = applicationContext.getBean(IntegerDivider.class);
+	@Autowired
+	public NumberIsMultipleOfAnotherNumberVerifier(final IntegerDivider integerDivider) {
+		this.integerDivider = integerDivider;
 	}
 
 	public static boolean numberIsMultipleOfAnotherNumber(final int nFirstNumber, final int nSecondNumber) {
