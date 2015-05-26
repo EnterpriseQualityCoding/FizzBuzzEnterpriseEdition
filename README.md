@@ -1,5 +1,6 @@
 # FizzBuzzEnterpriseEdition
-[![Build status][Build status image]][Build status URL]
+
+[![Build status][Build status image]][Build status URL] [![codecov.io](https://codecov.io/github/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition/coverage.svg?branch=master)](https://codecov.io/github/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition?branch=master)
 
 [Build status image]: https://secure.travis-ci.org/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition.png?branch=master
 [Build status URL]: http://travis-ci.org/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition
