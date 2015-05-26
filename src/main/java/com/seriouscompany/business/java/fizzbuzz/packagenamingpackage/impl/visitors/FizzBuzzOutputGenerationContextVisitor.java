@@ -1,5 +1,7 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.visitors;
 
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.printers.DataPrinter;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.IsEvenlyDivisibleStrategy;
 import org.springframework.stereotype.Service;
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.visitors.OutputGenerationContext;
@@ -10,9 +12,11 @@ public class FizzBuzzOutputGenerationContextVisitor implements
 		OutputGenerationContextVisitor {
 
 	@Override
-	public void visit(OutputGenerationContext context, int nGenerationParameter) {
-		if (context.getStrategy().isEvenlyDivisible(nGenerationParameter)) {
-			context.getPrinter().printValue(new Integer(nGenerationParameter));
+	public void visit(final OutputGenerationContext context, final int nGenerationParameter) {
+		final IsEvenlyDivisibleStrategy strategy = context.getStrategy();
+		if (strategy.isEvenlyDivisible(nGenerationParameter)) {
+			final DataPrinter printer = context.getPrinter();
+			printer.printValue(new Integer(nGenerationParameter));
 		}
 	}
 

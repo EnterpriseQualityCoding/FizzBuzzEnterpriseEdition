@@ -9,17 +9,22 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 
 @Service
 public class NewLinePrinter {
-	
+
+	private final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory;
+
 	@Autowired
-	private SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory;
-	
+	public NewLinePrinter(final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
+		this._systemOutFizzBuzzOutputStrategyFactory = _systemOutFizzBuzzOutputStrategyFactory;
+	}
+
 	public void printNewLine() {
 		final NewLineStringReturner myNewLineStringReturner = new NewLineStringReturner();
 		final String myNewLineString = myNewLineStringReturner.getReturnString();
 		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
-				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(_systemOutFizzBuzzOutputStrategyFactory.createOutputStrategy());
+				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(
+						this._systemOutFizzBuzzOutputStrategyFactory.createOutputStrategy());
 
 		myOutputAdapter.output(myNewLineString);
 	}
-	
+
 }

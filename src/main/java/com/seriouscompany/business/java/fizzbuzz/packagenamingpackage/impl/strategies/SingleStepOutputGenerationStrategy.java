@@ -25,34 +25,40 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 @Service
 public class SingleStepOutputGenerationStrategy implements OutputGenerationStrategy {
 
-	private List<OutputGenerationContext> contexts = new ArrayList<OutputGenerationContext>();
-	private OutputGenerationContextVisitor contextVisitor;
+	private final List<OutputGenerationContext> contexts;
+	private final OutputGenerationContextVisitor contextVisitor;
+	private final StringPrinter myNewLinePrinter;
 
-	private StringPrinter myNewLinePrinter;
-	
 	@Autowired
-	public SingleStepOutputGenerationStrategy(FizzBuzzOutputGenerationContextVisitorFactory fizzBuzzOutputGenerationContextVisitorFactory,
-			FizzStrategyFactory fizzStrategyFactory, 
-			FizzStringPrinterFactory fizzStringPrinterFactory, 
-			BuzzStrategyFactory buzzStrategyFactory, 
-			BuzzStringPrinterFactory buzzStringPrinterFactory,
-			NoFizzNoBuzzStrategyFactory noFizzNoBuzzStrategyFactory,
-			IntegerIntegerPrinterFactory integerIntegerPrinterFactory,
-			NewLineStringPrinterFactory newLineStringPrinterFactory) {
-		contextVisitor = fizzBuzzOutputGenerationContextVisitorFactory.createVisitor();
-		contexts.add(new FizzBuzzOutputGenerationContext(fizzStrategyFactory.createIsEvenlyDivisibleStrategy(), fizzStringPrinterFactory.createStringPrinter()));
-		contexts.add(new FizzBuzzOutputGenerationContext(buzzStrategyFactory.createIsEvenlyDivisibleStrategy(), buzzStringPrinterFactory.createStringPrinter()));
-		contexts.add(new FizzBuzzOutputGenerationContext(noFizzNoBuzzStrategyFactory.createIsEvenlyDivisibleStrategy(), integerIntegerPrinterFactory.createPrinter()));
+	public SingleStepOutputGenerationStrategy(
+			final FizzBuzzOutputGenerationContextVisitorFactory fizzBuzzOutputGenerationContextVisitorFactory,
+			final FizzStrategyFactory fizzStrategyFactory,
+			final FizzStringPrinterFactory fizzStringPrinterFactory,
+			final BuzzStrategyFactory buzzStrategyFactory,
+			final BuzzStringPrinterFactory buzzStringPrinterFactory,
+			final NoFizzNoBuzzStrategyFactory noFizzNoBuzzStrategyFactory,
+			final IntegerIntegerPrinterFactory integerIntegerPrinterFactory,
+			final NewLineStringPrinterFactory newLineStringPrinterFactory) {
+		this.contextVisitor = fizzBuzzOutputGenerationContextVisitorFactory.createVisitor();
+		this.contexts = new ArrayList<OutputGenerationContext>();
+		this.contexts.add(new FizzBuzzOutputGenerationContext(fizzStrategyFactory.createIsEvenlyDivisibleStrategy(),
+				fizzStringPrinterFactory.createStringPrinter()));
+		this.contexts.add(new FizzBuzzOutputGenerationContext(buzzStrategyFactory.createIsEvenlyDivisibleStrategy(),
+				buzzStringPrinterFactory.createStringPrinter()));
+		this.contexts.add(new FizzBuzzOutputGenerationContext(
+				noFizzNoBuzzStrategyFactory.createIsEvenlyDivisibleStrategy(),
+				integerIntegerPrinterFactory.createPrinter()));
 
-		myNewLinePrinter = newLineStringPrinterFactory.createStringPrinter();	}
+		this.myNewLinePrinter = newLineStringPrinterFactory.createStringPrinter();
+	}
 
-	public void performGenerationForCurrentStep(SingleStepOutputGenerationParameter generationParameter) {
+	public void performGenerationForCurrentStep(final SingleStepOutputGenerationParameter generationParameter) {
 		final int nGenerationParameter = generationParameter.retrieveIntegerValue();
-		Iterator<OutputGenerationContext> iterator = contexts.iterator();
-		while(iterator.hasNext()) {
-			OutputGenerationContext context = iterator.next();
-			contextVisitor.visit(context, nGenerationParameter);
+		final Iterator<OutputGenerationContext> iterator = this.contexts.iterator();
+		while (iterator.hasNext()) {
+			final OutputGenerationContext context = iterator.next();
+			this.contextVisitor.visit(context, nGenerationParameter);
 		}
-		myNewLinePrinter.print();
+		this.myNewLinePrinter.print();
 	}
 }

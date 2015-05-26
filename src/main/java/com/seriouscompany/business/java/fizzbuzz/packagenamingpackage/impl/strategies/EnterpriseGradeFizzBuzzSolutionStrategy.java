@@ -11,13 +11,17 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.loop.
 @Service
 public class EnterpriseGradeFizzBuzzSolutionStrategy implements FizzBuzzSolutionStrategy {
 
+	private final LoopPayloadExecution _loopPayloadExecution;
+
 	@Autowired
-	private LoopPayloadExecution _loopPayloadExecution;
-	
+	public EnterpriseGradeFizzBuzzSolutionStrategy(final LoopPayloadExecution _loopPayloadExecution) {
+		this._loopPayloadExecution = _loopPayloadExecution;
+	}
+
 	@Override
-	public void runSolution(int nFizzBuzzUpperLimit) {
+	public void runSolution(final int nFizzBuzzUpperLimit) {
 		final LoopContext loopContext = new LoopContext(nFizzBuzzUpperLimit);
-		final LoopRunner loopRunner = new LoopRunner(loopContext, loopContext, _loopPayloadExecution);
+		final LoopRunner loopRunner = new LoopRunner(loopContext, loopContext, this._loopPayloadExecution);
 		loopRunner.runLoop();
 	}
 }

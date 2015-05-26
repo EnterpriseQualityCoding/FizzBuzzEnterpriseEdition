@@ -15,28 +15,29 @@ import java.io.PrintStream;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.FizzBuzz;
 
 public class FizzBuzzTest {
+
 	private PrintStream out;
 	private FizzBuzz fb;
 
 	@Before
 	public void setUp() {
-		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-		fb = (FizzBuzz) context.getBean("standardFizzBuzz");
-		out = System.out;
+		final ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+		this.fb = (FizzBuzz) context.getBean("standardFizzBuzz");
+		this.out = System.out;
 		((ConfigurableApplicationContext) context).close();
 	}
 
 	@After
 	public void tearDown() {
-		System.setOut(out);
+		System.setOut(this.out);
 	}
 
-	private void doFizzBuzz(int n, String s) throws IOException {
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		BufferedOutputStream bos = new BufferedOutputStream(baos);
+	private void doFizzBuzz(final int n, final String s) throws IOException {
+		final ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		final BufferedOutputStream bos = new BufferedOutputStream(baos);
 		System.setOut(new PrintStream(bos));
 
-		fb.fizzBuzz(n);
+		this.fb.fizzBuzz(n);
 
 		System.out.flush();
 		assertEquals(s, baos.toString());
@@ -44,21 +45,21 @@ public class FizzBuzzTest {
 
 	@Test
 	public void testFizzBuzz() throws IOException {
-		doFizzBuzz(1, "1\n");
-		doFizzBuzz(2, "1\n2\n");
-		doFizzBuzz(3, "1\n2\nFizz\n");
-		doFizzBuzz(4, "1\n2\nFizz\n4\n");
-		doFizzBuzz(5, "1\n2\nFizz\n4\nBuzz\n");
-		doFizzBuzz(6, "1\n2\nFizz\n4\nBuzz\nFizz\n");
-		doFizzBuzz(7, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n");
-		doFizzBuzz(8, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\n");
-		doFizzBuzz(9, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\n");
-		doFizzBuzz(10, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n");
-		doFizzBuzz(11, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\n");
-		doFizzBuzz(12, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n");
-		doFizzBuzz(13, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n");
-		doFizzBuzz(14, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\n");
-		doFizzBuzz(15, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n");
-		doFizzBuzz(16, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n");
+		this.doFizzBuzz(1, "1\n");
+		this.doFizzBuzz(2, "1\n2\n");
+		this.doFizzBuzz(3, "1\n2\nFizz\n");
+		this.doFizzBuzz(4, "1\n2\nFizz\n4\n");
+		this.doFizzBuzz(5, "1\n2\nFizz\n4\nBuzz\n");
+		this.doFizzBuzz(6, "1\n2\nFizz\n4\nBuzz\nFizz\n");
+		this.doFizzBuzz(7, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n");
+		this.doFizzBuzz(8, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\n");
+		this.doFizzBuzz(9, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\n");
+		this.doFizzBuzz(10, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n");
+		this.doFizzBuzz(11, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\n");
+		this.doFizzBuzz(12, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n");
+		this.doFizzBuzz(13, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n");
+		this.doFizzBuzz(14, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\n");
+		this.doFizzBuzz(15, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n");
+		this.doFizzBuzz(16, "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n");
 	}
 }

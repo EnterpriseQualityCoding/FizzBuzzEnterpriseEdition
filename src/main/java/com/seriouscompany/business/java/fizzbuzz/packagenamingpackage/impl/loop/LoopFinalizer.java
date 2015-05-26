@@ -1,15 +1,14 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.loop;
 
-public class LoopFinalizer {
+public final class LoopFinalizer {
 
 	private final int nStoredLoopFinalValue;
 
-	public LoopFinalizer(int nLoopFinalValue) {
-		nStoredLoopFinalValue = nLoopFinalValue;
+	public LoopFinalizer(final int nLoopFinalValue) {
+		this.nStoredLoopFinalValue = nLoopFinalValue;
 	}
 
 	public int getLoopFinalizationPoint() {
-		return nStoredLoopFinalValue;
+		return this.nStoredLoopFinalValue;
 	}
 }
-
