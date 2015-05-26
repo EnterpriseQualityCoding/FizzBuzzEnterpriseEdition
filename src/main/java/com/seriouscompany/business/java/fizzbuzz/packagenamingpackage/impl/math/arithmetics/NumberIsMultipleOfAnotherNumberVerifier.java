@@ -12,7 +12,7 @@ public class NumberIsMultipleOfAnotherNumberVerifier {
 
 	@Autowired
 	public NumberIsMultipleOfAnotherNumberVerifier(final IntegerDivider integerDivider) {
-		this.integerDivider = integerDivider;
+		NumberIsMultipleOfAnotherNumberVerifier.integerDivider = integerDivider;
 	}
 
 	public static boolean numberIsMultipleOfAnotherNumber(final int nFirstNumber, final int nSecondNumber) {
