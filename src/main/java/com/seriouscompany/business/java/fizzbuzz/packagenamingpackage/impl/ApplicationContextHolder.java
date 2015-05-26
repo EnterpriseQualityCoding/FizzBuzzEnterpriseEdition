@@ -18,6 +18,10 @@ public class ApplicationContextHolder implements ApplicationContextAware {
 	}
 
 	public static ApplicationContext getApplicationContext() {
-		return ApplicationContextHolder.applicationContext;
+		final ApplicationContext applicationContext = ApplicationContextHolder.applicationContext;
+		if (applicationContext == null) {
+			throw new IllegalStateException("context not initialized");
+		}
+		return applicationContext;
 	}
 }
