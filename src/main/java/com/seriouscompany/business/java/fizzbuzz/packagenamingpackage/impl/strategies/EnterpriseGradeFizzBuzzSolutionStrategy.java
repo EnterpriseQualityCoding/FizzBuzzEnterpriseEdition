@@ -8,13 +8,16 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.loop.LoopContext;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.loop.LoopRunner;
 
+import javax.annotation.Nonnull;
+
 @Service
 public class EnterpriseGradeFizzBuzzSolutionStrategy implements FizzBuzzSolutionStrategy {
 
+	@Nonnull
 	private final LoopPayloadExecution _loopPayloadExecution;
 
 	@Autowired
-	public EnterpriseGradeFizzBuzzSolutionStrategy(final LoopPayloadExecution _loopPayloadExecution) {
+	public EnterpriseGradeFizzBuzzSolutionStrategy(@Nonnull final LoopPayloadExecution _loopPayloadExecution) {
 		this._loopPayloadExecution = _loopPayloadExecution;
 	}
 

@@ -7,17 +7,21 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.FizzBuzzOutputStrategyFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
 
+import javax.annotation.Nonnull;
+
 @Service
 public class SystemOutFizzBuzzOutputStrategyFactory implements
 		FizzBuzzOutputStrategyFactory {
 
+	@Nonnull
 	private final SystemOutFizzBuzzOutputStrategy _systemOutFizzBuzzOutputStrategy;
 
 	@Autowired
-	public SystemOutFizzBuzzOutputStrategyFactory(final SystemOutFizzBuzzOutputStrategy _systemOutFizzBuzzOutputStrategy) {
+	public SystemOutFizzBuzzOutputStrategyFactory(@Nonnull final SystemOutFizzBuzzOutputStrategy _systemOutFizzBuzzOutputStrategy) {
 		this._systemOutFizzBuzzOutputStrategy = _systemOutFizzBuzzOutputStrategy;
 	}
 
+	@Nonnull
 	@Override
 	public FizzBuzzOutputStrategy createOutputStrategy() {
 

@@ -16,7 +16,7 @@ public class TestBuzzStringPrinterFactory {
          
         // Invoke the method
          
-        BuzzStringPrinterFactory buzzStringPrinterFactory = new BuzzStringPrinterFactory();
+        final BuzzStringPrinterFactory buzzStringPrinterFactory = new BuzzStringPrinterFactory();
     }
 
 }

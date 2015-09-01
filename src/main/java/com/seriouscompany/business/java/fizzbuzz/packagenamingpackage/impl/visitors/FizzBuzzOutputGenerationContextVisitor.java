@@ -7,12 +7,14 @@ import org.springframework.stereotype.Service;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.visitors.OutputGenerationContext;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.visitors.OutputGenerationContextVisitor;
 
+import javax.annotation.Nonnull;
+
 @Service
 public class FizzBuzzOutputGenerationContextVisitor implements
 		OutputGenerationContextVisitor {
 
 	@Override
-	public void visit(final OutputGenerationContext context, final int nGenerationParameter) {
+	public void visit(@Nonnull final OutputGenerationContext context, final int nGenerationParameter) {
 		final IsEvenlyDivisibleStrategy strategy = context.getStrategy();
 		if (strategy.isEvenlyDivisible(nGenerationParameter)) {
 			final DataPrinter printer = context.getPrinter();

@@ -20,7 +20,7 @@ public class TestStandardFizzBuzz {
          
         // Invoke the method
          
-        StandardFizzBuzz standardFizzBuzz = new StandardFizzBuzz();
+        final StandardFizzBuzz standardFizzBuzz = new StandardFizzBuzz();
     }
 
     @Test
@@ -33,11 +33,11 @@ public class TestStandardFizzBuzz {
          
         // Generate the fields
          
-        EnterpriseGradeFizzBuzzSolutionStrategyFactory mockEnterpriseGradeFizzBuzzSolutionStrategyFactory = Mockito.mock(EnterpriseGradeFizzBuzzSolutionStrategyFactory.class);
-        EnterpriseGradeFizzBuzzSolutionStrategy mockEnterpriseGradeFizzBuzzSolutionStrategy = Mockito.mock(EnterpriseGradeFizzBuzzSolutionStrategy.class);
+        final EnterpriseGradeFizzBuzzSolutionStrategyFactory mockEnterpriseGradeFizzBuzzSolutionStrategyFactory = Mockito.mock(EnterpriseGradeFizzBuzzSolutionStrategyFactory.class);
+        final EnterpriseGradeFizzBuzzSolutionStrategy mockEnterpriseGradeFizzBuzzSolutionStrategy = Mockito.mock(EnterpriseGradeFizzBuzzSolutionStrategy.class);
         Mockito.when(mockEnterpriseGradeFizzBuzzSolutionStrategyFactory.createFizzBuzzSolutionStrategy()).thenReturn(mockEnterpriseGradeFizzBuzzSolutionStrategy);
-        StandardFizzBuzz standardFizzBuzz = new StandardFizzBuzz();
-        Field field = standardFizzBuzz.getClass().getDeclaredField("_fizzBuzzSolutionStrategyFactory");
+        final StandardFizzBuzz standardFizzBuzz = new StandardFizzBuzz();
+        final Field field = standardFizzBuzz.getClass().getDeclaredField("_fizzBuzzSolutionStrategyFactory");
         field.set(standardFizzBuzz, mockEnterpriseGradeFizzBuzzSolutionStrategyFactory);
          
         // Invoke the method

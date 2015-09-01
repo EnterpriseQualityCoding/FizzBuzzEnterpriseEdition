@@ -8,18 +8,23 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.loop.
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.loop.LoopInitializer;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.loop.LoopStep;
 
+import javax.annotation.Nonnull;
+
 @Service
 public class LoopComponentFactory {
 
+	@Nonnull
 	private final LoopCondition _loopCondition;
 
+	@Nonnull
 	private final LoopInitializer _loopInitializer;
 
+	@Nonnull
 	private final LoopStep _loopStep;
 
 	@Autowired
-	public LoopComponentFactory(final LoopCondition _loopCondition, final LoopInitializer _loopInitializer,
-			final LoopStep _loopStep) {
+	public LoopComponentFactory(@Nonnull final LoopCondition _loopCondition, @Nonnull final LoopInitializer _loopInitializer,
+								@Nonnull final LoopStep _loopStep) {
 		this._loopCondition = _loopCondition;
 		this._loopInitializer = _loopInitializer;
 		this._loopStep = _loopStep;

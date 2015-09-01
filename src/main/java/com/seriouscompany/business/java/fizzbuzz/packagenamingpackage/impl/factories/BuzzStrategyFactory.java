@@ -7,16 +7,20 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.IsEvenlyDivisibleStrategyFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.IsEvenlyDivisibleStrategy;
 
+import javax.annotation.Nonnull;
+
 @Service
 public class BuzzStrategyFactory implements IsEvenlyDivisibleStrategyFactory {
 
+	@Nonnull
 	private final BuzzStrategy _buzzStrategy;
 
 	@Autowired
-	public BuzzStrategyFactory(final BuzzStrategy _buzzStrategy) {
+	public BuzzStrategyFactory(@Nonnull final BuzzStrategy _buzzStrategy) {
 		this._buzzStrategy = _buzzStrategy;
 	}
 
+	@Nonnull
 	@Override
 	public IsEvenlyDivisibleStrategy createIsEvenlyDivisibleStrategy() {
 		return this._buzzStrategy;

@@ -22,23 +22,28 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.visitors.OutputGenerationContext;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.visitors.OutputGenerationContextVisitor;
 
+import javax.annotation.Nonnull;
+
 @Service
 public class SingleStepOutputGenerationStrategy implements OutputGenerationStrategy {
 
+	@Nonnull
 	private final List<OutputGenerationContext> contexts;
+	@Nonnull
 	private final OutputGenerationContextVisitor contextVisitor;
+	@Nonnull
 	private final StringPrinter myNewLinePrinter;
 
 	@Autowired
 	public SingleStepOutputGenerationStrategy(
-			final FizzBuzzOutputGenerationContextVisitorFactory fizzBuzzOutputGenerationContextVisitorFactory,
-			final FizzStrategyFactory fizzStrategyFactory,
-			final FizzStringPrinterFactory fizzStringPrinterFactory,
-			final BuzzStrategyFactory buzzStrategyFactory,
-			final BuzzStringPrinterFactory buzzStringPrinterFactory,
-			final NoFizzNoBuzzStrategyFactory noFizzNoBuzzStrategyFactory,
-			final IntegerIntegerPrinterFactory integerIntegerPrinterFactory,
-			final NewLineStringPrinterFactory newLineStringPrinterFactory) {
+			@Nonnull final FizzBuzzOutputGenerationContextVisitorFactory fizzBuzzOutputGenerationContextVisitorFactory,
+			@Nonnull final FizzStrategyFactory fizzStrategyFactory,
+			@Nonnull final FizzStringPrinterFactory fizzStringPrinterFactory,
+			@Nonnull final BuzzStrategyFactory buzzStrategyFactory,
+			@Nonnull final BuzzStringPrinterFactory buzzStringPrinterFactory,
+			@Nonnull final NoFizzNoBuzzStrategyFactory noFizzNoBuzzStrategyFactory,
+			@Nonnull final IntegerIntegerPrinterFactory integerIntegerPrinterFactory,
+			@Nonnull final NewLineStringPrinterFactory newLineStringPrinterFactory) {
 		this.contextVisitor = fizzBuzzOutputGenerationContextVisitorFactory.createVisitor();
 		this.contexts = new ArrayList<OutputGenerationContext>();
 		this.contexts.add(new FizzBuzzOutputGenerationContext(fizzStrategyFactory.createIsEvenlyDivisibleStrategy(),
@@ -52,7 +57,7 @@ public class SingleStepOutputGenerationStrategy implements OutputGenerationStrat
 		this.myNewLinePrinter = newLineStringPrinterFactory.createStringPrinter();
 	}
 
-	public void performGenerationForCurrentStep(final SingleStepOutputGenerationParameter generationParameter) {
+	public void performGenerationForCurrentStep(@Nonnull final SingleStepOutputGenerationParameter generationParameter) {
 		final int nGenerationParameter = generationParameter.retrieveIntegerValue();
 		final Iterator<OutputGenerationContext> iterator = this.contexts.iterator();
 		while (iterator.hasNext()) {

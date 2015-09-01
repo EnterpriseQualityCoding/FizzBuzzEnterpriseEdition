@@ -9,16 +9,20 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.IntegerStringReturner;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.adapters.FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter;
 
+import javax.annotation.Nonnull;
+
 @Service
 public class IntegerIntegerPrinter implements IntegerPrinter {
 
+	@Nonnull
 	private final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory;
 
+	@Nonnull
 	private final IntegerIntegerStringReturnerFactory _integerIntegerStringReturnerFactory;
 
 	@Autowired
-	public IntegerIntegerPrinter(final IntegerIntegerStringReturnerFactory _integerIntegerStringReturnerFactory,
-			final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
+	public IntegerIntegerPrinter(@Nonnull final IntegerIntegerStringReturnerFactory _integerIntegerStringReturnerFactory,
+								 @Nonnull final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
 		this._integerIntegerStringReturnerFactory = _integerIntegerStringReturnerFactory;
 		this._systemOutFizzBuzzOutputStrategyFactory = _systemOutFizzBuzzOutputStrategyFactory;
 	}
@@ -41,7 +45,7 @@ public class IntegerIntegerPrinter implements IntegerPrinter {
 	}
 
 	@Override
-	public void printValue(final Object value) {
+	public void printValue(@Nonnull final Object value) {
 		this.printInteger((Integer) value);
 	}
 

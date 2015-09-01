@@ -8,9 +8,11 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.parameters.FizzBuzzUpperLimitParameter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.parameters.DefaultFizzBuzzUpperLimitParameter;
 
+import javax.annotation.Nonnull;
+
 public final class Main {
 
-	public static void main(final String[] args) {
+	public static void main(@Nonnull final String[] args) {
 		final ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		final FizzBuzz myFizzBuzz = (FizzBuzz) context.getBean("standardFizzBuzz");
 		final FizzBuzzUpperLimitParameter fizzBuzzUpperLimit = new DefaultFizzBuzzUpperLimitParameter();

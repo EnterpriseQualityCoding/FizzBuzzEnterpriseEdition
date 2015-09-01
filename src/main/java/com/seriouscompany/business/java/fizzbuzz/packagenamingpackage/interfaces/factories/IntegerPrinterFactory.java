@@ -2,8 +2,11 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.printers.IntegerPrinter;
 
+import javax.annotation.Nonnull;
+
 public interface IntegerPrinterFactory {
-	
+
+	@Nonnull
 	public IntegerPrinter createPrinter();
 	
 }

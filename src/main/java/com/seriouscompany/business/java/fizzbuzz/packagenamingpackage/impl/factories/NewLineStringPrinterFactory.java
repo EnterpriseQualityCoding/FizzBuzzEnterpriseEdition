@@ -7,16 +7,20 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.print
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.StringPrinterFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.printers.StringPrinter;
 
+import javax.annotation.Nonnull;
+
 @Service
 public class NewLineStringPrinterFactory implements StringPrinterFactory {
 
+	@Nonnull
 	private final NewLineStringPrinter _newLineStringPrinter;
 
 	@Autowired
-	public NewLineStringPrinterFactory(final NewLineStringPrinter _newLineStringPrinter) {
+	public NewLineStringPrinterFactory(@Nonnull final NewLineStringPrinter _newLineStringPrinter) {
 		this._newLineStringPrinter = _newLineStringPrinter;
 	}
 
+	@Nonnull
 	@Override
 	public StringPrinter createStringPrinter() {
 		return this._newLineStringPrinter;

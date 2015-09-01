@@ -9,16 +9,20 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.StringStringReturner;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.adapters.FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter;
 
+import javax.annotation.Nonnull;
+
 @Service
 public class BuzzStringPrinter implements StringPrinter {
 
+	@Nonnull
 	private final SystemOutFizzBuzzOutputStrategyFactory _outputStrategyFactory;
 
+	@Nonnull
 	private final BuzzStringReturnerFactory _buzzStringReturnerFactory;
 
 	@Autowired
-	public BuzzStringPrinter(final BuzzStringReturnerFactory _buzzStringReturnerFactory,
-			final SystemOutFizzBuzzOutputStrategyFactory _outputStrategyFactory) {
+	public BuzzStringPrinter(@Nonnull final BuzzStringReturnerFactory _buzzStringReturnerFactory,
+							 @Nonnull final SystemOutFizzBuzzOutputStrategyFactory _outputStrategyFactory) {
 		this._buzzStringReturnerFactory = _buzzStringReturnerFactory;
 		this._outputStrategyFactory = _outputStrategyFactory;
 	}
@@ -34,7 +38,7 @@ public class BuzzStringPrinter implements StringPrinter {
 	}
 
 	@Override
-	public void printValue(final Object value) {
+	public void printValue(@Nonnull final Object value) {
 		this.print();
 	}
 }

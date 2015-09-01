@@ -8,15 +8,21 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.facto
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.loop.LoopContextStateManipulation;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.loop.LoopContextStateRetrieval;
 
+import javax.annotation.Nonnull;
+
 public final class LoopContext implements LoopContextStateManipulation, LoopContextStateRetrieval {
 
+	@Nonnull
 	private final LoopInitializer myLoopInitializer;
+	@Nonnull
 	private final LoopFinalizer myLoopFinalizer;
+	@Nonnull
 	private final LoopCondition myLoopCondition;
+	@Nonnull
 	private final LoopStep myLoopStep;
 	private int myCurrentControlParameterValue;
 
-	public LoopContext(final int nLoopControlParameterFinalValue) {
+	public LoopContext(@Nonnull final int nLoopControlParameterFinalValue) {
 		final ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		final LoopComponentFactory myLoopComponentFactory = context.getBean("loopComponentFactory",
 				LoopComponentFactory.class);

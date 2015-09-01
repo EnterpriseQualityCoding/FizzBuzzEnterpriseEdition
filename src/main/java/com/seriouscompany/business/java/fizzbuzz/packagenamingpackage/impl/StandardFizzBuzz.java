@@ -7,13 +7,16 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.FizzBuzzSolutionStrategyFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzSolutionStrategy;
 
+import javax.annotation.Nonnull;
+
 @Service
 public class StandardFizzBuzz implements FizzBuzz {
 
+	@Nonnull
 	private final FizzBuzzSolutionStrategyFactory _fizzBuzzSolutionStrategyFactory;
 
 	@Autowired
-	public StandardFizzBuzz(final FizzBuzzSolutionStrategyFactory _fizzBuzzSolutionStrategyFactory) {
+	public StandardFizzBuzz(@Nonnull final FizzBuzzSolutionStrategyFactory _fizzBuzzSolutionStrategyFactory) {
 		this._fizzBuzzSolutionStrategyFactory = _fizzBuzzSolutionStrategyFactory;
 	}
 

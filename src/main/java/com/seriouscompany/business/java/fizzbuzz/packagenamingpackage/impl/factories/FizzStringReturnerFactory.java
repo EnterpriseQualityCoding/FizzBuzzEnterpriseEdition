@@ -7,16 +7,20 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strin
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.StringStringReturnerFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.StringStringReturner;
 
+import javax.annotation.Nonnull;
+
 @Service
 public class FizzStringReturnerFactory implements StringStringReturnerFactory {
 
+	@Nonnull
 	private final FizzStringReturner _fizzStringReturner;
 
 	@Autowired
-	public FizzStringReturnerFactory(final FizzStringReturner _fizzStringReturner) {
+	public FizzStringReturnerFactory(@Nonnull final FizzStringReturner _fizzStringReturner) {
 		this._fizzStringReturner = _fizzStringReturner;
 	}
 
+	@Nonnull
 	@Override
 	public StringStringReturner createStringStringReturner() {
 		return this._fizzStringReturner;

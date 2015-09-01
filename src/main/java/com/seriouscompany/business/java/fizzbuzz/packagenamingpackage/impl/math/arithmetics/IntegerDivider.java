@@ -9,18 +9,22 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.converters.primitivetypesconverters.DoubleToIntConverter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.converters.primitivetypesconverters.IntToDoubleConverter;
 
+import javax.annotation.Nonnull;
+
 @Service
 public class IntegerDivider {
 
 	public static final int INTEGER_DIVIDE_ZERO_VALUE = 0;
 	public static final int INTEGER_ORIGIN_ZERO_VALUE = 0;
 
+	@Nonnull
 	private final FirstIsSmallerThanSecondDoubleComparator firstIsSmallerThanSecondDoubleComparator;
+	@Nonnull
 	private final FirstIsLargerThanSecondDoubleComparator firstIsLargerThanSecondDoubleComparator;
 
 	@Autowired
-	public IntegerDivider(final FirstIsLargerThanSecondDoubleComparator firstIsLargerThanSecondDoubleComparator,
-			final FirstIsSmallerThanSecondDoubleComparator firstIsSmallerThanSecondDoubleComparator) {
+	public IntegerDivider(@Nonnull final FirstIsLargerThanSecondDoubleComparator firstIsLargerThanSecondDoubleComparator,
+						  @Nonnull final FirstIsSmallerThanSecondDoubleComparator firstIsSmallerThanSecondDoubleComparator) {
 		this.firstIsLargerThanSecondDoubleComparator = firstIsLargerThanSecondDoubleComparator;
 		this.firstIsSmallerThanSecondDoubleComparator = firstIsSmallerThanSecondDoubleComparator;
 	}

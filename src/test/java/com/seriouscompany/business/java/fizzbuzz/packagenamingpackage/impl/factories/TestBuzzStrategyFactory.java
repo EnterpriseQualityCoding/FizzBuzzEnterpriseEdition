@@ -16,7 +16,7 @@ public class TestBuzzStrategyFactory {
          
         // Invoke the method
          
-        BuzzStrategyFactory buzzStrategyFactory = new BuzzStrategyFactory();
+        final BuzzStrategyFactory buzzStrategyFactory = new BuzzStrategyFactory();
     }
 
 }
