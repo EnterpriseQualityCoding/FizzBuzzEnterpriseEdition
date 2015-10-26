@@ -10,16 +10,12 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 @Service
 public class FizzStringPrinterFactory implements StringPrinterFactory {
 
-	private final FizzStringPrinter _fizzStringPrinter;
-
 	@Autowired
-	public FizzStringPrinterFactory(final FizzStringPrinter _fizzStringPrinter) {
-		this._fizzStringPrinter = _fizzStringPrinter;
-	}
-
+	FizzStringPrinter _fizzStringPrinter;
+	
 	@Override
 	public StringPrinter createStringPrinter() {
-		return this._fizzStringPrinter;
+		return _fizzStringPrinter;
 	}
 
 }

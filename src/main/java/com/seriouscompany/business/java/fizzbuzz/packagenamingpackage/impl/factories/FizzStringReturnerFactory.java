@@ -10,16 +10,12 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 @Service
 public class FizzStringReturnerFactory implements StringStringReturnerFactory {
 
-	private final FizzStringReturner _fizzStringReturner;
-
 	@Autowired
-	public FizzStringReturnerFactory(final FizzStringReturner _fizzStringReturner) {
-		this._fizzStringReturner = _fizzStringReturner;
-	}
-
+	private FizzStringReturner _fizzStringReturner;
+	
 	@Override
 	public StringStringReturner createStringStringReturner() {
-		return this._fizzStringReturner;
+		return _fizzStringReturner;
 	}
 
 }

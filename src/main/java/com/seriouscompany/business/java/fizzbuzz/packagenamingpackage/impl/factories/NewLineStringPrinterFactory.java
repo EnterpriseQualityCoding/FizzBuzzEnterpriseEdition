@@ -10,16 +10,12 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 @Service
 public class NewLineStringPrinterFactory implements StringPrinterFactory {
 
-	private final NewLineStringPrinter _newLineStringPrinter;
-
 	@Autowired
-	public NewLineStringPrinterFactory(final NewLineStringPrinter _newLineStringPrinter) {
-		this._newLineStringPrinter = _newLineStringPrinter;
-	}
-
+	private NewLineStringPrinter _newLineStringPrinter;
+	
 	@Override
 	public StringPrinter createStringPrinter() {
-		return this._newLineStringPrinter;
+		return _newLineStringPrinter;
 	}
 
 }

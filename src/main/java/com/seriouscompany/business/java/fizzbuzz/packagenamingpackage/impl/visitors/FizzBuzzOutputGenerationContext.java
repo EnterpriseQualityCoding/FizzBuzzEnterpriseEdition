@@ -4,13 +4,13 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.IsEvenlyDivisibleStrategy;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.visitors.OutputGenerationContext;
 
-public final class FizzBuzzOutputGenerationContext implements OutputGenerationContext {
+public class FizzBuzzOutputGenerationContext implements OutputGenerationContext {
 
-	private final DataPrinter printer;
-	private final IsEvenlyDivisibleStrategy strategy;
+	private DataPrinter printer;
+	private IsEvenlyDivisibleStrategy strategy;
 
-	public FizzBuzzOutputGenerationContext(final IsEvenlyDivisibleStrategy strategy,
-			final DataPrinter printer) {
+	public FizzBuzzOutputGenerationContext(IsEvenlyDivisibleStrategy strategy,
+			DataPrinter printer) {
 		super();
 		this.strategy = strategy;
 		this.printer = printer;
@@ -18,12 +18,12 @@ public final class FizzBuzzOutputGenerationContext implements OutputGenerationCo
 
 	@Override
 	public DataPrinter getPrinter() {
-		return this.printer;
+		return printer;
 	}
 
 	@Override
 	public IsEvenlyDivisibleStrategy getStrategy() {
-		return this.strategy;
+		return strategy;
 	}
 
 }

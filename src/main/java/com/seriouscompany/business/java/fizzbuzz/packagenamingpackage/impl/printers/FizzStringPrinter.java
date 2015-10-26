@@ -12,30 +12,24 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 @Service
 public class FizzStringPrinter implements StringPrinter {
 
-	private final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory;
-
-	private final FizzStringReturnerFactory _fizzStringReturnerFactory;
-
 	@Autowired
-	public FizzStringPrinter(final FizzStringReturnerFactory _fizzStringReturnerFactory,
-			final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
-		this._fizzStringReturnerFactory = _fizzStringReturnerFactory;
-		this._systemOutFizzBuzzOutputStrategyFactory = _systemOutFizzBuzzOutputStrategyFactory;
-	}
-
+	private SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory;
+	
+	@Autowired 
+	private FizzStringReturnerFactory _fizzStringReturnerFactory;
+	
 	public void print() {
-		final StringStringReturner myFizzStringReturner = this._fizzStringReturnerFactory
-			.createStringStringReturner();
+		final StringStringReturner myFizzStringReturner = _fizzStringReturnerFactory
+				.createStringStringReturner();
 		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
-				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(
-						this._systemOutFizzBuzzOutputStrategyFactory.createOutputStrategy());
+				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(_systemOutFizzBuzzOutputStrategyFactory.createOutputStrategy());
 
 		myOutputAdapter.output(myFizzStringReturner.getReturnString());
 	}
 
 	@Override
-	public void printValue(final Object value) {
-		this.print();
+	public void printValue(Object value) {
+		print();
 	}
 
 }

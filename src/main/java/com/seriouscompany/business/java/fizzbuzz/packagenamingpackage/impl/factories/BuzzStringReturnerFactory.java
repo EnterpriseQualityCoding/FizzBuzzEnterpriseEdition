@@ -10,15 +10,11 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 @Service
 public class BuzzStringReturnerFactory implements StringStringReturnerFactory {
 
-	private final BuzzStringReturner _myBuzzStringReturner;
-
 	@Autowired
-	public BuzzStringReturnerFactory(final BuzzStringReturner _myBuzzStringReturner) {
-		this._myBuzzStringReturner = _myBuzzStringReturner;
-	}
-
+	private BuzzStringReturner _myBuzzStringReturner;
+	
 	@Override
 	public StringStringReturner createStringStringReturner() {
-		return this._myBuzzStringReturner;
+		return _myBuzzStringReturner;
 	}
 }

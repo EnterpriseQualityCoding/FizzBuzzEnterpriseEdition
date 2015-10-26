@@ -12,37 +12,30 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 @Service
 public class IntegerIntegerPrinter implements IntegerPrinter {
 
-	private final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory;
-
-	private final IntegerIntegerStringReturnerFactory _integerIntegerStringReturnerFactory;
-
 	@Autowired
-	public IntegerIntegerPrinter(final IntegerIntegerStringReturnerFactory _integerIntegerStringReturnerFactory,
-			final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
-		this._integerIntegerStringReturnerFactory = _integerIntegerStringReturnerFactory;
-		this._systemOutFizzBuzzOutputStrategyFactory = _systemOutFizzBuzzOutputStrategyFactory;
-	}
+	private SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory;
+	
+	@Autowired
+	private IntegerIntegerStringReturnerFactory _integerIntegerStringReturnerFactory;
 
-	public void printInteger(final int theInteger) {
-		final IntegerStringReturner myIntegerStringReturner =
-				this._integerIntegerStringReturnerFactory.createIntegerStringReturner();
+	public void printInteger(int theInteger) {
+		final IntegerStringReturner myIntegerStringReturner = 
+				_integerIntegerStringReturnerFactory.createIntegerStringReturner();
 		final String myIntegerString = myIntegerStringReturner.getIntegerReturnString(theInteger);
 		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
-				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(
-						this._systemOutFizzBuzzOutputStrategyFactory.createOutputStrategy());
+				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(_systemOutFizzBuzzOutputStrategyFactory.createOutputStrategy());
 
 		myOutputAdapter.output(myIntegerString);
 	}
 
 	@Override
 	public void print() {
-		throw new UnsupportedOperationException(
-				"com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.printers.IntegerIntegerPrinter.print()");
+		throw new UnsupportedOperationException("com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.printers.IntegerIntegerPrinter.print()");
 	}
 
 	@Override
-	public void printValue(final Object value) {
-		this.printInteger((Integer) value);
+	public void printValue(Object value) {
+		printInteger((Integer)value);
 	}
 
 }

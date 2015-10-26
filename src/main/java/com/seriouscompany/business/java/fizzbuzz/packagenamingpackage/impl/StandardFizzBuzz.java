@@ -9,17 +9,13 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 @Service
 public class StandardFizzBuzz implements FizzBuzz {
-
-	private final FizzBuzzSolutionStrategyFactory _fizzBuzzSolutionStrategyFactory;
-
+	
 	@Autowired
-	public StandardFizzBuzz(final FizzBuzzSolutionStrategyFactory _fizzBuzzSolutionStrategyFactory) {
-		this._fizzBuzzSolutionStrategyFactory = _fizzBuzzSolutionStrategyFactory;
-	}
-
-	public void fizzBuzz(final int nFizzBuzzUpperLimit) {
+	FizzBuzzSolutionStrategyFactory _fizzBuzzSolutionStrategyFactory;
+	
+	public void fizzBuzz(int nFizzBuzzUpperLimit) {
 		final FizzBuzzSolutionStrategy mySolutionStrategy =
-				this._fizzBuzzSolutionStrategyFactory.createFizzBuzzSolutionStrategy();
+			this._fizzBuzzSolutionStrategyFactory.createFizzBuzzSolutionStrategy();
 		mySolutionStrategy.runSolution(nFizzBuzzUpperLimit);
 	}
 }

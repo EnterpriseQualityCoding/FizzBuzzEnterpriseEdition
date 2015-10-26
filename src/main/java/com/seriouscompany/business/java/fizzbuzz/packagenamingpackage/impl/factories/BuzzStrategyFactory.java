@@ -9,17 +9,13 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 @Service
 public class BuzzStrategyFactory implements IsEvenlyDivisibleStrategyFactory {
-
-	private final BuzzStrategy _buzzStrategy;
-
+	
 	@Autowired
-	public BuzzStrategyFactory(final BuzzStrategy _buzzStrategy) {
-		this._buzzStrategy = _buzzStrategy;
-	}
-
+	private BuzzStrategy _buzzStrategy;
+	
 	@Override
 	public IsEvenlyDivisibleStrategy createIsEvenlyDivisibleStrategy() {
-		return this._buzzStrategy;
+		return _buzzStrategy;
 	}
 
 }

@@ -7,7 +7,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 @Service
 public class IntegerIntegerStringReturner implements IntegerStringReturner {
 
-	public String getIntegerReturnString(final int theInteger) {
+	public String getIntegerReturnString(int theInteger) {
 		final Integer myIntegerToBeConvertedToString = new Integer(theInteger);
 		final StringBuilder myStringBuilder = new StringBuilder(myIntegerToBeConvertedToString.toString());
 		final String myResultingStringFromIntegerToStringConversion = myStringBuilder.toString();

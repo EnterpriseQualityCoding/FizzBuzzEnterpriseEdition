@@ -11,16 +11,12 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 public class IntegerIntegerStringReturnerFactory implements
 		IntegerStringReturnerFactory {
 
-	private final IntegerIntegerStringReturner _integerIntegerStringReturner;
-
 	@Autowired
-	public IntegerIntegerStringReturnerFactory(final IntegerIntegerStringReturner _integerIntegerStringReturner) {
-		this._integerIntegerStringReturner = _integerIntegerStringReturner;
-	}
-
+	private IntegerIntegerStringReturner _integerIntegerStringReturner;
+	
 	@Override
 	public IntegerStringReturner createIntegerStringReturner() {
-		return this._integerIntegerStringReturner;
+		return _integerIntegerStringReturner;
 	}
 
 }

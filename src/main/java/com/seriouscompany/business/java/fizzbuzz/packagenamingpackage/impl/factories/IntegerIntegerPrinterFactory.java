@@ -10,16 +10,12 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 @Service
 public class IntegerIntegerPrinterFactory implements IntegerPrinterFactory {
 
-	private final IntegerIntegerPrinter _integerIntegerPrinter;
-
 	@Autowired
-	public IntegerIntegerPrinterFactory(final IntegerIntegerPrinter _integerIntegerPrinter) {
-		this._integerIntegerPrinter = _integerIntegerPrinter;
-	}
-
+	private IntegerIntegerPrinter _integerIntegerPrinter;
+	
 	@Override
 	public IntegerPrinter createPrinter() {
-		return this._integerIntegerPrinter;
+		return _integerIntegerPrinter;
 	}
 
 }

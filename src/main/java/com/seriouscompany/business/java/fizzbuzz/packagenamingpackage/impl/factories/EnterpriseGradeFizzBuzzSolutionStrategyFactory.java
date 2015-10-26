@@ -9,16 +9,12 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 @Service
 public class EnterpriseGradeFizzBuzzSolutionStrategyFactory implements FizzBuzzSolutionStrategyFactory {
 
-	private final FizzBuzzSolutionStrategy _fizzBuzzSolutionStrategy;
-
 	@Autowired
-	public EnterpriseGradeFizzBuzzSolutionStrategyFactory(final FizzBuzzSolutionStrategy _fizzBuzzSolutionStrategy) {
-		this._fizzBuzzSolutionStrategy = _fizzBuzzSolutionStrategy;
-	}
-
+	private FizzBuzzSolutionStrategy _fizzBuzzSolutionStrategy;
+	
 	@Override
 	public FizzBuzzSolutionStrategy createFizzBuzzSolutionStrategy() {
-		return this._fizzBuzzSolutionStrategy;
+		return _fizzBuzzSolutionStrategy;
 	}
 
 }

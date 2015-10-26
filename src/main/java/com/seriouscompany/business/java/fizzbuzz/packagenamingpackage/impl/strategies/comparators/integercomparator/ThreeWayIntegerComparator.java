@@ -4,8 +4,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ThreeWayIntegerComparator {
-
-	public static ThreeWayIntegerComparisonResult Compare(final int nFirstInteger, final int nSecondInteger) {
+	public static ThreeWayIntegerComparisonResult Compare(int nFirstInteger, int nSecondInteger) {
 		if (nFirstInteger == nSecondInteger) {
 			return ThreeWayIntegerComparisonResult.FirstEqualsSecond;
 		} else if (nFirstInteger < nSecondInteger) {
