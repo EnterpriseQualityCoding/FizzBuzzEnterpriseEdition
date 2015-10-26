@@ -11,14 +11,18 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 public class SystemOutFizzBuzzOutputStrategyFactory implements
 		FizzBuzzOutputStrategyFactory {
 
+	private final SystemOutFizzBuzzOutputStrategy _systemOutFizzBuzzOutputStrategy;
+
 	@Autowired
-	SystemOutFizzBuzzOutputStrategy _systemOutFizzBuzzOutputStrategy;
-	
+	public SystemOutFizzBuzzOutputStrategyFactory(final SystemOutFizzBuzzOutputStrategy _systemOutFizzBuzzOutputStrategy) {
+		this._systemOutFizzBuzzOutputStrategy = _systemOutFizzBuzzOutputStrategy;
+	}
+
 	@Override
 	public FizzBuzzOutputStrategy createOutputStrategy() {
 
-		return _systemOutFizzBuzzOutputStrategy;
-		
+		return this._systemOutFizzBuzzOutputStrategy;
+
 	}
 
 }

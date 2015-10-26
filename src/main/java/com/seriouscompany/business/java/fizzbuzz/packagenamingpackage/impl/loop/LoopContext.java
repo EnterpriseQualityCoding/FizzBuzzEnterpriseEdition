@@ -8,45 +8,46 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.facto
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.loop.LoopContextStateManipulation;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.loop.LoopContextStateRetrieval;
 
-public class LoopContext implements LoopContextStateManipulation, LoopContextStateRetrieval {
+public final class LoopContext implements LoopContextStateManipulation, LoopContextStateRetrieval {
 
-	LoopInitializer myLoopInitializer;
-	LoopFinalizer myLoopFinalizer;
-	LoopCondition myLoopCondition;
-	LoopStep myLoopStep;
-	int myCurrentControlParameterValue;
+	private final LoopInitializer myLoopInitializer;
+	private final LoopFinalizer myLoopFinalizer;
+	private final LoopCondition myLoopCondition;
+	private final LoopStep myLoopStep;
+	private int myCurrentControlParameterValue;
 
-	public LoopContext(int nLoopControlParameterFinalValue) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-		final LoopComponentFactory myLoopComponentFactory = (LoopComponentFactory) context.getBean("loopComponentFactory");
-		myLoopInitializer = myLoopComponentFactory.createLoopInitializer();
-		myLoopFinalizer = myLoopComponentFactory.createLoopFinalizer(nLoopControlParameterFinalValue);
-		myLoopCondition = myLoopComponentFactory.createLoopCondition();
-		myLoopStep = myLoopComponentFactory.createLoopStep();
+	public LoopContext(final int nLoopControlParameterFinalValue) {
+		final ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+		final LoopComponentFactory myLoopComponentFactory = context.getBean("loopComponentFactory",
+				LoopComponentFactory.class);
+		this.myLoopInitializer = myLoopComponentFactory.createLoopInitializer();
+		this.myLoopFinalizer = myLoopComponentFactory.createLoopFinalizer(nLoopControlParameterFinalValue);
+		this.myLoopCondition = myLoopComponentFactory.createLoopCondition();
+		this.myLoopStep = myLoopComponentFactory.createLoopStep();
 		((ConfigurableApplicationContext) context).close();
 	}
 
 	@Override
 	public void start() {
-		myCurrentControlParameterValue =
-			myLoopInitializer.getLoopInitializationPoint();
+		this.myCurrentControlParameterValue =
+				this.myLoopInitializer.getLoopInitializationPoint();
 	}
 
 	@Override
 	public boolean shouldProceed() {
-		return myLoopCondition.evaluateLoop(myCurrentControlParameterValue,
-			myLoopFinalizer.getLoopFinalizationPoint());
+		return this.myLoopCondition.evaluateLoop(this.myCurrentControlParameterValue,
+				this.myLoopFinalizer.getLoopFinalizationPoint());
 	}
 
 	@Override
 	public void proceed() {
-		myCurrentControlParameterValue =
-			myLoopStep.stepLoop(myCurrentControlParameterValue);
+		this.myCurrentControlParameterValue =
+				this.myLoopStep.stepLoop(this.myCurrentControlParameterValue);
 	}
 
 	@Override
 	public int getControlParameter() {
-		return myCurrentControlParameterValue;
+		return this.myCurrentControlParameterValue;
 	}
 
 }

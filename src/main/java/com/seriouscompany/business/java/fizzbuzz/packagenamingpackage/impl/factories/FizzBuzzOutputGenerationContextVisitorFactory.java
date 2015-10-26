@@ -11,12 +11,17 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 public class FizzBuzzOutputGenerationContextVisitorFactory implements
 		OutputGenerationContextVisitorFactory {
 
+	private final FizzBuzzOutputGenerationContextVisitor _fizzBuzzOutputGenerationContextVisitor;
+
 	@Autowired
-	private FizzBuzzOutputGenerationContextVisitor _fizzBuzzOutputGenerationContextVisitor;
-	
+	public FizzBuzzOutputGenerationContextVisitorFactory(
+			final FizzBuzzOutputGenerationContextVisitor _fizzBuzzOutputGenerationContextVisitor) {
+		this._fizzBuzzOutputGenerationContextVisitor = _fizzBuzzOutputGenerationContextVisitor;
+	}
+
 	@Override
 	public OutputGenerationContextVisitor createVisitor() {
-		return _fizzBuzzOutputGenerationContextVisitor;
+		return this._fizzBuzzOutputGenerationContextVisitor;
 	}
 
 }

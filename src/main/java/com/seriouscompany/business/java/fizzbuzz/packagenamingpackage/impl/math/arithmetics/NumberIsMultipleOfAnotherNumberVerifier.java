@@ -1,23 +1,36 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.math.arithmetics;
 
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.ApplicationContextHolder;
+import javax.annotation.PostConstruct;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.comparators.integercomparator.IntegerForEqualityComparator;
 
 @Service
 public class NumberIsMultipleOfAnotherNumberVerifier {
-	public static boolean numberIsMultipleOfAnotherNumber(int nFirstNumber, int nSecondNumber) {
-		try{
+
+	private static IntegerDivider integerDivider;
+
+	@PostConstruct
+	public void init() {
+		final ApplicationContext applicationContext = ApplicationContextHolder.getApplicationContext();
+		this.integerDivider = applicationContext.getBean(IntegerDivider.class);
+	}
+
+	public static boolean numberIsMultipleOfAnotherNumber(final int nFirstNumber, final int nSecondNumber) {
+		try {
 			final int nDivideFirstIntegerBySecondIntegerResult =
-				(IntegerDivider.divide(nFirstNumber, nSecondNumber));
+					(NumberIsMultipleOfAnotherNumberVerifier.integerDivider.divide(nFirstNumber, nSecondNumber));
 			final int nMultiplyDivisionResultBySecondIntegerResult =
-				nDivideFirstIntegerBySecondIntegerResult * nSecondNumber;
-			if (IntegerForEqualityComparator.areTwoIntegersEqual(nMultiplyDivisionResultBySecondIntegerResult, nFirstNumber)) {
+					nDivideFirstIntegerBySecondIntegerResult * nSecondNumber;
+			if (IntegerForEqualityComparator.areTwoIntegersEqual(nMultiplyDivisionResultBySecondIntegerResult,
+					nFirstNumber)) {
 				return true;
 			} else {
 				return false;
 			}
-		} catch( ArithmeticException ae ){
+		} catch (final ArithmeticException ae) {
 			return false;
 		}
 	}

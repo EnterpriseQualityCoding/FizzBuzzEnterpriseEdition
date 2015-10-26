@@ -12,25 +12,31 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 @Service
 public class NewLineStringPrinter implements StringPrinter {
 
+	private final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory;
+
+	private final NewLineStringReturnerFactory _newLineStringReturnerFactory;
+
 	@Autowired
-	private SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory;
-	
-	@Autowired
-	private NewLineStringReturnerFactory _newLineStringReturnerFactory;
+	public NewLineStringPrinter(final NewLineStringReturnerFactory _newLineStringReturnerFactory,
+			final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
+		this._newLineStringReturnerFactory = _newLineStringReturnerFactory;
+		this._systemOutFizzBuzzOutputStrategyFactory = _systemOutFizzBuzzOutputStrategyFactory;
+	}
 
 	public void print() {
-		final StringStringReturner myNewLineStringReturner = _newLineStringReturnerFactory
-				.createStringStringReturner();
+		final StringStringReturner myNewLineStringReturner = this._newLineStringReturnerFactory
+			.createStringStringReturner();
 		final String myNewLineString = myNewLineStringReturner.getReturnString();
 		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
-				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(_systemOutFizzBuzzOutputStrategyFactory.createOutputStrategy());
+				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(
+						this._systemOutFizzBuzzOutputStrategyFactory.createOutputStrategy());
 
 		myOutputAdapter.output(myNewLineString);
 	}
 
 	@Override
-	public void printValue(Object value) {
-		print();
+	public void printValue(final Object value) {
+		this.print();
 	}
 
 }

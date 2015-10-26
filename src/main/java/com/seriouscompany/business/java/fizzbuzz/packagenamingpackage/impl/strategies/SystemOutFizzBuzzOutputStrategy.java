@@ -10,7 +10,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 public class SystemOutFizzBuzzOutputStrategy implements FizzBuzzOutputStrategy {
 
 	@Override
-	public void output(String output) throws IOException {
+	public void output(final String output) throws IOException {
 
 		System.out.write(output.getBytes());
 		System.out.flush();
