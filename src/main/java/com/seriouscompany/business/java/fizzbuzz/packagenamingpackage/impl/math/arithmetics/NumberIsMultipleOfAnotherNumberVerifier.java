@@ -2,6 +2,8 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.math
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.ApplicationContextHolder;
 import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 
@@ -12,9 +14,13 @@ public class NumberIsMultipleOfAnotherNumberVerifier {
 
 	private static IntegerDivider integerDivider;
 
+	@Autowired
+	private ApplicationContextHolder applicationContextHolder;
+
 	@PostConstruct
 	public void init() {
-		final ApplicationContext applicationContext = ApplicationContextHolder.getApplicationContext();
+		final ApplicationContext applicationContext = applicationContextHolder.getApplicationContext();
+
 		this.integerDivider = applicationContext.getBean(IntegerDivider.class);
 	}
 
