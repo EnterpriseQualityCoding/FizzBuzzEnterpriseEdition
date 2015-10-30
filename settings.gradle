@@ -1,1 +1,4 @@
 rootProject.name = 'FizzBuzzEnterpriseEdition'
+include 'interfacelibrarymodule'
+include 'implementationlibrarymodule'
+
