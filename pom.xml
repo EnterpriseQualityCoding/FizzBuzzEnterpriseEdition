@@ -8,7 +8,7 @@
   <packaging>jar</packaging>
 
   <name>FizzBuzz Enterprise Edition</name>
-  <url>https://github.com/Mikkeren/FizzBuzzEnterpriseEdition</url>
+  <url>https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
