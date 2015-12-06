@@ -12,12 +12,20 @@ public class NumberIsMultipleOfAnotherNumberVerifier {
 
 	private static IntegerDivider integerDivider;
 
+	/**
+	 * @return
+	 */
 	@PostConstruct
 	public void init() {
 		final ApplicationContext applicationContext = ApplicationContextHolder.getApplicationContext();
 		this.integerDivider = applicationContext.getBean(IntegerDivider.class);
 	}
 
+	/**
+	 * @param nFirstNumber
+	 * @param nSecondNumber
+     * @return
+     */
 	public static boolean numberIsMultipleOfAnotherNumber(final int nFirstNumber, final int nSecondNumber) {
 		try {
 			final int nDivideFirstIntegerBySecondIntegerResult =
