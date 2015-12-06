@@ -8,6 +8,11 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 @Service
 public class LoopCondition {
 
+	/**
+	 * @param nCurrentNumber
+	 * @param nTotalCount
+     * @return
+     */
 	public boolean evaluateLoop(final int nCurrentNumber, final int nTotalCount) {
 		final ThreeWayIntegerComparisonResult comparisonResult = ThreeWayIntegerComparator.Compare(nCurrentNumber,
 				nTotalCount);
