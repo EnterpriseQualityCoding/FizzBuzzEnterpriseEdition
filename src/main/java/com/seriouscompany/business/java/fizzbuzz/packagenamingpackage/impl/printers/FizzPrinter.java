@@ -12,11 +12,17 @@ public class FizzPrinter {
 
 	private final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory;
 
+	/**
+	 * @param _systemOutFizzBuzzOutputStrategyFactory
+     */
 	@Autowired
 	public FizzPrinter(final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
 		this._systemOutFizzBuzzOutputStrategyFactory = _systemOutFizzBuzzOutputStrategyFactory;
 	}
 
+	/**
+	 * @return
+	 */
 	public void printFizz() {
 		final FizzStringReturner myFizzStringReturner = new FizzStringReturner();
 		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =

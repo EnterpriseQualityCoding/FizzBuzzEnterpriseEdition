@@ -16,6 +16,10 @@ public class FizzStringPrinter implements StringPrinter {
 
 	private final FizzStringReturnerFactory _fizzStringReturnerFactory;
 
+	/**
+	 * @param _fizzStringReturnerFactory
+	 * @param _systemOutFizzBuzzOutputStrategyFactory
+     */
 	@Autowired
 	public FizzStringPrinter(final FizzStringReturnerFactory _fizzStringReturnerFactory,
 			final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
@@ -23,6 +27,9 @@ public class FizzStringPrinter implements StringPrinter {
 		this._systemOutFizzBuzzOutputStrategyFactory = _systemOutFizzBuzzOutputStrategyFactory;
 	}
 
+	/**
+	 * @return
+	 */
 	public void print() {
 		final StringStringReturner myFizzStringReturner = this._fizzStringReturnerFactory
 			.createStringStringReturner();
@@ -33,6 +40,9 @@ public class FizzStringPrinter implements StringPrinter {
 		myOutputAdapter.output(myFizzStringReturner.getReturnString());
 	}
 
+	/**
+	 * @param value
+     */
 	@Override
 	public void printValue(final Object value) {
 		this.print();

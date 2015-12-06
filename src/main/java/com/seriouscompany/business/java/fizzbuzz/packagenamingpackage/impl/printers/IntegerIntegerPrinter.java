@@ -16,6 +16,10 @@ public class IntegerIntegerPrinter implements IntegerPrinter {
 
 	private final IntegerIntegerStringReturnerFactory _integerIntegerStringReturnerFactory;
 
+	/**
+	 * @param _integerIntegerStringReturnerFactory
+	 * @param _systemOutFizzBuzzOutputStrategyFactory
+     */
 	@Autowired
 	public IntegerIntegerPrinter(final IntegerIntegerStringReturnerFactory _integerIntegerStringReturnerFactory,
 			final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
@@ -34,12 +38,18 @@ public class IntegerIntegerPrinter implements IntegerPrinter {
 		myOutputAdapter.output(myIntegerString);
 	}
 
+	/**
+	 * @return
+	 */
 	@Override
 	public void print() {
 		throw new UnsupportedOperationException(
 				"com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.printers.IntegerIntegerPrinter.print()");
 	}
 
+	/**
+	 * @param value
+     */
 	@Override
 	public void printValue(final Object value) {
 		this.printInteger((Integer) value);

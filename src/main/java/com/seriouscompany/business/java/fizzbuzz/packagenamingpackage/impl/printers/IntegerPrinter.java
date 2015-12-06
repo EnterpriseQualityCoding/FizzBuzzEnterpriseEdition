@@ -13,11 +13,18 @@ public class IntegerPrinter {
 
 	private final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory;
 
+	/**
+	 * @param _systemOutFizzBuzzOutputStrategyFactory
+     */
 	@Autowired
 	public IntegerPrinter(final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
 		this._systemOutFizzBuzzOutputStrategyFactory = _systemOutFizzBuzzOutputStrategyFactory;
 	}
 
+	/**
+	 * @param theInteger
+	 * @return
+     */
 	public void printInteger(final int theInteger) {
 		final IntegerStringReturner myIntegerIntegerStringReturner = new IntegerIntegerStringReturner();
 		final String myIntegerString = myIntegerIntegerStringReturner
