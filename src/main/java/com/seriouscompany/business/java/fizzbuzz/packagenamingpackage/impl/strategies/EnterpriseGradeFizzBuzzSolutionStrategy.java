@@ -13,11 +13,18 @@ public class EnterpriseGradeFizzBuzzSolutionStrategy implements FizzBuzzSolution
 
 	private final LoopPayloadExecution _loopPayloadExecution;
 
+	/**
+	 * @param _loopPayloadExecution
+     */
 	@Autowired
 	public EnterpriseGradeFizzBuzzSolutionStrategy(final LoopPayloadExecution _loopPayloadExecution) {
 		this._loopPayloadExecution = _loopPayloadExecution;
 	}
 
+	/**
+	 * @param nFizzBuzzUpperLimit
+	 * @return
+     */
 	@Override
 	public void runSolution(final int nFizzBuzzUpperLimit) {
 		final LoopContext loopContext = new LoopContext(nFizzBuzzUpperLimit);

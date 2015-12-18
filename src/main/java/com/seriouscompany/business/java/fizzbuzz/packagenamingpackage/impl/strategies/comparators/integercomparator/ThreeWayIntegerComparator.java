@@ -5,6 +5,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class ThreeWayIntegerComparator {
 
+	/**
+	 * @param nFirstInteger
+	 * @param nSecondInteger
+     * @return
+     */
 	public static ThreeWayIntegerComparisonResult Compare(final int nFirstInteger, final int nSecondInteger) {
 		if (nFirstInteger == nSecondInteger) {
 			return ThreeWayIntegerComparisonResult.FirstEqualsSecond;

@@ -2,6 +2,9 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 
 public interface FizzBuzzExceptionSafeOutputStrategy {
 
+	/**
+	 * @param output
+     */
 	public void output(String output);
 
 }

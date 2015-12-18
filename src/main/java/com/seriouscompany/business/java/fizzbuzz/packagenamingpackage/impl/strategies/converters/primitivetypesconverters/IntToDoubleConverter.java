@@ -5,6 +5,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class IntToDoubleConverter {
 
+	/**
+	 * @param nIntegerToConvert
+	 * @return double
+     */
 	public static double Convert(final int nIntegerToConvert) {
 		final double dbConversionResult = (double) nIntegerToConvert;
 		return dbConversionResult;

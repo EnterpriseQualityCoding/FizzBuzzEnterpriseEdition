@@ -4,6 +4,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public interface StringStringReturnerFactory {
 
+	/**
+	 * @return
+     */
 	public StringStringReturner createStringStringReturner();
 	
 }

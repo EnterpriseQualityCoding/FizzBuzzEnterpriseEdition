@@ -9,12 +9,15 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 @Service
 public class SystemOutFizzBuzzOutputStrategy implements FizzBuzzOutputStrategy {
 
+	/**
+	 * @param output
+	 * @throws IOException
+	 * @return
+     */
 	@Override
 	public void output(final String output) throws IOException {
-
 		System.out.write(output.getBytes());
 		System.out.flush();
-
 	}
 
 }

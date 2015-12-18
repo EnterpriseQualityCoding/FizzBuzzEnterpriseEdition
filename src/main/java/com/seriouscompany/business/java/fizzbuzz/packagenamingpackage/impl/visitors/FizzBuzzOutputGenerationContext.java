@@ -9,6 +9,10 @@ public final class FizzBuzzOutputGenerationContext implements OutputGenerationCo
 	private final DataPrinter printer;
 	private final IsEvenlyDivisibleStrategy strategy;
 
+	/**
+	 * @param strategy
+	 * @param printer
+     */
 	public FizzBuzzOutputGenerationContext(final IsEvenlyDivisibleStrategy strategy,
 			final DataPrinter printer) {
 		super();
@@ -16,11 +20,17 @@ public final class FizzBuzzOutputGenerationContext implements OutputGenerationCo
 		this.printer = printer;
 	}
 
+	/**
+	 * @return
+     */
 	@Override
 	public DataPrinter getPrinter() {
 		return this.printer;
 	}
 
+	/**
+	 * @return
+     */
 	@Override
 	public IsEvenlyDivisibleStrategy getStrategy() {
 		return this.strategy;

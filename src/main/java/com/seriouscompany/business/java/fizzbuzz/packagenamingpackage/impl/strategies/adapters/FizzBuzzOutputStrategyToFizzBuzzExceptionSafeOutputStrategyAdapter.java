@@ -6,11 +6,18 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 public final class FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter implements FizzBuzzExceptionSafeOutputStrategy {
 
 	private  final FizzBuzzOutputStrategy _fizzBuzzOutputStrategy;
-	
+
+	/**
+	 * @param fizzBuzzOutputStrategy
+     */
 	public FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(final FizzBuzzOutputStrategy fizzBuzzOutputStrategy) {
 		this._fizzBuzzOutputStrategy = fizzBuzzOutputStrategy;
 	}
 
+	/**
+	 * @param outputStringToOutput
+	 * @return
+     */
 	@Override
 	public void output(final String outputStringToOutput) {
 		try {

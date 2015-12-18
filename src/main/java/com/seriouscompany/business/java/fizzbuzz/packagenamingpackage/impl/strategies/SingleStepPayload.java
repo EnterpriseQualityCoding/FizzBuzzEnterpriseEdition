@@ -13,11 +13,18 @@ public class SingleStepPayload implements LoopPayloadExecution {
 
 	private final OutputGenerationStrategy _outputGenerationStrategy;
 
+	/**
+	 * @param _outputGenerationStrategy
+     */
 	@Autowired
 	public SingleStepPayload(final OutputGenerationStrategy _outputGenerationStrategy) {
 		this._outputGenerationStrategy = _outputGenerationStrategy;
 	}
 
+	/**
+	 * @param stateRetrieval
+     * @return
+	 */
 	@Override
 	public void runLoopPayload(final LoopContextStateRetrieval stateRetrieval) {
 		final LoopContextStateRetrievalToSingleStepOutputGenerationAdapter adapter =

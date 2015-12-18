@@ -29,6 +29,16 @@ public class SingleStepOutputGenerationStrategy implements OutputGenerationStrat
 	private final OutputGenerationContextVisitor contextVisitor;
 	private final StringPrinter myNewLinePrinter;
 
+	/**
+	 * @param fizzBuzzOutputGenerationContextVisitorFactory
+	 * @param fizzStrategyFactory
+	 * @param fizzStringPrinterFactory
+	 * @param buzzStrategyFactory
+	 * @param buzzStringPrinterFactory
+	 * @param noFizzNoBuzzStrategyFactory
+	 * @param integerIntegerPrinterFactory
+     * @param newLineStringPrinterFactory
+     */
 	@Autowired
 	public SingleStepOutputGenerationStrategy(
 			final FizzBuzzOutputGenerationContextVisitorFactory fizzBuzzOutputGenerationContextVisitorFactory,
@@ -52,6 +62,10 @@ public class SingleStepOutputGenerationStrategy implements OutputGenerationStrat
 		this.myNewLinePrinter = newLineStringPrinterFactory.createStringPrinter();
 	}
 
+	/**
+	 * @param generationParameter
+	 * @return
+     */
 	public void performGenerationForCurrentStep(final SingleStepOutputGenerationParameter generationParameter) {
 		final int nGenerationParameter = generationParameter.retrieveIntegerValue();
 		final Iterator<OutputGenerationContext> iterator = this.contexts.iterator();
