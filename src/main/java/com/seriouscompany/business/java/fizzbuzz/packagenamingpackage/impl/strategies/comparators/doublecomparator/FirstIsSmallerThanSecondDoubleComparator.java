@@ -5,10 +5,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class FirstIsSmallerThanSecondDoubleComparator {
 	public  boolean firstIsSmallerThanSecond(final double dbFirstDoubleToCompare, final double dbSecondDoubleToCompare) {
-		if (dbFirstDoubleToCompare < dbSecondDoubleToCompare) {
-			return true;
-		} else {
-			return false;
-		}
+		return dbFirstDoubleToCompare < dbSecondDoubleToCompare;
 	}
 }

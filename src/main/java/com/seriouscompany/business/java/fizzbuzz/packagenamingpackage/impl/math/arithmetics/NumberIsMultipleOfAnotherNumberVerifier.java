@@ -24,12 +24,8 @@ public class NumberIsMultipleOfAnotherNumberVerifier {
 					(NumberIsMultipleOfAnotherNumberVerifier.integerDivider.divide(nFirstNumber, nSecondNumber));
 			final int nMultiplyDivisionResultBySecondIntegerResult =
 					nDivideFirstIntegerBySecondIntegerResult * nSecondNumber;
-			if (IntegerForEqualityComparator.areTwoIntegersEqual(nMultiplyDivisionResultBySecondIntegerResult,
-					nFirstNumber)) {
-				return true;
-			} else {
-				return false;
-			}
+			return IntegerForEqualityComparator.areTwoIntegersEqual(nMultiplyDivisionResultBySecondIntegerResult, nFirstNumber);
+			
 		} catch (final ArithmeticException ae) {
 			return false;
 		}

@@ -10,11 +10,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.math.
 public class BuzzStrategy implements IsEvenlyDivisibleStrategy {
 
 	public boolean isEvenlyDivisible(final int theInteger) {
-		if (NumberIsMultipleOfAnotherNumberVerifier.numberIsMultipleOfAnotherNumber(theInteger,
-				BuzzStrategyConstants.BUZZ_INTEGER_CONSTANT_VALUE)) {
-			return true;
-		} else {
-			return false;
-		}
+		return NumberIsMultipleOfAnotherNumberVerifier.numberIsMultipleOfAnotherNumber(theInteger,
+				BuzzStrategyConstants.BUZZ_INTEGER_CONSTANT_VALUE);
 	}
 }
