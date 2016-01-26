@@ -31,18 +31,18 @@ public class IntegerDivider {
 		if (denominatorEqualsZero) {
 			throw new ArithmeticException("An attempt was made to divide by zero.");
 		} else {
-			final double dbFirstNumber = IntToDoubleConverter.Convert(nFirstInteger);
-			final double dbSecondNumber = IntToDoubleConverter.Convert(nSecondInteger);
+			final double dbFirstNumber = IntToDoubleConverter.convert(nFirstInteger);
+			final double dbSecondNumber = IntToDoubleConverter.convert(nSecondInteger);
 			final double dbQuotient = dbFirstNumber / dbSecondNumber;
 			double dbRoundedQuotient = (double) IntegerDivider.INTEGER_ORIGIN_ZERO_VALUE;
-			if (this.firstIsSmallerThanSecondDoubleComparator.FirstIsSmallerThanSecond(dbQuotient,
+			if (this.firstIsSmallerThanSecondDoubleComparator.firstIsSmallerThanSecond(dbQuotient,
 					(double) IntegerDivider.INTEGER_ORIGIN_ZERO_VALUE)) {
 				dbRoundedQuotient = Math.ceil(dbQuotient);
-			} else if (this.firstIsLargerThanSecondDoubleComparator.FirstIsLargerThanSecond(dbQuotient,
+			} else if (this.firstIsLargerThanSecondDoubleComparator.firstIsLargerThanSecond(dbQuotient,
 					(double) IntegerDivider.INTEGER_ORIGIN_ZERO_VALUE)) {
 				dbRoundedQuotient = Math.floor(dbQuotient);
 			}
-			final int nIntegerQuotient = DoubleToIntConverter.Convert(dbRoundedQuotient);
+			final int nIntegerQuotient = DoubleToIntConverter.convert(dbRoundedQuotient);
 			return nIntegerQuotient;
 		}
 	}

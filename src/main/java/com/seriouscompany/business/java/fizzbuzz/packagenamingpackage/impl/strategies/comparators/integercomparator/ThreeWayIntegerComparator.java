@@ -7,7 +7,7 @@ public class ThreeWayIntegerComparator {
 	
 	private ThreeWayIntegerComparator() {}
 
-	public static ThreeWayIntegerComparisonResult Compare(final int nFirstInteger, final int nSecondInteger) {
+	public static ThreeWayIntegerComparisonResult compare(final int nFirstInteger, final int nSecondInteger) {
 		if (nFirstInteger == nSecondInteger) {
 			return ThreeWayIntegerComparisonResult.FirstEqualsSecond;
 		} else if (nFirstInteger < nSecondInteger) {

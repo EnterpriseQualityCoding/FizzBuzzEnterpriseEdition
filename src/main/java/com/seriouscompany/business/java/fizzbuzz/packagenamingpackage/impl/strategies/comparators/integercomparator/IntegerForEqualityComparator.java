@@ -9,7 +9,7 @@ public class IntegerForEqualityComparator {
 
 	public static boolean areTwoIntegersEqual(final int nFirstInteger, final int nSecondInteger) {
 		final ThreeWayIntegerComparisonResult comparisonResult =
-				ThreeWayIntegerComparator.Compare(nFirstInteger, nSecondInteger);
+				ThreeWayIntegerComparator.compare(nFirstInteger, nSecondInteger);
 		if (comparisonResult == ThreeWayIntegerComparisonResult.FirstEqualsSecond) {
 			return true;
 		} else {

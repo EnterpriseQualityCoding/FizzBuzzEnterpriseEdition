@@ -7,7 +7,7 @@ public class DoubleToIntConverter {
 
 	private DoubleToIntConverter() {}
 
-	public static int Convert(final double dbDoubleToConvert) {
+	public static int convert(final double dbDoubleToConvert) {
 		final int nConversionResult = (int) dbDoubleToConvert;
 		return nConversionResult;
 	}
