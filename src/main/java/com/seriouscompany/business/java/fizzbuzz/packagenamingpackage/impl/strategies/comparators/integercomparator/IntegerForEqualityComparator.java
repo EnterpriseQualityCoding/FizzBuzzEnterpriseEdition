@@ -4,6 +4,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class IntegerForEqualityComparator {
+	
+	private IntegerForEqualityComparator() {}
 
 	public static boolean areTwoIntegersEqual(final int nFirstInteger, final int nSecondInteger) {
 		final ThreeWayIntegerComparisonResult comparisonResult =
