@@ -10,8 +10,6 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.param
 
 public final class Main {
 	
-	private Main () {}
-
 	public static void main(final String[] args) {
 		final ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		final FizzBuzz myFizzBuzz = (FizzBuzz) context.getBean("standardFizzBuzz");

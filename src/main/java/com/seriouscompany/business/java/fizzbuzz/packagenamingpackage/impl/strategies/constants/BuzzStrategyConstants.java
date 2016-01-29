@@ -3,7 +3,7 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.stra
 import org.springframework.stereotype.Service;
 
 @Service
-public class BuzzStrategyConstants
+public final class BuzzStrategyConstants
 {
 	private BuzzStrategyConstants() {}
 	
