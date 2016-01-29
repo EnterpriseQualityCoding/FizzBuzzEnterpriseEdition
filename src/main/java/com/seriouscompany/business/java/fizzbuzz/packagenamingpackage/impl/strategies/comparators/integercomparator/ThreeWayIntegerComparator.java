@@ -3,7 +3,9 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.stra
 import org.springframework.stereotype.Service;
 
 @Service
-public class ThreeWayIntegerComparator {
+public final class ThreeWayIntegerComparator {
+
+	private ThreeWayIntegerComparator() {}
 
 	public static ThreeWayIntegerComparisonResult Compare(final int nFirstInteger, final int nSecondInteger) {
 		if (nFirstInteger == nSecondInteger) {

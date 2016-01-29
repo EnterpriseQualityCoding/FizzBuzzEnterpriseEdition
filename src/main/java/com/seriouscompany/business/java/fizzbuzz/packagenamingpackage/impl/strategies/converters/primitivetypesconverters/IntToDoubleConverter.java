@@ -3,7 +3,9 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.stra
 import org.springframework.stereotype.Service;
 
 @Service
-public class IntToDoubleConverter {
+public final class IntToDoubleConverter {
+
+	private IntToDoubleConverter() {}
 
 	public static double Convert(final int nIntegerToConvert) {
 		final double dbConversionResult = (double) nIntegerToConvert;
