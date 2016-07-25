@@ -4,6 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.Constants;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.LoopComponentFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.loop.LoopContextStateManipulation;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.loop.LoopContextStateRetrieval;
@@ -17,8 +18,9 @@ public final class LoopContext implements LoopContextStateManipulation, LoopCont
 	private int myCurrentControlParameterValue;
 
 	public LoopContext(final int nLoopControlParameterFinalValue) {
-		final ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-		final LoopComponentFactory myLoopComponentFactory = context.getBean("loopComponentFactory",
+		super();
+		final ApplicationContext context = new ClassPathXmlApplicationContext(Constants.SPRING_XML);
+		final LoopComponentFactory myLoopComponentFactory = context.getBean(Constants.LOOP_COMPONENT_FACTORY,
 				LoopComponentFactory.class);
 		this.myLoopInitializer = myLoopComponentFactory.createLoopInitializer();
 		this.myLoopFinalizer = myLoopComponentFactory.createLoopFinalizer(nLoopControlParameterFinalValue);

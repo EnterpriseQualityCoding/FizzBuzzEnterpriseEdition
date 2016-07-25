@@ -5,6 +5,7 @@ public final class LoopFinalizer {
 	private final int nStoredLoopFinalValue;
 
 	public LoopFinalizer(final int nLoopFinalValue) {
+		super();
 		this.nStoredLoopFinalValue = nLoopFinalValue;
 	}
 

@@ -14,6 +14,7 @@ public class IntegerIntegerPrinterFactory implements IntegerPrinterFactory {
 
 	@Autowired
 	public IntegerIntegerPrinterFactory(final IntegerIntegerPrinter _integerIntegerPrinter) {
+		super();
 		this._integerIntegerPrinter = _integerIntegerPrinter;
 	}
 

@@ -15,6 +15,7 @@ public class NewLineStringReturnerFactory implements
 
 	@Autowired
 	public NewLineStringReturnerFactory(final NewLineStringReturner _newlineStringReturner) {
+		super();
 		this._newlineStringReturner = _newlineStringReturner;
 	}
 

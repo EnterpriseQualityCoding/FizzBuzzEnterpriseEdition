@@ -8,8 +8,9 @@ public final class LoopContextStateRetrievalToSingleStepOutputGenerationAdapter 
 	private final LoopContextStateRetrieval _retrievalObjectToAdapt;
 	
 	public LoopContextStateRetrievalToSingleStepOutputGenerationAdapter(final LoopContextStateRetrieval retrievalObjectToAdapt) {
+		super();
 		this._retrievalObjectToAdapt = retrievalObjectToAdapt;
-		
+
 	}
 
 	@Override

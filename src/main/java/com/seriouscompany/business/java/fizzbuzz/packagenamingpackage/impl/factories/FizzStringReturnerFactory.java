@@ -14,6 +14,7 @@ public class FizzStringReturnerFactory implements StringStringReturnerFactory {
 
 	@Autowired
 	public FizzStringReturnerFactory(final FizzStringReturner _fizzStringReturner) {
+		super();
 		this._fizzStringReturner = _fizzStringReturner;
 	}
 

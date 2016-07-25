@@ -14,6 +14,7 @@ public class NewLineStringPrinterFactory implements StringPrinterFactory {
 
 	@Autowired
 	public NewLineStringPrinterFactory(final NewLineStringPrinter _newLineStringPrinter) {
+		super();
 		this._newLineStringPrinter = _newLineStringPrinter;
 	}
 

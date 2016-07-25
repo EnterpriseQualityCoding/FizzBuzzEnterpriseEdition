@@ -15,6 +15,7 @@ public class SystemOutFizzBuzzOutputStrategyFactory implements
 
 	@Autowired
 	public SystemOutFizzBuzzOutputStrategyFactory(final SystemOutFizzBuzzOutputStrategy _systemOutFizzBuzzOutputStrategy) {
+		super();
 		this._systemOutFizzBuzzOutputStrategy = _systemOutFizzBuzzOutputStrategy;
 	}
 

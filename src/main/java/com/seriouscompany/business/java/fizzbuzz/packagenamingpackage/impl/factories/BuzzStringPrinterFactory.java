@@ -14,6 +14,7 @@ public class BuzzStringPrinterFactory implements StringPrinterFactory {
 
 	@Autowired
 	public BuzzStringPrinterFactory(final BuzzStringPrinter _buzzStringPrinter) {
+		super();
 		this._buzzStringPrinter = _buzzStringPrinter;
 	}
 

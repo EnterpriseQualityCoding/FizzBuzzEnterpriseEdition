@@ -5,9 +5,9 @@ import org.springframework.stereotype.Service;
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.BuzzStringReturnerFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.SystemOutFizzBuzzOutputStrategyFactory;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.adapters.FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.printers.StringPrinter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.StringStringReturner;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.adapters.FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter;
 
 @Service
 public class BuzzStringPrinter implements StringPrinter {
@@ -19,6 +19,7 @@ public class BuzzStringPrinter implements StringPrinter {
 	@Autowired
 	public BuzzStringPrinter(final BuzzStringReturnerFactory _buzzStringReturnerFactory,
 			final SystemOutFizzBuzzOutputStrategyFactory _outputStrategyFactory) {
+		super();
 		this._buzzStringReturnerFactory = _buzzStringReturnerFactory;
 		this._outputStrategyFactory = _outputStrategyFactory;
 	}

@@ -8,7 +8,8 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 public class FizzStringReturner implements StringStringReturner {
 
 	public String getReturnString() {
-		final StringBuilder myStringBuilder = new StringBuilder("Fizz");
+		final StringBuilder myStringBuilder = new StringBuilder(
+				com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.Constants.FIZZ);
 		final String myString = myStringBuilder.toString();
 		return new String(myString);
 	}

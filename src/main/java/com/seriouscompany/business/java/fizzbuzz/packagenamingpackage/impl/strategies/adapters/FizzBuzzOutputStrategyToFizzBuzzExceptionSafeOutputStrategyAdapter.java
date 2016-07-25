@@ -1,13 +1,14 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.adapters;
 
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzExceptionSafeOutputStrategy;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
 
 public final class FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter implements FizzBuzzExceptionSafeOutputStrategy {
 
 	private  final FizzBuzzOutputStrategy _fizzBuzzOutputStrategy;
 	
 	public FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(final FizzBuzzOutputStrategy fizzBuzzOutputStrategy) {
+		super();
 		this._fizzBuzzOutputStrategy = fizzBuzzOutputStrategy;
 	}
 
