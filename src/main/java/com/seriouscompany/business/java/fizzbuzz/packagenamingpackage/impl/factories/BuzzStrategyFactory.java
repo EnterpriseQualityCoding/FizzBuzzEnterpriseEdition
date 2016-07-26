@@ -14,6 +14,7 @@ public class BuzzStrategyFactory implements IsEvenlyDivisibleStrategyFactory {
 
 	@Autowired
 	public BuzzStrategyFactory(final BuzzStrategy _buzzStrategy) {
+		super();
 		this._buzzStrategy = _buzzStrategy;
 	}
 

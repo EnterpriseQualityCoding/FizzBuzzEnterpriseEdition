@@ -13,6 +13,7 @@ public class EnterpriseGradeFizzBuzzSolutionStrategyFactory implements FizzBuzzS
 
 	@Autowired
 	public EnterpriseGradeFizzBuzzSolutionStrategyFactory(final FizzBuzzSolutionStrategy _fizzBuzzSolutionStrategy) {
+		super();
 		this._fizzBuzzSolutionStrategy = _fizzBuzzSolutionStrategy;
 	}
 

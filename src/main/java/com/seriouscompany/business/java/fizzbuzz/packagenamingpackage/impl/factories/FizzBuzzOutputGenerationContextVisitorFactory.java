@@ -16,6 +16,7 @@ public class FizzBuzzOutputGenerationContextVisitorFactory implements
 	@Autowired
 	public FizzBuzzOutputGenerationContextVisitorFactory(
 			final FizzBuzzOutputGenerationContextVisitor _fizzBuzzOutputGenerationContextVisitor) {
+		super();
 		this._fizzBuzzOutputGenerationContextVisitor = _fizzBuzzOutputGenerationContextVisitor;
 	}
 

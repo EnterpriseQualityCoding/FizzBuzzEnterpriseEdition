@@ -12,6 +12,7 @@ public final class LoopRunner {
 
 	public LoopRunner(final LoopContextStateManipulation stateManipulation,
 			final LoopContextStateRetrieval stateRetrieval, final LoopPayloadExecution payload) {
+		super();
 		this.myStateManipulation = stateManipulation;
 		this.myStateRetrieval = stateRetrieval;
 		this.myPayload = payload;

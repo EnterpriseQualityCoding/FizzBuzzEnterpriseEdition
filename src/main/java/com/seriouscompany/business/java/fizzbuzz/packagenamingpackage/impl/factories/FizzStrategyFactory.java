@@ -14,8 +14,9 @@ public class FizzStrategyFactory implements IsEvenlyDivisibleStrategyFactory {
 
     @Autowired
     public FizzStrategyFactory(final FizzStrategy _fizzStrategy) {
-        this._fizzStrategy = _fizzStrategy;
-    }
+		super();
+		this._fizzStrategy = _fizzStrategy;
+	}
 
     @Override
 	public IsEvenlyDivisibleStrategy createIsEvenlyDivisibleStrategy() {

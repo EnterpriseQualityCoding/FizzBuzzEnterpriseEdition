@@ -14,6 +14,7 @@ public class FizzStringPrinterFactory implements StringPrinterFactory {
 
 	@Autowired
 	public FizzStringPrinterFactory(final FizzStringPrinter _fizzStringPrinter) {
+		super();
 		this._fizzStringPrinter = _fizzStringPrinter;
 	}
 

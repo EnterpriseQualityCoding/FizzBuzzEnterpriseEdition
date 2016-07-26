@@ -14,6 +14,7 @@ public class StandardFizzBuzz implements FizzBuzz {
 
 	@Autowired
 	public StandardFizzBuzz(final FizzBuzzSolutionStrategyFactory _fizzBuzzSolutionStrategyFactory) {
+		super();
 		this._fizzBuzzSolutionStrategyFactory = _fizzBuzzSolutionStrategyFactory;
 	}
 

@@ -20,6 +20,7 @@ public class LoopComponentFactory {
 	@Autowired
 	public LoopComponentFactory(final LoopCondition _loopCondition, final LoopInitializer _loopInitializer,
 			final LoopStep _loopStep) {
+		super();
 		this._loopCondition = _loopCondition;
 		this._loopInitializer = _loopInitializer;
 		this._loopStep = _loopStep;

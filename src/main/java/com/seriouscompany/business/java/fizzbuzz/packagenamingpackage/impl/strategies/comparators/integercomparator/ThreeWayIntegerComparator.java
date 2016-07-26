@@ -2,6 +2,8 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.stra
 
 import org.springframework.stereotype.Service;
 
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.Constants;
+
 @Service
 public class ThreeWayIntegerComparator {
 
@@ -14,7 +16,7 @@ public class ThreeWayIntegerComparator {
 			return ThreeWayIntegerComparisonResult.FirstIsGreaterThanSecond;
 		} else {
 			// If the integers cannot be compared, then something is seriously wrong with the numbers.
-			throw new UnsupportedOperationException("The integers could not be compared.");
+			throw new UnsupportedOperationException(Constants.THE_INTEGERS_COULD_NOT_BE_COMPARED);
 		}
 	}
 }

@@ -14,6 +14,7 @@ public class BuzzStringReturnerFactory implements StringStringReturnerFactory {
 
 	@Autowired
 	public BuzzStringReturnerFactory(final BuzzStringReturner _myBuzzStringReturner) {
+		super();
 		this._myBuzzStringReturner = _myBuzzStringReturner;
 	}
 

@@ -15,6 +15,7 @@ public class IntegerIntegerStringReturnerFactory implements
 
 	@Autowired
 	public IntegerIntegerStringReturnerFactory(final IntegerIntegerStringReturner _integerIntegerStringReturner) {
+		super();
 		this._integerIntegerStringReturner = _integerIntegerStringReturner;
 	}
 
