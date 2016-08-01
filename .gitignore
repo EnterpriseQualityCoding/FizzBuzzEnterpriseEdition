@@ -132,6 +132,10 @@ Thumbs.db
 # Folder config file
 Desktop.ini
 
+#############
+## Mac OS
+#############
+.DS_Store
 
 #############
 ## Python
