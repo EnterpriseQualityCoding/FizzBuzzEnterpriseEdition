@@ -4,7 +4,8 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.IsEvenlyDivisibleStrategy;
 
 public interface OutputGenerationContext {
+
 	public IsEvenlyDivisibleStrategy getStrategy();
 	public DataPrinter getPrinter();
-}
 
+}

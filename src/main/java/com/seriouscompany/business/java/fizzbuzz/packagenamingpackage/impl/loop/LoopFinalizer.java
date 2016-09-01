@@ -12,4 +12,5 @@ public final class LoopFinalizer {
 	public int getLoopFinalizationPoint() {
 		return this.nStoredLoopFinalValue;
 	}
+
 }

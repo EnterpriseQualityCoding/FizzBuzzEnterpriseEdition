@@ -3,9 +3,10 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.stra
 import org.springframework.stereotype.Service;
 
 @Service
-public final class FizzStrategyConstants
-{
+public final class FizzStrategyConstants {
+
 	private FizzStrategyConstants() {}
 
 	public static final int FIZZ_INTEGER_CONSTANT_VALUE = 3;
+
 }

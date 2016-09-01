@@ -38,4 +38,5 @@ public class BuzzStringPrinter implements StringPrinter {
 	public void printValue(final Object value) {
 		this.print();
 	}
+
 }

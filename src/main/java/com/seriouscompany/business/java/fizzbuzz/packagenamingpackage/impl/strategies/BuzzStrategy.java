@@ -17,4 +17,5 @@ public class BuzzStrategy implements IsEvenlyDivisibleStrategy {
 			return false;
 		}
 	}
+
 }

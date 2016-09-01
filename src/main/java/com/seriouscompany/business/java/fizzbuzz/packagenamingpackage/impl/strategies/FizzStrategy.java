@@ -17,4 +17,5 @@ public class FizzStrategy implements IsEvenlyDivisibleStrategy {
 			return false;
 		}
 	}
+
 }

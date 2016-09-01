@@ -10,4 +10,5 @@ public class LoopInitializer {
 	public int getLoopInitializationPoint() {
 		return Constants.LOOP_INIT_VALUE;
 	}
+
 }

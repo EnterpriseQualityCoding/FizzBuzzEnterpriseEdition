@@ -26,4 +26,5 @@ public class BuzzPrinter {
 
 		myOutputAdapter.output(myBuzzStringReturner.getReturnString());
 	}
+
 }

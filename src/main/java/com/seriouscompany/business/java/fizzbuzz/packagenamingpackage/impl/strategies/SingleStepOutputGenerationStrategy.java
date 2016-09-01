@@ -55,4 +55,5 @@ public class SingleStepOutputGenerationStrategy implements OutputGenerationStrat
 		}
 		this.myNewLinePrinter.print();
 	}
+
 }
