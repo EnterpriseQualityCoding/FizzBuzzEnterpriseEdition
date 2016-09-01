@@ -11,4 +11,5 @@ public final class DoubleToIntConverter {
 		final int nConversionResult = (int) dbDoubleToConvert;
 		return nConversionResult;
 	}
+
 }

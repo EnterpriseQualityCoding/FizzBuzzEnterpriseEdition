@@ -19,4 +19,5 @@ public class LoopCondition {
 			return false;
 		}
 	}
+
 }

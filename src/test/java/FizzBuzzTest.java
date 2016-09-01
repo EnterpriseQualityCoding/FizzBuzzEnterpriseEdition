@@ -64,4 +64,5 @@ public class FizzBuzzTest {
 		this.doFizzBuzz(TestConstants.INT_16,
 				TestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7_8_FIZZ_BUZZ_11_FIZZ_13_14_FIZZ_BUZZ_16);
 	}
+
 }

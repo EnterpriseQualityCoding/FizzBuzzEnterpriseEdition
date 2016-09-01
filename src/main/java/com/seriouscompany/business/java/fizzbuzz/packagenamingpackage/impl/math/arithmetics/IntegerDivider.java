@@ -45,4 +45,5 @@ public class IntegerDivider {
 			return nIntegerQuotient;
 		}
 	}
+
 }

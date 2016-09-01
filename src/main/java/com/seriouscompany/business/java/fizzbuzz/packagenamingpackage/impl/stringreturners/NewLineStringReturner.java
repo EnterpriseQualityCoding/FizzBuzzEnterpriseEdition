@@ -14,4 +14,5 @@ public class NewLineStringReturner implements StringStringReturner {
 		final String myString = myStringBuilder.toString();
 		return new String(myString);
 	}
+
 }

@@ -16,4 +16,5 @@ public class Constants {
 	public static final int INTEGER_ORIGIN_ZERO_VALUE = 0;
 	public static final int LOOP_INC_VALUE = 1;
 	public static final int LOOP_INIT_VALUE = 1;
+
 }

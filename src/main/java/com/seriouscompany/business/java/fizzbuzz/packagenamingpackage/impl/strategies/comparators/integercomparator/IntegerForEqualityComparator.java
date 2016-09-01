@@ -16,4 +16,5 @@ public final class IntegerForEqualityComparator {
 			return false;
 		}
 	}
+
 }

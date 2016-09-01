@@ -6,7 +6,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 public final class FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter implements FizzBuzzExceptionSafeOutputStrategy {
 
 	private  final FizzBuzzOutputStrategy _fizzBuzzOutputStrategy;
-	
+
 	public FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(final FizzBuzzOutputStrategy fizzBuzzOutputStrategy) {
 		super();
 		this._fizzBuzzOutputStrategy = fizzBuzzOutputStrategy;
@@ -22,4 +22,5 @@ public final class FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAd
 			// We're the enterprise...we don't get throwables either!
 		}
 	}
+
 }

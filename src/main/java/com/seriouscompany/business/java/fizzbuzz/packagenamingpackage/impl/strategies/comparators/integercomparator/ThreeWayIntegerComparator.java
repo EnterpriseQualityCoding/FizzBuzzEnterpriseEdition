@@ -21,4 +21,5 @@ public final class ThreeWayIntegerComparator {
 			throw new UnsupportedOperationException(Constants.THE_INTEGERS_COULD_NOT_BE_COMPARED);
 		}
 	}
+
 }

@@ -34,4 +34,5 @@ public class NumberIsMultipleOfAnotherNumberVerifier {
 			return false;
 		}
 	}
+
 }

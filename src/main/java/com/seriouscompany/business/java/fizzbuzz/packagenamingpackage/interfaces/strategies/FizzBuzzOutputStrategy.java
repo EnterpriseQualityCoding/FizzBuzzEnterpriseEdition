@@ -3,7 +3,7 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 import java.io.IOException;
 
 public interface FizzBuzzOutputStrategy {
-	
+
 	public void output(String output) throws IOException;
-	
+
 }

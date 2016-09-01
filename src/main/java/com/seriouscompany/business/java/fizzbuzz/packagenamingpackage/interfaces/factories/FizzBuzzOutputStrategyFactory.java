@@ -3,7 +3,7 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
 
 public interface FizzBuzzOutputStrategyFactory {
-	
+
 	public FizzBuzzOutputStrategy createOutputStrategy();
 
 }

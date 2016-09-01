@@ -13,5 +13,5 @@ public class BuzzStringReturner implements StringStringReturner {
 		final String myString = myStringBuilder.toString();
 		return new String(myString);
 	}
-	
+
 }

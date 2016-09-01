@@ -22,4 +22,5 @@ public class BuzzStringReturnerFactory implements StringStringReturnerFactory {
 	public StringStringReturner createStringStringReturner() {
 		return this._myBuzzStringReturner;
 	}
+
 }

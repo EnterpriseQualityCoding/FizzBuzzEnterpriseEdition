@@ -23,4 +23,5 @@ public class StandardFizzBuzz implements FizzBuzz {
 				this._fizzBuzzSolutionStrategyFactory.createFizzBuzzSolutionStrategy();
 		mySolutionStrategy.runSolution(nFizzBuzzUpperLimit);
 	}
+
 }

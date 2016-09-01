@@ -11,4 +11,5 @@ public final class IntToDoubleConverter {
 		final double dbConversionResult = (double) nIntegerToConvert;
 		return dbConversionResult;
 	}
+
 }
