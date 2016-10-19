@@ -40,7 +40,7 @@ public class FizzBuzzTest {
 		this.fb.fizzBuzz(n);
 
 		System.out.flush();
-		final String platformDependentExpectedResult = s.replaceAll("\\n", System.getProperty("line.separator"));
+		String platformDependentExpectedResult = s.replaceAll("\\n", System.getProperty("line.separator"));
 		assertEquals(platformDependentExpectedResult, baos.toString());
 	}
 
