@@ -4,8 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.factories.SystemOutFizzBuzzOutputStrategyFactory;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.adapters.FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter;
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.stringreturners.NewLineStringReturner;
 
 @Service
 public class NewLinePrinter {
@@ -16,16 +14,6 @@ public class NewLinePrinter {
 	public NewLinePrinter(final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
 		super();
 		this._systemOutFizzBuzzOutputStrategyFactory = _systemOutFizzBuzzOutputStrategyFactory;
-	}
-
-	public void printNewLine() {
-		final NewLineStringReturner myNewLineStringReturner = new NewLineStringReturner();
-		final String myNewLineString = myNewLineStringReturner.getReturnString();
-		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
-				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(
-						this._systemOutFizzBuzzOutputStrategyFactory.createOutputStrategy());
-
-		myOutputAdapter.output(myNewLineString);
 	}
 
 }
