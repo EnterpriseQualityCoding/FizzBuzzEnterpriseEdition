@@ -9,6 +9,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.printers.IntegerPrinter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.IntegerStringReturner;
 
+/**
+ * Printer for IntegerInteger
+ */
 @Service
 public class IntegerIntegerPrinter implements IntegerPrinter {
 
@@ -17,8 +20,8 @@ public class IntegerIntegerPrinter implements IntegerPrinter {
 	private final IntegerIntegerStringReturnerFactory _integerIntegerStringReturnerFactory;
 
 	/**
-	 * @param _integerIntegerStringReturnerFactory
-	 * @param _systemOutFizzBuzzOutputStrategyFactory
+	 * @param _integerIntegerStringReturnerFactory IntegerIntegerStringReturnerFactory
+	 * @param _systemOutFizzBuzzOutputStrategyFactory SystemOutFizzBuzzOutputStrategyFactory
      */
 	@Autowired
 	public IntegerIntegerPrinter(final IntegerIntegerStringReturnerFactory _integerIntegerStringReturnerFactory,
@@ -28,6 +31,9 @@ public class IntegerIntegerPrinter implements IntegerPrinter {
 		this._systemOutFizzBuzzOutputStrategyFactory = _systemOutFizzBuzzOutputStrategyFactory;
 	}
 
+	/**
+	 * @param theInteger
+     */
 	public void printInteger(final int theInteger) {
 		final IntegerStringReturner myIntegerStringReturner =
 				this._integerIntegerStringReturnerFactory.createIntegerStringReturner();
@@ -40,7 +46,7 @@ public class IntegerIntegerPrinter implements IntegerPrinter {
 	}
 
 	/**
-	 * @return
+	 * @return void
 	 */
 	@Override
 	public void print() {

@@ -7,13 +7,16 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.facto
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.adapters.FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.stringreturners.BuzzStringReturner;
 
+/**
+ * BuzzPrinter
+ */
 @Service
 public class BuzzPrinter {
 
 	private final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory;
 
 	/**
-	 * @param _systemOutFizzBuzzOutputStrategyFactory
+	 * @param _systemOutFizzBuzzOutputStrategyFactory SystemOutFizzBuzzOutputStrategyFactory
      */
 	@Autowired
 	public BuzzPrinter(final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
@@ -22,7 +25,7 @@ public class BuzzPrinter {
 	}
 
 	/**
-	 * @return
+	 * @return void
 	 */
 	public void printBuzz() {
 		final BuzzStringReturner myBuzzStringReturner = new BuzzStringReturner();

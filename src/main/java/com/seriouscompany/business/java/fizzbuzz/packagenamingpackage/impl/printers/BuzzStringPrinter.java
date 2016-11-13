@@ -9,6 +9,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.printers.StringPrinter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.StringStringReturner;
 
+/**
+ * Printer for BuzzString
+ */
 @Service
 public class BuzzStringPrinter implements StringPrinter {
 
@@ -29,7 +32,7 @@ public class BuzzStringPrinter implements StringPrinter {
 	}
 
 	/**
-	 * @return
+	 * @return void
 	 */
 	public void print() {
 		final StringStringReturner myBuzzStringReturner = this._buzzStringReturnerFactory

@@ -9,6 +9,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.printers.StringPrinter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.StringStringReturner;
 
+/**
+ * Printer for NewLineString
+ */
 @Service
 public class NewLineStringPrinter implements StringPrinter {
 
@@ -17,8 +20,8 @@ public class NewLineStringPrinter implements StringPrinter {
 	private final NewLineStringReturnerFactory _newLineStringReturnerFactory;
 
 	/**
-	 * @param _newLineStringReturnerFactory
-	 * @param _systemOutFizzBuzzOutputStrategyFactory
+	 * @param _newLineStringReturnerFactory NewLineStringReturnerFactory
+	 * @param _systemOutFizzBuzzOutputStrategyFactory SystemOutFizzBuzzOutputStrategyFactory
      */
 	@Autowired
 	public NewLineStringPrinter(final NewLineStringReturnerFactory _newLineStringReturnerFactory,
@@ -29,7 +32,7 @@ public class NewLineStringPrinter implements StringPrinter {
 	}
 
 	/**
-	 * @return
+	 * @return void
 	 */
 	public void print() {
 		final StringStringReturner myNewLineStringReturner = this._newLineStringReturnerFactory
@@ -43,7 +46,7 @@ public class NewLineStringPrinter implements StringPrinter {
 	}
 
 	/**
-	 * @param value
+	 * @param value Object
      */
 	@Override
 	public void printValue(final Object value) {

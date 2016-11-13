@@ -8,13 +8,16 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.stringreturners.IntegerIntegerStringReturner;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.IntegerStringReturner;
 
+/**
+ * IntegerPrinter
+ */
 @Service
 public class IntegerPrinter {
 
 	private final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory;
 
 	/**
-	 * @param _systemOutFizzBuzzOutputStrategyFactory
+	 * @param _systemOutFizzBuzzOutputStrategyFactory SystemOutFizzBuzzOutputStrategyFactory
      */
 	@Autowired
 	public IntegerPrinter(final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
@@ -23,8 +26,7 @@ public class IntegerPrinter {
 	}
 
 	/**
-	 * @param theInteger
-	 * @return
+	 * @param theInteger int
      */
 	public void printInteger(final int theInteger) {
 		final IntegerStringReturner myIntegerIntegerStringReturner = new IntegerIntegerStringReturner();
