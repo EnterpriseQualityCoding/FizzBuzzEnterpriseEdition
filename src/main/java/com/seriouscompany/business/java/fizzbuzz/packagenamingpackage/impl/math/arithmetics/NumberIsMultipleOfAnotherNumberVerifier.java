@@ -7,13 +7,16 @@ import org.springframework.stereotype.Service;
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.comparators.integercomparator.IntegerForEqualityComparator;
 
+/**
+ *  Verifier for NumberIsMultipleOfAnotherNumber
+ */
 @Service
 public class NumberIsMultipleOfAnotherNumberVerifier {
 
 	private static IntegerDivider integerDivider;
 
 	/**
-	 * @return
+	 * @return void
 	 */
 	@PostConstruct
 	public void init() {
@@ -22,8 +25,8 @@ public class NumberIsMultipleOfAnotherNumberVerifier {
 	}
 
 	/**
-	 * @param nFirstNumber
-	 * @param nSecondNumber
+	 * @param nFirstNumber int
+	 * @param nSecondNumber int
      * @return
      */
 	public static boolean numberIsMultipleOfAnotherNumber(final int nFirstNumber, final int nSecondNumber) {

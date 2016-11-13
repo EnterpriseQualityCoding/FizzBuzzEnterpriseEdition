@@ -3,12 +3,15 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.para
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.Constants;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.parameters.FizzBuzzUpperLimitParameter;
 
+/**
+ * Parameter for DefaultFizzBuzzUpperLimit
+ */
 public final class DefaultFizzBuzzUpperLimitParameter implements FizzBuzzUpperLimitParameter {
 
 	private final int fizzBuzzUpperLimitParameterValue;
 
 	/**
-	 * @return
+	 *
 	 */
 	public DefaultFizzBuzzUpperLimitParameter() {
 		super();
@@ -16,7 +19,7 @@ public final class DefaultFizzBuzzUpperLimitParameter implements FizzBuzzUpperLi
 	}
 
 	/**
-	 * @param fizzBuzzUpperLimitParameterValue
+	 * @param fizzBuzzUpperLimitParameterValue int
 	 * @return
      */
 	public DefaultFizzBuzzUpperLimitParameter(final int fizzBuzzUpperLimitParameterValue) {
@@ -25,10 +28,9 @@ public final class DefaultFizzBuzzUpperLimitParameter implements FizzBuzzUpperLi
 	}
 
 	/**
-	 * @return
+	 * @return int
      */
 	public int obtainUpperLimitValue() {
 		return this.fizzBuzzUpperLimitParameterValue;
 	}
-
 }

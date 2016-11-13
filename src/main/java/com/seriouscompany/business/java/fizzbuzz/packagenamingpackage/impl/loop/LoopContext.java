@@ -10,7 +10,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.loop.LoopContextStateRetrieval;
 
 /**
- *
+ * LoopContext
  */
 public final class LoopContext implements LoopContextStateManipulation, LoopContextStateRetrieval {
 
@@ -21,7 +21,7 @@ public final class LoopContext implements LoopContextStateManipulation, LoopCont
 	private int myCurrentControlParameterValue;
 
 	/**
-	 * @param nLoopControlParameterFinalValue
+	 * @param nLoopControlParameterFinalValue int
      */
 	public LoopContext(final int nLoopControlParameterFinalValue) {
 		super();

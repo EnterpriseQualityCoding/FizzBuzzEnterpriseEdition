@@ -17,8 +17,8 @@ public class IntegerDivider {
 	private final FirstIsLargerThanSecondDoubleComparator firstIsLargerThanSecondDoubleComparator;
 
 	/**
-	 * @param firstIsLargerThanSecondDoubleComparator
-	 * @param firstIsSmallerThanSecondDoubleComparator
+	 * @param firstIsLargerThanSecondDoubleComparator FirstIsLargerThanSecondDoubleComparator
+	 * @param firstIsSmallerThanSecondDoubleComparator FirstIsSmallerThanSecondDoubleComparator
      */
 	@Autowired
 	public IntegerDivider(final FirstIsLargerThanSecondDoubleComparator firstIsLargerThanSecondDoubleComparator,
@@ -29,8 +29,8 @@ public class IntegerDivider {
 	}
 
 	/**
-	 * @param nFirstInteger
-	 * @param nSecondInteger
+	 * @param nFirstInteger int
+	 * @param nSecondInteger int
      * @return int
      */
 	public int divide(final int nFirstInteger, final int nSecondInteger) {

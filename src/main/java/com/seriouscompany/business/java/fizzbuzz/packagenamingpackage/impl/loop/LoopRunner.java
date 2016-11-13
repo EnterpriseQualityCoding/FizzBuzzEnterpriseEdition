@@ -4,6 +4,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.loop.LoopContextStateRetrieval;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.loop.LoopPayloadExecution;
 
+/**
+ * LoopRunner
+ */
 public final class LoopRunner {
 
 	private final LoopContextStateManipulation myStateManipulation;
@@ -11,9 +14,9 @@ public final class LoopRunner {
 	private final LoopPayloadExecution myPayload;
 
 	/**
-	 * @param stateManipulation
-	 * @param stateRetrieval
-	 * @param payload
+	 * @param stateManipulation LoopContextStateManipulation
+	 * @param stateRetrieval LoopContextStateRetrieval
+	 * @param payload LoopPayloadExecution
      */
 	public LoopRunner(final LoopContextStateManipulation stateManipulation,
 			final LoopContextStateRetrieval stateRetrieval, final LoopPayloadExecution payload) {

@@ -4,11 +4,14 @@ import org.springframework.stereotype.Service;
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.Constants;
 
+/**
+ * LoopStep
+ */
 @Service
 public class LoopStep {
 
 	/**
-	 * @param nCurrentNumber
+	 * @param nCurrentNumber int
 	 * @return int
      */
 	public int stepLoop(final int nCurrentNumber) {
