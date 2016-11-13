@@ -12,8 +12,8 @@ public class FizzBuzzOutputGenerationContextVisitor implements
 		OutputGenerationContextVisitor {
 
 	/**
-	 * @param context
-	 * @param nGenerationParameter
+	 * @param context OutputGenerationContext
+	 * @param nGenerationParameter int
      */
 	@Override
 	public void visit(final OutputGenerationContext context, final int nGenerationParameter) {

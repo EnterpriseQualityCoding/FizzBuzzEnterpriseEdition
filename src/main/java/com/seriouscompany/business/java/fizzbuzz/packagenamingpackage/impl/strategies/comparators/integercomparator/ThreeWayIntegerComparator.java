@@ -4,15 +4,18 @@ import org.springframework.stereotype.Service;
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.Constants;
 
+/**
+ * Comparator for ThreeWayInteger
+ */
 @Service
 public final class ThreeWayIntegerComparator {
 
 	private ThreeWayIntegerComparator() {}
 
 	/**
-	 * @param nFirstInteger
-	 * @param nSecondInteger
-     * @return
+	 * @param nFirstInteger int
+	 * @param nSecondInteger int
+     * @return ThreeWayIntegerComparisonResult
      */
 	public static ThreeWayIntegerComparisonResult Compare(final int nFirstInteger, final int nSecondInteger) {
 		if (nFirstInteger == nSecondInteger) {

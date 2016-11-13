@@ -8,6 +8,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.loop.LoopPayloadExecution;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.OutputGenerationStrategy;
 
+/**
+ * Payload for SingleStep
+ */
 @Service
 public class SingleStepPayload implements LoopPayloadExecution {
 
@@ -23,8 +26,8 @@ public class SingleStepPayload implements LoopPayloadExecution {
 	}
 
 	/**
-	 * @param stateRetrieval
-     * @return
+	 * @param stateRetrieval LoopContextStateRetrieval
+     * @return void
 	 */
 	@Override
 	public void runLoopPayload(final LoopContextStateRetrieval stateRetrieval) {

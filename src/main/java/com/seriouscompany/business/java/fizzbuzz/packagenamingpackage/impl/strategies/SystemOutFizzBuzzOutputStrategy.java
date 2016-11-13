@@ -6,13 +6,16 @@ import org.springframework.stereotype.Service;
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
 
+/**
+ * Strategy for SystemOutFizzBuzzOutput
+ */
 @Service
 public class SystemOutFizzBuzzOutputStrategy implements FizzBuzzOutputStrategy {
 
 	/**
-	 * @param output
+	 * @param output String
 	 * @throws IOException
-	 * @return
+	 * @return void
      */
 	@Override
 	public void output(final String output) throws IOException {

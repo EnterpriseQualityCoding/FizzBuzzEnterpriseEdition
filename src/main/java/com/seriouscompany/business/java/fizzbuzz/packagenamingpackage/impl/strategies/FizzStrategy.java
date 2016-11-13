@@ -6,11 +6,14 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.constants.FizzStrategyConstants;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.math.arithmetics.NumberIsMultipleOfAnotherNumberVerifier;
 
+/**
+ * Strategy for Fizz
+ */
 @Service
 public class FizzStrategy implements IsEvenlyDivisibleStrategy {
 
 	/**
-	 * @param theInteger
+	 * @param theInteger int
 	 * @return boolean
      */
 	public boolean isEvenlyDivisible(final int theInteger) {

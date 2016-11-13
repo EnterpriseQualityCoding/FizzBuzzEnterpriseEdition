@@ -4,10 +4,14 @@ import org.springframework.stereotype.Service;
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.StringStringReturner;
 
+/**
+ * Returner for FizzString
+ */
 @Service
 public class FizzStringReturner implements StringStringReturner {
+
 	/**
-	 * @return
+	 * @return String
      */
 	public String getReturnString() {
 		final StringBuilder myStringBuilder = new StringBuilder(

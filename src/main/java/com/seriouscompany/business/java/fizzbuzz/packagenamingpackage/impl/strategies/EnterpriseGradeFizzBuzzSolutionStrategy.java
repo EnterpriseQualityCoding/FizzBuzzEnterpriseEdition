@@ -8,13 +8,16 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.loop.
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.loop.LoopPayloadExecution;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzSolutionStrategy;
 
+/**
+ * Strategy for EnterpriseGradeFizzBuzzSolution
+ */
 @Service
 public class EnterpriseGradeFizzBuzzSolutionStrategy implements FizzBuzzSolutionStrategy {
 
 	private final LoopPayloadExecution _loopPayloadExecution;
 
 	/**
-	 * @param _loopPayloadExecution
+	 * @param _loopPayloadExecution LoopPayloadExecution
      */
 	@Autowired
 	public EnterpriseGradeFizzBuzzSolutionStrategy(final LoopPayloadExecution _loopPayloadExecution) {
@@ -23,8 +26,8 @@ public class EnterpriseGradeFizzBuzzSolutionStrategy implements FizzBuzzSolution
 	}
 
 	/**
-	 * @param nFizzBuzzUpperLimit
-	 * @return
+	 * @param nFizzBuzzUpperLimit int
+	 * @return void
      */
 	@Override
 	public void runSolution(final int nFizzBuzzUpperLimit) {

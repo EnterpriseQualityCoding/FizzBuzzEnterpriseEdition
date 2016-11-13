@@ -10,8 +10,8 @@ public final class FizzBuzzOutputGenerationContext implements OutputGenerationCo
 	private final IsEvenlyDivisibleStrategy strategy;
 
 	/**
-	 * @param strategy
-	 * @param printer
+	 * @param strategy IsEvenlyDivisibleStrategy
+	 * @param printer DataPrinter
      */
 	public FizzBuzzOutputGenerationContext(final IsEvenlyDivisibleStrategy strategy,
 			final DataPrinter printer) {

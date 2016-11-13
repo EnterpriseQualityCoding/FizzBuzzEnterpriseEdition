@@ -2,6 +2,9 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.stra
 
 import org.springframework.stereotype.Service;
 
+/**
+ * Constants for BuzzStrategy
+ */
 @Service
 public final class BuzzStrategyConstants {
 

@@ -3,20 +3,23 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.stra
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzExceptionSafeOutputStrategy;
 
+/**
+ * Adapter for FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategy
+ */
 public final class FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter implements FizzBuzzExceptionSafeOutputStrategy {
 
 	private  final FizzBuzzOutputStrategy _fizzBuzzOutputStrategy;
 
 	/**
-	 * @param fizzBuzzOutputStrategy
+	 * @param fizzBuzzOutputStrategy FizzBuzzOutputStrategy
      */
 	public FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(final FizzBuzzOutputStrategy fizzBuzzOutputStrategy) {
 		this._fizzBuzzOutputStrategy = fizzBuzzOutputStrategy;
 	}
 
 	/**
-	 * @param outputStringToOutput
-	 * @return
+	 * @param outputStringToOutput String
+	 * @return void
      */
 	@Override
 	public void output(final String outputStringToOutput) {

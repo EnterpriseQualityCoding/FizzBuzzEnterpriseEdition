@@ -2,15 +2,18 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.stra
 
 import org.springframework.stereotype.Service;
 
+/**
+ * Comparator for IntegerForEquality
+ */
 @Service
 public final class IntegerForEqualityComparator {
 
 	private IntegerForEqualityComparator() {}
 
 	/**
-	 * @param nFirstInteger
-	 * @param nSecondInteger
-     * @return
+	 * @param nFirstInteger int
+	 * @param nSecondInteger int
+     * @return boolean
      */
 	public static boolean areTwoIntegersEqual(final int nFirstInteger, final int nSecondInteger) {
 		final ThreeWayIntegerComparisonResult comparisonResult =
@@ -21,5 +24,4 @@ public final class IntegerForEqualityComparator {
 			return false;
 		}
 	}
-
 }

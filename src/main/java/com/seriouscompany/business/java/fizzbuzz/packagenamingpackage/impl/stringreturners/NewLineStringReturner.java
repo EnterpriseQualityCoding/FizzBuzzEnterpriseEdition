@@ -4,6 +4,9 @@ import org.springframework.stereotype.Service;
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.StringStringReturner;
 
+/**
+ * Returner for NewLineString
+ */
 @Service
 public class NewLineStringReturner implements StringStringReturner {
 
