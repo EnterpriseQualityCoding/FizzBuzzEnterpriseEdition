@@ -4,6 +4,10 @@ import java.io.IOException;
 
 public interface FizzBuzzOutputStrategy {
 
+	/**
+	 * @param output
+	 * @throws IOException
+     */
 	public void output(String output) throws IOException;
 
 }

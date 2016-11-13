@@ -16,6 +16,10 @@ public class IntegerDivider {
 	private final FirstIsSmallerThanSecondDoubleComparator firstIsSmallerThanSecondDoubleComparator;
 	private final FirstIsLargerThanSecondDoubleComparator firstIsLargerThanSecondDoubleComparator;
 
+	/**
+	 * @param firstIsLargerThanSecondDoubleComparator
+	 * @param firstIsSmallerThanSecondDoubleComparator
+     */
 	@Autowired
 	public IntegerDivider(final FirstIsLargerThanSecondDoubleComparator firstIsLargerThanSecondDoubleComparator,
 			final FirstIsSmallerThanSecondDoubleComparator firstIsSmallerThanSecondDoubleComparator) {
@@ -24,6 +28,11 @@ public class IntegerDivider {
 		this.firstIsSmallerThanSecondDoubleComparator = firstIsSmallerThanSecondDoubleComparator;
 	}
 
+	/**
+	 * @param nFirstInteger
+	 * @param nSecondInteger
+     * @return int
+     */
 	public int divide(final int nFirstInteger, final int nSecondInteger) {
 		final boolean denominatorEqualsZero =
 				IntegerForEqualityComparator.areTwoIntegersEqual(nSecondInteger, Constants.INTEGER_DIVIDE_ZERO_VALUE);

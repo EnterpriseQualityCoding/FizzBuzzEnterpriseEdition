@@ -2,6 +2,9 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 
 public interface OutputGenerationStrategy {
 
+	/**
+	 * @param generationParameter
+     */
 	void performGenerationForCurrentStep(SingleStepOutputGenerationParameter generationParameter);
 
 }

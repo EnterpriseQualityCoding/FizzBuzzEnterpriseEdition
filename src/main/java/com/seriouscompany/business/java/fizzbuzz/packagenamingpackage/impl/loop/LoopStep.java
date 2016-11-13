@@ -7,6 +7,10 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.Const
 @Service
 public class LoopStep {
 
+	/**
+	 * @param nCurrentNumber
+	 * @return int
+     */
 	public int stepLoop(final int nCurrentNumber) {
 		return nCurrentNumber + Constants.LOOP_INC_VALUE;
 	}

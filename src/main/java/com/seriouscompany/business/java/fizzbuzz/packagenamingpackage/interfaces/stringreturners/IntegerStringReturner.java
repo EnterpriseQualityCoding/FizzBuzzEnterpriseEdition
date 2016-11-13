@@ -2,6 +2,10 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 
 public interface IntegerStringReturner {
 
+	/**
+	 * @param theInteger
+	 * @return
+     */
 	public String getIntegerReturnString(int theInteger);
 
 }

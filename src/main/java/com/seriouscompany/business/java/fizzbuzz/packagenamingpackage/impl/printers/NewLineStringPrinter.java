@@ -16,6 +16,10 @@ public class NewLineStringPrinter implements StringPrinter {
 
 	private final NewLineStringReturnerFactory _newLineStringReturnerFactory;
 
+	/**
+	 * @param _newLineStringReturnerFactory
+	 * @param _systemOutFizzBuzzOutputStrategyFactory
+     */
 	@Autowired
 	public NewLineStringPrinter(final NewLineStringReturnerFactory _newLineStringReturnerFactory,
 			final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
@@ -24,6 +28,9 @@ public class NewLineStringPrinter implements StringPrinter {
 		this._systemOutFizzBuzzOutputStrategyFactory = _systemOutFizzBuzzOutputStrategyFactory;
 	}
 
+	/**
+	 * @return
+	 */
 	public void print() {
 		final StringStringReturner myNewLineStringReturner = this._newLineStringReturnerFactory
 			.createStringStringReturner();
@@ -35,6 +42,9 @@ public class NewLineStringPrinter implements StringPrinter {
 		myOutputAdapter.output(myNewLineString);
 	}
 
+	/**
+	 * @param value
+     */
 	@Override
 	public void printValue(final Object value) {
 		this.print();

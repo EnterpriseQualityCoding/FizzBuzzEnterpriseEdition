@@ -12,12 +12,18 @@ public class NewLinePrinter {
 
 	private final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory;
 
+	/**
+	 * @param _systemOutFizzBuzzOutputStrategyFactory
+     */
 	@Autowired
 	public NewLinePrinter(final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
 		super();
 		this._systemOutFizzBuzzOutputStrategyFactory = _systemOutFizzBuzzOutputStrategyFactory;
 	}
 
+	/**
+	 * @return
+	 */
 	public void printNewLine() {
 		final NewLineStringReturner myNewLineStringReturner = new NewLineStringReturner();
 		final String myNewLineString = myNewLineStringReturner.getReturnString();

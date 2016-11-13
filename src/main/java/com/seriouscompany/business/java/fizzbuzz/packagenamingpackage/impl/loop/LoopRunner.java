@@ -10,6 +10,11 @@ public final class LoopRunner {
 	private final LoopContextStateRetrieval myStateRetrieval;
 	private final LoopPayloadExecution myPayload;
 
+	/**
+	 * @param stateManipulation
+	 * @param stateRetrieval
+	 * @param payload
+     */
 	public LoopRunner(final LoopContextStateManipulation stateManipulation,
 			final LoopContextStateRetrieval stateRetrieval, final LoopPayloadExecution payload) {
 		super();
@@ -18,6 +23,8 @@ public final class LoopRunner {
 		this.myPayload = payload;
 	}
 
+	/**
+	 */
 	public void runLoop() {
 		for (this.myStateManipulation.start(); this.myStateManipulation.shouldProceed(); this.myStateManipulation.proceed()) {
 			this.myPayload.runLoopPayload(this.myStateRetrieval);

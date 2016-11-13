@@ -4,6 +4,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 
 public interface IsEvenlyDivisibleStrategyFactory {
 
+	/**
+	 * @return
+     */
 	public IsEvenlyDivisibleStrategy createIsEvenlyDivisibleStrategy();
 
 }

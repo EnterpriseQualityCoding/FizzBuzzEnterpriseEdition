@@ -2,6 +2,10 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 
 public interface OutputGenerationContextVisitor {
 
+	/**
+	 * @param context
+	 * @param nGenerationParameter
+     */
 	public void visit(OutputGenerationContext context, int nGenerationParameter);
 
 }

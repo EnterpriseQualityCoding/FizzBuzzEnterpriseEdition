@@ -9,6 +9,11 @@ public final class ThreeWayIntegerComparator {
 
 	private ThreeWayIntegerComparator() {}
 
+	/**
+	 * @param nFirstInteger
+	 * @param nSecondInteger
+     * @return
+     */
 	public static ThreeWayIntegerComparisonResult Compare(final int nFirstInteger, final int nSecondInteger) {
 		if (nFirstInteger == nSecondInteger) {
 			return ThreeWayIntegerComparisonResult.FirstEqualsSecond;

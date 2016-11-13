@@ -2,6 +2,9 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 
 public interface FizzBuzzSolutionStrategy {
 
+	/**
+	 * @param nFizzBuzzUpperLimit
+     */
 	public void runSolution(int nFizzBuzzUpperLimit);
 
 }

@@ -7,6 +7,11 @@ public final class IntegerForEqualityComparator {
 
 	private IntegerForEqualityComparator() {}
 
+	/**
+	 * @param nFirstInteger
+	 * @param nSecondInteger
+     * @return
+     */
 	public static boolean areTwoIntegersEqual(final int nFirstInteger, final int nSecondInteger) {
 		final ThreeWayIntegerComparisonResult comparisonResult =
 				ThreeWayIntegerComparator.Compare(nFirstInteger, nSecondInteger);

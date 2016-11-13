@@ -11,6 +11,10 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 public class FizzBuzzOutputGenerationContextVisitor implements
 		OutputGenerationContextVisitor {
 
+	/**
+	 * @param context
+	 * @param nGenerationParameter
+     */
 	@Override
 	public void visit(final OutputGenerationContext context, final int nGenerationParameter) {
 		final IsEvenlyDivisibleStrategy strategy = context.getStrategy();
