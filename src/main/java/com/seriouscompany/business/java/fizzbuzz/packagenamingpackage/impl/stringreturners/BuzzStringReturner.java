@@ -8,9 +8,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 public class BuzzStringReturner implements StringStringReturner {
 
 	public String getReturnString() {
-		final StringBuilder myStringBuilder = new StringBuilder(
+		final StringBuffer myStringBuffer = new StringBuffer(
 				com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.Constants.BUZZ);
-		final String myString = myStringBuilder.toString();
+		final String myString = myStringBuffer.toString();
 		return new String(myString);
 	}
 
