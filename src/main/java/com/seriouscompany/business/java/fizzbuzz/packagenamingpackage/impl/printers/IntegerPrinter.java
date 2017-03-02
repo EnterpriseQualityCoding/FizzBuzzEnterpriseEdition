@@ -18,7 +18,7 @@ public class IntegerPrinter {
 
 	/**
 	 * @param _systemOutFizzBuzzOutputStrategyFactory SystemOutFizzBuzzOutputStrategyFactory
-     */
+	 */
 	@Autowired
 	public IntegerPrinter(final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
 		super();
@@ -27,7 +27,7 @@ public class IntegerPrinter {
 
 	/**
 	 * @param theInteger int
-     */
+	 */
 	public void printInteger(final int theInteger) {
 		final IntegerStringReturner myIntegerIntegerStringReturner = new IntegerIntegerStringReturner();
 		final String myIntegerString = myIntegerIntegerStringReturner

@@ -22,7 +22,7 @@ public class NewLineStringPrinter implements StringPrinter {
 	/**
 	 * @param _newLineStringReturnerFactory NewLineStringReturnerFactory
 	 * @param _systemOutFizzBuzzOutputStrategyFactory SystemOutFizzBuzzOutputStrategyFactory
-     */
+	 */
 	@Autowired
 	public NewLineStringPrinter(final NewLineStringReturnerFactory _newLineStringReturnerFactory,
 			final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
@@ -47,7 +47,7 @@ public class NewLineStringPrinter implements StringPrinter {
 
 	/**
 	 * @param value Object
-     */
+	 */
 	@Override
 	public void printValue(final Object value) {
 		this.print();

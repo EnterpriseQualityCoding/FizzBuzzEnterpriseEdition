@@ -22,7 +22,7 @@ public class FizzStringPrinter implements StringPrinter {
 	/**
 	 * @param _fizzStringReturnerFactory FizzStringReturnerFactory
 	 * @param _systemOutFizzBuzzOutputStrategyFactory SystemOutFizzBuzzOutputStrategyFactory
-     */
+	 */
 	@Autowired
 	public FizzStringPrinter(final FizzStringReturnerFactory _fizzStringReturnerFactory,
 			final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
@@ -46,7 +46,7 @@ public class FizzStringPrinter implements StringPrinter {
 
 	/**
 	 * @param value
-     */
+	 */
 	@Override
 	public void printValue(final Object value) {
 		this.print();

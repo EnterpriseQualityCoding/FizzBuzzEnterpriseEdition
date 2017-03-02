@@ -17,7 +17,7 @@ public class FizzPrinter {
 
 	/**
 	 * @param _systemOutFizzBuzzOutputStrategyFactory SystemOutFizzBuzzOutputStrategyFactory
-     */
+	 */
 	@Autowired
 	public FizzPrinter(final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
 		super();

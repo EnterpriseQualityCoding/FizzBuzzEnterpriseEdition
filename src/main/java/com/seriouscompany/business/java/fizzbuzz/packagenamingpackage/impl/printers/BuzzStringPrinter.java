@@ -22,7 +22,7 @@ public class BuzzStringPrinter implements StringPrinter {
 	/**
 	 * @param _buzzStringReturnerFactory
 	 * @param _outputStrategyFactory
-     */
+	 */
 	@Autowired
 	public BuzzStringPrinter(final BuzzStringReturnerFactory _buzzStringReturnerFactory,
 			final SystemOutFizzBuzzOutputStrategyFactory _outputStrategyFactory) {
@@ -47,7 +47,7 @@ public class BuzzStringPrinter implements StringPrinter {
 	/**
 	 * @param value
 	 * @return
-     */
+	 */
 	@Override
 	public void printValue(final Object value) {
 		this.print();

@@ -22,7 +22,7 @@ public class IntegerIntegerPrinter implements IntegerPrinter {
 	/**
 	 * @param _integerIntegerStringReturnerFactory IntegerIntegerStringReturnerFactory
 	 * @param _systemOutFizzBuzzOutputStrategyFactory SystemOutFizzBuzzOutputStrategyFactory
-     */
+	 */
 	@Autowired
 	public IntegerIntegerPrinter(final IntegerIntegerStringReturnerFactory _integerIntegerStringReturnerFactory,
 			final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
@@ -33,7 +33,7 @@ public class IntegerIntegerPrinter implements IntegerPrinter {
 
 	/**
 	 * @param theInteger
-     */
+	 */
 	public void printInteger(final int theInteger) {
 		final IntegerStringReturner myIntegerStringReturner =
 				this._integerIntegerStringReturnerFactory.createIntegerStringReturner();
@@ -56,7 +56,7 @@ public class IntegerIntegerPrinter implements IntegerPrinter {
 
 	/**
 	 * @param value
-     */
+	 */
 	@Override
 	public void printValue(final Object value) {
 		this.printInteger((Integer) value);
