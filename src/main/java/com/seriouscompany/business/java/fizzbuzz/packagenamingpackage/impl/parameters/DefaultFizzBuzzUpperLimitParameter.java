@@ -20,7 +20,7 @@ public final class DefaultFizzBuzzUpperLimitParameter implements FizzBuzzUpperLi
 
 	/**
 	 * @param fizzBuzzUpperLimitParameterValue int
-     */
+	 */
 	public DefaultFizzBuzzUpperLimitParameter(final int fizzBuzzUpperLimitParameterValue) {
 		super();
 		this.fizzBuzzUpperLimitParameterValue = fizzBuzzUpperLimitParameterValue;
@@ -28,7 +28,7 @@ public final class DefaultFizzBuzzUpperLimitParameter implements FizzBuzzUpperLi
 
 	/**
 	 * @return int
-     */
+	 */
 	public int obtainUpperLimitValue() {
 		return this.fizzBuzzUpperLimitParameterValue;
 	}
