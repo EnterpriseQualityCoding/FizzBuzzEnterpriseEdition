@@ -17,14 +17,14 @@ public class ApplicationContextHolder implements ApplicationContextAware {
 	/**
 	 * @param applicationContext
 	 * @throws BeansException
-     */
+	 */
 	public void setApplicationContext(final ApplicationContext applicationContext) throws BeansException {
 		ApplicationContextHolder.applicationContext = applicationContext;
 	}
 
 	/**
 	 * @return
-     */
+	 */
 	public static ApplicationContext getApplicationContext() {
 		return ApplicationContextHolder.applicationContext;
 	}

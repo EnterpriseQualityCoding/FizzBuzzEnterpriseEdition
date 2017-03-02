@@ -12,7 +12,7 @@ public final class LoopContextStateRetrievalToSingleStepOutputGenerationAdapter 
 
 	/**
 	 * @param retrievalObjectToAdapt LoopContextStateRetrieval
-     */
+	 */
 	public LoopContextStateRetrievalToSingleStepOutputGenerationAdapter(final LoopContextStateRetrieval retrievalObjectToAdapt) {
 		super();
 		this._retrievalObjectToAdapt = retrievalObjectToAdapt;
@@ -21,7 +21,7 @@ public final class LoopContextStateRetrievalToSingleStepOutputGenerationAdapter 
 
 	/**
 	 * @return int
-     */
+	 */
 	@Override
 	public int retrieveIntegerValue() {
 		return this._retrievalObjectToAdapt.getControlParameter();

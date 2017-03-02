@@ -18,7 +18,7 @@ public class SingleStepPayload implements LoopPayloadExecution {
 
 	/**
 	 * @param _outputGenerationStrategy
-     */
+	 */
 	@Autowired
 	public SingleStepPayload(final OutputGenerationStrategy _outputGenerationStrategy) {
 		super();
@@ -27,7 +27,7 @@ public class SingleStepPayload implements LoopPayloadExecution {
 
 	/**
 	 * @param stateRetrieval LoopContextStateRetrieval
-     * @return void
+	 * @return void
 	 */
 	@Override
 	public void runLoopPayload(final LoopContextStateRetrieval stateRetrieval) {

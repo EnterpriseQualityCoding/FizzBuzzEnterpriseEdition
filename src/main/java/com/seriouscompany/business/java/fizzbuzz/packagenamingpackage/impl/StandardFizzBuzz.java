@@ -14,7 +14,7 @@ public class StandardFizzBuzz implements FizzBuzz {
 
 	/**
 	 * @param _fizzBuzzSolutionStrategyFactory
-     */
+	 */
 	@Autowired
 	public StandardFizzBuzz(final FizzBuzzSolutionStrategyFactory _fizzBuzzSolutionStrategyFactory) {
 		super();
@@ -23,7 +23,7 @@ public class StandardFizzBuzz implements FizzBuzz {
 
 	/**
 	 * @param nFizzBuzzUpperLimit
-     */
+	 */
 	public void fizzBuzz(final int nFizzBuzzUpperLimit) {
 		final FizzBuzzSolutionStrategy mySolutionStrategy =
 				this._fizzBuzzSolutionStrategyFactory.createFizzBuzzSolutionStrategy();

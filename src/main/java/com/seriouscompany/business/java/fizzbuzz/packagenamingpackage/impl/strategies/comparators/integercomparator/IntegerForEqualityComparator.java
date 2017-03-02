@@ -13,8 +13,8 @@ public final class IntegerForEqualityComparator {
 	/**
 	 * @param nFirstInteger int
 	 * @param nSecondInteger int
-     * @return boolean
-     */
+	 * @return boolean
+	 */
 	public static boolean areTwoIntegersEqual(final int nFirstInteger, final int nSecondInteger) {
 		final ThreeWayIntegerComparisonResult comparisonResult =
 				ThreeWayIntegerComparator.Compare(nFirstInteger, nSecondInteger);

@@ -16,7 +16,7 @@ public class SystemOutFizzBuzzOutputStrategy implements FizzBuzzOutputStrategy {
 	 * @param output String
 	 * @throws IOException
 	 * @return void
-     */
+	 */
 	@Override
 	public void output(final String output) throws IOException {
 		System.out.write(output.getBytes());

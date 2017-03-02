@@ -14,7 +14,7 @@ public class FizzBuzzOutputGenerationContextVisitor implements
 	/**
 	 * @param context OutputGenerationContext
 	 * @param nGenerationParameter int
-     */
+	 */
 	@Override
 	public void visit(final OutputGenerationContext context, final int nGenerationParameter) {
 		final IsEvenlyDivisibleStrategy strategy = context.getStrategy();
