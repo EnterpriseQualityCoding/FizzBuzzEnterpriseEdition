@@ -6,7 +6,7 @@ public interface IsEvenlyDivisibleStrategyFactory {
 
 	/**
 	 * @return
-     */
+	 */
 	public IsEvenlyDivisibleStrategy createIsEvenlyDivisibleStrategy();
 
 }

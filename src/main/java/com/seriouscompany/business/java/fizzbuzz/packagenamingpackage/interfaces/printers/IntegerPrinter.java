@@ -4,7 +4,7 @@ public interface IntegerPrinter extends DataPrinter {
 
 	/**
 	 * @param theInteger
-     */
+	 */
 	public void printInteger(int theInteger);
 
 }

@@ -7,12 +7,12 @@ public interface OutputGenerationContext {
 
 	/**
 	 * @return
-     */
+	 */
 	public IsEvenlyDivisibleStrategy getStrategy();
 
 	/**
 	 * @return
-     */
+	 */
 	public DataPrinter getPrinter();
 
 }

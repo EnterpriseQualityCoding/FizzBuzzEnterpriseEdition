@@ -6,7 +6,7 @@ public interface IntegerPrinterFactory {
 
 	/**
 	 * @return
-     */
+	 */
 	public IntegerPrinter createPrinter();
 
 }

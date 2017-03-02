@@ -4,7 +4,7 @@ public interface LoopContextStateRetrieval {
 
 	/**
 	 * @return
-     */
+	 */
 	public int getControlParameter();
 
 }

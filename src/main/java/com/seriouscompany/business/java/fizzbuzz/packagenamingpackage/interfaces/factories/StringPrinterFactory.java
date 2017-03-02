@@ -6,7 +6,7 @@ public interface StringPrinterFactory {
 
 	/**
 	 * @return
-     */
+	 */
 	public StringPrinter createStringPrinter();
 
 }

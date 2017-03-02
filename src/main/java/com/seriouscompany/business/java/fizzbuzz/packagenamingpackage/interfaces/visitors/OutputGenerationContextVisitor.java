@@ -5,7 +5,7 @@ public interface OutputGenerationContextVisitor {
 	/**
 	 * @param context
 	 * @param nGenerationParameter
-     */
+	 */
 	public void visit(OutputGenerationContext context, int nGenerationParameter);
 
 }

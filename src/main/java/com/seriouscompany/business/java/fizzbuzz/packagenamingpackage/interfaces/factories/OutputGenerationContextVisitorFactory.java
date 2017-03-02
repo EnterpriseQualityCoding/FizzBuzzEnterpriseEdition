@@ -6,7 +6,7 @@ public interface OutputGenerationContextVisitorFactory {
 
 	/**
 	 * @return
-     */
+	 */
 	public OutputGenerationContextVisitor createVisitor();
 
 }

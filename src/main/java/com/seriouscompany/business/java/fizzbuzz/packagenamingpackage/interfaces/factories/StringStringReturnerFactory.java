@@ -6,7 +6,7 @@ public interface StringStringReturnerFactory {
 
 	/**
 	 * @return
-     */
+	 */
 	public StringStringReturner createStringStringReturner();
 
 }

@@ -6,7 +6,7 @@ public interface IntegerStringReturnerFactory {
 
 	/**
 	 * @return
-     */
+	 */
 	public IntegerStringReturner createIntegerStringReturner();
 
 }

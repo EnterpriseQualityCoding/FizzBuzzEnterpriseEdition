@@ -4,7 +4,7 @@ public interface FizzBuzzExceptionSafeOutputStrategy {
 
 	/**
 	 * @param output
-     */
+	 */
 	public void output(String output);
 
 }

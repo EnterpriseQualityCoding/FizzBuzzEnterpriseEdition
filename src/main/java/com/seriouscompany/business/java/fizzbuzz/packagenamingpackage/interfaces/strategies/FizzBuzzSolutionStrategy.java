@@ -4,7 +4,7 @@ public interface FizzBuzzSolutionStrategy {
 
 	/**
 	 * @param nFizzBuzzUpperLimit
-     */
+	 */
 	public void runSolution(int nFizzBuzzUpperLimit);
 
 }

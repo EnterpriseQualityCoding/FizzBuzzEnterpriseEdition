@@ -5,7 +5,7 @@ public interface IntegerStringReturner {
 	/**
 	 * @param theInteger
 	 * @return
-     */
+	 */
 	public String getIntegerReturnString(int theInteger);
 
 }

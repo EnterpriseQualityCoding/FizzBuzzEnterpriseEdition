@@ -4,7 +4,7 @@ public interface FizzBuzzUpperLimitParameter {
 
 	/**
 	 * @return
-     */
+	 */
 	public int obtainUpperLimitValue();
 
 }

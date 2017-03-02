@@ -4,7 +4,7 @@ public interface FizzBuzz {
 
 	/**
 	 * @param nFizzBuzzUpperLimit
-     */
+	 */
 	void fizzBuzz(int nFizzBuzzUpperLimit);
 
 }

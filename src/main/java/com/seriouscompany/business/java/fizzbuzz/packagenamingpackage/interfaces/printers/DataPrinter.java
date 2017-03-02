@@ -9,7 +9,7 @@ public interface DataPrinter {
 
 	/**
 	 * @param value
-     */
+	 */
 	public void printValue(Object value);
 
 }

@@ -4,7 +4,7 @@ public interface StringStringReturner {
 
 	/**
 	 * @return
-     */
+	 */
 	public String getReturnString();
 
 }

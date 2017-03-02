@@ -4,7 +4,7 @@ public interface OutputGenerationStrategy {
 
 	/**
 	 * @param generationParameter
-     */
+	 */
 	void performGenerationForCurrentStep(SingleStepOutputGenerationParameter generationParameter);
 
 }

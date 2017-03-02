@@ -4,7 +4,7 @@ public interface SingleStepOutputGenerationParameter {
 
 	/**
 	 * @return
-     */
+	 */
 	public int retrieveIntegerValue();
 
 }

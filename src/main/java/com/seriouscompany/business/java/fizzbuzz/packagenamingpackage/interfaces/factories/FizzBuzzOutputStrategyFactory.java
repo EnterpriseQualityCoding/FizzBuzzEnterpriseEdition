@@ -6,7 +6,7 @@ public interface FizzBuzzOutputStrategyFactory {
 
 	/**
 	 * @return
-     */
+	 */
 	public FizzBuzzOutputStrategy createOutputStrategy();
 
 }

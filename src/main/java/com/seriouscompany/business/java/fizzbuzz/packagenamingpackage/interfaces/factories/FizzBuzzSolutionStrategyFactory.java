@@ -6,7 +6,7 @@ public interface FizzBuzzSolutionStrategyFactory {
 
 	/**
 	 * @return
-     */
+	 */
 	public FizzBuzzSolutionStrategy createFizzBuzzSolutionStrategy();
 
 }

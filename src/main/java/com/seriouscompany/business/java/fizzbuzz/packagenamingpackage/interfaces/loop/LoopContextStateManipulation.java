@@ -9,7 +9,7 @@ public interface LoopContextStateManipulation {
 
 	/**
 	 * @return
-     */
+	 */
 	public boolean shouldProceed();
 
 	/**
