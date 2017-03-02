@@ -2,6 +2,9 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.IsEvenlyDivisibleStrategy;
 
+/**
+ * Factory for IsEvenlyDivisibleStrategy
+ */
 public interface IsEvenlyDivisibleStrategyFactory {
 
 	/**

@@ -2,6 +2,9 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 
 import java.io.IOException;
 
+/**
+ * Strategy for FizzBuzzOutput
+ */
 public interface FizzBuzzOutputStrategy {
 
 	/**

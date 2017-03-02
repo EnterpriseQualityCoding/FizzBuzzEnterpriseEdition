@@ -8,6 +8,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.param
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.FizzBuzz;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.parameters.FizzBuzzUpperLimitParameter;
 
+/**
+ * Main
+ */
 public final class Main {
 
 	/**

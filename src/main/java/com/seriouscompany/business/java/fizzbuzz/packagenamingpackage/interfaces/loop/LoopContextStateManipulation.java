@@ -1,9 +1,12 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.loop;
 
+/**
+ * Manipulation for LoopContextState
+ */
 public interface LoopContextStateManipulation {
 
 	/**
-	 *
+	 * @return
 	 */
 	public void start();
 
@@ -13,7 +16,7 @@ public interface LoopContextStateManipulation {
 	public boolean shouldProceed();
 
 	/**
-	 *
+	 * @return
 	 */
 	public void proceed();
 

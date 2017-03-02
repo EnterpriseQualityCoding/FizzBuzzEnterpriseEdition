@@ -1,5 +1,8 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies;
 
+/**
+ * Strategy for IsEvenlyDivisible
+ */
 public interface IsEvenlyDivisibleStrategy {
 
 	/**

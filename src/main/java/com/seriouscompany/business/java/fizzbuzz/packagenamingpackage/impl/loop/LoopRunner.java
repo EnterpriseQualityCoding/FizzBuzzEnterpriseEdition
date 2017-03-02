@@ -27,6 +27,7 @@ public final class LoopRunner {
 	}
 
 	/**
+	 * @return
 	 */
 	public void runLoop() {
 		for (this.myStateManipulation.start(); this.myStateManipulation.shouldProceed(); this.myStateManipulation.proceed()) {

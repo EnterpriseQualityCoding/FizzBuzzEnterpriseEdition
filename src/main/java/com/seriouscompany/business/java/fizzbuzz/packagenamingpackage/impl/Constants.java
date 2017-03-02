@@ -1,5 +1,8 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl;
 
+/**
+ * Constants
+ */
 public class Constants {
 
 	public static final String AN_ATTEMPT_WAS_MADE_TO_DIVIDE_BY_ZERO = "An attempt was made to divide by zero.";

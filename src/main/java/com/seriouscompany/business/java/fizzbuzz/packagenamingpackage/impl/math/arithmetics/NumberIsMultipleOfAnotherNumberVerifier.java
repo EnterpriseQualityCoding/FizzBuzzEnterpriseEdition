@@ -9,6 +9,9 @@ import org.springframework.stereotype.Service;
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.comparators.integercomparator.IntegerForEqualityComparator;
 
+/**
+ * NumberIsMultipleOfAnotherNumberVerifier
+ */
 @Service
 public class NumberIsMultipleOfAnotherNumberVerifier {
 
@@ -17,6 +20,9 @@ public class NumberIsMultipleOfAnotherNumberVerifier {
 	@Autowired
 	private ApplicationContextHolder applicationContextHolder;
 
+	/**
+	 * @return
+	 */
 	@PostConstruct
 	public void init() {
 		final ApplicationContext applicationContext = applicationContextHolder.getApplicationContext();
@@ -24,6 +30,11 @@ public class NumberIsMultipleOfAnotherNumberVerifier {
 		this.integerDivider = applicationContext.getBean(IntegerDivider.class);
 	}
 
+	/**
+	 * @param nFirstNumber
+	 * @param nSecondNumber
+	 * @return
+	 */
 	public static boolean numberIsMultipleOfAnotherNumber(final int nFirstNumber, final int nSecondNumber) {
 		try {
 			final int nDivideFirstIntegerBySecondIntegerResult =

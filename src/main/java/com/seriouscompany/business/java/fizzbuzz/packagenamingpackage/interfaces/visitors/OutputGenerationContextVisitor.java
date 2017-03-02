@@ -1,5 +1,8 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.visitors;
 
+/**
+ * Visitor for OutputGenerationContext
+ */
 public interface OutputGenerationContextVisitor {
 
 	/**

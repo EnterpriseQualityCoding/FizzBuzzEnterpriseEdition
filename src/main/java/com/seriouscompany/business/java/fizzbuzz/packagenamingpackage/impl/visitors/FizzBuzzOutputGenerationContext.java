@@ -4,6 +4,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.IsEvenlyDivisibleStrategy;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.visitors.OutputGenerationContext;
 
+/**
+ * Context for FizzBuzzOutputGeneration
+ */
 public final class FizzBuzzOutputGenerationContext implements OutputGenerationContext {
 
 	private final DataPrinter printer;
