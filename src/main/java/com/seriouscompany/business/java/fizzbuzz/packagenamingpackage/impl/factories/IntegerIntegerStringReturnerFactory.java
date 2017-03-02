@@ -18,7 +18,7 @@ public class IntegerIntegerStringReturnerFactory implements
 
 	/**
 	 * @param _integerIntegerStringReturner IntegerIntegerStringReturner
-     */
+	 */
 	@Autowired
 	public IntegerIntegerStringReturnerFactory(final IntegerIntegerStringReturner _integerIntegerStringReturner) {
 		super();
@@ -27,7 +27,7 @@ public class IntegerIntegerStringReturnerFactory implements
 
 	/**
 	 * @return IntegerStringReturner
-     */
+	 */
 	@Override
 	public IntegerStringReturner createIntegerStringReturner() {
 		return this._integerIntegerStringReturner;

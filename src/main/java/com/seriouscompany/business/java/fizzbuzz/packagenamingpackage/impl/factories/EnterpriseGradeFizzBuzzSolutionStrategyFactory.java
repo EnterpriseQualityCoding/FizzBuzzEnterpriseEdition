@@ -16,7 +16,7 @@ public class EnterpriseGradeFizzBuzzSolutionStrategyFactory implements FizzBuzzS
 
 	/**
 	 * @param _fizzBuzzSolutionStrategy FizzBuzzSolutionStrategy
-     */
+	 */
 	@Autowired
 	public EnterpriseGradeFizzBuzzSolutionStrategyFactory(final FizzBuzzSolutionStrategy _fizzBuzzSolutionStrategy) {
 		super();
@@ -25,7 +25,7 @@ public class EnterpriseGradeFizzBuzzSolutionStrategyFactory implements FizzBuzzS
 
 	/**
 	 * @return FizzBuzzSolutionStrategy
-     */
+	 */
 	@Override
 	public FizzBuzzSolutionStrategy createFizzBuzzSolutionStrategy() {
 		return this._fizzBuzzSolutionStrategy;

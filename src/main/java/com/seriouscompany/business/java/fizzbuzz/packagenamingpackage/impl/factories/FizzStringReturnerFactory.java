@@ -17,7 +17,7 @@ public class FizzStringReturnerFactory implements StringStringReturnerFactory {
 
 	/**
 	 * @param _fizzStringReturner FizzStringReturner
-     */
+	 */
 	@Autowired
 	public FizzStringReturnerFactory(final FizzStringReturner _fizzStringReturner) {
 		super();
@@ -26,7 +26,7 @@ public class FizzStringReturnerFactory implements StringStringReturnerFactory {
 
 	/**
 	 * @return StringStringReturner
-     */
+	 */
 	@Override
 	public StringStringReturner createStringStringReturner() {
 		return this._fizzStringReturner;

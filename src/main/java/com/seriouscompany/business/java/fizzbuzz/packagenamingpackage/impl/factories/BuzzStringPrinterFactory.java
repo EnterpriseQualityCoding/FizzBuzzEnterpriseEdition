@@ -17,7 +17,7 @@ public class BuzzStringPrinterFactory implements StringPrinterFactory {
 
 	/**
 	 * @param _buzzStringPrinter BuzzStringPrinter
-     */
+	 */
 	@Autowired
 	public BuzzStringPrinterFactory(final BuzzStringPrinter _buzzStringPrinter) {
 		super();
@@ -26,7 +26,7 @@ public class BuzzStringPrinterFactory implements StringPrinterFactory {
 
 	/**
 	 * @return StringPrinter
-     */
+	 */
 	@Override
 	public StringPrinter createStringPrinter() {
 		return this._buzzStringPrinter;

@@ -18,7 +18,7 @@ public class FizzBuzzOutputGenerationContextVisitorFactory implements
 
 	/**
 	 * @param _fizzBuzzOutputGenerationContextVisitor FizzBuzzOutputGenerationContextVisitor
-     */
+	 */
 	@Autowired
 	public FizzBuzzOutputGenerationContextVisitorFactory(
 			final FizzBuzzOutputGenerationContextVisitor _fizzBuzzOutputGenerationContextVisitor) {
@@ -28,7 +28,7 @@ public class FizzBuzzOutputGenerationContextVisitorFactory implements
 
 	/**
 	 * @return OutputGenerationContextVisitor
-     */
+	 */
 	@Override
 	public OutputGenerationContextVisitor createVisitor() {
 		return this._fizzBuzzOutputGenerationContextVisitor;

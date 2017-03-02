@@ -18,7 +18,7 @@ public class NoFizzNoBuzzStrategyFactory implements
 
 	/**
 	 * @param _noFizzNoBuzzStrategy NoFizzNoBuzzStrategy
-     */
+	 */
 	@Autowired
 	public NoFizzNoBuzzStrategyFactory(final NoFizzNoBuzzStrategy _noFizzNoBuzzStrategy) {
 		super();
@@ -27,7 +27,7 @@ public class NoFizzNoBuzzStrategyFactory implements
 
 	/**
 	 * @return IsEvenlyDivisibleStrategy
-     */
+	 */
 	@Override
 	public IsEvenlyDivisibleStrategy createIsEvenlyDivisibleStrategy() {
 		return this._noFizzNoBuzzStrategy;

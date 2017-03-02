@@ -17,7 +17,7 @@ public class FizzStringPrinterFactory implements StringPrinterFactory {
 
 	/**
 	 * @param _fizzStringPrinter FizzStringPrinter
-     */
+	 */
 	@Autowired
 	public FizzStringPrinterFactory(final FizzStringPrinter _fizzStringPrinter) {
 		super();
@@ -26,7 +26,7 @@ public class FizzStringPrinterFactory implements StringPrinterFactory {
 
 	/**
 	 * @return StringPrinter
-     */
+	 */
 	@Override
 	public StringPrinter createStringPrinter() {
 		return this._fizzStringPrinter;

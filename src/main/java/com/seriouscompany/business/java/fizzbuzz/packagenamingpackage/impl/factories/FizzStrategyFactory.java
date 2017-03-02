@@ -17,17 +17,17 @@ public class FizzStrategyFactory implements IsEvenlyDivisibleStrategyFactory {
 
 	/**
 	 * @param _fizzStrategy FizzStrategy
-     */
-    @Autowired
-    public FizzStrategyFactory(final FizzStrategy _fizzStrategy) {
+	 */
+	@Autowired
+	public FizzStrategyFactory(final FizzStrategy _fizzStrategy) {
 		super();
 		this._fizzStrategy = _fizzStrategy;
 	}
 
 	/**
 	 * @return IsEvenlyDivisibleStrategy
-     */
-    @Override
+	 */
+	@Override
 	public IsEvenlyDivisibleStrategy createIsEvenlyDivisibleStrategy() {
 		return this._fizzStrategy;
 	}

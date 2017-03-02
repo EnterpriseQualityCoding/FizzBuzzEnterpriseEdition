@@ -17,7 +17,7 @@ public class BuzzStringReturnerFactory implements StringStringReturnerFactory {
 
 	/**
 	 * @param _myBuzzStringReturner BuzzStringReturner
-     */
+	 */
 	@Autowired
 	public BuzzStringReturnerFactory(final BuzzStringReturner _myBuzzStringReturner) {
 		super();
@@ -26,7 +26,7 @@ public class BuzzStringReturnerFactory implements StringStringReturnerFactory {
 
 	/**
 	 * @return StringStringReturner
-     */
+	 */
 	@Override
 	public StringStringReturner createStringStringReturner() {
 		return this._myBuzzStringReturner;

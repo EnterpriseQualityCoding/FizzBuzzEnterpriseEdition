@@ -17,7 +17,7 @@ public class IntegerIntegerPrinterFactory implements IntegerPrinterFactory {
 
 	/**
 	 * @param _integerIntegerPrinter IntegerIntegerPrinter
-     */
+	 */
 	@Autowired
 	public IntegerIntegerPrinterFactory(final IntegerIntegerPrinter _integerIntegerPrinter) {
 		super();
@@ -26,7 +26,7 @@ public class IntegerIntegerPrinterFactory implements IntegerPrinterFactory {
 
 	/**
 	 * @return IntegerPrinter
-     */
+	 */
 	@Override
 	public IntegerPrinter createPrinter() {
 		return this._integerIntegerPrinter;

@@ -18,7 +18,7 @@ public class SystemOutFizzBuzzOutputStrategyFactory implements
 
 	/**
 	 * @param _systemOutFizzBuzzOutputStrategy SystemOutFizzBuzzOutputStrategy
-     */
+	 */
 	@Autowired
 	public SystemOutFizzBuzzOutputStrategyFactory(final SystemOutFizzBuzzOutputStrategy _systemOutFizzBuzzOutputStrategy) {
 		super();
@@ -27,7 +27,7 @@ public class SystemOutFizzBuzzOutputStrategyFactory implements
 
 	/**
 	 * @return FizzBuzzOutputStrategy
-     */
+	 */
 	@Override
 	public FizzBuzzOutputStrategy createOutputStrategy() {
 		return this._systemOutFizzBuzzOutputStrategy;

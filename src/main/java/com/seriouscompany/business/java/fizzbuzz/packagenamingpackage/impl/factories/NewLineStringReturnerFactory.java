@@ -18,7 +18,7 @@ public class NewLineStringReturnerFactory implements
 
 	/**
 	 * @param _newlineStringReturner NewLineStringReturner
-     */
+	 */
 	@Autowired
 	public NewLineStringReturnerFactory(final NewLineStringReturner _newlineStringReturner) {
 		super();
@@ -27,7 +27,7 @@ public class NewLineStringReturnerFactory implements
 
 	/**
 	 * @return StringStringReturner
-     */
+	 */
 	@Override
 	public StringStringReturner createStringStringReturner() {
 		return this._newlineStringReturner;

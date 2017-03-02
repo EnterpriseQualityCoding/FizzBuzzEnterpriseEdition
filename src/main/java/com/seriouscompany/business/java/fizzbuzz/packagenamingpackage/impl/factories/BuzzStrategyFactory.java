@@ -17,7 +17,7 @@ public class BuzzStrategyFactory implements IsEvenlyDivisibleStrategyFactory {
 
 	/**
 	 * @param _buzzStrategy BuzzStrategy
-     */
+	 */
 	@Autowired
 	public BuzzStrategyFactory(final BuzzStrategy _buzzStrategy) {
 		super();
@@ -26,7 +26,7 @@ public class BuzzStrategyFactory implements IsEvenlyDivisibleStrategyFactory {
 
 	/**
 	 * @return void
-     */
+	 */
 	@Override
 	public IsEvenlyDivisibleStrategy createIsEvenlyDivisibleStrategy() {
 		return this._buzzStrategy;

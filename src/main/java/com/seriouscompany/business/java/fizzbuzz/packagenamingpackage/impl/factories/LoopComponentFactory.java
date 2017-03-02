@@ -24,7 +24,7 @@ public class LoopComponentFactory {
 	 * @param _loopCondition LoopCondition
 	 * @param _loopInitializer LoopInitializer
 	 * @param _loopStep LoopStep
-     */
+	 */
 	@Autowired
 	public LoopComponentFactory(final LoopCondition _loopCondition, final LoopInitializer _loopInitializer,
 			final LoopStep _loopStep) {
@@ -36,14 +36,14 @@ public class LoopComponentFactory {
 
 	/**
 	 * @return LoopCondition
-     */
+	 */
 	public LoopCondition createLoopCondition() {
 		return this._loopCondition;
 	}
 
 	/**
 	 * @return LoopInitializer
-     */
+	 */
 	public LoopInitializer createLoopInitializer() {
 		return this._loopInitializer;
 	}
@@ -51,7 +51,7 @@ public class LoopComponentFactory {
 	/**
 	 * @param nLoopFinalValue int
 	 * @return LoopFinalizer
-     */
+	 */
 	public LoopFinalizer createLoopFinalizer(final int nLoopFinalValue) {
 		final LoopFinalizer myLoopFinalizer = new LoopFinalizer(nLoopFinalValue);
 		return myLoopFinalizer;
@@ -59,7 +59,7 @@ public class LoopComponentFactory {
 
 	/**
 	 * @return LoopStep
-     */
+	 */
 	public LoopStep createLoopStep() {
 		return this._loopStep;
 	}

@@ -17,7 +17,7 @@ public class NewLineStringPrinterFactory implements StringPrinterFactory {
 
 	/**
 	 * @param _newLineStringPrinter NewLineStringPrinter
-     */
+	 */
 	@Autowired
 	public NewLineStringPrinterFactory(final NewLineStringPrinter _newLineStringPrinter) {
 		super();
@@ -26,7 +26,7 @@ public class NewLineStringPrinterFactory implements StringPrinterFactory {
 
 	/**
 	 * @return StringPrinter
-     */
+	 */
 	@Override
 	public StringPrinter createStringPrinter() {
 		return this._newLineStringPrinter;
