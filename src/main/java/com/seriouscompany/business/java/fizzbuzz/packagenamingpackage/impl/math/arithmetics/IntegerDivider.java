@@ -19,7 +19,7 @@ public class IntegerDivider {
 	/**
 	 * @param firstIsLargerThanSecondDoubleComparator FirstIsLargerThanSecondDoubleComparator
 	 * @param firstIsSmallerThanSecondDoubleComparator FirstIsSmallerThanSecondDoubleComparator
-     */
+	 */
 	@Autowired
 	public IntegerDivider(final FirstIsLargerThanSecondDoubleComparator firstIsLargerThanSecondDoubleComparator,
 			final FirstIsSmallerThanSecondDoubleComparator firstIsSmallerThanSecondDoubleComparator) {
@@ -31,8 +31,8 @@ public class IntegerDivider {
 	/**
 	 * @param nFirstInteger int
 	 * @param nSecondInteger int
-     * @return int
-     */
+	 * @return int
+	 */
 	public int divide(final int nFirstInteger, final int nSecondInteger) {
 		final boolean denominatorEqualsZero =
 				IntegerForEqualityComparator.areTwoIntegersEqual(nSecondInteger, Constants.INTEGER_DIVIDE_ZERO_VALUE);

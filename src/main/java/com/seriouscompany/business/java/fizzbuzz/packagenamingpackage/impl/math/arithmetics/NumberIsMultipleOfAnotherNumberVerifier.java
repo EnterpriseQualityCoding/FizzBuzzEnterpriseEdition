@@ -27,8 +27,8 @@ public class NumberIsMultipleOfAnotherNumberVerifier {
 	/**
 	 * @param nFirstNumber int
 	 * @param nSecondNumber int
-     * @return
-     */
+	 * @return
+	 */
 	public static boolean numberIsMultipleOfAnotherNumber(final int nFirstNumber, final int nSecondNumber) {
 		try {
 			final int nDivideFirstIntegerBySecondIntegerResult =
