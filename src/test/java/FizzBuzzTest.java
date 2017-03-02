@@ -45,7 +45,7 @@ public class FizzBuzzTest {
 	 * @param n int
 	 * @param s String
 	 * @throws IOException
-     */
+	 */
 	private void doFizzBuzz(final int n, final String s) throws IOException {
 		final ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		final BufferedOutputStream bos = new BufferedOutputStream(baos);
@@ -60,7 +60,7 @@ public class FizzBuzzTest {
 	/**
 	 * @throws IOException
 	 * @return void
-     */
+	 */
 	@Test
 	public void testFizzBuzz() throws IOException {
 		this.doFizzBuzz(TestConstants.INT_1, TestConstants._1_);
