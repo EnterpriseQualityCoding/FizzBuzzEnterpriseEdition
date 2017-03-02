@@ -1,0 +1,29 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    jcenter()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+        resources {
+            srcDir 'resources/assets/configuration/spring/dependencyinjection/configuration/'
+        }
+    }
+}
+
+dependencies {
+    compile 'org.springframework:spring-aop:3.2.13.RELEASE',
+            'org.springframework:spring-beans:3.2.13.RELEASE',
+            'org.springframework:spring-context:3.2.13.RELEASE',
+            'org.springframework:spring-core:3.2.13.RELEASE',
+            'org.springframework:spring-expression:3.2.13.RELEASE'
+
+    testCompile 'junit:junit:4.8.2'
+}
+
+mainClassName = 'com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.Main'
