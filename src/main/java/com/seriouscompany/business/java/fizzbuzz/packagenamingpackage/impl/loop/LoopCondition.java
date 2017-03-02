@@ -14,8 +14,8 @@ public class LoopCondition {
 	/**
 	 * @param nCurrentNumber int
 	 * @param nTotalCount int
-     * @return boolean
-     */
+	 * @return boolean
+	 */
 	public boolean evaluateLoop(final int nCurrentNumber, final int nTotalCount) {
 		final ThreeWayIntegerComparisonResult comparisonResult = ThreeWayIntegerComparator.Compare(nCurrentNumber,
 				nTotalCount);

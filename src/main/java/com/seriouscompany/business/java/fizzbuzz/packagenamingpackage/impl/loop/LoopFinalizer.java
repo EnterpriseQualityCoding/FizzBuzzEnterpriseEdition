@@ -9,7 +9,7 @@ public final class LoopFinalizer {
 
 	/**
 	 * @param nLoopFinalValue int
-     */
+	 */
 	public LoopFinalizer(final int nLoopFinalValue) {
 		super();
 		this.nStoredLoopFinalValue = nLoopFinalValue;
@@ -17,7 +17,7 @@ public final class LoopFinalizer {
 
 	/**
 	 * @return int
-     */
+	 */
 	public int getLoopFinalizationPoint() {
 		return this.nStoredLoopFinalValue;
 	}

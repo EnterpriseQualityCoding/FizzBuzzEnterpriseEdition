@@ -17,7 +17,7 @@ public final class LoopRunner {
 	 * @param stateManipulation LoopContextStateManipulation
 	 * @param stateRetrieval LoopContextStateRetrieval
 	 * @param payload LoopPayloadExecution
-     */
+	 */
 	public LoopRunner(final LoopContextStateManipulation stateManipulation,
 			final LoopContextStateRetrieval stateRetrieval, final LoopPayloadExecution payload) {
 		super();

@@ -12,7 +12,7 @@ public class LoopInitializer {
 	
 	/**
 	 * @return int
-     */
+	 */
 	public int getLoopInitializationPoint() {
 		return Constants.LOOP_INIT_VALUE;
 	}

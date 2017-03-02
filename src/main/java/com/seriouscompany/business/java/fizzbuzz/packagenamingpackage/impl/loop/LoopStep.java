@@ -13,7 +13,7 @@ public class LoopStep {
 	/**
 	 * @param nCurrentNumber int
 	 * @return int
-     */
+	 */
 	public int stepLoop(final int nCurrentNumber) {
 		return nCurrentNumber + Constants.LOOP_INC_VALUE;
 	}

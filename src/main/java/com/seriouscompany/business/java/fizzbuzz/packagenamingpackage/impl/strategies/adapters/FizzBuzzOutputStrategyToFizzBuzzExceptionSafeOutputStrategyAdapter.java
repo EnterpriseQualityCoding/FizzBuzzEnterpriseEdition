@@ -12,7 +12,7 @@ public final class FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAd
 
 	/**
 	 * @param fizzBuzzOutputStrategy FizzBuzzOutputStrategy
-     */
+	 */
 	public FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(final FizzBuzzOutputStrategy fizzBuzzOutputStrategy) {
 		this._fizzBuzzOutputStrategy = fizzBuzzOutputStrategy;
 	}
@@ -20,7 +20,7 @@ public final class FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAd
 	/**
 	 * @param outputStringToOutput String
 	 * @return void
-     */
+	 */
 	@Override
 	public void output(final String outputStringToOutput) {
 		try {
