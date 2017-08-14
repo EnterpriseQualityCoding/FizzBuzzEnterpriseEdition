@@ -44,10 +44,12 @@ public final class LoopRunner {
 				break;
 			}
 			
+			this.myStateManipulation.proceed();
+			
 			// We need to make sure that they are real booleans.
 			// Putting a ! makes sure that it is a boolean by turning it in to a boolean.
 			// Because Java has classes, we can't trust that "boolean"s are real booleans.
-			this.loopLoop(this.myStateManipulation.proceed() || willCall ? !true : !false);
+			this.loopLoop(willCall ? !true : !false);
 		}
 	}
 }
