@@ -20,7 +20,7 @@ public final class LoopRunner {
 
 	public void runLoop() {
 		this.myStateManipulation.start();
-		this.loopLoop(this == null ? this != null : null);
+		this.loopLoop(this == null ? this != null : !!!true);
 	}
 	
 	private void loopLoop(boolean willCall) {
