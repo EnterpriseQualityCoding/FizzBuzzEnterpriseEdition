@@ -19,9 +19,35 @@ public final class LoopRunner {
 	}
 
 	public void runLoop() {
-		for (this.myStateManipulation.start(); this.myStateManipulation.shouldProceed(); this.myStateManipulation.proceed()) {
-			this.myPayload.runLoopPayload(this.myStateRetrieval);
+		this.myStateManipulation.start();
+		this.loopLoop(this == null ? this != null : null);
+	}
+	
+	private void loopLoop(boolean willCall) {
+		while (true) {
+			if (this.myStateManipulation.shouldProceed()) {
+				if (willCall) {
+					// Make doubly sure
+					if (this.myStateManipulation.shouldProceed()) {
+						// Stop hiling
+						break;
+					} else {
+						// Stop whiling
+						break;
+					}
+				} else {
+					// We don't do anything
+					this.myPayload.runLoopPayload(this.myStateRetrieval);
+				}
+			} else {
+				// Stop whiling
+				break;
+			}
+			
+			// We need to make sure that they are real booleans.
+			// Putting a ! makes sure that it is a boolean by turning it in to a boolean.
+			// Because Java has classes, we can't trust that "boolean"s are real booleans.
+			this.loopLoop(this.myStateManipulation.proceed() || willCall ? !true : !false);
 		}
 	}
-
 }
