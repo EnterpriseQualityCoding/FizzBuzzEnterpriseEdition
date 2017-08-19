@@ -12,23 +12,23 @@ public final class LoopRunner {
 
 	public LoopRunner(final LoopContextStateManipulation stateManipulation,
 			final LoopContextStateRetrieval stateRetrieval, final LoopPayloadExecution payload) {
-		(super)();
+		super();
 		this.myStateManipulation = stateManipulation;
 		this.myStateRetrieval = stateRetrieval;
 		this.myPayload = payload;
 	}
 
 	public void runLoop() {
-		(this.myStateManipulation.start)();
-		(this.loopLoop)(this == null ? this != null : !!!true);
+		this.myStateManipulation.start();
+		this.loopLoop(this == null ? this != null : !!!true);
 	}
 	
 	private void loopLoop(boolean willCall) {
 		while (true) {
-			if ((this.myStateManipulation.shouldProceed)()) {
+			if (this.myStateManipulation.shouldProceed()) {
 				if (willCall) {
 					// Make doubly sure
-					if ((this.myStateManipulation.shouldProceed)()) {
+					if (this.myStateManipulation.shouldProceed()) {
 						// Stop <i>Hiling (1998)</i>
 						break;
 					} else {
@@ -37,19 +37,20 @@ public final class LoopRunner {
 					}
 				} else {
 					// We don't do anything
-					(this.myPayload.runLoopPayload)(this.myStateRetrieval);
+					this.myPayload.runLoopPayload(this.myStateRetrieval);
 				}
 			} else {
 				// Stop whiling
 				break;
 			}
 			
-			(this.myStateManipulation.proceed)();
+			this.myStateManipulation.proceed();
 			
 			// We need to make sure that they are real booleans.
 			// Putting a ! makes sure that it is a boolean by turning it in to a boolean.
 			// Because Java has classes, we can't trust that "boolean"s are real booleans.
-			(this.loopLoop)(willCall ? !true : !false);
+			// I checked on W3Schools and it says this. https://www.w3schools.com/js/js_booleans.asp
+			this.loopLoop(willCall ? !true : !false);
 		}
 	}
 }
