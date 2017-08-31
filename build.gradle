@@ -1,3 +1,6 @@
+plugins {
+    id "com.github.johnrengelman.shadow" version "2.0.1"
+}
 apply plugin: 'java'
 apply plugin: 'application'
 
@@ -5,11 +8,10 @@ repositories {
     jcenter()
 }
 
+defaultTasks = ['clean', 'shadowJar']
+
 sourceSets {
     main {
-        java {
-            srcDir 'src/main/java'
-        }
         resources {
             srcDir 'resources/assets/configuration/spring/dependencyinjection/configuration/'
         }
