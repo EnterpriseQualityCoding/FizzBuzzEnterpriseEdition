@@ -1,11 +1,12 @@
 pipeline {
-  agent {
-    dockerfile {
-      label "foxtrot"
-    }
-  }
+  agent none
   stages {
     stage('Build') {
+      agent {
+        dockerfile {
+          label "dockerTest"
+        }
+      }
       steps {
         sh 'mvn clean install'
       }
