@@ -1,7 +1,9 @@
 pipeline {
   agent {
-    label 'foxtrot'
     dockerfile true
+    node {
+	label 'foxtrot'
+    }
   }
   stages {
     stage('Build') {
