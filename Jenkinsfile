@@ -1,5 +1,6 @@
 pipeline {
   agent {
+    label 'foxtrot'
     dockerfile true
   }
   stages {
