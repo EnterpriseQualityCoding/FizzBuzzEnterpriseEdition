@@ -14,7 +14,7 @@ pipeline {
       deleteDir()
     }
     failure {
-      mail to:'bmcconnell@cloudbees.com', subject:'FAILURE:'
+      mail to:'bmcconnell@cloudbees.com', subject:'FAILURE:', body:'Help'
     }
   }
 }
