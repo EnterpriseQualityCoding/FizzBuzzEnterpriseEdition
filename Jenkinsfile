@@ -1,6 +1,20 @@
-node('maven-jdk-8') {
-    checkout scm
-    sh 'mvn clean install'
-    echo 'HelloWorld2'
-    echo 'HelloWorld3'
+pipeline {
+  agent {
+    dockerfile true
+  }
+  stages {
+    stage('Build') {
+      steps {
+        sh 'mvn clean install'
+      }
+    }
+  }
+  post {
+    always {
+      deleteDir()
+    }
+    failure {
+      mail to:'bmcconnell@cloudbees.com', subject:'FAILURE:'
+    }
+  }
 }
