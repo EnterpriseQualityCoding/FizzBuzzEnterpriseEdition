@@ -28,7 +28,7 @@ For numbers 1 through 100,
 
 ## Contributing
 
-Although this project is intended as satire, we take openness and inclusivity
-very seriously. To that end we have adopted the following code of conduct.
+We take openness and inclusivity very seriously. To that end we have adopted 
+the following code of conduct.
 
 [Contributor Code of Conduct](CONTRIBUTING.md)
