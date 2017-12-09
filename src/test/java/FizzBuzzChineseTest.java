@@ -13,14 +13,14 @@ import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
 
-public class FizzBuzzTest {
+public class FizzBuzzChineseTest {
 
 	private PrintStream out;
 	private FizzBuzz fb;
 
 	@Before
 	public void setUp() {
-		System.setProperty("user.locale", "en_US");
+		System.setProperty("user.locale", "zh_CN");
 		final ApplicationContext context = new ClassPathXmlApplicationContext(TestConstants.SPRING_XML);
 		this.fb = (FizzBuzz) context.getBean(TestConstants.STANDARD_FIZZ_BUZZ);
 		this.out = System.out;
@@ -46,24 +46,24 @@ public class FizzBuzzTest {
 
 	@Test
 	public void testFizzBuzz() throws IOException {
-		this.doFizzBuzz(TestConstants.INT_1, TestConstants._1_);
-		this.doFizzBuzz(TestConstants.INT_2, TestConstants._1_2_);
-		this.doFizzBuzz(TestConstants.INT_3, TestConstants._1_2_FIZZ);
-		this.doFizzBuzz(TestConstants.INT_4, TestConstants._1_2_FIZZ_4);
-		this.doFizzBuzz(TestConstants.INT_5, TestConstants._1_2_FIZZ_4_BUZZ);
-		this.doFizzBuzz(TestConstants.INT_6, TestConstants._1_2_FIZZ_4_BUZZ_FIZZ);
-		this.doFizzBuzz(TestConstants.INT_7, TestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7);
-		this.doFizzBuzz(TestConstants.INT_8, TestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7_8);
-		this.doFizzBuzz(TestConstants.INT_9, TestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7_8_FIZZ);
-		this.doFizzBuzz(TestConstants.INT_10, TestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7_8_FIZZ_BUZZ);
-		this.doFizzBuzz(TestConstants.INT_11, TestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7_8_FIZZ_BUZZ_11);
-		this.doFizzBuzz(TestConstants.INT_12, TestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7_8_FIZZ_BUZZ_11_FIZZ);
-		this.doFizzBuzz(TestConstants.INT_13, TestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7_8_FIZZ_BUZZ_11_FIZZ_13);
-		this.doFizzBuzz(TestConstants.INT_14, TestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7_8_FIZZ_BUZZ_11_FIZZ_13_14);
+		this.doFizzBuzz(TestConstants.INT_1, ChineseTestConstants._1_);
+		this.doFizzBuzz(TestConstants.INT_2, ChineseTestConstants._1_2_);
+		this.doFizzBuzz(TestConstants.INT_3, ChineseTestConstants._1_2_FIZZ);
+		this.doFizzBuzz(TestConstants.INT_4, ChineseTestConstants._1_2_FIZZ_4);
+		this.doFizzBuzz(TestConstants.INT_5, ChineseTestConstants._1_2_FIZZ_4_BUZZ);
+		this.doFizzBuzz(TestConstants.INT_6, ChineseTestConstants._1_2_FIZZ_4_BUZZ_FIZZ);
+		this.doFizzBuzz(TestConstants.INT_7, ChineseTestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7);
+		this.doFizzBuzz(TestConstants.INT_8, ChineseTestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7_8);
+		this.doFizzBuzz(TestConstants.INT_9, ChineseTestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7_8_FIZZ);
+		this.doFizzBuzz(TestConstants.INT_10, ChineseTestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7_8_FIZZ_BUZZ);
+		this.doFizzBuzz(TestConstants.INT_11, ChineseTestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7_8_FIZZ_BUZZ_11);
+		this.doFizzBuzz(TestConstants.INT_12, ChineseTestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7_8_FIZZ_BUZZ_11_FIZZ);
+		this.doFizzBuzz(TestConstants.INT_13, ChineseTestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7_8_FIZZ_BUZZ_11_FIZZ_13);
+		this.doFizzBuzz(TestConstants.INT_14, ChineseTestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7_8_FIZZ_BUZZ_11_FIZZ_13_14);
 		this.doFizzBuzz(TestConstants.INT_15,
-				TestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7_8_FIZZ_BUZZ_11_FIZZ_13_14_FIZZ_BUZZ);
+				ChineseTestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7_8_FIZZ_BUZZ_11_FIZZ_13_14_FIZZ_BUZZ);
 		this.doFizzBuzz(TestConstants.INT_16,
-				TestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7_8_FIZZ_BUZZ_11_FIZZ_13_14_FIZZ_BUZZ_16);
+				ChineseTestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7_8_FIZZ_BUZZ_11_FIZZ_13_14_FIZZ_BUZZ_16);
 	}
 
 }

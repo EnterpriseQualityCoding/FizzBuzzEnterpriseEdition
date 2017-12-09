@@ -1,15 +1,14 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.loop;
 
-import org.springframework.stereotype.Service;
-
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.comparators.integercomparator.ThreeWayIntegerComparator;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.comparators.integercomparator.ThreeWayIntegerComparisonResult;
+import org.springframework.stereotype.Service;
 
 @Service
 public class LoopCondition {
 
-	public boolean evaluateLoop(final int nCurrentNumber, final int nTotalCount) {
-		final ThreeWayIntegerComparisonResult comparisonResult = ThreeWayIntegerComparator.Compare(nCurrentNumber,
+	public static boolean evaluateLoop(final int nCurrentNumber, final int nTotalCount) {
+		final ThreeWayIntegerComparisonResult comparisonResult = ThreeWayIntegerComparator.compare(nCurrentNumber,
 				nTotalCount);
 		if (ThreeWayIntegerComparisonResult.FirstIsLessThanSecond == comparisonResult) {
 			return true;
