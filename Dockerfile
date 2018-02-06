@@ -8,4 +8,4 @@ COPY build/libs/${JAR_FILE} ${APP_HOME}
 
 WORKDIR ${APP_HOME}
 
-CMD exec java -jar ${JAR_FILE}
+CMD exec java -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -jar ${JAR_FILE}
