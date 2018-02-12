@@ -37,6 +37,6 @@ public class TestConstants {
 	static final int INT_13 = 13;
 	static final int INT_14 = 14;
 	static final int INT_15 = 15;
-	static final int INT_16 = 16;
+	static final int INT_16 = 16; 
 
 }
