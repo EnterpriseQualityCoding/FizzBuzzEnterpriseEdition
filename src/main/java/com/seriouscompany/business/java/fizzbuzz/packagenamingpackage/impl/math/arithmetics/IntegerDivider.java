@@ -41,8 +41,7 @@ public class IntegerDivider {
 					(double) Constants.INTEGER_ORIGIN_ZERO_VALUE)) {
 				dbRoundedQuotient = Math.floor(dbQuotient);
 			}
-			final int nIntegerQuotient = DoubleToIntConverter.Convert(dbRoundedQuotient);
-			return nIntegerQuotient;
+			return DoubleToIntConverter.Convert(dbRoundedQuotient);
 		}
 	}
 
