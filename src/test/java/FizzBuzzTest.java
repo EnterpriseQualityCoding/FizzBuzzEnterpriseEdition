@@ -65,5 +65,77 @@ public class FizzBuzzTest {
 		this.doFizzBuzz(TestConstants.INT_16,
 				TestConstants._1_2_FIZZ_4_BUZZ_FIZZ_7_8_FIZZ_BUZZ_11_FIZZ_13_14_FIZZ_BUZZ_16);
 	}
+	
+	private int countCharCount(final String string, final String character) {
+		return string.length() - string.replace(character, "").length();
+	}
+
+
+	// https://stackoverflow.com/a/24063511/5223757
+	private static <A, B> Stream<Pair<A, B>> zipTwoStreams(Stream<A> as, Stream<B> bs)
+	{
+		Iterator<A> i=as.iterator();
+		return bs.filter(x->i.hasNext()).map(b->new Pair<>(i.next(), b));
+	}
+	
+	private void assertFizzBuzz(final String fizzBuzzStringLineString, final Integer fizzBuzzStringLineNumber) {
+		final int fizzBuzzStringLineNumberInt = fizzBuzzStringLineNumber.intValue();
+		final boolean fizzBuzzStringLineNumberIntModuloThreeBoolean = fizzBuzzStringLineNumberInt % TestConstants.INT_3;
+		final boolean fizzBuzzStringLineNumberIntModuloFiveBoolean = fizzBuzzStringLineNumberInt % TestConstants.INT_5;
+		if (fizzBuzzStringLineNumberIntModuloThreeBoolean && fizzBuzzStringLineNumberIntModuloFiveBoolean) {
+			final Integer fizzBuzzStringLineNumberIntInteger = Integer.valueOf(fizzBuzzStringLineNumberIntInteger);
+			final String fizzBuzzStringLineNumberIntIntegerString = fizzBuzzStringLineNumberIntInteger.toString();
+			assertEqual(fizzBuzzStringLineString, fizzBuzzStringLineNumberIntIntegerString);
+		} else {
+			assertEqual(fizzBuzzStringLineString.length() % TestConstants.INT_4, TestConstants.INT_0);
+			assertEqual(fizzBuzzStringLineString.length() > 0, true);
+			final boolean fizzBuzzStringLineNumberIntModuloThreeBooleanNegated = !fizzBuzzStringLineNumberIntModuloThreeBoolean;
+			final boolean fizzBuzzStringLineNumberIntModuloFiveBooleanNegated = !fizzBuzzStringLineNumberIntModuloFiveBoolean;
+			if (fizzBuzzStringLineNumberIntModuloThreeBooleanNegated) {
+				final String fizzBuzzStringLineStringFirstFour = fizzBuzzStringLineString.substring(TestConstants.INT_0, TestConstants.INT_4);
+				assertEqual(fizzBuzzStringLineStringFirstFour, TestConstants.FIZZ);
+			}
+			if (fizzBuzzStringLineNumberIntModuloFiveBooleanNegated) {
+				final int fizzBuzzStringLineStringLengthMinusFour = fizzBuzzStringLineString.length() - TestConstants.INT_4;
+				final String fizzBuzzStringLineStringLastFour = fizzBuzzStringLineString.substring(fizzBuzzStringLineStringLengthMinusFour, fizzBuzzStringLineString.length());
+				assertEqual(fizzBuzzStringLineStringLastFounr, TestConstants.BUZZ);
+			}
+		}
+	}
+
+	private void doFizzingAndBuzzing(final int testNumber) throws IOException {
+		final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+		final BufferedOutputStream byteArrayOutputStreamBufferedOutputStream = new BufferedOutputStream(byteArrayOutputStream);
+		final PrintStream byteArrayOutputStreamBufferedOutputStreamPrintStream = new PrintStream(byteArrayOutputStreamBufferedOutputStream);
+		System.setOut(byteArrayOutputStreamBufferedOutputStreamPrintStream);
+
+		this.fb.fizzBuzz(testNumber);
+
+		System.out.flush();
+		final String testNumberByteArrayOutputStreamFizzBuzzString = byteArrayOutputStream.toString();
+		final int testNumberByteArrayOutputStreamFizzBuzzStringCharCountLineCount = countCharCount(testNumberByteArrayOutputStreamFizzBuzzString, System.getProperty("line.separator"));
+		final Stream<String> testNumberByteArrayOutputStreamFizzBuzzStringLinesStream = testNumberByteArrayOutputStreamFizzBuzzString.lines();
+		final String[] testNumberByteArrayOutputStreamFizzBuzzStringLinesStreamArray = testNumberByteArrayOutputStreamFizzBuzzStringLinesStream.toArray(String[]::new);
+		final int testNumberByteArrayOutputStreamFizzBuzzStringLinesStreamArrayLengthLineCount = testNumberByteArrayOutputStreamFizzBuzzStringLinesStreamArray.length;
+
+		assertEqual(testNumber, testNumberByteArrayOutputStreamFizzBuzzStringCharCountLineCount);
+		assertEqual(testNumber, testNumberByteArrayOutputStreamFizzBuzzStringLinesStreamArrayLengthLineCount);
+		assertEqual(testNumberByteArrayOutputStreamFizzBuzzStringCharCountLineCount, testNumberByteArrayOutputStreamFizzBuzzStringLinesStreamArrayLengthLineCount);
+		
+		final Stream<String> testNumberByteArrayOutputStreamFizzBuzzStringLinesStreamArrayStream = Stream.of(testNumberByteArrayOutputStreamFizzBuzzStringLinesStreamArray);
+		final IntStream oneToTestNumberInclusiveIntStream = IntStream.range(1, testNumber + 1);
+		final Stream<Integer> oneToTestNumberInclusiveIntStreamStream = oneToTestNumberInclusiveIntStreamStream.mapToObj(Integer::new);
+		
+		final Stream<Pair<String, Integer>> testNumberByteArrayOutputStreamFizzBuzzStringLinesStreamArrayStreamOneToTestNumberInclusiveIntStreamStreamZipStream = zip(testNumberByteArrayOutputStreamFizzBuzzStreamCharCountLineCount, oneToTestNumberInclusiveIntStreamStream);
+
+		testNumberByteArrayOutputStreamFizzBuzzStringLinesStreamArrayStreamOneToTestNumberInclusiveIntStreamStreamZipStream.forEach(assertFizzBuzz);
+	}
+
+	@Test
+	public void testFizzingAndBuzzing() throws IOException {
+		for (int testNumber = TestConstants.INT_1; testNumber <= TestConstants.INT_MAX; testNumber += TestConstants.INT_1) {
+			doFizzingAndBuzzing(testNumber);
+		}
+	}
 
 }
