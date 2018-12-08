@@ -3,5 +3,11 @@ before_install: sudo pip install codecov
 after_success: codecov
 
 jdk:
-  - oraclejdk7
-  - openjdk7
+  - openjdk8
+  - openjdk11
+  - openjdk-ea
+
+matrix:
+  allow_failures:
+    - jdk: openjdk11
+    - jdk: openjdk-ea
