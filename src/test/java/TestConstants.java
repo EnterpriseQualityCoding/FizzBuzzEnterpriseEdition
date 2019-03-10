@@ -20,10 +20,12 @@ public class TestConstants {
 	static final String _1_2_FIZZ = "1\n2\nFizz\n";
 	static final String _1_2_ = "1\n2\n";
 	static final String _1_ = "1\n";
+
 	static final String STANDARD_FIZZ_BUZZ = "standardFizzBuzz";
 	static final String SPRING_XML = "spring.xml";
 	static final String FIZZ = "Fizz";
 	static final String BUZZ = "Buzz";
+
 	static final int INT_0 = 0;
 	static final int INT_1 = 1;
 	static final int INT_2 = 2;
