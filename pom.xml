@@ -7,7 +7,7 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>FizzBuzz Enterprise Edition</name>
+  <name>sample maven example</name>
   <url>https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition</url>
 
   <properties>
