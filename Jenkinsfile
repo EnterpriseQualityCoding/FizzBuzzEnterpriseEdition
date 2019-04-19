@@ -21,7 +21,7 @@ pipeline {
         sonarCodeCoverageConfig = "-Dsonar.binaries=target/classes -Dsonar.jacoco.reportPaths=target/jacoco.exec"
 
         //sonarQube-scanner에서 git으로 결과를 보고할 수 있게 설정
-        //git config oauth={githubtoken} currently token of juho.kang
+        //git config oauth={githubtoken} currently token of juho.kang ddd
         sonarGitPreviewConfig = "-Dsonar.analysis.mode=preview -Dsonar.github.pullRequest=$CHANGE_ID -Dsonar.github.repository=JuhoKang/FizzBuzzEnterpriseEdition -Dsonar.github.oauth=6d60a8c28bedcdf1009fbe3dcc003e9befb32725 -Dsonar.host.url=http://localhost:8998"
 
     }
