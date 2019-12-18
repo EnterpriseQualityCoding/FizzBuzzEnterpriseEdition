@@ -9,6 +9,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.printers.StringPrinter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.StringStringReturner;
 
+/**
+ * Printer for FizzString
+ */
 @Service
 public class FizzStringPrinter implements StringPrinter {
 
@@ -16,6 +19,10 @@ public class FizzStringPrinter implements StringPrinter {
 
 	private final FizzStringReturnerFactory _fizzStringReturnerFactory;
 
+	/**
+	 * @param _fizzStringReturnerFactory FizzStringReturnerFactory
+	 * @param _systemOutFizzBuzzOutputStrategyFactory SystemOutFizzBuzzOutputStrategyFactory
+	 */
 	@Autowired
 	public FizzStringPrinter(final FizzStringReturnerFactory _fizzStringReturnerFactory,
 			final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
@@ -24,6 +31,9 @@ public class FizzStringPrinter implements StringPrinter {
 		this._systemOutFizzBuzzOutputStrategyFactory = _systemOutFizzBuzzOutputStrategyFactory;
 	}
 
+	/**
+	 * @return void
+	 */
 	public void print() {
 		final StringStringReturner myFizzStringReturner = this._fizzStringReturnerFactory
 			.createStringStringReturner();
@@ -34,6 +44,9 @@ public class FizzStringPrinter implements StringPrinter {
 		myOutputAdapter.output(myFizzStringReturner.getReturnString());
 	}
 
+	/**
+	 * @param value
+	 */
 	@Override
 	public void printValue(final Object value) {
 		this.print();

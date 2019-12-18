@@ -10,12 +10,19 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.converters.primitivetypesconverters.DoubleToIntConverter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.converters.primitivetypesconverters.IntToDoubleConverter;
 
+/**
+ * IntegerDivider
+ */
 @Service
 public class IntegerDivider {
 
 	private final FirstIsSmallerThanSecondDoubleComparator firstIsSmallerThanSecondDoubleComparator;
 	private final FirstIsLargerThanSecondDoubleComparator firstIsLargerThanSecondDoubleComparator;
 
+	/**
+	 * @param firstIsLargerThanSecondDoubleComparator FirstIsLargerThanSecondDoubleComparator
+	 * @param firstIsSmallerThanSecondDoubleComparator FirstIsSmallerThanSecondDoubleComparator
+	 */
 	@Autowired
 	public IntegerDivider(final FirstIsLargerThanSecondDoubleComparator firstIsLargerThanSecondDoubleComparator,
 			final FirstIsSmallerThanSecondDoubleComparator firstIsSmallerThanSecondDoubleComparator) {
@@ -24,6 +31,11 @@ public class IntegerDivider {
 		this.firstIsSmallerThanSecondDoubleComparator = firstIsSmallerThanSecondDoubleComparator;
 	}
 
+	/**
+	 * @param nFirstInteger int
+	 * @param nSecondInteger int
+	 * @return int
+	 */
 	public int divide(final int nFirstInteger, final int nSecondInteger) {
 		final boolean denominatorEqualsZero =
 				IntegerForEqualityComparator.areTwoIntegersEqual(nSecondInteger, Constants.INTEGER_DIVIDE_ZERO_VALUE);

@@ -14,11 +14,17 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.FizzBuzz;
 
+/**
+ * Tests for FizzBuzz
+ */
 public class FizzBuzzTest {
 
 	private PrintStream out;
 	private FizzBuzz fb;
 
+	/**
+	 * @return void
+	 */
 	@Before
 	public void setUp() {
 		final ApplicationContext context = new ClassPathXmlApplicationContext(TestConstants.SPRING_XML);
@@ -27,11 +33,19 @@ public class FizzBuzzTest {
 		((ConfigurableApplicationContext) context).close();
 	}
 
+	/**
+	 * @return void
+	 */
 	@After
 	public void tearDown() {
 		System.setOut(this.out);
 	}
 
+	/**
+	 * @param n int
+	 * @param s String
+	 * @throws IOException
+	 */
 	private void doFizzBuzz(final int n, final String s) throws IOException {
 		final ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		final BufferedOutputStream bos = new BufferedOutputStream(baos);
@@ -44,6 +58,10 @@ public class FizzBuzzTest {
 		assertEquals(platformDependentExpectedResult, baos.toString());
 	}
 
+	/**
+	 * @throws IOException
+	 * @return void
+	 */
 	@Test
 	public void testFizzBuzz() throws IOException {
 		this.doFizzBuzz(TestConstants.INT_1, TestConstants._1_);

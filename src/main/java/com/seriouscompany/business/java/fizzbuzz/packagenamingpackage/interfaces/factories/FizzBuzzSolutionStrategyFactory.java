@@ -2,8 +2,14 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzSolutionStrategy;
 
+/**
+ * Factory for FizzBuzzSolutionStrategy
+ */
 public interface FizzBuzzSolutionStrategyFactory {
 
+	/**
+	 * @return
+	 */
 	public FizzBuzzSolutionStrategy createFizzBuzzSolutionStrategy();
 
 }

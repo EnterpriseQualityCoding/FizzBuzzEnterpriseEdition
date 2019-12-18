@@ -7,17 +7,26 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.FizzBuzzSolutionStrategyFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzSolutionStrategy;
 
+/**
+ * Standard FizzBuzz
+ */
 @Service
 public class StandardFizzBuzz implements FizzBuzz {
 
 	private final FizzBuzzSolutionStrategyFactory _fizzBuzzSolutionStrategyFactory;
 
+	/**
+	 * @param _fizzBuzzSolutionStrategyFactory
+	 */
 	@Autowired
 	public StandardFizzBuzz(final FizzBuzzSolutionStrategyFactory _fizzBuzzSolutionStrategyFactory) {
 		super();
 		this._fizzBuzzSolutionStrategyFactory = _fizzBuzzSolutionStrategyFactory;
 	}
 
+	/**
+	 * @param nFizzBuzzUpperLimit
+	 */
 	public void fizzBuzz(final int nFizzBuzzUpperLimit) {
 		final FizzBuzzSolutionStrategy mySolutionStrategy =
 				this._fizzBuzzSolutionStrategyFactory.createFizzBuzzSolutionStrategy();

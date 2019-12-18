@@ -9,6 +9,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strat
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.printers.IntegerPrinter;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.stringreturners.IntegerStringReturner;
 
+/**
+ * Printer for IntegerInteger
+ */
 @Service
 public class IntegerIntegerPrinter implements IntegerPrinter {
 
@@ -16,6 +19,10 @@ public class IntegerIntegerPrinter implements IntegerPrinter {
 
 	private final IntegerIntegerStringReturnerFactory _integerIntegerStringReturnerFactory;
 
+	/**
+	 * @param _integerIntegerStringReturnerFactory IntegerIntegerStringReturnerFactory
+	 * @param _systemOutFizzBuzzOutputStrategyFactory SystemOutFizzBuzzOutputStrategyFactory
+	 */
 	@Autowired
 	public IntegerIntegerPrinter(final IntegerIntegerStringReturnerFactory _integerIntegerStringReturnerFactory,
 			final SystemOutFizzBuzzOutputStrategyFactory _systemOutFizzBuzzOutputStrategyFactory) {
@@ -24,6 +31,9 @@ public class IntegerIntegerPrinter implements IntegerPrinter {
 		this._systemOutFizzBuzzOutputStrategyFactory = _systemOutFizzBuzzOutputStrategyFactory;
 	}
 
+	/**
+	 * @param theInteger
+	 */
 	public void printInteger(final int theInteger) {
 		final IntegerStringReturner myIntegerStringReturner =
 				this._integerIntegerStringReturnerFactory.createIntegerStringReturner();
@@ -35,12 +45,18 @@ public class IntegerIntegerPrinter implements IntegerPrinter {
 		myOutputAdapter.output(myIntegerString);
 	}
 
+	/**
+	 * @return void
+	 */
 	@Override
 	public void print() {
 		throw new UnsupportedOperationException(
 				com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.Constants.COM_SERIOUSCOMPANY_BUSINESS_JAVA_FIZZBUZZ_PACKAGENAMINGPACKAGE_IMPL_PRINTERS_INTEGER_INTEGER_PRINTER_PRINT);
 	}
 
+	/**
+	 * @param value
+	 */
 	@Override
 	public void printValue(final Object value) {
 		this.printInteger((Integer) value);
