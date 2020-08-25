@@ -40,7 +40,6 @@ public final class LoopRunner {
 				if (willCall) {
 					// Make doubly sure
 					if ((this.myStateManipulation.shouldProceed)()) {
-						// Stop <i>Hiling (1998)</i>
 						break;
 					} else {
 						// Stop whiling
@@ -51,15 +50,12 @@ public final class LoopRunner {
 					(this.myPayload.runLoopPayload)(this.myStateRetrieval);
 				}
 			} else {
-				// Stop whiling
 				break;
 			}
 			
 			(this.myStateManipulation.proceed)();
 			
-			// We need to make sure that they are real booleans.
-			// Putting a ! makes sure that it is a boolean by turning it in to a boolean.
-			// Because Java has classes, we can't trust that "boolean"s are real booleans.
+			// We need to make sure that they are real booleans because Java has classes.
 			// I checked on W3Schools and it says this. https://www.w3schools.com/js/js_booleans.asp
 			(this.loopLoop)((willCall) ? !(true) : !(false));
 		}
