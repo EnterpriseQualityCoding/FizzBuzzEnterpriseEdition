@@ -8,17 +8,27 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.loop.LoopPayloadExecution;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.OutputGenerationStrategy;
 
+/**
+ * Payload for SingleStep
+ */
 @Service
 public class SingleStepPayload implements LoopPayloadExecution {
 
 	private final OutputGenerationStrategy _outputGenerationStrategy;
 
+	/**
+	 * @param _outputGenerationStrategy
+	 */
 	@Autowired
 	public SingleStepPayload(final OutputGenerationStrategy _outputGenerationStrategy) {
 		super();
 		this._outputGenerationStrategy = _outputGenerationStrategy;
 	}
 
+	/**
+	 * @param stateRetrieval LoopContextStateRetrieval
+	 * @return void
+	 */
 	@Override
 	public void runLoopPayload(final LoopContextStateRetrieval stateRetrieval) {
 		final LoopContextStateRetrievalToSingleStepOutputGenerationAdapter adapter =

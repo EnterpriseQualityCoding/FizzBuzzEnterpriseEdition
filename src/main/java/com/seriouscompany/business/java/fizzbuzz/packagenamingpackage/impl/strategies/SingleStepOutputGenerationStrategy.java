@@ -15,6 +15,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.visitors.OutputGenerationContext;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.visitors.OutputGenerationContextVisitor;
 
+/**
+ * Strategy for SingleStepOutputGeneration
+ */
 @Service
 public class SingleStepOutputGenerationStrategy implements OutputGenerationStrategy {
 
@@ -22,6 +25,16 @@ public class SingleStepOutputGenerationStrategy implements OutputGenerationStrat
 	private final OutputGenerationContextVisitor contextVisitor;
 	private final StringPrinter myNewLinePrinter;
 
+	/**
+	 * @param fizzBuzzOutputGenerationContextVisitorFactory FizzBuzzOutputGenerationContextVisitorFactory
+	 * @param fizzStrategyFactory FizzStrategyFactory
+	 * @param fizzStringPrinterFactory FizzStringPrinterFactory
+	 * @param buzzStrategyFactory BuzzStrategyFactory
+	 * @param buzzStringPrinterFactory BuzzStringPrinterFactory
+	 * @param noFizzNoBuzzStrategyFactory NoFizzNoBuzzStrategyFactory
+	 * @param integerIntegerPrinterFactory IntegerIntegerPrinterFactory
+	 * @param newLineStringPrinterFactory NewLineStringPrinterFactory
+	 */
 	@Autowired
 	public SingleStepOutputGenerationStrategy(
 			final FizzBuzzOutputGenerationContextVisitorFactory fizzBuzzOutputGenerationContextVisitorFactory,
@@ -46,6 +59,10 @@ public class SingleStepOutputGenerationStrategy implements OutputGenerationStrat
 		this.myNewLinePrinter = newLineStringPrinterFactory.createStringPrinter();
 	}
 
+	/**
+	 * @param generationParameter SingleStepOutputGenerationParameter
+	 * @return void
+	 */
 	public void performGenerationForCurrentStep(final SingleStepOutputGenerationParameter generationParameter) {
 		final int nGenerationParameter = generationParameter.retrieveIntegerValue();
 		final Iterator<OutputGenerationContext> iterator = this.contexts.iterator();

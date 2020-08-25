@@ -1,17 +1,26 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.adapters;
 
-import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzExceptionSafeOutputStrategy;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzOutputStrategy;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.strategies.FizzBuzzExceptionSafeOutputStrategy;
 
+/**
+ * Adapter for FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategy
+ */
 public final class FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter implements FizzBuzzExceptionSafeOutputStrategy {
 
 	private  final FizzBuzzOutputStrategy _fizzBuzzOutputStrategy;
 
+	/**
+	 * @param fizzBuzzOutputStrategy FizzBuzzOutputStrategy
+	 */
 	public FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(final FizzBuzzOutputStrategy fizzBuzzOutputStrategy) {
-		super();
 		this._fizzBuzzOutputStrategy = fizzBuzzOutputStrategy;
 	}
 
+	/**
+	 * @param outputStringToOutput String
+	 * @return void
+	 */
 	@Override
 	public void output(final String outputStringToOutput) {
 		try {
@@ -22,5 +31,4 @@ public final class FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAd
 			// We're the enterprise...we don't get throwables either!
 		}
 	}
-
 }

@@ -7,12 +7,18 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.visit
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.OutputGenerationContextVisitorFactory;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.visitors.OutputGenerationContextVisitor;
 
+/**
+ * Factory for FizzBuzzOutputGenerationContextVisitor
+ */
 @Service
 public class FizzBuzzOutputGenerationContextVisitorFactory implements
 		OutputGenerationContextVisitorFactory {
 
 	private final FizzBuzzOutputGenerationContextVisitor _fizzBuzzOutputGenerationContextVisitor;
 
+	/**
+	 * @param _fizzBuzzOutputGenerationContextVisitor FizzBuzzOutputGenerationContextVisitor
+	 */
 	@Autowired
 	public FizzBuzzOutputGenerationContextVisitorFactory(
 			final FizzBuzzOutputGenerationContextVisitor _fizzBuzzOutputGenerationContextVisitor) {
@@ -20,6 +26,9 @@ public class FizzBuzzOutputGenerationContextVisitorFactory implements
 		this._fizzBuzzOutputGenerationContextVisitor = _fizzBuzzOutputGenerationContextVisitor;
 	}
 
+	/**
+	 * @return OutputGenerationContextVisitor
+	 */
 	@Override
 	public OutputGenerationContextVisitor createVisitor() {
 		return this._fizzBuzzOutputGenerationContextVisitor;

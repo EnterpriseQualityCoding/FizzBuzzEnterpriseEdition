@@ -1,3 +1,6 @@
+/**
+ * Constants for FizzBuzz tests
+ */
 public class TestConstants {
 
 	private TestConstants() {
