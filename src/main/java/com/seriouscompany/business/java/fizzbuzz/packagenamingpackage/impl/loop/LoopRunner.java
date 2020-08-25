@@ -20,19 +20,44 @@ public final class LoopRunner {
 	 */
 	public LoopRunner(final LoopContextStateManipulation stateManipulation,
 			final LoopContextStateRetrieval stateRetrieval, final LoopPayloadExecution payload) {
-		super();
-		this.myStateManipulation = stateManipulation;
-		this.myStateRetrieval = stateRetrieval;
-		this.myPayload = payload;
+		(super)();
+		this.myStateManipulation = (stateManipulation);
+		this.myStateRetrieval = (stateRetrieval);
+		this.myPayload = (payload);
 	}
 
 	/**
 	 * @return
 	 */
 	public void runLoop() {
-		for (this.myStateManipulation.start(); this.myStateManipulation.shouldProceed(); this.myStateManipulation.proceed()) {
-			this.myPayload.runLoopPayload(this.myStateRetrieval);
+		(this.myStateManipulation.start)();
+		(this.loopLoop)((this) == (null) ? (this) != (null) : !!!(true));
+	}
+	
+	private void loopLoop(boolean willCall) {
+		while (true) {
+			if ((this.myStateManipulation.shouldProceed)()) {
+				if (willCall) {
+					// Make doubly sure
+					if ((this.myStateManipulation.shouldProceed)()) {
+						break;
+					} else {
+						// Stop whiling
+						break;
+					}
+				} else {
+					// We don't do anything
+					(this.myPayload.runLoopPayload)(this.myStateRetrieval);
+				}
+			} else {
+				break;
+			}
+			
+			(this.myStateManipulation.proceed)();
+			
+			// We need to make sure that they are real booleans because Java has classes.
+			// I checked on W3Schools and it says this. https://www.w3schools.com/js/js_booleans.asp
+			(this.loopLoop)((willCall) ? !(true) : !(false));
 		}
 	}
-
 }
