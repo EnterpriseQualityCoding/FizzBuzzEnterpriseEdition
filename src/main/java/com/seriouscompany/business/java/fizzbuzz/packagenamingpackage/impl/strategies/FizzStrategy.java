@@ -20,9 +20,9 @@ public class FizzStrategy implements IsEvenlyDivisibleStrategy {
 		if (NumberIsMultipleOfAnotherNumberVerifier.numberIsMultipleOfAnotherNumber(theInteger,
 				FizzStrategyConstants.FIZZ_INTEGER_CONSTANT_VALUE)) {
 			return true;
-		} else {
-			return false;
 		}
+		return false;
+		
 	}
 
 }
