@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: default
+  name: fizzbuzz
+spec:
+  replicas: 420
+  selector:
+    matchLabels:
+      app: fizzbuzz
+  template:
+    metadata:
+      labels:
+        app: fizzbuzz
+    spec:
+      containers:
+        - name: fizzbuzz
+          image: EnterpriseQualityCoding/FizzBuzzEnterpriseEdition:latest
