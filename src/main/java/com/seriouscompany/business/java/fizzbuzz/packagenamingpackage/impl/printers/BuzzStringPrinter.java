@@ -1,5 +1,6 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.printers;
 
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies.FizzBuzzOutputStrategyI18nProxy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,7 +40,8 @@ public class BuzzStringPrinter implements StringPrinter {
 			.createStringStringReturner();
 		final FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter myOutputAdapter =
 				new FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter(
-						this._outputStrategyFactory.createOutputStrategy());
+						new FizzBuzzOutputStrategyI18nProxy(
+								this._outputStrategyFactory.createOutputStrategy()));
 
 		myOutputAdapter.output(myBuzzStringReturner.getReturnString());
 	}

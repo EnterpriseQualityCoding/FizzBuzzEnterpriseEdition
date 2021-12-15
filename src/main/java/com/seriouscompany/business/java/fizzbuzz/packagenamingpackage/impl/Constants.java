@@ -19,5 +19,8 @@ public class Constants {
 	public static final int INTEGER_ORIGIN_ZERO_VALUE = 0;
 	public static final int LOOP_INC_VALUE = 1;
 	public static final int LOOP_INIT_VALUE = 1;
+	public static final String I18N_LIB_PROPERTIES_PATH = "assets/configuration/i18n/i18n_lib.properties";
+	public static final String LANGUAGE = "Chinese";
+	public static final String I18N_LIB_PROPERTIES_SEPARATOR = ".";
 
 }
