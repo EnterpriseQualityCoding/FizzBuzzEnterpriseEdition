@@ -8,7 +8,7 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
  */
 public final class FizzBuzzOutputStrategyToFizzBuzzExceptionSafeOutputStrategyAdapter implements FizzBuzzExceptionSafeOutputStrategy {
 
-	private  final FizzBuzzOutputStrategy _fizzBuzzOutputStrategy;
+	private   final FizzBuzzOutputStrategy _fizzBuzzOutputStrategy;
 
 	/**
 	 * @param fizzBuzzOutputStrategy FizzBuzzOutputStrategy
