@@ -45,6 +45,7 @@ public class FizzBuzzTest {
 	@Before
 	public void setUp() {
 		// create a constant for the ApplicationContext called `context` that uses test constant `SPRING_XML` from TestConstants
+		// `SPRING_XML` points to /resources/assets/configuration/spring/dependencyinjection/configuration/spring.xml
 		final ApplicationContext context = new ClassPathXmlApplicationContext(TestConstants.SPRING_XML);
 		// ...
 		this.fb = (FizzBuzz) context.getBean(TestConstants.STANDARD_FIZZ_BUZZ);
