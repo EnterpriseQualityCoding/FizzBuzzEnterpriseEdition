@@ -1,17 +1,32 @@
+// FizzBuzzTest.java
+// Tests for FizzBuzz
+
+// imports org.junit.Assert.assertEquals
 import static org.junit.Assert.assertEquals;
 
+// imports java.io.BufferedOutputStream
 import java.io.BufferedOutputStream;
+// imports java.io.ByteArrayOutputStream
 import java.io.ByteArrayOutputStream;
+// imports java.io.IOException
 import java.io.IOException;
+// imports java.io.PrintStream
 import java.io.PrintStream;
 
+// imports org.junit.After
 import org.junit.After;
+// imports org.junit.Before
 import org.junit.Before;
+// imports org.junit.Test
 import org.junit.Test;
+// imports org.springframework.context.ApplicationContext
 import org.springframework.context.ApplicationContext;
+// imports org.springframework.context.ConfigurableApplicationContext
 import org.springframework.context.ConfigurableApplicationContext;
+// imports org.springframework.context.support.ClassPathXmlApplicationContext
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+// imports com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.FizzBuzz
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.FizzBuzz;
 
 /**
@@ -19,7 +34,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
  */
 public class FizzBuzzTest {
 
+	// create a PrintStream called `out`
 	private PrintStream out;
+	// create a FizBuzz objecct called `fb`
 	private FizzBuzz fb;
 
 	/**
@@ -27,7 +44,9 @@ public class FizzBuzzTest {
 	 */
 	@Before
 	public void setUp() {
+		// create a constant for the ApplicationContext called `context` that uses test constant `SPRING_XML` from TestConstants
 		final ApplicationContext context = new ClassPathXmlApplicationContext(TestConstants.SPRING_XML);
+		// ...
 		this.fb = (FizzBuzz) context.getBean(TestConstants.STANDARD_FIZZ_BUZZ);
 		this.out = System.out;
 		((ConfigurableApplicationContext) context).close();
