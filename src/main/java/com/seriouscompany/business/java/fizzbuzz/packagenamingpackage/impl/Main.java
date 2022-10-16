@@ -27,12 +27,16 @@ public final class Main {
 	 * @param args
 	 */
 	public static void main(final String[] args) {
-		// create a constant for the ApplicationContext called `context` that uses test constant `SPRING_XML` from Constants
+		// create a constant for the ApplicationContext called `context` that uses constant `SPRING_XML` from Constants
 		final ApplicationContext context = new ClassPathXmlApplicationContext(Constants.SPRING_XML);
+		// creates a constant using FizzBuzz called `myFizzBuzz` which accesses the constant `STANDARD_FIZZ_BUZZ` from Constants
 		final FizzBuzz myFizzBuzz = (FizzBuzz) context.getBean(Constants.STANDARD_FIZZ_BUZZ);
+		// create a constant for the FizzBuzz Upper Limit using FizzBuzzUpperLimitParameter called `fizzBuzzUpperLimit`
 		final FizzBuzzUpperLimitParameter fizzBuzzUpperLimit = new DefaultFizzBuzzUpperLimitParameter();
+		// set myFizzBuzz.fizzBuzz to the FizzBuzz Upper Limit by using the obtainUpperLimitValue method from fizzBuzz UpperLimit
 		myFizzBuzz.fizzBuzz(fizzBuzzUpperLimit.obtainUpperLimitValue());
 
+		// close application context
 		((ConfigurableApplicationContext) context).close();
 
 	}

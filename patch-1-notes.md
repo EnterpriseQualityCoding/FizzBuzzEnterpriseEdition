@@ -1,15 +1,46 @@
 # patch-1 Notes
 
-NOTE: This file is to be removed after all commenting is done.
+This pull request be to fix issue #607.
+
+NOTE: This file be to be removed after all commenting be done.
+
+
+ANOTHER NOTE: "<...>" be used to skip through many empty directories.
+For example, "/src/<...>/impl" be used to direct the reader to
+/src/main/java/com/seriouscompany/business/java/fizzbuzz/packagenamingpackage/impl.
+
+Another example, "/resources/<...>/spring.xml" be used to direct the reader to
+/resources/assets/configuration/spring/dependencyinjection/configuration/spring.xml.
 
 ## DONE!
 
+### /test/java
+
 - /test/java/FizzBuzzTest.java
 - /test/java/TestConstants.java (!)
-- /src/main/java/com/seriouscompany/business/java/fizzbuzz/packagenamingpackage/impl/Constants.java (!)
-- /src/main/java/com/seriouscompany/business/java/fizzbuzz/packagenamingpackage/impl/StandardFizzBuzz.java
-- /src/main/java/com/seriouscompany/business/java/fizzbuzz/packagenamingpackage/interfaces/FizzBuzz.java
 
-## IN PROGRESS 
-- /src/main/java/com/seriouscompany/business/java/fizzbuzz/packagenamingpackage/impl/Main.java
-- /src/main/java/com/seriouscompany/business/java/fizzbuzz/packagenamingpackage/impl/printers/IntegerIntegerPrinter.java
+### /src/<...>/impl
+
+- /src/<...>/impl/Constants.java (!)
+- /src/<...>/impl/StandardFizzBuzz.java
+- /src/<...>/impl/Main.java
+
+#### /src/<...>/impl/printers
+
+- /src/<...>/impl/printers/IntegerIntegerPrinter.java
+
+#### /src/<...>/impl/factories
+
+- /src/<...>/impl/factories/NoFizzNoBuzzStrategyFactory.java
+
+### /src/<...>/interfaces
+
+- /src/<...>/interfaces/FizzBuzz.java
+
+#### /src/<...>/interfaces/parameters
+
+- /src/<...>/interfaces/parameters/FizzBuzzUpperLimitParameter.java
+
+## IN PROGRESS
+
+undefined
