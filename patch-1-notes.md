@@ -37,6 +37,10 @@ be used to direct the reader to
 #### /src/<...>/impl/factories
 
 - /src/<...>/impl/factories/NoFizzNoBuzzStrategyFactory.java
+- /src/<...>/impl/factories/BuzzStrategyFactory.java
+- /src/<...>/impl/factories/BuzzStringPrinterFactory.java
+- /src/<...>/impl/factories/BuzzStringReturnerFactory.java
+- /src/<...>/impl/factories/EnterpriseGradeFizzBuzzSolutionStrategy.java
 
 #### /src/<...>/impl/strategies
 
@@ -59,3 +63,4 @@ be used to direct the reader to
 ## IN PROGRESS
 
 undefined
+
