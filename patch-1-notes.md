@@ -4,9 +4,9 @@ This pull request be to fix issue #607.
 
 NOTE: This file be to be removed after all commenting be done.
 
-
 ANOTHER NOTE:
 "<...>" be used to skip through many empty directories.
+
 For example,
 "/src/<...>/impl"
 be used to direct the reader to
@@ -17,7 +17,7 @@ Another example,
 be used to direct the reader to
 /resources/assets/configuration/spring/dependencyinjection/configuration/spring.xml.
 
-## DONE!
+## COMPLETED
 
 ### /test/java
 
@@ -46,6 +46,10 @@ be used to direct the reader to
 
 - /src/<...>/impl/strategies/NoFizzNoBuzzStrategy.java
 
+#### /src/<...>/impl/loop
+
+- /src/<...>/impl/loop/LoopCondition.java
+
 ### /src/<...>/interfaces
 
 - /src/<...>/interfaces/FizzBuzz.java
@@ -62,5 +66,4 @@ be used to direct the reader to
 
 ## IN PROGRESS
 
-undefined
-
+null
