@@ -45,14 +45,21 @@ public class IntegerDivider {
 			final double dbFirstNumber = IntToDoubleConverter.Convert(nFirstInteger);
 			final double dbSecondNumber = IntToDoubleConverter.Convert(nSecondInteger);
 			final double dbQuotient = dbFirstNumber / dbSecondNumber;
-			double dbRoundedQuotient = (double) Constants.INTEGER_ORIGIN_ZERO_VALUE;
-			if (this.firstIsSmallerThanSecondDoubleComparator.FirstIsSmallerThanSecond(dbQuotient,
-					(double) Constants.INTEGER_ORIGIN_ZERO_VALUE)) {
-				dbRoundedQuotient = Math.ceil(dbQuotient);
-			} else if (this.firstIsLargerThanSecondDoubleComparator.FirstIsLargerThanSecond(dbQuotient,
-					(double) Constants.INTEGER_ORIGIN_ZERO_VALUE)) {
-				dbRoundedQuotient = Math.floor(dbQuotient);
-			}
+			final double constantsIntegerOriginZeroValueAsDouble = IntToDoubleConverter.Convert(
+				Constants.INTEGER_ORIGIN_ZERO_VALUE
+			);
+			final boolean dbQuotientIsSmallerThanConstantIntegerOriginZeroValueAsDouble =
+				this.firstIsSmallerThanSecondDoubleComparator.FirstIsSmallerThanSecond(dbQuotient,
+					IntToDoubleConverter.Convert(Constants.INTEGER_ORIGIN_ZERO_VALUE));
+			final boolean dbQuotientIsLargerThanConstantIntegerOriginZeroValueAsDouble =
+				this.firstIsLargerThanSecondDoubleComparator.FirstIsLargerThanSecond(dbQuotient,
+					IntToDoubleConverter.Convert(Constant.INTEGER_ORIGIN_ZERO_VALUE));
+			//TODO: refactor to use ternary operator factory and classes
+			final double dbRoundedQuotient = dbQuotientIsSmallerThanConstantIntegerOriginZeroValueAsDouble ?
+				Math.ceil(constantsIntegerOriginZeroValueAsDouble) :
+				dbQuotientIsLargerThanConstantIntegerOriginZeroValueAsDouble ?
+				Math.floor(constantsIntegerOriginZeroValueAsDouble :
+				Constant.INTEGER_ORIGIN_ZERO_VALUE; //if neither smaller nor larger, it must be equal
 			final int nIntegerQuotient = DoubleToIntConverter.Convert(dbRoundedQuotient);
 			return nIntegerQuotient;
 		}
