@@ -1,7 +1,7 @@
 // Main.java
 // Main
 
-// import package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl
+// add this specific class (Main) to the package named com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl;
 
 // import package org.springframework.context.ApplicationContext
@@ -25,7 +25,7 @@ public final class Main {
 
 	/**
 	 * the main function to the class Main declared in com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl; the starting point to the application
-	 * @param args
+	 * @param args The command line arguments passed in from the command line, which are used to change the end effects of the program if used as a Command Line Interface, or CLI, tool. This is declared as `final`, which is a keyword used in Java to declare any variable as a constant, meaning that it cannot be changed after declaration. This specfic program does not use this argument, as this is just an Enterprise Quality(TM) FizzBuzz program which does not need any arguments passed in on execution, but other projects which are less Enterprise Quality(TM) have used it.
 	 */
 	public static void main(final String[] args) {
 		// create an object off of ClassPathXmlApplicationContent imported from org.springframework.context.support.ClassPathXmlApplicationContent on line 12 called context of type ApplicationContext, passing in Constants.SPRING_XML
