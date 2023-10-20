@@ -19,13 +19,27 @@ public class LoopCondition {
 	public boolean evaluateLoop(final int nCurrentNumber, final int nTotalCount) {
 		final ThreeWayIntegerComparisonResult comparisonResult = ThreeWayIntegerComparator.Compare(nCurrentNumber,
 				nTotalCount);
-		if (ThreeWayIntegerComparisonResult.FirstIsLessThanSecond == comparisonResult) {
+		if (absolutelySafeCheck(ThreeWayIntegerComparisonResult.FirstIsLessThanSecond, comparisonResult)) {
 			return true;
-		} else if (ThreeWayIntegerComparisonResult.FirstEqualsSecond == comparisonResult) {
+		} else if (absolutelySafeCheck(ThreeWayIntegerComparisonResult.FirstEqualsSecond, comparisonResult)) {
 			return true;
 		} else {
 			return false;
 		}
 	}
 
+	/**
+	 * This method guarantees an absolutely safe logical evaluation no matter what.
+	 * @param boolean crucialCondition
+	 * @param ThreeWayIntegerComparisonResult comparisonResult
+	 * @return boolean
+	 */
+
+	private boolean absolutelySafeCheck(boolean crucialCondition, ThreeWayIntegerComparisonResult comparisonResult){
+		try{
+			return crucialCondition == comparisonResult;
+		}catch(Throwable t){
+			return false;
+		}
+	}
 }
