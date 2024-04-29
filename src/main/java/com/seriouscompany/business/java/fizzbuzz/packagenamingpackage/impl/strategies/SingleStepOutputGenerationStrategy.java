@@ -15,6 +15,9 @@ import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.visitors.OutputGenerationContext;
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.visitors.OutputGenerationContextVisitor;
 
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.data.ResultCollection;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.data.ActionResultCollection;
+
 /**
  * Strategy for SingleStepOutputGeneration
  */
@@ -64,13 +67,30 @@ public class SingleStepOutputGenerationStrategy implements OutputGenerationStrat
 	 * @return void
 	 */
 	public void performGenerationForCurrentStep(final SingleStepOutputGenerationParameter generationParameter) {
-		final int nGenerationParameter = generationParameter.retrieveIntegerValue();
 		final Iterator<OutputGenerationContext> iterator = this.contexts.iterator();
+		final ResultCollectionFactory<OutputGenerationContext> resultCollectionFactory = new ActionResultCollectionFactory<>();
+		// switch to ConditionalLoop
 		while (iterator.hasNext()) {
 			final OutputGenerationContext context = iterator.next();
 			this.contextVisitor.visit(context, nGenerationParameter);
 		}
+		//
+		final ResultCollection<OutputGenerationContext> results = resultCollectionFactory.createResultCollection();
+		final IteratorPayload<OutputGenerationContext> iteratorPayload = new IteratorPayload<>(iterator, results);
+		//end
 		this.myNewLinePrinter.print();
 	}
 
+	private void generateResultCollection(Iterator<OutputGenerationContext> iterator, IteratorPayload<OutputGenerationContext> iteratorPayload) {
+		final ConditionalLoopContext loopContext = new ConditionalLoopContext(iterator::hasNext);
+		final ConditionalLoopRunner loopRunner = new ConditionalLoopRunner(loopContext, loopContext, iteratorPayload);
+		loopRunner.runLoop();
+	}
+
+	private void generateOutputFromResultCollection(ResultCollection<OutputGenerationContext> results, final OutputGenerationContextVisitor contextVisitor, final SingleStepOutputGenerationParameter nGenerationParameter) {
+		final OutputGenerationContextVisitorPayload outputGenerationContextVisitorPayload = new OutputGenerationContextVisitorPayload();
+		final CountBasedLoopContext loopContext = new CountBasedLoopContext(results.size());
+		final CountBasedLoopRunner loopRunner = new CountBasedLoopRunner(loopContext, loopContext, outputGenerationContextVisitorPayload);
+		loopRunner.runLoop();
+	}
 }
