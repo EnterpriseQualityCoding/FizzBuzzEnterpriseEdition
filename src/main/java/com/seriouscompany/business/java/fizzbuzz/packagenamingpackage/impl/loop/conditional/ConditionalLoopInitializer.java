@@ -14,6 +14,6 @@ public class ConditionalLoopInitializer implements LoopInitializer {
 	 * @return int
 	 */
 	public int getLoopInitializationPoint() {
-		throw new UnsupportedOperationException(Constants.A_CONDITIONAL_LOOP_HAS_NO_INITIALIZATION_POINT);
+		throw Constants.A_CONDITIONAL_LOOP_HAS_NO_INITIALIZATION_POINT.apply(Language.DEFAULT).createException();
 	}
 }

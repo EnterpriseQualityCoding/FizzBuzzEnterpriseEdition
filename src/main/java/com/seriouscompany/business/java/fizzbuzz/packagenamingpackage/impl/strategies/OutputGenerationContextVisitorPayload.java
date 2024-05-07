@@ -1,5 +1,7 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.strategies;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +22,6 @@ public class OutputGenerationContextVisitorPayload implements LoopPayloadExecuti
 	 * @param _results ResultCollection<OutputGenerationContext>
      * @param contextVisitor OutputGenerationContextVisitor
 	 */
-	@Autowired
 	public OutputGenerationContextVisitorPayload(final ResultCollection<OutputGenerationContext> _results, final OutputGenerationContextVisitor contextVisitor) {
 		super();
 		this._results = _results;
@@ -34,7 +35,7 @@ public class OutputGenerationContextVisitorPayload implements LoopPayloadExecuti
 	@Override
 	public void runLoopPayload(final LoopContextStateRetrieval stateRetrieval) {
         int controlParameterValue = stateRetrieval.getControlParameter();
-        List<Result<OutputGenerationContext>> resultsList = _results.getResults();
+        List<Result<OutputGenerationContext>> resultsList = this._results.getResults();
 		OutputGenerationContext outputGenerationContext = resultsList.get(controlParameterValue);
         this.contextVisitor.visit(outputGenerationContext, controlParameterValue);
 	}

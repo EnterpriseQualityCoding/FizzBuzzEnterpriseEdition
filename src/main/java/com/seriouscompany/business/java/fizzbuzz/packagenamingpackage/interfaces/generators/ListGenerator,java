@@ -1,5 +1,0 @@
-package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.generators;
-
-public interface ListGenerator<E, L extends List<E>> extends Generator<L> {
-    public L get();
-}

@@ -69,15 +69,15 @@ public class SingleStepOutputGenerationStrategy implements OutputGenerationStrat
 	public void performGenerationForCurrentStep(final SingleStepOutputGenerationParameter generationParameter) {
 		final Iterator<OutputGenerationContext> iterator = this.contexts.iterator();
 		final ResultCollectionFactory<OutputGenerationContext> resultCollectionFactory = new ActionResultCollectionFactory<>();
-		// switch to ConditionalLoop
-		while (iterator.hasNext()) {
-			final OutputGenerationContext context = iterator.next();
-			this.contextVisitor.visit(context, nGenerationParameter);
-		}
-		//
+		// while (iterator.hasNext()) {
+		// 	final OutputGenerationContext context = iterator.next();
+		// 	this.contextVisitor.visit(context, nGenerationParameter);
+		// }
 		final ResultCollection<OutputGenerationContext> results = resultCollectionFactory.createResultCollection();
 		final IteratorPayload<OutputGenerationContext> iteratorPayload = new IteratorPayload<>(iterator, results);
-		//end
+		final OutputGenerationContextVisitorPayload outputGenerationContextVisitorPayload = new OutputGenerationContextVisitorPayload();
+		generateResultCollection(iterator, iteratorPayload);
+		generateOutputFromResultCollection(outputGenerationContextVisitorPayload, results, this.contextVisitor);
 		this.myNewLinePrinter.print();
 	}
 
@@ -87,8 +87,7 @@ public class SingleStepOutputGenerationStrategy implements OutputGenerationStrat
 		loopRunner.runLoop();
 	}
 
-	private void generateOutputFromResultCollection(ResultCollection<OutputGenerationContext> results, final OutputGenerationContextVisitor contextVisitor, final SingleStepOutputGenerationParameter nGenerationParameter) {
-		final OutputGenerationContextVisitorPayload outputGenerationContextVisitorPayload = new OutputGenerationContextVisitorPayload();
+	private void generateOutputFromResultCollection(final OutputGenerationContextVisitorPayload outputGenerationContextVisitorPayload, ResultCollection<OutputGenerationContext> results, OutputGenerationContextVisitor contextVisitor) {
 		final CountBasedLoopContext loopContext = new CountBasedLoopContext(results.size());
 		final CountBasedLoopRunner loopRunner = new CountBasedLoopRunner(loopContext, loopContext, outputGenerationContextVisitorPayload);
 		loopRunner.runLoop();

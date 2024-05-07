@@ -3,6 +3,5 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 import org.json.JsonObject;
 
 public interface JsonObjectHolderFactory {
-    void initialize(JsonObject object);
-    JsonObjectHolder createJsonObjectHolder();
+    JsonObjectHolder createJsonObjectHolder(JsonObject jsonObject);
 }

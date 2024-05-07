@@ -9,6 +9,6 @@ public final class ConditionalLoopFinalizer implements LoopFinalizer {
 	 * @return int
 	 */
 	public int getLoopFinalizationPoint() {
-		throw new UnsupportedOperationException(Constants.A_CONDITIONAL_LOOP_HAS_NO_FINALIZATION_POINT);
+		throw Constants.A_CONDITIONAL_LOOP_HAS_NO_FINALIZATION_POINT.apply(Language.DEFAULT).createException();
 	}
 }

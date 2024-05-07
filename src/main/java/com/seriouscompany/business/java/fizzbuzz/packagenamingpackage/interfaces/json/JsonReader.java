@@ -1,8 +1,7 @@
 package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.json;
 
-import org.json.JsonObject;
-import java.io.ByteBuffer;
+import java.io.InputStream;
 
 public interface JsonReader {
-    JsonObject readJson();
+    JsonObjectHolder readJson();
 }

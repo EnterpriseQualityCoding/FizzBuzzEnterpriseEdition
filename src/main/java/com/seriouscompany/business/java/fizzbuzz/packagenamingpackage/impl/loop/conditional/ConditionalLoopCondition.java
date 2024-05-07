@@ -22,7 +22,7 @@ public class ConditionalLoopCondition implements LoopCondition {
 		if (loopState instanceof ConditionalLoopState) {
 			myConditionalLoopState = (ConditionalLoopState) loopState;
 		} else {
-			throw new IllegalArgumentException(Constants.THE_WRONG_TYPE_OF_LOOP_STATE_WAS_PROVIDED);
+			throw Constants.THE_WRONG_TYPE_OF_LOOP_STATE_WAS_PROVIDED.apply(Language.DEFAULT).createException();
 		}
 		boolean conditionalLoopIsFinished = conditionalLoopIsFinishedChecker.checkIfConditionalLoopIsFinished(loopState);
 		if (conditionalLoopIsFinished == true) {
@@ -30,7 +30,7 @@ public class ConditionalLoopCondition implements LoopCondition {
 		} else if (conditionalLoopIsFinished == false) {
 			return false;
 		} else {
-			return new UnsupportedOperationException(Constants.COULD_NOT_DETERMINE_IF_THE_LOOP_WAS_FINISHED);
+			return Constants.COULD_NOT_DETERMINE_IF_THE_LOOP_WAS_FINISHED.apply(Language.DEFAULT).createException();
 		}
 	}
 

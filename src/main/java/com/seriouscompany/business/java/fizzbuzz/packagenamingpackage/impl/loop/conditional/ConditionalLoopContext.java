@@ -51,7 +51,7 @@ public final class ConditionalLoopContext implements LoopContext {
 	 */
 	@Override
 	public int getControlParameter() {
-		throw new UnsupportedOperationException(Constants.A_CONDITIONAL_LOOP_HAS_NO_CONTROL_PARAMETER);
+		throw Constants.A_CONDITIONAL_LOOP_HAS_NO_CONTROL_PARAMETER.apply(Language.DEFAULT).createException();
 	}
 
 	@Override

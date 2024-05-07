@@ -3,6 +3,6 @@ package com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interface
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.factories.JsonReaderFactory;
 
 public interface JsonLoader {
-    void loadJson(ByteArrayInputStream stream);
+    void loadJson(InputStream inputStream);
     JsonReaderFactory getJsonReaderFactory();
 }

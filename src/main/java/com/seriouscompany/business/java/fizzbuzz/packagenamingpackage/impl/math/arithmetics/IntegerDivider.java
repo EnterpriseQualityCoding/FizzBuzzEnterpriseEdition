@@ -40,7 +40,7 @@ public class IntegerDivider {
 		final boolean denominatorEqualsZero =
 				IntegerForEqualityComparator.areTwoIntegersEqual(nSecondInteger, Constants.INTEGER_DIVIDE_ZERO_VALUE);
 		if (denominatorEqualsZero) {
-			throw new ArithmeticException(Constants.AN_ATTEMPT_WAS_MADE_TO_DIVIDE_BY_ZERO);
+			throw Constants.AN_ATTEMPT_WAS_MADE_TO_DIVIDE_BY_ZERO.apply(Language.DEFAULT).createException();
 		} else {
 			final double dbFirstNumber = IntToDoubleConverter.Convert(nFirstInteger);
 			final double dbSecondNumber = IntToDoubleConverter.Convert(nSecondInteger);

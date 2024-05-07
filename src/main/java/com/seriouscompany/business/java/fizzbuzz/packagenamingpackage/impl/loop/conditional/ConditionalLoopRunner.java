@@ -32,7 +32,7 @@ public final class ConditionalLoopRunner implements LoopRunner {
 	 */
 	public void runLoop() {
 		while (this.myStateManipulation.shouldProceed()) {
-			this.myPayload.runLoopPayload(Constants.NULL_VALUE);
+			this.myPayload.runLoopPayload(Constants.NULL_VALUE());
 		}
 	}
 
