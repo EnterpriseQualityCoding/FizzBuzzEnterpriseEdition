@@ -1,0 +1,17 @@
+{
+	"translations": {
+		"default": {
+			"fizzbuzz.string.error.A_CONDITIONAL_LOOP_HAS_NO_CONTROL_PARAMETER": "A conditional loop has no control parameter.",
+			"fizzbuzz.string.error.A_CONDITIONAL_LOOP_HAS_NO_FINALIZATION_POINT": "A conditional loop has no finalization point.",
+			"fizzbuzz.string.error.A_CONDITIONAL_LOOP_HAS_NO_INITIALIZATION_POINT": "A conditional loop has no initialization point.",
+			"fizzbuzz.string.error.AN_ATTEMPT_WAS_MADE_TO_DIVIDE_BY_ZERO": "An attempt was made to divide by zero.",
+			"fizzbuzz.string.error.COULD_NOT_DETERMINE_IF_THE_LOOP_WAS_FINISHED": "Could not determine if the loop was finished.",
+			"fizzbuzz.string.error.KEY_NOT_FOUND": "Key not found.",
+			"fizzbuzz.string.error.THE_INTEGERS_COULD_NOT_BE_COMPARED": "The integers could not be compared.",
+			"fizzbuzz.string.error.THE_OBJECTS_COULD_NOT_BE_COMPARED": "The objects could not be compared.",
+			"fizzbuzz.string.error.THE_WRONG_TYPE_OF_LOOP_STATE_WAS_PROVIDED": "The wrong type of loop state was provided.",
+			"fizzbuzz.string.output.buzz": "Buzz",
+			"fizzbuzz.string.output.fizz": "Fizz"
+		}
+	}
+}

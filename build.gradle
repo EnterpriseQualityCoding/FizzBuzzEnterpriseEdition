@@ -23,6 +23,8 @@ dependencies {
             'org.springframework:spring-core:3.2.13.RELEASE',
             'org.springframework:spring-expression:3.2.13.RELEASE'
 
+    compile 'org.json'
+
     testCompile 'junit:junit:4.8.2'
 }
 

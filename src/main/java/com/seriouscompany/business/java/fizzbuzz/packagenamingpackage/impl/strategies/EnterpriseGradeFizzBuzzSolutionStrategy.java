@@ -31,8 +31,8 @@ public class EnterpriseGradeFizzBuzzSolutionStrategy implements FizzBuzzSolution
 	 */
 	@Override
 	public void runSolution(final int nFizzBuzzUpperLimit) {
-		final LoopContext loopContext = new LoopContext(nFizzBuzzUpperLimit);
-		final LoopRunner loopRunner = new LoopRunner(loopContext, loopContext, this._loopPayloadExecution);
+		final CountBasedLoopContext loopContext = new CountBasedLoopContext(nFizzBuzzUpperLimit);
+		final CountBasedLoopRunner loopRunner = new CountBasedLoopRunner(loopContext, loopContext, this._loopPayloadExecution);
 		loopRunner.runLoop();
 	}
 
