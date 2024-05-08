@@ -23,6 +23,9 @@ dependencies {
             'org.springframework:spring-core:3.2.13.RELEASE',
             'org.springframework:spring-expression:3.2.13.RELEASE'
 
+    compile 'org.json'
+    compile 'it.unimi.dsi:fastutil:8.2.1'
+
     testCompile 'junit:junit:4.8.2'
 }
 

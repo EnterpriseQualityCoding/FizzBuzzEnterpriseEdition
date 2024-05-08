@@ -26,7 +26,7 @@ public final class ThreeWayIntegerComparator {
 			return ThreeWayIntegerComparisonResult.FirstIsGreaterThanSecond;
 		} else {
 			// If the integers cannot be compared, then something is seriously wrong with the numbers.
-			throw new UnsupportedOperationException(Constants.THE_INTEGERS_COULD_NOT_BE_COMPARED);
+			throw Constants.THE_INTEGERS_COULD_NOT_BE_COMPARED.apply(Language.DEFAULT).createException();
 		}
 	}
 

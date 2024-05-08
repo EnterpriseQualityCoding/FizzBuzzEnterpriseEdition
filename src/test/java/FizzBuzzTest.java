@@ -13,6 +13,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.FizzBuzz;
+import com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.interfaces.lang.Language;
 
 /**
  * Tests for FizzBuzz
@@ -54,7 +55,12 @@ public class FizzBuzzTest {
 		this.fb.fizzBuzz(n);
 
 		System.out.flush();
-		String platformDependentExpectedResult = s.replaceAll("\\n", System.getProperty("line.separator"));
+		String platformDependentExpectedResult = s
+			.replaceAll("\\n", System.getProperty(TestConstants.LINE_SEPARATOR))
+			.formatted(
+				com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.Constants.FIZZ.apply(Language.DEFAULT),
+				com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.Constants.BUZZ.apply(Language.DEFAULT)
+			);
 		assertEquals(platformDependentExpectedResult, baos.toString());
 	}
 
