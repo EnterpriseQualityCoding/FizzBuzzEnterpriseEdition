@@ -6,13 +6,13 @@ import it.unimi.dsi.fastutils.chars.CharacterList;
  * Converter for CharacterListToCharacterArray
  */
 public class CharacterListToCharacterArrayConverter {
-    
-    private CharListToCharacterArrayAdapter() {}
+	
+	private CharListToCharacterArrayAdapter() {}
 
-    public static char[] Convert(CharacterList characterList) {
-        
-		final ConditionalLoopContext loopContext = new ConditionalLoopContext(context -> context.);
-		final ConditionalLoopRunner loopRunner = new ConditionalLoopRunner(loopContext, loopContext, this._loopPayloadExecution);
+	public static char[] Convert(CharacterList characterList) {
+			
+	final ConditionalLoopContext loopContext = new ConditionalLoopContext(context -> context.);
+	final ConditionalLoopRunner loopRunner = new ConditionalLoopRunner(loopContext, loopContext, this._loopPayloadExecution);
 		loopRunner.runLoop();
-    }
+	}
 }
