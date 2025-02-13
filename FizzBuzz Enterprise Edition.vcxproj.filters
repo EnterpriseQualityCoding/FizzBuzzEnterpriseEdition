@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Markdown files">
+      <UniqueIdentifier>{B732F1CF-BC88-4644-AEB4-5F85C7319B37}</UniqueIdentifier>
+      <Extensions>md;markdown</Extensions>
+    </Filter>
+    <Filter Include="Source files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="console.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="argparser.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="input_reader.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="fizz_buzz.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="output_writer.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="fizz_buzz_persistent_cache.cpp">
+      <Filter>Source files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cpp_tstring.hpp">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="console.hpp">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="argparser.hpp">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="input_reader.hpp">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="fizz_buzz.hpp">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="output_writer.hpp">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="fizz_buzz_persistent_cache.hpp">
+      <Filter>Header files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md">
+      <Filter>Markdown files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

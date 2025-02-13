@@ -1,7 +1,0 @@
-language: java
-before_install: sudo pip install codecov
-after_success: codecov
-
-jdk:
-  - oraclejdk7
-  - openjdk7

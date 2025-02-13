@@ -1,34 +1,24 @@
-# FizzBuzzEnterpriseEdition
+# FizzBuzz Enterprise Edition
+Welcome to FizzBuzz Enterprise Edition by Quality Enterprise Coding Co LTD. - the company which had the award for being the best totally real company.
 
-[![Build status][Build status image]][Build status URL] [![codecov.io](https://codecov.io/github/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition/coverage.svg?branch=master)](https://codecov.io/github/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition?branch=master)
+Our top priority is performance, code architecture and ease of use. This is why we wrote our product in C++, and never used Java (don't look at the Git commit history, no, don't do it!).
 
-[Build status image]: https://secure.travis-ci.org/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition.png?branch=master
-[Build status URL]: http://travis-ci.org/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition
+## System Requirements
+At least Microsoft(R) Windows(R) Server(R) 2022 or Microsoft(R) Windows (R) 11 24H2. 2 TiB of RAM and 2 PiB of disk space required.
 
-Enterprise software marks a special high-grade class of software that makes
-careful use of relevant software architecture design principles to build
-particularly customizable and extensible solutions to real problems. This
-project is an example of how the popular FizzBuzz game might be built were it
-subject to the high quality standards of enterprise software.
+You will need an AMD Ryzen Threadripper PRO 7995WX. For optimal usage of the program, installing 16 of (AMD Ryzen Threadripper PRO 7995WX) is recommended.
 
-## FizzBuzz
-
-FizzBuzz is a game that has gained in popularity as a programming assignment to
-weed out non-programmers during job interviews. The object of the assignment is
-less about solving it correctly according to the below rules and more about
-showing the programmer understands basic, necessary tools such as
-`if`-/`else`-statements and loops. The rules of FizzBuzz are as follows:
-
-For numbers 1 through 100,
-
-* if the number is divisible by 3 print Fizz;
-* if the number is divisible by 5 print Buzz;
-* if the number is divisible by 3 and 5 (15) print FizzBuzz;
-* else, print the number.
+## Usage
+Run the executable without any arguments to see the help menu. (figure it out yourself, it's very easy).
 
 ## Contributing
+You can contribute to this totally not satire and fake company by opening a pull request. It's that simple!
 
-Although this project is intended as satire, we take openness and inclusivity
-very seriously. To that end we have adopted the following code of conduct.
-
-[Contributor Code of Conduct](CONTRIBUTING.md)
+## FizzBuzz
+For each number:
+```
+	If it's divisible by 15, output "FizzBuzz"
+	If it's divisible by 3, output "Fizz"
+	If it's divisible by 5, output "Buzz"
+	Otherwise, output the number.
+```
