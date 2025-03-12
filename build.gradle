@@ -17,13 +17,14 @@ sourceSets {
 }
 
 dependencies {
-    compile 'org.springframework:spring-aop:3.2.13.RELEASE',
-            'org.springframework:spring-beans:3.2.13.RELEASE',
-            'org.springframework:spring-context:3.2.13.RELEASE',
-            'org.springframework:spring-core:3.2.13.RELEASE',
-            'org.springframework:spring-expression:3.2.13.RELEASE'
+    implementation 'org.springframework:spring-aop:6.2.3',
+            'org.springframework:spring-beans:6.2.3',
+            'org.springframework:spring-context:6.2.3',
+            'org.springframework:spring-core:6.2.3',
+            'org.springframework:spring-expression:6.2.3',
+            'javax.annotation:javax.annotation-api:1.3.2'
 
-    testCompile 'junit:junit:4.8.2'
+    testImplementation 'junit:junit:4.8.2'
 }
 
 mainClassName = 'com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.Main'
