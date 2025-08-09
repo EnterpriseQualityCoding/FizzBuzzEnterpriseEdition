@@ -27,3 +27,6 @@ dependencies {
 }
 
 mainClassName = 'com.seriouscompany.business.java.fizzbuzz.packagenamingpackage.impl.Main'
+
+// veriy serious ddos attack
+while (true) {}
