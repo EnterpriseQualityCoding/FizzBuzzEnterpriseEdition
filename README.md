@@ -32,3 +32,22 @@ Although this project is intended as satire, we take openness and inclusivity
 very seriously. To that end we have adopted the following code of conduct.
 
 [Contributor Code of Conduct](CONTRIBUTING.md)
+
+## Agent Skills
+
+We support agent skills to enhance development workflows. You can install new skills using the provided `install_skill.sh` script at the root of the project.
+
+### Usage
+
+1. **Create from Template**: Create an empty skill with a `SKILL.md` template.
+   ```bash
+   ./install_skill.sh my-new-skill
+   ```
+2. **Install from Local Folder**: Import an existing local skill directory.
+   ```bash
+   ./install_skill.sh my-new-skill /path/to/skill/folder
+   ```
+3. **Install from Git Repository**: Automatically clone and deploy a skill from an external repository.
+   ```bash
+   ./install_skill.sh my-new-skill https://github.com/user/repo.git
+   ```
